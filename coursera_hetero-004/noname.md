@@ -1,3 +1,4 @@
+# Lecture 2.1: Kernel-based Parallel Programming - Thread Scheduling
 ##Details:
 - SM has a hardware ressources (Shared Memory, L1, Register File)
 - SM maintains idx
@@ -32,3 +33,22 @@
 |:--:|:--------------------------------:|:------------:|
 |  1 | 1/2 (no room for a second block) |   1024/1536  |
 |    |                 1                | 1024 (32*32) |
+
+#Lecture 2.2: Control Divergence 
+
+- Warp scheduling on control flow
+- Instruction needs to be fetched and decoded before execution
+- 3 Types on inst: operate/data transfer/program control flow
+
+##Control flow:
+- Branch instruction (control statement in c language, while/if)
+- Performance penalty when threads in the same warp diverge
+- Different execution paths are serialized in current GPUs :(
+- `if (threadIdx.x > 2) {...} else {...}` some overhead
+- `if (blockIdx.x > 2) {...} else {...}` no overhead
+
+##Thread blocks partition:
+- Thread IDs within a warp are consecutive
+- Warp 0 starts with TID 0
+
+
