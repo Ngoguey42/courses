@@ -51,4 +51,11 @@
 - Thread IDs within a warp are consecutive
 - Warp 0 starts with TID 0
 
+#Lecture 2.3: Memory Model and Locality -- CUDA Memories
+- Registers, shared memory, global memory, constant memory
 
+#Lecture 2.4: Tiled Parallel Algorithms
+#Lecture 2.5: Tiled Matrix Multiplication
+- `load in shared mem`; `__syncthreads()`; `work`;
+
+#Lecture 2.6: Tiled Matrix Multiplication Kernel
