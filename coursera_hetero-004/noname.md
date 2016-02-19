@@ -59,3 +59,6 @@
 - `load in shared mem`; `__syncthreads()`; `work`;
 
 #Lecture 2.6: Tiled Matrix Multiplication Kernel
+#Lecture 2.7: Handling Boundary Conditions in Tiling
+#Lecture 2.8: A Tiled Kernel for Arbitrary Matrix Dimensions
+#Lecture 3.1: Performance Considerations - DRAM Bandwidth 
