@@ -34,7 +34,7 @@
 |  1 | 1/2 (no room for a second block) |   1024/1536  |
 |    |                 1                | 1024 (32*32) |
 
-#Lecture 2.2: Control Divergence 
+#Lecture 2.2: Control Divergence
 
 - Warp scheduling on control flow
 - Instruction needs to be fetched and decoded before execution
@@ -61,4 +61,3 @@
 #Lecture 2.6: Tiled Matrix Multiplication Kernel
 #Lecture 2.7: Handling Boundary Conditions in Tiling
 #Lecture 2.8: A Tiled Kernel for Arbitrary Matrix Dimensions
-#Lecture 3.1: Performance Considerations - DRAM Bandwidth 
