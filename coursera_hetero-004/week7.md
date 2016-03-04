@@ -21,3 +21,26 @@
 <BR>
 
 - clCreateBuffer() & clEnqueueWriteBuffer() can be combined into a single clCreateBuffer() call
+
+# Lecture 7.5: Related Programming Models - OpenACC 
+
+- \#pragma dans tous les sens
+
+# Lecture 7.6: Related Programming Models - OpenACC Details 
+
+# Lecture 8.1: Related Parallel Models - C++ AMP
+
+- Une lib c++
+- .discard_data()
+
+# Lecture 8.2: Related Parallel Models - C++ AMP Advance Concepts
+
+- array<> vs array_view<>
+- future with .synchronize_async() .get()
+- extent<>, array\_view<, X> to array\_view<, Y>
+- More: Device query
+
+# Lecture 8.3: Related Parallel Models - Introduction to Heterogeneous Supercomputing and MPI
+
+# Lecture 8.4: Conclusions and Future Directions
+
