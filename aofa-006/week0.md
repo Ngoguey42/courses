@@ -19,14 +19,44 @@
 #####3. Extract coefficients
 - `T(z) = 1 + zT(z)^2`
 
-###### Quadradic Formula
+###### Quadradic Formula (Division priorities might be fucked, but result ok)
 - `z(T(z)^2) - T(z) + 1 = 0`
 - `a(z) b(-1) c(1)` 
 - `T(z) = (-(-1) +- ((-1)^2 - 4(z)(1))^0.5)/(2(z))`
 - `T(z) = (1 +- (1 - 4z)^0.5)/(2z)`
 - `z*T(z) = (1/2)*(1 +- (1 - 4z)^0.5)` ("Has to be minus for n=0")
 
-###### Binomial theorem
+###### Generalized binomial theorem (Division priorities might be fucked, but result ok)
+- `z*T(z) = (1/2)*(1 - (1 - 4z)^0.5)`
+- `SUM{k=0}( (r<-k) x^(r-k) y^k )`
+- `z*T(z) = (1/2)*(1 - SUM{N>=0}( (0.5<-N) 1^(0.5-N) (-4z)^N ))`
+- `z*T(z) = (1/2)*(1 - SUM{N>=0}( (0.5<-N) (-4z)^N ))`
+- `z*T(z) = (1/2)*(1 - SUM{N>=1}( (0.5<-N) (-4z)^N ) + (0.5<-0))`
+- `z*T(z) = (1/2)*(1 - SUM{N>=1}( (0.5<-N) (-4z)^N ) + 1)` https://fr.wikipedia.org/wiki/Formule_du_bin%C3%B4me_g%C3%A9n%C3%A9ralis%C3%A9e
+- `z*T(z) = -0.5*SUM{N>=1}( (0.5<-N) (-4z)^N )`
+
+##### Subsitution (N)->(N+1) plus magie (Division priorities might be fucked, but result ok)
+- `T(N) = -0.5 (0.5<-N+1) (-4)^(N+1)`
+
+##### Generalized binomial coeficient (Division priorities might be fucked, but result ok)
+- `T(N) = -0.5 ( (0.5)(0.5-1)(0.5-2)...(0.5-N) )/( (N+1)! ) (-4)^(N+1)`
+- `T(N) = ( (0.5)(0.5-1)(0.5-2)...(0.5-N) ) * -0.5 * (-4)^(N+1) / (N+1)!`
+- `T(N) = ( (0.5)(0.5-1)(0.5-2)...(0.5-N) ) * -0.5 * (-4) * (-4)^N / (N+1)!`
+- `T(N) = ( (0.5)(0.5-1)(0.5-2)...(0.5-N) ) * 2 * (-4)^N / (N+1)!`
+- `T(N) = ( (0.5)(0.5-1)(0.5-2)...(0.5-N) ) * 2 * (-2)^N * 2^N / (N+1)!`
+- `T(N) = ( (0.5)(0.5-1)(-2)(0.5-2)(-2)...(0.5-N)(-2) ) * 2 * 2^N / (N+1)!`
+- `T(N) = ( (0.5)1*3...(2N-1) ) * 2 * 2^N / (N+1)!`
+- `T(N) = ( 1*3...(2N-1) ) * 2^N / (N+1)!`
+
+##### Substitute (`2^N`)->(`2/1*4/2*6/3`)
+- `T(N) = ( 1*3...(2N-1) ) / (N+1)! * ( ( 2*4*6...2N ) / (1*2*3...N) )`
+- `T(N) = ( 1*3...(2N-1) ) / N! * ( 1/(N+1) ) * ( ( 2*4*6...2N ) / (1*2*3...N) )`
+- `T(N) = ( 1*3...(2N-1) ) / N! * ( 1/(N+1) ) * ( ( 2*4*6...2N ) / N! )`
+- `T(N) = ( 1*3...(2N-1)*2*4*6...(2N) ) / N! * ( 1/(N+1) ))`
+- `T(N) = (2N)! / N! * ( 1/(N+1) ))`
+- `T(N) = ( 1/(N+1) ) * (2N<-N)` (Catalan number)
+
+#####4. Asymptotic approximation
 
 
 
