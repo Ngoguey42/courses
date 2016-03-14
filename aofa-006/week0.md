@@ -69,3 +69,14 @@
 - `T(N) ~= 4^N / (pi*N^3)^0.5`
 
 # Lecture 1: Analysis of Algorithms
+### Resources
+- Analysis of Algorithms (2nd edition) (2013) Text book (1st edition 1995)
+- Analytic Combinatorics ()
+- Algorithms (4th edition) ()
+- Book site(s) 
+
+- Knuth's books
+- Flajolet's books
+- Math typesetting (tex texshot latexit mathjax)
+- Symbolic math (Maple16, soge, mathematica 8)
+- web references (oeis, wikipedia, mathworld, nist handbook)
