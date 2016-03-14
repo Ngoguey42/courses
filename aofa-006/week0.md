@@ -52,12 +52,20 @@
 - `T(N) = ( 1*3...(2N-1) ) / (N+1)! * ( ( 2*4*6...2N ) / (1*2*3...N) )`
 - `T(N) = ( 1*3...(2N-1) ) / N! * ( 1/(N+1) ) * ( ( 2*4*6...2N ) / (1*2*3...N) )`
 - `T(N) = ( 1*3...(2N-1) ) / N! * ( 1/(N+1) ) * ( ( 2*4*6...2N ) / N! )`
-- `T(N) = ( 1*3...(2N-1)*2*4*6...(2N) ) / N! * ( 1/(N+1) ))`
-- `T(N) = (2N)! / N! * ( 1/(N+1) ))`
+- `T(N) = ( 1*3...(2N-1)*2*4*6...(2N) ) / N! * ( 1/(N+1) )`
+- `T(N) = (2N)! / N! * ( 1/(N+1) )`
 - `T(N) = ( 1/(N+1) ) * (2N<-N)` (Catalan number)
 
 #####4. Asymptotic approximation
-
-
+- `T(N) = (2N)! / N! * ( 1/(N+1) )`
+- `T(N) = exp( ln(2N!) - 2ln(N!) -ln(N+1) )`
+- stirling: `ln N! ~= NlnN - N + ln((2piN)^0.5)`
+- `T(N) ~= exp( 2Nln2N - 2N + ln((4piN)^0.5)
+				   - 2( NlnN - N + ln((2piN)^0.5) )
+				   - ln(N+1) )` (-ln(N+1) or -ln(N) in last term??)
+- `T(N) ~= exp( 2Nln2N + ln((4piN)^0.5)
+				   - 2NlnN - 2ln((2piN)^0.5)
+				   - ln(N+1) ) ` TODO: expand to solution 
+- `T(N) ~= 4^N / (pi*N^3)^0.5`
 
 # Lecture 1: Analysis of Algorithms
