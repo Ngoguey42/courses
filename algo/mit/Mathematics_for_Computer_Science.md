@@ -118,4 +118,24 @@
 - Minimum element
 - Parallel task scheduling
 
+## Part III: Counting
 
+#### Lecture 12: Sums (_Leighton_)
+> https://www.youtube.com/watch?v=fAeShezAGLE&list=PLB7540DEDD482705B&index=12
+
+- Annuity
+- Perturbation method
+- Geometric series
+- Derivative method
+- Integration bounds
+- Tilde notation
+
+#### Lecture 13: Sums and Asymptotics (_Leighton_)
+> https://www.youtube.com/watch?v=X9eErxRjQEI&feature=youtu.be&list=PLB7540DEDD482705B&t=1200
+
+- Ex: `Blocks center of gravity`
+- Greedy strategy
+- Harmonic sum
+- Products
+- Factorial, Stirling's formula
+- Asymptotic notation
