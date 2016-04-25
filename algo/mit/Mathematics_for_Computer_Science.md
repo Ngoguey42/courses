@@ -138,4 +138,12 @@
 - Harmonic sum
 - Products
 - Factorial, Stirling's formula
-- Asymptotic notation
+- Asymptotic notation (O, Ω, Θ, o, ω)
+
+####  Lecture 14: Divide and Conquer Recurrences (_Leighton_)
+> https://www.youtube.com/watch?v=Kqf0uO0oV6s&index=14&list=PLB7540DEDD482705B
+
+- Ex: `Tower of Hanoi`
+- Proof: `Tower of Hanoi` find formula with Guess&Verify(Substitution method) or Plus&Chug(Expansion)
+- Merge sort
+- Akra–Bazzi method
