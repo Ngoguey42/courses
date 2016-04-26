@@ -17,7 +17,7 @@
 - Proof: `Sum(1 to N) = N(N+1) / 2`
 - Proof: `3|(n^3-n)`
 - Proof: not `All horses are the same color`
-- Proof: `courtyard with L shape tiles with statue` 
+- Proof: `courtyard with L shape tiles with statue`
 
 #### Lecture 3: Strong Induction (_Leighton_)
 > https://www.youtube.com/watch?v=NuGDkmwEObM&list=PLB7540DEDD482705B&index=3
@@ -173,4 +173,19 @@
 - Generalized Product Rule
 - Ex: `Committee from n people`
 - Ex: `Defective dollard bill`
+- Product rule
 - Sum Rule
+- Ex: `Passwords combinations`
+
+#### Lecture 17: Counting Rules II (_van Dijk_)
+> https://www.youtube.com/watch?v=pNt5Ll6hGqo&feature=youtu.be&list=PLB7540DEDD482705B&t=3989
+
+- Inclusion, Exclusion
+- Ex: `How many permutations of the 10 digits with certain sequences`
+- Bookeeper rule
+- Binomial coefficient
+- Subset rule
+- Binomial theorem
+- `Poker Hands`
+- Combinatorial proofs
+https://youtu.be/09yIb3VHhMI?list=PLB7540DEDD482705B&t=1910
