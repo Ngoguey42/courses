@@ -131,7 +131,7 @@
 - Tilde notation
 
 #### Lecture 13: Sums and Asymptotics (_Leighton_)
-> https://www.youtube.com/watch?v=X9eErxRjQEI&feature=youtu.be&list=PLB7540DEDD482705B&t=1200
+> https://www.youtube.com/watch?v=X9eErxRjQEI&feature=youtu.be&list=PLB7540DEDD482705B
 
 - Ex: `Blocks center of gravity`
 - Greedy strategy
@@ -147,3 +147,16 @@
 - Proof: `Tower of Hanoi` find formula with Guess&Verify(Substitution method) or Plus&Chug(Expansion)
 - Merge sort
 - Akra–Bazzi method
+
+#### Lecture 15: Linear Recurrences (_Leighton_)
+> https://www.youtube.com/watch?v=TWBB-JlmYUc&list=PLB7540DEDD482705B&index=15
+
+- Graduate student job problem
+- Fibonacci recurrence
+- Proof: `Solve any linear recurrence`
+- Plant reproducing once in year one (for one)
+- Inhomogeneous linear equation
+
+#### Lecture 16: Counting Rules I (_van Dijk_)
+> https://www.youtube.com/watch?v=pNt5Ll6hGqo&list=PLB7540DEDD482705B&index=15
+
