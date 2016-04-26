@@ -12,7 +12,7 @@
 #### Lecture 2: Induction (_Leighton_)
 > https://www.youtube.com/watch?v=z8HKWUWS-lA&list=PLB7540DEDD482705B&index=2
 
-- Ex: `Sliding diagonals in square`
+- Demo: `Sliding diagonals in square`
 - Induction axiom
 - Proof: `Sum(1 to N) = N(N+1) / 2`
 - Proof: `3|(n^3-n)`
@@ -27,13 +27,13 @@
 - Fermat's Last Theorem (doe not fit in margin)
 - 8-puzzle parity of inversions
 - Strong induction
-- Ex: `n-block game (unstacking)`
+- Demo: `n-block game (unstacking)`
 - Proof: `n-block game (unstacking)`
 
 #### Lecture 4: Number Theory I (_van Dijk_)
 > https://www.youtube.com/watch?v=NuY7szYSXSw&list=PLB7540DEDD482705B&index=4
 
-- Ex: `die hard 3 jugs, gcd`
+- Demo: `die hard 3 jugs, gcd`
 - Proof: `die hard 3 jugs, gcd`
 - Linear combination
 - Euclidean algorithm
@@ -133,7 +133,7 @@
 #### Lecture 13: Sums and Asymptotics (_Leighton_)
 > https://www.youtube.com/watch?v=X9eErxRjQEI&feature=youtu.be&list=PLB7540DEDD482705B
 
-- Ex: `Blocks center of gravity`
+- Demo: `Blocks center of gravity`
 - Greedy strategy
 - Harmonic sum
 - Products
@@ -143,7 +143,7 @@
 ####  Lecture 14: Divide and Conquer Recurrences (_Leighton_)
 > https://www.youtube.com/watch?v=Kqf0uO0oV6s&index=14&list=PLB7540DEDD482705B
 
-- Ex: `Tower of Hanoi`
+- Demo: `Tower of Hanoi`
 - Proof: `Tower of Hanoi` find formula with Guess&Verify(Substitution method) or Plus&Chug(Expansion)
 - Merge sort
 - Akra–Bazzi method
@@ -160,3 +160,17 @@
 #### Lecture 16: Counting Rules I (_van Dijk_)
 > https://www.youtube.com/watch?v=pNt5Ll6hGqo&list=PLB7540DEDD482705B&index=15
 
+- Formal definitions of Set, Sequence, Permutation
+- Formal definitions of Function (mapping)
+- Surjective, Injective, Bijective function
+- mapping rule
+- Generalized pigeon hole principle
+- Ex: `Boston non-bold people, at least 3 people with same num hair`
+- Ex: `10 2-digits set, at least 2 subsets with same sum`
+- Non constructive proofs
+- Division rule
+- Ex: `Rooks on a chessboard`
+- Generalized Product Rule
+- Ex: `Committee from n people`
+- Ex: `Defective dollard bill`
+- Sum Rule
