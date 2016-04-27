@@ -183,9 +183,22 @@
 - Inclusion, Exclusion
 - Ex: `How many permutations of the 10 digits with certain sequences`
 - Bookeeper rule
+- Multinomial coefficient
 - Binomial coefficient
 - Subset rule
 - Binomial theorem
-- `Poker Hands`
+- Ex: `Poker Hands`
 - Combinatorial proofs
-https://youtu.be/09yIb3VHhMI?list=PLB7540DEDD482705B&t=1910
+- Pascal's identity
+
+## Part IV: Probability
+
+#### Lecture 18: Probability Introduction (_Leighton_)
+> https://www.youtube.com/watch?v=SmFwFdESMHI&index=18&list=PLB7540DEDD482705B
+
+- Demo: `Monty Hall problem`
+- Definition sample space, sample point (outcome)
+- Definition propability space
+- Sample tree
+- Definition event
+- Demo: `Special dices bet`
