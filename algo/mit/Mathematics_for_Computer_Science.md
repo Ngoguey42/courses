@@ -202,3 +202,26 @@
 - Sample tree
 - Definition event
 - Demo: `Special dices bet`
+
+#### Lecture 19: Conditional Probability (_Leighton_)
+> https://www.youtube.com/watch?v=E6FbvM-FGZ8
+
+- Conditional Probability
+- Product rule
+- Generalized product rule
+- a posteriori probability
+- Tons of exemples
+
+#### Lecture 20: Independence (_Leighton_)
+> https://www.youtube.com/watch?v=l1BCv3qqW4A
+
+- Product Rule for Independent Events
+- Symmetry of Independence
+- Mutual independency
+- Pairwise independency
+- Birthday principle
+
+#### Lecture 21: Random Variables (_Leighton_)
+> https://www.youtube.com/watch?v=MOfhhFaQdjw
+
+- Indicator (Bernouilli/characteristic random variable)
