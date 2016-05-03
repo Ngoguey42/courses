@@ -220,8 +220,25 @@
 - Mutual independency
 - Pairwise independency
 - Birthday principle
+- Tons of exemples
 
-#### Lecture 21: Random Variables (_Leighton_)
+#### Lecture 21: Random Variables
 > https://www.youtube.com/watch?v=MOfhhFaQdjw
 
 - Indicator (Bernouilli/characteristic random variable)
+- Probability/Point distribution function (pdf)
+- Cumulative distribution function
+- Uniform random variable
+- Uniform distribution
+- Demo: `Numbers in envelope`
+- Binomial distribution
+
+#### Lecture 22: Expectation I (_Leighton_)
+> https://www.youtube.com/watch?v=gGlMSe7uEkA
+
+- Def: `Expected value/average/mean of a random variable`
+- Def: `Mean of a random variable`
+- Demo: `Coin flip bet, 3 people`
+- Ex: `Mean time to failure`
+- Ex: `Number of boys before one girl`
+- Linearity of expectations
