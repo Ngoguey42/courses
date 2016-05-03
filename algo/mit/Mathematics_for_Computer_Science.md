@@ -242,3 +242,9 @@
 - Ex: `Mean time to failure`
 - Ex: `Number of boys before one girl`
 - Linearity of expectations
+- Ex: `Hat check problem`
+
+#### Lecture 23: Expectation II (_Leighton_)
+> https://www.youtube.com/watch?v=oI9fMUqgfxY
+
+-
