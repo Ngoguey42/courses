@@ -240,11 +240,22 @@
 - Def: `Mean of a random variable`
 - Demo: `Coin flip bet, 3 people`
 - Ex: `Mean time to failure`
-- Ex: `Number of boys before one girl`
-- Linearity of expectations
+- Ex: `Number of born boys before one girl`
+- Linearity of expectations for sums
 - Ex: `Hat check problem`
+- Ex: `Chinese restaurant spinning table`
 
 #### Lecture 23: Expectation II (_Leighton_)
 > https://www.youtube.com/watch?v=oI9fMUqgfxY
 
--
+- Murphy's law
+- Demo: `Card trick` comme micmath https://www.youtube.com/watch?v=lLzUcJf3E60
+- Linearity of expectations for products
+- Ex: `RISK vs Z8002 code length`
+- Variance
+- Standard deviation (root-mean-square)
+
+#### Lecture 24: Large Deviations (_Leighton_)
+> https://www.youtube.com/watch?v=q4mwO2qS2z4
+
+- Markov's theorem
