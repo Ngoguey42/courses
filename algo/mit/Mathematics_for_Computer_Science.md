@@ -259,3 +259,6 @@
 > https://www.youtube.com/watch?v=q4mwO2qS2z4
 
 - Markov's theorem
+- Chebyshev's theorem
+- Chernoff's bound
+- Ex: `How to assign N jobs to M servers (Load balance)`
