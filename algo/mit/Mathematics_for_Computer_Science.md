@@ -262,3 +262,11 @@
 - Chebyshev's theorem
 - Chernoff's bound
 - Ex: `How to assign N jobs to M servers (Load balance)`
+
+#### Lecture 25: Random Walks (_Leighton_)
+> https://www.youtube.com/watch?v=56iFMY8QW2k&index=25&list=PLB7540DEDD482705B
+
+- Gambler's ruin
+- Martingale
+- Drift / Swings
+https://youtu.be/56iFMY8QW2k?list=PLB7540DEDD482705B&t=3220
