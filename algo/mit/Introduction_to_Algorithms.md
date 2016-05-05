@@ -13,6 +13,12 @@
 
 - Good explanation of O, Ω, Θ
 
-#### Lecture 2: Models of Computation, Document Distance
+#### Lecture 2: Models of Computation, Document Distance (_Erik Demaine_)
+> https://www.youtube.com/watch?v=Zc54gFhdpLA&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=2
+
+- Analogies Program/Algorithm
+- Random access machine
+https://youtu.be/Zc54gFhdpLA?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&t=626
+- Pointer access machine
 
 #### Recitation 2: Python Cost Model, Document Distance
