@@ -18,7 +18,37 @@
 
 - Analogies Program/Algorithm
 - Random access machine
-https://youtu.be/Zc54gFhdpLA?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&t=626
 - Pointer access machine
+- Complexity of some Python builtins
+- Document distance, cosine similarity
 
-#### Recitation 2: Python Cost Model, Document Distance
+#### Recitation 2: Python Cost Model, Document Distance (_Victor Costan_)
+> https://www.youtube.com/watch?v=QFcyt8fgQMU&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=26
+
+- Code analysis
+
+#### Lecture 3: Insertion Sort, Merge Sort (_Srinivas Devadas_)
+> https://www.youtube.com/watch?v=Kg4bqzAqRBM&index=3&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
+
+- Why sorting?
+- Insertion sort analysis
+- Merge sort analysis
+- Ex: Some reccurences analysis whith recursive tree
+
+#### Recitation 3: Document Distance, Insertion and Merge Sort (_Victor Costan_)
+> https://www.youtube.com/watch?v=4iXLnF3hExw&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=27
+
+- Code analysis
+
+#### Lecture 4: Heaps and Heap Sort
+> https://www.youtube.com/watch?v=B7hVxCmfPtM&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=4
+
+- Priority Queue
+
+#### Recitation 4 :
+> Unavailable
+
+#### Lecture 5: Binary Search Trees, BST Sort (_Srinivas Devadas_)
+> https://www.youtube.com/watch?v=9Jry5-82I68&index=5&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
+
+- Ex: `Airport runway reservation`
