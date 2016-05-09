@@ -40,7 +40,7 @@
 
 - Code analysis
 
-#### Lecture 4: Heaps and Heap Sort
+#### Lecture 4: Heaps and Heap Sort (_Srinivas Devadas_)
 > https://www.youtube.com/watch?v=B7hVxCmfPtM&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=4
 
 - Priority Queue
@@ -52,3 +52,41 @@
 > https://www.youtube.com/watch?v=9Jry5-82I68&index=5&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
 
 - Ex: `Airport runway reservation`
+
+#### Recitation 5: Recursion Trees, Binary Search Trees (_Victor Costan_)
+> https://www.youtube.com/watch?v=r5pXu1PAUkI&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=28
+
+- Definition of datastructure
+- Function: `Check ri (representation invariant)`
+- Iteration in bst
+- Deletion in bst
+
+#### Lecture 6: AVL Trees, AVL Sort (_Erik Demaine_)
+> https://www.youtube.com/watch?v=FNeL18KsWPc&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=6
+
+- Def: `inorder traversal`
+- Def: `Height vs depth of node`
+- AVL worst case (with Fibonacci)
+- Rotations
+- ADT vs DS
+
+#### Recitation 6: AVL Trees (_Victor Costan_)
+> https://www.youtube.com/watch?v=IWzYoXKaRIc&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=29
+
+- AVL details
+
+#### Lecture 7: Counting Sort, Radix Sort, Lower Bounds for Sorting (_Erik Demaine_)
+> https://www.youtube.com/watch?v=Nz1KZXbghj8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=7
+
+- Comparison model
+- Decision tree
+- Proof: `search lower bound`
+- Proof: `sort lower bound`
+- Linear-Time Sorting (integer sorting)
+- Counting sort
+- Radix sort
+
+#### Recitation 8: Simulation Algorithms (_Victor Costan_)
+> https://www.youtube.com/watch?v=eGSXsaJ-BlY&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=31
+
+-
