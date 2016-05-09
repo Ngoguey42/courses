@@ -89,4 +89,6 @@
 #### Recitation 8: Simulation Algorithms (_Victor Costan_)
 > https://www.youtube.com/watch?v=eGSXsaJ-BlY&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=31
 
--
+- Line sweep algorithm
+- Range index
+https://youtu.be/eGSXsaJ-BlY?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&t=2948
