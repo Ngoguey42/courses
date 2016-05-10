@@ -103,23 +103,37 @@
 #### Recitation 7: Comparison Sort, Counting and Radix Sort (_Victor Costan_)
 > https://www.youtube.com/watch?v=9bkvws_vqLU&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=30
 
+- Small review of previous sort algorithms
+- Deep review of count/radix sort algorithms
+- Stability
+
 ***
 
 ## Unit 3: Hashing
 
 #### Lecture 8: Hashing with Chaining
->
+> https://www.youtube.com/watch?v=0M_kIqhwbFo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=8
+
+- Exemples of dictionary uses
+- Direct access table
+- Prehashing
+- Simple uniform hashing
+- Division/multiplication/universal hashing
 
 #### Recitation 8: Simulation Algorithms (_Victor Costan_)
 > https://www.youtube.com/watch?v=eGSXsaJ-BlY&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=31
 
 - Line sweep algorithm
 - Range index
-https://youtu.be/eGSXsaJ-BlY?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&t=2948
 
 ***
 
 #### Lecture 9: Table Doubling, Karp-Rabin (_Erik Demaine_)
+> https://www.youtube.com/watch?v=BRO7mVIFt08&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=9
+
+- Hash table grow
+https://youtu.be/BRO7mVIFt08?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&t=302
+
 #### Recitation 9: Rolling Hashes, Amortized Analysis (_Victor Costan_)
 #### Recitation 9b: DNA Sequence Matching (_Victor Costan_)
 
