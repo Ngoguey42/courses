@@ -27,6 +27,8 @@
 
 - Code analysis
 
+## Unit 2: Sorting and Trees
+
 #### Lecture 3: Insertion Sort, Merge Sort (_Srinivas Devadas_)
 > https://www.youtube.com/watch?v=Kg4bqzAqRBM&index=3&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
 
@@ -86,9 +88,30 @@
 - Counting sort
 - Radix sort
 
+#### Recitation 7: Comparison Sort, Counting and Radix Sort (_Victor Costan_)
+>
+
+## Unit 3: Hashing
+
+#### Lecture 8: Hashing with Chaining
+>
+
 #### Recitation 8: Simulation Algorithms (_Victor Costan_)
 > https://www.youtube.com/watch?v=eGSXsaJ-BlY&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=31
 
 - Line sweep algorithm
 - Range index
 https://youtu.be/eGSXsaJ-BlY?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&t=2948
+
+
+#### Lecture 9: Table Doubling, Karp-Rabin (_Erik Demaine_)
+#### Recitation 9: Rolling Hashes, Amortized Analysis (_Victor Costan_)
+#### Recitation 9b: DNA Sequence Matching (_Victor Costan_)
+
+#### Lecture 10: Open Addressing, Cryptographic Hashing (_Srinivas Devadas_)
+#### Recitation 10: Quiz 1 Review (_Victor Costan_)
+
+## Unit 4: Numerics
+
+#### Lecture 11: Integer Arithmetic, Karatsuba Multiplication (_Srinivas Devadas_)
+#### Recitation 11: Principles of Algorithm Design (_Victor Costan_)
