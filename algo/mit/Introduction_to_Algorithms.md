@@ -131,10 +131,17 @@
 #### Lecture 9: Table Doubling, Karp-Rabin (_Erik Demaine_)
 > https://www.youtube.com/watch?v=BRO7mVIFt08&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=9
 
-- Hash table grow
-https://youtu.be/BRO7mVIFt08?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&t=302
+- Hash table resize
+- Amortization
+- String matching
+- Rolling hashes
+- Karp-Rabin
 
 #### Recitation 9: Rolling Hashes, Amortized Analysis (_Victor Costan_)
+> https://youtu.be/w6nuXg0BISo?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
+
+https://youtu.be/w6nuXg0BISo?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&t=1108
+
 #### Recitation 9b: DNA Sequence Matching (_Victor Costan_)
 
 ***
