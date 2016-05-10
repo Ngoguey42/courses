@@ -13,6 +13,8 @@
 
 - Good explanation of O, Ω, Θ
 
+***
+
 #### Lecture 2: Models of Computation, Document Distance (_Erik Demaine_)
 > https://www.youtube.com/watch?v=Zc54gFhdpLA&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=2
 
@@ -26,6 +28,8 @@
 > https://www.youtube.com/watch?v=QFcyt8fgQMU&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=26
 
 - Code analysis
+
+***
 
 ## Unit 2: Sorting and Trees
 
@@ -42,6 +46,8 @@
 
 - Code analysis
 
+***
+
 #### Lecture 4: Heaps and Heap Sort (_Srinivas Devadas_)
 > https://www.youtube.com/watch?v=B7hVxCmfPtM&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=4
 
@@ -49,6 +55,8 @@
 
 #### Recitation 4 :
 > Unavailable
+
+***
 
 #### Lecture 5: Binary Search Trees, BST Sort (_Srinivas Devadas_)
 > https://www.youtube.com/watch?v=9Jry5-82I68&index=5&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
@@ -62,6 +70,8 @@
 - Function: `Check ri (representation invariant)`
 - Iteration in bst
 - Deletion in bst
+
+***
 
 #### Lecture 6: AVL Trees, AVL Sort (_Erik Demaine_)
 > https://www.youtube.com/watch?v=FNeL18KsWPc&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=6
@@ -77,6 +87,8 @@
 
 - AVL details
 
+***
+
 #### Lecture 7: Counting Sort, Radix Sort, Lower Bounds for Sorting (_Erik Demaine_)
 > https://www.youtube.com/watch?v=Nz1KZXbghj8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=7
 
@@ -89,7 +101,9 @@
 - Radix sort
 
 #### Recitation 7: Comparison Sort, Counting and Radix Sort (_Victor Costan_)
->
+> https://www.youtube.com/watch?v=9bkvws_vqLU&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=30
+
+***
 
 ## Unit 3: Hashing
 
@@ -103,15 +117,22 @@
 - Range index
 https://youtu.be/eGSXsaJ-BlY?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&t=2948
 
+***
 
 #### Lecture 9: Table Doubling, Karp-Rabin (_Erik Demaine_)
 #### Recitation 9: Rolling Hashes, Amortized Analysis (_Victor Costan_)
 #### Recitation 9b: DNA Sequence Matching (_Victor Costan_)
 
+***
+
 #### Lecture 10: Open Addressing, Cryptographic Hashing (_Srinivas Devadas_)
 #### Recitation 10: Quiz 1 Review (_Victor Costan_)
+
+***
 
 ## Unit 4: Numerics
 
 #### Lecture 11: Integer Arithmetic, Karatsuba Multiplication (_Srinivas Devadas_)
 #### Recitation 11: Principles of Algorithm Design (_Victor Costan_)
+
+***
