@@ -134,20 +134,40 @@
 - Hash table resize
 - Amortization
 - String matching
+- Crazy python syntax
 - Rolling hashes
 - Karp-Rabin
 
 #### Recitation 9: Rolling Hashes, Amortized Analysis (_Victor Costan_)
 > https://youtu.be/w6nuXg0BISo?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
 
-https://youtu.be/w6nuXg0BISo?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&t=1108
+- Rolling hash implementation/math
+- Amortization exemple
 
 #### Recitation 9b: DNA Sequence Matching (_Victor Costan_)
+> https://www.youtube.com/watch?v=-DwGrJ8JxDc&feature=youtu.be&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
+
+- Rolling hash math
+- Python iterator/generator (yield)
+- Aggregate analysis
 
 ***
 
 #### Lecture 10: Open Addressing, Cryptographic Hashing (_Srinivas Devadas_)
+> https://www.youtube.com/watch?v=rvdJDijO2Ro&index=10&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
+
+- Probing
+- Trial count
+- Clustering
+- Linear probing
+- Double hashing
+- Uniform hashing analysis
+
 #### Recitation 10: Quiz 1 Review (_Victor Costan_)
+> https://www.youtube.com/watch?v=-FElVPKykgw&feature=youtu.be&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
+
+- Ex: `2d rolling hash`
+- Ex: `nth element of 2 arrays`
 
 ***
 
