@@ -174,6 +174,43 @@
 ## Unit 4: Numerics
 
 #### Lecture 11: Integer Arithmetic, Karatsuba Multiplication (_Srinivas Devadas_)
-#### Recitation 11: Principles of Algorithm Design (_Victor Costan_)
+> https://www.youtube.com/watch?v=eCaXlAaN2uE&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=11
 
+- Catalan numbers
+- Newton's method
+- Karatsuba algorithm
+
+#### Recitation 11: Principles of Algorithm Design (_Victor Costan_)
+> https://www.youtube.com/watch?v=a_otxyu0mSQ&index=35&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
+
+- Ex: `Shifted array divide and conquer`
+- Ex: `nth min element of heap`
+https://youtu.be/a_otxyu0mSQ?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&t=1210
+
+***
+
+#### Lecture 12: Square Roots, Newton's Method (_Srinivas Devadas_)
+#### Recitation 12: Karatsuba Multiplication, Newton's Method (_Victor Costan_)
+***
+## Unit 5: Graphs
+#### Lecture 13: Breadth-First Search (BFS) (_Erik Demaine_)
+#### Recitation 13: Breadth-First Search (BFS) (_Victor Costan_)
+***
+#### Lecture 14: Depth-First Search (DFS), Topological Sort (_Erik Demaine_)
+#### Recitation 14: Depth-First Search (DFS) (_Victor Costan_)
+***
+## Unit 6: Shortest Paths
+
+#### Lecture 15: Single-Source Shortest Paths Problem (_Srinivas Devadas_)
+#### Recitation 15: Shortest Paths (_Victor Costan_)
+***
+#### Lecture 16: Dijkstra (_Srinivas Devadas_)
+#### Recitation 16: Rubik's Cube, StarCraft Zero (_Victor Costan_)
+***
+#### Lecture 17: Bellman-Ford (_Srinivas Devadas_)
+#### Recitation 17:
+> Unavailable
+***
+#### Lecture 18: Speeding up Dijkstra (_Srinivas Devadas_)
+#### Recitation 18: Quiz 2 Review (_Victor Costan_)
 ***
