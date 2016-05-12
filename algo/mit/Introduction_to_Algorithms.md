@@ -185,15 +185,30 @@
 
 - Ex: `Shifted array divide and conquer`
 - Ex: `nth min element of heap`
-https://youtu.be/a_otxyu0mSQ?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&t=1210
+- Ex: `min element of an interval in an array filled with random numbers`
 
 ***
 
 #### Lecture 12: Square Roots, Newton's Method (_Srinivas Devadas_)
+> https://www.youtube.com/watch?v=2YeJ-5UAke8&index=12&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
+
+- Newton's method convergence rate
+- Toom-cook
+- Log star
+- Division complexity
+- Square root complexity
+
 #### Recitation 12: Karatsuba Multiplication, Newton's Method (_Victor Costan_)
+> https://www.youtube.com/watch?v=JRgIXyEPnbA&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=36
+
+
 ***
+
 ## Unit 5: Graphs
+
 #### Lecture 13: Breadth-First Search (BFS) (_Erik Demaine_)
+> https://www.youtube.com/watch?v=s-CYnVz-uh4&index=13&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
+
 #### Recitation 13: Breadth-First Search (BFS) (_Victor Costan_)
 ***
 #### Lecture 14: Depth-First Search (DFS), Topological Sort (_Erik Demaine_)
