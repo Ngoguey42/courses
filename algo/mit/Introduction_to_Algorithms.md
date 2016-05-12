@@ -229,3 +229,23 @@
 #### Lecture 18: Speeding up Dijkstra (_Srinivas Devadas_)
 #### Recitation 18: Quiz 2 Review (_Victor Costan_)
 ***
+## Unit 7: Dynamic Programming
+#### Lecture 19: Dynamic Programming I: Fibonacci, Shortest Paths
+#### Recitation 19: Dynamic Programming: Crazy Eights, Shortest Path (_Victor Costan_)
+***
+#### Lecture 20: Dynamic Programming II: Text Justification, Blackjack
+#### Recitation 20: Dynamic Programming: Blackjack (_Victor Costan_)
+***
+#### Lecture 21: Dynamic Programming III: Parenthesization, Edit Distance, Knapsack
+#### Recitation 21: Dynamic Programming: Knapsack Problem (_Victor Costan_)
+***
+#### Lecture 22: Dynamic Programming IV: Guitar Fingering, Tetris, Super Mario Bros.
+#### Recitation 22: Dynamic Programming: Dance Dance Revolution (_Victor Costan_)
+***
+## Unit 8: Advanced Topics
+#### Lecture 23: Computational Complexity
+#### Recitation 23: Computational Complexity (_Victor Costan_)
+***
+#### Lecture 24: Topics in Algorithms Research
+#### Recitation 24: Final Exam Review (_Victor Costan_)
+***
