@@ -1,4 +1,4 @@
-## Unit 1: Introduction
+*## Unit 1: Introduction
 
 #### Lecture 1: Algorithmic Thinking, Peak Finding (_Srinivas Devadas_)
 > https://www.youtube.com/watch?v=HtSuA80QTyo&index=1&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
@@ -201,6 +201,7 @@
 #### Recitation 12: Karatsuba Multiplication, Newton's Method (_Victor Costan_)
 > https://www.youtube.com/watch?v=JRgIXyEPnbA&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=36
 
+- Details Newton's Method
 
 ***
 
@@ -209,14 +210,42 @@
 #### Lecture 13: Breadth-First Search (BFS) (_Erik Demaine_)
 > https://www.youtube.com/watch?v=s-CYnVz-uh4&index=13&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
 
+- Graphs noration
+- Rubics Cube details
+- Diameter of the graph (god's number)
+- Graphs representations
+- BFS
+- Handshaking lemma
+
 #### Recitation 13: Breadth-First Search (BFS) (_Victor Costan_)
+> https://www.youtube.com/watch?v=5JxShDZ_ylo&index=37&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
+
+- Bytes addition
+- Details on graphs
+
 ***
+
 #### Lecture 14: Depth-First Search (DFS), Topological Sort (_Erik Demaine_)
+> https://www.youtube.com/watch?v=AfSk24UTFS8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=14
+
+- DFS
+- Edge classification, tree/backward/forward/cross edges
+- Cycle detection
+- Ex: `Job scheduling`
+
+
 #### Recitation 14: Depth-First Search (DFS) (_Victor Costan_)
+> https://www.youtube.com/watch?v=C5SPsY72_CM&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=38
+
+- Lecture review
+
 ***
 ## Unit 6: Shortest Paths
 
 #### Lecture 15: Single-Source Shortest Paths Problem (_Srinivas Devadas_)
+> https://www.youtube.com/watch?v=Aa2sqUhIn-E&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=15
+
+
 #### Recitation 15: Shortest Paths (_Victor Costan_)
 ***
 #### Lecture 16: Dijkstra (_Srinivas Devadas_)
