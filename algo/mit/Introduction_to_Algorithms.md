@@ -265,11 +265,23 @@
 
 - Edge relaxation detail
 - DAGs
-https://youtu.be/2E7MmKv0Y24?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&t=1661
+- Demo: `Shortest path with strings and balls`
+- Dijkstra implementation
 
 #### Recitation 16: Rubik's Cube, StarCraft Zero (_Victor Costan_)
+> https://www.youtube.com/watch?v=oRpERQA4Vik&index=40&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
+
+- Rubik's Cube notation
+- Formal exemple of permutation
+- Ex: `Starcraft build order`
+
 ***
 #### Lecture 17: Bellman-Ford (_Srinivas Devadas_)
+> https://www.youtube.com/watch?v=ozsuci5pIso&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=17
+
+- Bellman-Ford
+https://youtu.be/ozsuci5pIso?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&t=1585
+
 #### Recitation 17:
 > Unavailable
 ***
