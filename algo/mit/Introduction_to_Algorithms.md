@@ -245,10 +245,25 @@
 #### Lecture 15: Single-Source Shortest Paths Problem (_Srinivas Devadas_)
 > https://www.youtube.com/watch?v=Aa2sqUhIn-E&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=15
 
+- Weighted graphs
+- Dijkstra presentation
+- Negative edges
+- Bellman-Ford presentation
+- Edge relaxation in bellman-ford
+- Optimal substructure proprerty
 
 #### Recitation 15: Shortest Paths (_Victor Costan_)
+> https://www.youtube.com/watch?v=mQSp6VmfakA&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=39
+
+- levels in BFS
+- Ex: `convert weighted graph to non-weighted graph for BFS`
+- Ex: `Shortest path with odd number of edges`
+
 ***
 #### Lecture 16: Dijkstra (_Srinivas Devadas_)
+> https://www.youtube.com/watch?v=2E7MmKv0Y24&index=16&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
+
+
 #### Recitation 16: Rubik's Cube, StarCraft Zero (_Victor Costan_)
 ***
 #### Lecture 17: Bellman-Ford (_Srinivas Devadas_)
