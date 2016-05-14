@@ -263,6 +263,9 @@
 #### Lecture 16: Dijkstra (_Srinivas Devadas_)
 > https://www.youtube.com/watch?v=2E7MmKv0Y24&index=16&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
 
+- Edge relaxation detail
+- DAGs
+https://youtu.be/2E7MmKv0Y24?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&t=1661
 
 #### Recitation 16: Rubik's Cube, StarCraft Zero (_Victor Costan_)
 ***
