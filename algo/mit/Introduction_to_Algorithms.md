@@ -308,9 +308,13 @@
 - Ex: `Fibonacci bottom up`
 - Ex: `Shortest Paths memoization`
 - Cyclic to acyclic graph transformation
-https://youtu.be/OQ5jsbhAv_M?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&t=2881
 
 #### Recitation 19: Dynamic Programming: Crazy Eights, Shortest Path (_Victor Costan_)
+> https://www.youtube.com/watch?v=IFrvgSvZA0I&index=42&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
+
+- Ex: `Crazy Eights`
+https://youtu.be/IFrvgSvZA0I?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&t=1087
+
 ***
 #### Lecture 20: Dynamic Programming II: Text Justification, Blackjack (_Erik Demaine_)
 #### Recitation 20: Dynamic Programming: Blackjack (_Victor Costan_)
