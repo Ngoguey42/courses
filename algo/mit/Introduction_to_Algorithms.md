@@ -255,7 +255,7 @@
 #### Recitation 15: Shortest Paths (_Victor Costan_)
 > https://www.youtube.com/watch?v=mQSp6VmfakA&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=39
 
-- levels in BFS
+- Levels in BFS
 - Ex: `convert weighted graph to non-weighted graph for BFS`
 - Ex: `Shortest path with odd number of edges`
 
@@ -279,32 +279,52 @@
 #### Lecture 17: Bellman-Ford (_Srinivas Devadas_)
 > https://www.youtube.com/watch?v=ozsuci5pIso&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=17
 
-- Bellman-Ford
-https://youtu.be/ozsuci5pIso?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&t=1585
+- Proof: `Bellman-Ford`
+- Shortest simple path
 
 #### Recitation 17:
 > Unavailable
+
 ***
 #### Lecture 18: Speeding up Dijkstra (_Srinivas Devadas_)
+> https://www.youtube.com/watch?v=CHvQ3q_gJ7E&index=18&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
+
+- Bidirectional Dijkstra
+- Goal directed Dijkstra (Heuristic)
+
 #### Recitation 18: Quiz 2 Review (_Victor Costan_)
+> https://www.youtube.com/watch?v=sPuazUPiV1k&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=41 (pas vu)
+
 ***
+
 ## Unit 7: Dynamic Programming
-#### Lecture 19: Dynamic Programming I: Fibonacci, Shortest Paths
+
+#### Lecture 19: Dynamic Programming I: Fibonacci, Shortest Paths (_Erik Demaine_)
+> https://www.youtube.com/watch?v=OQ5jsbhAv_M&index=19&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
+
+- Origin of name "Dynamic Programming"
+- Memoization
+- Ex: `Fibonacci memoize`
+- Ex: `Fibonacci bottom up`
+- Ex: `Shortest Paths memoization`
+- Cyclic to acyclic graph transformation
+https://youtu.be/OQ5jsbhAv_M?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&t=2881
+
 #### Recitation 19: Dynamic Programming: Crazy Eights, Shortest Path (_Victor Costan_)
 ***
-#### Lecture 20: Dynamic Programming II: Text Justification, Blackjack
+#### Lecture 20: Dynamic Programming II: Text Justification, Blackjack (_Erik Demaine_)
 #### Recitation 20: Dynamic Programming: Blackjack (_Victor Costan_)
 ***
-#### Lecture 21: Dynamic Programming III: Parenthesization, Edit Distance, Knapsack
+#### Lecture 21: Dynamic Programming III: Parenthesization, Edit Distance, Knapsack (_Erik Demaine_)
 #### Recitation 21: Dynamic Programming: Knapsack Problem (_Victor Costan_)
 ***
-#### Lecture 22: Dynamic Programming IV: Guitar Fingering, Tetris, Super Mario Bros.
+#### Lecture 22: Dynamic Programming IV: Guitar Fingering, Tetris, Super Mario Bros. (_Erik Demaine_)
 #### Recitation 22: Dynamic Programming: Dance Dance Revolution (_Victor Costan_)
 ***
 ## Unit 8: Advanced Topics
-#### Lecture 23: Computational Complexity
+#### Lecture 23: Computational Complexity (_Erik Demaine_)
 #### Recitation 23: Computational Complexity (_Victor Costan_)
 ***
-#### Lecture 24: Topics in Algorithms Research
+#### Lecture 24: Topics in Algorithms Research (_Srinivas Devadas_)
 #### Recitation 24: Final Exam Review (_Victor Costan_)
 ***
