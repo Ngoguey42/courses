@@ -240,6 +240,7 @@
 - Lecture review
 
 ***
+
 ## Unit 6: Shortest Paths
 
 #### Lecture 15: Single-Source Shortest Paths Problem (_Srinivas Devadas_)
@@ -260,6 +261,7 @@
 - Ex: `Shortest path with odd number of edges`
 
 ***
+
 #### Lecture 16: Dijkstra (_Srinivas Devadas_)
 > https://www.youtube.com/watch?v=2E7MmKv0Y24&index=16&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
 
@@ -276,6 +278,7 @@
 - Ex: `Starcraft build order`
 
 ***
+
 #### Lecture 17: Bellman-Ford (_Srinivas Devadas_)
 > https://www.youtube.com/watch?v=ozsuci5pIso&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=17
 
@@ -286,6 +289,7 @@
 > Unavailable
 
 ***
+
 #### Lecture 18: Speeding up Dijkstra (_Srinivas Devadas_)
 > https://www.youtube.com/watch?v=CHvQ3q_gJ7E&index=18&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
 
@@ -312,11 +316,23 @@
 #### Recitation 19: Dynamic Programming: Crazy Eights, Shortest Path (_Victor Costan_)
 > https://www.youtube.com/watch?v=IFrvgSvZA0I&index=42&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
 
-- Ex: `Crazy Eights`
-https://youtu.be/IFrvgSvZA0I?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&t=1087
+- Ex: `Crazy Eights` DP for DAG shortest path
+- Term: `lattice`
+- Ex: `Manhattan shortest path` with DP
+- Optimal substructure
+- Cyclic to acyclic graph transformation
 
 ***
+
 #### Lecture 20: Dynamic Programming II: Text Justification, Blackjack (_Erik Demaine_)
+> https://www.youtube.com/watch?v=ENyox7kNKeY&index=20&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
+
+- DP analogies
+- 5 steps to DP
+- Ex: `Text justification`
+- Demo: `Blackjack`
+https://youtu.be/ENyox7kNKeY?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&t=1240 (tout vu, mais revoir)
+
 #### Recitation 20: Dynamic Programming: Blackjack (_Victor Costan_)
 ***
 #### Lecture 21: Dynamic Programming III: Parenthesization, Edit Distance, Knapsack (_Erik Demaine_)
