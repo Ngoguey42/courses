@@ -31,3 +31,25 @@
 - Meaning function
 - Syntax vs semantic (notation as a separate issue)
 - Ex: `arabic vs roman numbers`
+
+#### 03-05: Lexical Specifications
+- Regex examples
+
+#### DeduceIt Demo (8m25s)
+
+# Chapter 4: Finite Automata
+
+#### 04-01: Lexical Specification
+- Steps for lexical analysis of a language with regular expressions
+- Maximal munch of string match
+- Priority ordering of token clases
+- Errors last in priority
+
+#### 04-02: Finite Automata
+- What is NFA/DFA
+
+#### 04-03: Regular Expressions into NFAs
+- R.A.S.
+
+#### 04-04: NFA to DFA
+- Epsilon closure
