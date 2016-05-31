@@ -35,7 +35,8 @@
 #### 03-05: Lexical Specifications
 - Regex examples
 
-#### DeduceIt Demo (8m25s)
+#### DeduceIt Demo
+- R.A.S.
 
 # Chapter 4: Finite Automata
 
@@ -53,3 +54,33 @@
 
 #### 04-04: NFA to DFA
 - Epsilon closure
+
+#### 04-05: Implementing Finite Automata
+- impl dfa: `2d array (state, char) -> state`
+- impl dfa: `1d array (state) -> vector-id; 2d array (vector-id, char) -> state`
+- impl nfa: `2d array (state, char|epsilon) -> set of states`
+
+# Chapter 5: Parsing
+
+#### 05-01: Introduction to Parsing
+- Parse tree
+
+#### 05-02: Context Free Grammars
+- R.A.S.
+
+#### 05-03: Derivations
+- R.A.S.
+
+#### 05-04: Ambiguity
+- Ex: `resolving x * x + x ambiguity`
+- Ex: `resolving if if else ambiguity`
+- Precedence and associativity declarations
+
+# Chapter 6: Top-Down Parsing
+
+#### 06-01: Error Handling
+- 4 kind of errors (lexical, syntax, semantic, correctness)
+- 3 king of error handling (panic mode, error productions, automatic local or global correction)
+- Synchronizing tokens
+- Ex: `5x vs 5*x correction`
+- `PC/C` compiler for `PL/1` compiling everything
