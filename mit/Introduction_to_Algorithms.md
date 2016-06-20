@@ -330,8 +330,42 @@
 - DP analogies
 - 5 steps to DP
 - Ex: `Text justification`
-- Demo: `Blackjack`
-https://youtu.be/ENyox7kNKeY?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&t=1240 (tout vu, mais revoir)
+```
+incididunt ut labore et-----
+dolore magna aliqua Ut------
+enim ad minim veniam--------
+///
+ut labore et dolore---------
+magna aliqua Ut enim--------
+ad minim veniam-------------
+///
+labore et dolore------------
+magna aliqua Ut enim--------
+ad minim veniam-------------
+///
+et dolore magna aliqua------
+Ut enim ad minim veniam-----
+///
+dolore magna aliqua Ut------
+enim ad minim veniam--------
+///
+magna aliqua Ut enim--------
+ad minim veniam-------------
+///
+aliqua Ut enim--------------
+ad minim veniam-------------
+///
+Ut enim ad minim veniam-----
+///
+enim ad minim veniam--------
+///
+ad minim veniam-------------
+///
+minum veniam----------------
+///
+veniam----------------------
+```
+- Demo: `Perfect information Blackjack 1 player`
 
 #### Recitation 20: Dynamic Programming: Blackjack (_Victor Costan_)
 ***
