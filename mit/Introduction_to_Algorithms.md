@@ -368,9 +368,30 @@ veniam----------------------
 - Demo: `Perfect information Blackjack 1 player`
 
 #### Recitation 20: Dynamic Programming: Blackjack (_Victor Costan_)
+> https://www.youtube.com/watch?v=jZbkToeNK2g&index=43&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
+
+- Blackjack
+- Ex: `Longest subsequence in numbers`
+
 ***
+
 #### Lecture 21: Dynamic Programming III: Parenthesization, Edit Distance, Knapsack (_Erik Demaine_)
+> https://www.youtube.com/watch?v=ocZMDMZwhCY&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
+
+- Dynamic Programming samples (suffixes, prefixes, substrings)
+- Parenthesization
+- Edit Distance
+- Ex: `Longest common subsequence as edit distance`
+- Knapsack
+- Pseudo-polynomial time
+
 #### Recitation 21: Dynamic Programming: Knapsack Problem (_Victor Costan_)
+> https://www.youtube.com/watch?v=wFP5VHGHFdk&index=45&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
+
+- Knapsack with graph
+- Variations of Knapsack
+https://youtu.be/wFP5VHGHFdk?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&t=1017
+
 ***
 #### Lecture 22: Dynamic Programming IV: Guitar Fingering, Tetris, Super Mario Bros. (_Erik Demaine_)
 #### Recitation 22: Dynamic Programming: Dance Dance Revolution (_Victor Costan_)
