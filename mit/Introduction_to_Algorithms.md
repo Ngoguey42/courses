@@ -415,7 +415,10 @@ veniam----------------------
 
 - P, EXP and R complexity classes
 - Exemples of problems and their classes
-https://youtu.be/moPtwq_cVH8?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&t=878
+- NP class
+- Ex: `Tetris is NP-hard`
+- Reduction
+
 #### Recitation 23: Computational Complexity (_Victor Costan_)
 ***
 #### Lecture 24: Topics in Algorithms Research (_Srinivas Devadas_)
