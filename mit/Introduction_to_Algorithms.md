@@ -389,15 +389,33 @@ veniam----------------------
 > https://www.youtube.com/watch?v=wFP5VHGHFdk&index=45&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
 
 - Knapsack with graph
-- Variations of Knapsack
-https://youtu.be/wFP5VHGHFdk?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&t=1017
+- Knapsack with dp
+- Pseudo-polynomial explanations
 
 ***
 #### Lecture 22: Dynamic Programming IV: Guitar Fingering, Tetris, Super Mario Bros. (_Erik Demaine_)
+> https://www.youtube.com/watch?v=tp4_UXaVyx8&index=22&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
+
+- Demo: `Piano and guitar fingering, 1 note at a time`
+- Ex: `Piano and guitar fingering, multiple note at a time`
+- Ex: `Tetris`
+- Ex: `Super Mario Brothers`
+
 #### Recitation 22: Dynamic Programming: Dance Dance Revolution (_Victor Costan_)
+> https://www.youtube.com/watch?v=PptQgy89cN8&index=44&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
+
+- Numerical instability
+- Demo: `DDR`
+
 ***
 ## Unit 8: Advanced Topics
+
 #### Lecture 23: Computational Complexity (_Erik Demaine_)
+> https://www.youtube.com/watch?v=moPtwq_cVH8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=23
+
+- P, EXP and R complexity classes
+- Exemples of problems and their classes
+https://youtu.be/moPtwq_cVH8?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&t=878
 #### Recitation 23: Computational Complexity (_Victor Costan_)
 ***
 #### Lecture 24: Topics in Algorithms Research (_Srinivas Devadas_)
