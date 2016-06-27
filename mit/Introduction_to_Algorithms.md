@@ -420,6 +420,10 @@ veniam----------------------
 - Reduction
 
 #### Recitation 23: Computational Complexity (_Victor Costan_)
+> https://www.youtube.com/watch?v=t5Wxk96QjUk&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=46
+
+- k-SAT, conjonctive normal form
+
 ***
 #### Lecture 24: Topics in Algorithms Research (_Srinivas Devadas_)
 #### Recitation 24: Final Exam Review (_Victor Costan_)
