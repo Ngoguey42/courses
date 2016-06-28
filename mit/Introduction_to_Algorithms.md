@@ -425,6 +425,18 @@ veniam----------------------
 - k-SAT, conjonctive normal form
 
 ***
-#### Lecture 24: Topics in Algorithms Research (_Srinivas Devadas_)
+#### Lecture 24: Topics in Algorithms Research (_Srinivas Devadas_, _Erik Demaine_)
+> https://www.youtube.com/watch?v=dU40AvBURDQ&index=24&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
+
+- Intel's processors history
+- Parallel processor architectures
+- Execution migration
+- Algo classes at mit
+- Demo: `origami`
+- Sort/search in block model of computation
+- Planar graphs
+
 #### Recitation 24: Final Exam Review (_Victor Costan_)
+> https://www.youtube.com/watch?v=hkAONP0aC9w&index=47&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
+(pas vu)
 ***
