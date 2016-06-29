@@ -65,6 +65,11 @@ Term: `Dual of a graph`
  - `#nodes` - `#arcs` + `#faces` = `#connected components` * (2 - 2 * `genus`)
 - Sparsity lemma (implies no self loops and no parallel edges in a planar graph)
 - Interdigitating trees + Proof with `Jordan curve theorem`
+- Cycle-cut duality
+- `bond` = `sink` = `simple cut`
+- Info:
+ - Edges forming a cycle partition the faces into two connected groups.
+ - Connected faces must be surrounded by edges forming a cycle.
 
 #### Lecture 3: Planar separators (_Christian Sommer_)
 > Lipton-Tarjan and Miller's separators, r-divisions.
