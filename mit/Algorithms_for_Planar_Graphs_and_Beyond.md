@@ -85,19 +85,19 @@ We then show how to reduce the length of these cycles (1) by cutting the graph i
 > http://courses.csail.mit.edu/6.889/fall11/lectures/L04.html
 > http://courses.csail.mit.edu/6.889/fall11/lectures/L04.pdf
 
-#### Lecture 5:  (_Christian Sommer_)
+#### Lecture 5:  (_Siamak Tazari_)
 >
 >
 > http://courses.csail.mit.edu/6.889/fall11/lectures/L05.html
 > http://courses.csail.mit.edu/6.889/fall11/lectures/L05.pdf
 
-#### Lecture 6:  (_Christian Sommer_)
+#### Lecture 6:  (_Siamak Tazari_)
 >
 >
 > http://courses.csail.mit.edu/6.889/fall11/lectures/L06.html
 > http://courses.csail.mit.edu/6.889/fall11/lectures/L06.pdf
 
-#### Lecture 7:  (_Christian Sommer_)
+#### Lecture 7:  (_Siamak Tazari_)
 >
 >
 > http://courses.csail.mit.edu/6.889/fall11/lectures/L07.html
@@ -109,7 +109,7 @@ We then show how to reduce the length of these cycles (1) by cutting the graph i
 > http://courses.csail.mit.edu/6.889/fall11/lectures/L08.html
 > http://courses.csail.mit.edu/6.889/fall11/lectures/L08.pdf
 
-#### Lecture 9:  (_Christian Sommer_)
+#### Lecture 9:  (_Siamak Tazari_)
 >
 >
 > http://courses.csail.mit.edu/6.889/fall11/lectures/L09.html
