@@ -81,13 +81,14 @@
  - Let w be a vertex weight function w : V -> R+ (individual weights must be <= (1 - α)*w(V) )
  - V can be partitionned into 3 disjoint sets A,B,S:
 	 - no edges connect A and B
+	 - A and B may not form connected subgraphs
 	 - w(A) and w(B) are roughly the same ( w(A), w(B) <= α w(V) )
 	 - S stays small ( |S| <= f(n) )
 	 - Computed in linear time
 - Edge separator vs Vertex separator
  - Vertex separator in a binary tree allows α = 2/3
  - Edge separator in a binary tree allows α = 3/4
-- Triangulation of a graph
+- Triangulation of a graph (maximal planar)
  - The dual of a triangulated graph in a binary graph
  - A spanning the in the dual of a triangulated graph is a binary tree
 - Vertex degree in a binary tree is at most 3
@@ -112,8 +113,11 @@
 - Vertex separator (Lipton-Tarjan theorem)
  - Find the median vertex in the spanning tree of the graph, not its level L0 from the root
  - Find the two level >= and <=, such that their size <= sqrt(n)
+ - Let Head, L-, MHead, L0, MTail, L+, Tail be the 5 zones defined by those cuts
  - |Li−|, |Li+| ≤ √n
- - |i0 − i−|, |i+ − i0| ≤ √n/2.
+ - |i0 − i−|, |i+ − i0| < √n/2
+ - if |MHead + L0 + MTail + L + Tail| >= 2/3n then L- is S
+ - else if |Head + Tail| >= 2/3n then L- + L+ is S
 - r-division
 
 #### Lecture 4:  (_Christian Sommer_)
