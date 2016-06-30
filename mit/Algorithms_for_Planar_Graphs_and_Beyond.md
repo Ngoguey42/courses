@@ -5,9 +5,9 @@
 
 #### Lecture 1: Introduction (_Erik Demaine_)
 > Graphs considered: planar, bounded-genus, apex-minor-free, H-minor-free. Problems considered and survey of results.
-> This lecture is an introduction to the whole class, in particular an overview of the different types of graphs that we'll be talking about (the mysterious “Beyond” in the title). We also survey many different problems where we can do a lot better on planar graphs than we can on general graphs, to give you a flavor of what we will learn in the class.
-> http://courses.csail.mit.edu/6.889/fall11/lectures/L01.html
-> http://courses.csail.mit.edu/6.889/fall11/lectures/L01.pdf
+> - This lecture is an introduction to the whole class, in particular an overview of the different types of graphs that we'll be talking about (the mysterious “Beyond” in the title). We also survey many different problems where we can do a lot better on planar graphs than we can on general graphs, to give you a flavor of what we will learn in the class.
+> - http://courses.csail.mit.edu/6.889/fall11/lectures/L01.html
+> - http://courses.csail.mit.edu/6.889/fall11/lectures/L01.pdf
 
 - Maximum number of edges in a planar graph
 - Complexity of planar graphs
@@ -29,9 +29,9 @@
 
 #### Lecture 2: Embedded and planar graphs (_Shay Mozes_)
 > Basic definitions and concepts: combinatorial embeddings, duality, inter-digitating trees, cut-cycle duality.
-> This lecture covers the basics of embedded graphs and in particular planar graphs. We give a definition of graphs that views edges (rather than vertices) as the primary entities, and use that view in defining combinatorial embeddings of graphs. We discuss deletions and contractions, introduce the concept of the dual of an embedded graph and formally define planar graphs. We show two important properties of planar graphs: the duality of cuts and cycles, and the complementarity of primal and dual spanning trees. All of these concepts will be widely used in the algorithms we will present throughout the semester.
-> http://courses.csail.mit.edu/6.889/fall11/lectures/L02.html
-> http://courses.csail.mit.edu/6.889/fall11/lectures/L02.pdf
+> - This lecture covers the basics of embedded graphs and in particular planar graphs. We give a definition of graphs that views edges (rather than vertices) as the primary entities, and use that view in defining combinatorial embeddings of graphs. We discuss deletions and contractions, introduce the concept of the dual of an embedded graph and formally define planar graphs. We show two important properties of planar graphs: the duality of cuts and cycles, and the complementarity of primal and dual spanning trees. All of these concepts will be widely used in the algorithms we will present throughout the semester.
+> - http://courses.csail.mit.edu/6.889/fall11/lectures/L02.html
+> - http://courses.csail.mit.edu/6.889/fall11/lectures/L02.pdf
 
 - 3 ways to view graphs (arcs, edges, darts)
 - head/tail of a dart
@@ -69,11 +69,26 @@
 
 #### Lecture 3: Planar separators (_Christian Sommer_)
 > Lipton-Tarjan and Miller's separators, r-divisions.
-> Many efficient algorithms for planar graphs make use of «small separators»: small cuts that partition the graph into roughly balanced pieces. Such separators often allow us to apply a divide-and-conquer paradigm, recursively separating the graph to end up with small pieces with even smaller boundaries. These and related techniques are used in many algorithms we'll be presenting throughout the course.
-In this lecture, we discuss linear-time algorithms for planar graphs that find a small (O(√n)) subset of the nodes whose removal partitions the graph into disjoint subgraphs of size at most 3n/4. Based on interdigitating trees from Lecture 2, we first devise fundamental-cycle separators.
-We then show how to reduce the length of these cycles (1) by cutting the graph into pieces with smaller diameter and, if time permits, (2) by merging faces.
-> http://courses.csail.mit.edu/6.889/fall11/lectures/L03.html
-> http://courses.csail.mit.edu/6.889/fall11/lectures/L03.pdf
+> - Many efficient algorithms for planar graphs make use of «small separators»: small cuts that partition the graph into roughly balanced pieces. Such separators often allow us to apply a divide-and-conquer paradigm, recursively separating the graph to end up with small pieces with even smaller boundaries. These and related techniques are used in many algorithms we'll be presenting throughout the course.
+> - In this lecture, we discuss linear-time algorithms for planar graphs that find a small (O(√n)) subset of the nodes whose removal partitions the graph into disjoint subgraphs of size at most 3n/4. Based on interdigitating trees from Lecture 2, we first devise fundamental-cycle separators.
+> - We then show how to reduce the length of these cycles (1) by cutting the graph into pieces with smaller diameter and, if time permits, (2) by merging faces.
+> - http://courses.csail.mit.edu/6.889/fall11/lectures/L03.html
+> - http://courses.csail.mit.edu/6.889/fall11/lectures/L03.pdf
+
+- Planar separator theorem
+ - Let G be a planar graph
+ - Let V be the vertex set of G
+ - Let w be a vertex weight function w : V -> R+ (individual weights must be a fraction of set weight)
+ - V can be partitionned into 3 sets A,B,S:
+	 1. A and B are disjoint
+	 2. w(A) and w(B) are roughly the same ( w(A), w(B) <= α w(V) )
+	 3. S stays small ( |S| <= β f(n) )
+	 4. Computed in linear time
+
+- Fundamental Cycle Separator Lemma
+- Triangulate a graph
+- Vertex separator (Lipton-Tarjan theorem)
+- r-division
 
 #### Lecture 4:  (_Christian Sommer_)
 >
