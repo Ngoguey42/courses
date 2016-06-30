@@ -78,16 +78,42 @@
 - Planar separator theorem
  - Let G be a planar graph
  - Let V be the vertex set of G
- - Let w be a vertex weight function w : V -> R+ (individual weights must be a fraction of set weight)
- - V can be partitionned into 3 sets A,B,S:
-	 1. A and B are disjoint
-	 2. w(A) and w(B) are roughly the same ( w(A), w(B) <= α w(V) )
-	 3. S stays small ( |S| <= β f(n) )
-	 4. Computed in linear time
-
+ - Let w be a vertex weight function w : V -> R+ (individual weights must be <= (1 - α)*w(V) )
+ - V can be partitionned into 3 disjoint sets A,B,S:
+	 - no edges connect A and B
+	 - w(A) and w(B) are roughly the same ( w(A), w(B) <= α w(V) )
+	 - S stays small ( |S| <= f(n) )
+	 - Computed in linear time
+- Edge separator vs Vertex separator
+ - Vertex separator in a binary tree allows α = 2/3
+ - Edge separator in a binary tree allows α = 3/4
+- Triangulation of a graph
+ - The dual of a triangulated graph in a binary graph
+ - A spanning the in the dual of a triangulated graph is a binary tree
+- Vertex degree in a binary tree is at most 3
 - Fundamental Cycle Separator Lemma
-- Triangulate a graph
+ - Let G be a planar graph
+ - Let V be the vertex set of G
+ - Let n = |V|
+ - Let w be a vertex weight function w : V -> R+ (individual weights must be <= (1 - α)*w(V) )
+ - Let A,B,S be the partition of G
+	 - w(A), w(B) <= 3/4 w(V)
+     - |S| <= 2*d + 1
+	 - Computed in linear time
+ 1. Let T be the spanning tree of G
+ 2. Let d be the depth of T (length from the root to the futhest leaf)
+ 3. Every non-tree edge e defines a fundamental cycle C(e)
+ 4. THEN |S| = |C(e)| <= 2*d + 1
+ 5. Let G' be the triangulated version of G
+ 6. Let T* be the interdigitating tree of T in G' (binary tree)
+ 7. Assign weights from G to T* (black magic)
+ 8. T* being a binary tree, we can find an edge deviding it in two such that the fattest part <= 3/4 weight
+ 9. THEN w(A), w(B) <= 3/4 w(V)
 - Vertex separator (Lipton-Tarjan theorem)
+ - Find the median vertex in the spanning tree of the graph, not its level L0 from the root
+ - Find the two level >= and <=, such that their size <= sqrt(n)
+ - |Li−|, |Li+| ≤ √n
+ - |i0 − i−|, |i+ − i0| ≤ √n/2.
 - r-division
 
 #### Lecture 4:  (_Christian Sommer_)
