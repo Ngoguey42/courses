@@ -113,12 +113,28 @@
 - Vertex separator (Lipton-Tarjan theorem)
  - Find the median vertex in the spanning tree of the graph, not its level L0 from the root
  - Find the two level >= and <=, such that their size <= sqrt(n)
- - Let Head, L-, MHead, L0, MTail, L+, Tail be the 5 zones defined by those cuts
+ - Let (Head, Li-, Middle, Li+, Tail) be the 5 zones defined by those cuts
  - |Li−|, |Li+| ≤ √n
  - |i0 − i−|, |i+ − i0| < √n/2
- - if |MHead + L0 + MTail + L + Tail| >= 2/3n then L- is S
- - else if |Head + Tail| >= 2/3n then L- + L+ is S
+ - IF |Head| > 1/4n THEN Li- is S AND A = Head
+ - ELSE if |Tail| > 1/4n THEN Li+ is S AND A = Tail
+ - ELSE apply `fundamental separator lemma` to Middle with all further nodes deleted, and all previous nodes contracted
+    - we now get int(Middle) and ext(middle)
+	- S = {Li- U Li+ U bond(Middle)}
+	- A, B = some composition of Head, Tail, int(Middle), ext(middle)
 - r-division
+ - Is a division of the graph into O(n/r) disjoint pieces, each with at most r vertices, each with at most O(√r) pieces per boundary
+ - Total boundary size O(n/√r)
+- Maximum independant set `MIS` approximation in planar graphs
+ - Maximum set where no 2 nodes are connected.
+ - NP-complete (MaxSNP–complete to approximate)
+ - A planar graph is at most 4 colorable, so optimal solution <= n/4
+ - Error is at most 1/√(log log n)
+ 1. find an r-division for r = log log n
+ 2. remove all boundary nodes
+ 3. solve MIS per pieces P (brute force)
+ 4. return union over all pieces
+
 
 #### Lecture 4:  (_Christian Sommer_)
 >
