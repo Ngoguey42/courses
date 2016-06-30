@@ -39,35 +39,31 @@
 - Combinatorial embeddings (rotation system)
 - Topological embeddings
 - Term: `orbit`
-- Info:
  - orbits = cycles of the permutation Π = nodes of the graph
  - By convention a cycle is stated counter clockwise
  - A permutation Π is one possible combinatorial embedding of a graph.
  - An embedded graph is a pair G = (Π, A).
  - Some permutation might not correspond to a planar embedding.
-Term: `face of an embedded graph`
-- Info:
+- Term: `face of an embedded graph`
  - Π* = Π . rev
  - The faces of G = (Π, A) are the orbits of Π*
  - With combinatorial embeddings, each connected component has its own infinite face.
-Term: `Dual of a graph`
-- Info:
+- Term: `Dual of a graph`
  - G* = (Π*, A)
  - An edge in the primal connects the two vertices (head, tail) and separate two faces (left, right).
  - The `head` of an edge in the dual, connects to the `left` face from the primal.
  - The `tail` of an edge in the dual, connects to the `right` face from the primal.
 - Deletions / contractions in combinatorial embeddings
-- Def: `Contraction is deletion in the dual`
-- Def: `Contraction with self loops is undefined`
-- Def: `An embedding is planar if it satisfies Euler's formula`
-- Info:
+ - Contraction is deletion in the dual
+ - Contraction with self loops is undefined
+- An embedding is planar if it satisfies Euler's formula
  - n - m + f = k(2 - 2g)
  - `#nodes` - `#arcs` + `#faces` = `#connected components` * (2 - 2 * `genus`)
-- Sparsity lemma (implies no self loops and no parallel edges in a planar graph)
+- Sparsity lemma
+ - implies no self loops and no parallel edges in a planar graph)
 - Interdigitating trees + Proof with `Jordan curve theorem`
 - Cycle-cut duality
-- `bond` = `sink` = `simple cut`
-- Info:
+ - `bond` = `sink` = `simple cut`
  - Edges forming a cycle partition the faces into two connected groups.
  - Connected faces must be surrounded by edges forming a cycle.
 
