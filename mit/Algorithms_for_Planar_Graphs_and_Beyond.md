@@ -85,6 +85,7 @@
 	 - w(A) and w(B) are roughly the same ( w(A), w(B) <= α w(V) )
 	 - S stays small ( |S| <= f(n) )
 	 - Computed in linear time
+
 - Edge separator vs Vertex separator
  - Vertex separator in a binary tree allows α = 2/3
  - Edge separator in a binary tree allows α = 3/4
@@ -92,6 +93,7 @@
  - The dual of a triangulated graph in a binary graph
  - A spanning the in the dual of a triangulated graph is a binary tree
 - Vertex degree in a binary tree is at most 3
+
 - Fundamental Cycle Separator Lemma
  - Let G be a planar graph
  - Let V be the vertex set of G
@@ -110,6 +112,7 @@
  7. Assign weights from G to T* (black magic)
  8. T* being a binary tree, we can find an edge deviding it in two such that the fattest part <= 3/4 weight
  9. THEN w(A), w(B) <= 3/4 w(V)
+
 - Vertex separator (Lipton-Tarjan theorem)
  - Find the median vertex in the spanning tree of the graph, not its level L0 from the root
  - Find the two level >= and <=, such that their size <= sqrt(n)
@@ -122,6 +125,7 @@
     - we now get int(Middle) and ext(middle)
 	- S = {Li- U Li+ U bond(Middle)}
 	- A, B = some composition of Head, Tail, int(Middle), ext(middle)
+
 - r-division
  - Is a division of the graph into O(n/r) disjoint pieces, each with at most r vertices, each with at most O(√r) pieces per boundary
  - Total boundary size O(n/√r)
@@ -135,6 +139,20 @@
  3. solve MIS per pieces P (brute force)
  4. return union over all pieces
 
+http://www.cs.cmu.edu/~glmiller/Publications/Papers/Mi87.pdf
+- Cycle Separators (Miller)
+ - Do BFS in the dual, beginning with the infinit face
+ 1. Successive iterations carve the graph from the outside.
+ - At a certain point
+    - On the inside are left nodes that haven't been visited yet
+	- The outer bound is delimited by a cicle of edges in the PRIMAL.
+	- We consider the weight of the vertices inside the cycle that are in the PRIMAL.
+	- The vertices might have been disconnected from the iteration that just happended, forming groups.
+	- We stop if the current cycle has >0.5 w(V) and all child cycles have <=0.5 w(V)
+	- For the next iteration we follow the heavier of all the groups that were previously formed.
+ - Call this level i0
+ 2. Like in Lipton-Tarjan, find Li- and Li+
+ 3. Contract in the dual (delete in the primal)
 
 #### Lecture 4:  (_Christian Sommer_)
 >
