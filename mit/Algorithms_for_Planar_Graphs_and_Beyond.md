@@ -155,39 +155,43 @@
  - http://www.sommer.jp/cycleseparator.pdf
  - Only applies to maximal planar graphs
 
-#
-### Lecture 4:  (_Christian Sommer_)
->
->
-> http://courses.csail.mit.edu/6.889/fall11/lectures/L04.html
-> http://courses.csail.mit.edu/6.889/fall11/lectures/L04.pdf
+#### Lecture 4: Single-source shortest paths (_Christian Sommer_)
+> Nonnegative lengths in planar graphs.
+> - We see how to improve upon Dijkstra's algorithm for the SSSP problem in planar graphs with non-negative edge lengths. As an important technique, we revisit the concept of an r-division.
+> - In the previous lecture, we saw how to recursively separate a planar graph into small pieces with small total boundary. In this lecture, we see how to obtain a so-called r-division, where each individual piece is guaranteed to have small boundary (as opposed to small total boundary as in the previous lecture). We also discuss how to quickly compute such an r-division. Using an algorithm for fast r-division, we obtain a simple SSSP algorithm for planar graphs that's faster than Dijkstra's algorithm.
+> - We then discuss an even faster algorithm for SSSP in planar graphs. Despite the algorithm being quite simple, somewhat surprisingly, a rather involved analysis proves that its running time is linear, which is asymptotically optimal! We analyze a simplified version running in time O(n log logn). The algorithm works a little bit like Dijkstra's algorithm with “limited attention span”: The simple version starts by decomposing the graph into pieces of size O(log4 n). Then, it repeatedly works on the piece with the current minimum for log n steps until the shortest-path distance to all nodes has been found. We (partially) analyze the running time of the simplified algorithm.
+> - http://courses.csail.mit.edu/6.889/fall11/lectures/L04.html
+> - http://courses.csail.mit.edu/6.889/fall11/lectures/L04.pdf
+
+- SSSP in planar graph with r-division
+0:19:34
 
 #### Lecture 5:  (_Siamak Tazari_)
 >
 >
-> http://courses.csail.mit.edu/6.889/fall11/lectures/L05.html
-> http://courses.csail.mit.edu/6.889/fall11/lectures/L05.pdf
+> - http://courses.csail.mit.edu/6.889/fall11/lectures/L05.html
+> - http://courses.csail.mit.edu/6.889/fall11/lectures/L05.pdf
 
 #### Lecture 6:  (_Siamak Tazari_)
 >
 >
-> http://courses.csail.mit.edu/6.889/fall11/lectures/L06.html
-> http://courses.csail.mit.edu/6.889/fall11/lectures/L06.pdf
+> - http://courses.csail.mit.edu/6.889/fall11/lectures/L06.html
+> - http://courses.csail.mit.edu/6.889/fall11/lectures/L06.pdf
 
 #### Lecture 7:  (_Siamak Tazari_)
 >
 >
-> http://courses.csail.mit.edu/6.889/fall11/lectures/L07.html
-> http://courses.csail.mit.edu/6.889/fall11/lectures/L07.pdf
+> - http://courses.csail.mit.edu/6.889/fall11/lectures/L07.html
+> - http://courses.csail.mit.edu/6.889/fall11/lectures/L07.pdf
 
 #### Lecture 8:  (_Shay Mozes_)
 >
 >
-> http://courses.csail.mit.edu/6.889/fall11/lectures/L08.html
-> http://courses.csail.mit.edu/6.889/fall11/lectures/L08.pdf
+> - http://courses.csail.mit.edu/6.889/fall11/lectures/L08.html
+> - http://courses.csail.mit.edu/6.889/fall11/lectures/L08.pdf
 
 #### Lecture 9:  (_Siamak Tazari_)
 >
 >
-> http://courses.csail.mit.edu/6.889/fall11/lectures/L09.html
-> http://courses.csail.mit.edu/6.889/fall11/lectures/L09.pdf
+> - http://courses.csail.mit.edu/6.889/fall11/lectures/L09.html
+> - http://courses.csail.mit.edu/6.889/fall11/lectures/L09.pdf
