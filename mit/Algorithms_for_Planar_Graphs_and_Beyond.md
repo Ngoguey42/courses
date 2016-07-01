@@ -74,14 +74,15 @@
 > - We then show how to reduce the length of these cycles (1) by cutting the graph into pieces with smaller diameter and, if time permits, (2) by merging faces.
 > - http://courses.csail.mit.edu/6.889/fall11/lectures/L03.html
 > - http://courses.csail.mit.edu/6.889/fall11/lectures/L03.pdf
+> - https://en.wikipedia.org/wiki/Planar_separator_theorem
+> - http://tcs.rwth-aachen.de/lehre/Graphentheorie/WS2013/Jan_Dreier.pdf
 
 - Planar separator theorem
- - Let G be a planar graph
- - Let V be the vertex set of G
+ - Let G = (V,E) be a connected planar graph
  - Let w be a vertex weight function w : V -> R+ (individual weights must be <= (1 - α)*w(V) )
  - V can be partitionned into 3 disjoint sets A,B,S:
 	 - no edges connect A and B
-	 - A and B may not form connected subgraphs
+	 - A,B,S may be disconnected
 	 - w(A) and w(B) are roughly the same ( w(A), w(B) <= α w(V) )
 	 - S stays small ( |S| <= f(n) )
 	 - Computed in linear time
@@ -95,52 +96,59 @@
 - Vertex degree in a binary tree is at most 3
 
 - Fundamental Cycle Separator Lemma
- - Let G be a planar graph
- - Let V be the vertex set of G
- - Let n = |V|
- - Let w be a vertex weight function w : V -> R+ (individual weights must be <= (1 - α)*w(V) )
- - Let A,B,S be the partition of G
-	 - w(A), w(B) <= 3/4 w(V)
-     - |S| <= 2*d + 1
-	 - Computed in linear time
- 1. Let T be the spanning tree of G
- 2. Let d be the depth of T (length from the root to the futhest leaf)
- 3. Every non-tree edge e defines a fundamental cycle C(e)
- 4. THEN |S| = |C(e)| <= 2*d + 1
- 5. Let G' be the triangulated version of G
- 6. Let T* be the interdigitating tree of T in G' (binary tree)
- 7. Assign weights from G to T* (black magic)
- 8. T* being a binary tree, we can find an edge deviding it in two such that the fattest part <= 3/4 weight
- 9. THEN w(A), w(B) <= 3/4 w(V)
+ - Planar separator theorem with α=2/3 and f(n)=2*d+1
+ 1. For all T, spanning tree of G
+ 1. Let d be the depth of T (length from the root to the futhest leaf)
+ 1. Let r be the root of T
+ 1. For all non-tree edge e
+ 1. Let C(e) the fundamental cycle defined by e and T
+ 1. THEN |S| = |C(e)| <= 2*d + 1
+ 1. Let G' be the triangulated version of G
+ 1. Let T* be the interdigitating tree of T in G' (binary tree)
+ 1. Assign weights from G to T* (black magic)
+ 1. T* being a binary tree, we can find an edge deviding it in two such that the fattest part <= 2/3 w(v)
+ 1. THEN w(A), w(B) <= 2/3 w(V)
 
-- Vertex separator (Lipton-Tarjan theorem)
- - Find the median vertex in the spanning tree of the graph, not its level L0 from the root
- - Find the two level >= and <=, such that their size <= sqrt(n)
- - Let (Head, Li-, Middle, Li+, Tail) be the 5 zones defined by those cuts
- - |Li−|, |Li+| ≤ √n
- - |i0 − i−|, |i+ − i0| < √n/2
- - IF |Head| > 1/4n THEN Li- is S AND A = Head
- - ELSE if |Tail| > 1/4n THEN Li+ is S AND A = Tail
- - ELSE apply `fundamental separator lemma` to Middle with all further nodes deleted, and all previous nodes contracted
-    - we now get int(Middle) and ext(middle)
-	- S = {Li- U Li+ U bond(Middle)}
-	- A, B = some composition of Head, Tail, int(Middle), ext(middle)
+- Vertex separator (Lipton-Tarjan theorem) (Breadth-first layering)
+ 1. Let n = |V|
+ 1. Let v0 be an arbitrary vertex of G
+ 1. Let vk be a vertex encountered in a BFS starting at v0. 0 <= k <= n-1
+ 1. Let T be the BFS spanning tree.
+ 1. Let Li be a partition of V from it's distance to v0. (Li single step in the BFS)
+ 1. Let m be the number of steps in the BFS (layers)
+ 1. Let L[m - 1] be the last layer in the BFS
+ 1. Let Lm be a empty level. (In cast of)
+ 1. Let Li0 be the level containing the vertex vn/2 (median vertex)
+ 1. Let Li- be the first level with size <= √n before Li0 in the BFS. 0 <= i0 - i- <= √n/2
+ 1. Let Li+ be the first level with size <= √n after  Li0 in the BFS. 0 <= i+ - i0 <= √n/2
+ 1. Let {Head, Li-, Middle, Li+, Tail} = V be the five partitions of V so far.
+ 1. Let v be a single node, outcome of the contraction of Head and Li-.
+ 1. Let G' be a graph composed of v and Middle.
+ 1. Let T' be the same as T, but in G'
+ 1. Let int(G'), ext(G'), sep(G') be the oucome of a `Fundamental Cycle Separator Lemma` ran with G' as graph, v as root, T' as spanning tree.
+ 1. S = {Li-, Li+, sep(G')}, S <= 2√n + 2 * (√n + 1) + 1 <= 4√n + 3
+ 1. A and B are some optimal combination of Head, Tail, int(G'), ext(G')
 
 - r-division
- - Is a division of the graph into O(n/r) disjoint pieces, each with at most r vertices, each with at most O(√r) pieces per boundary
+ - Division of a planar graph, result of recursive applications of a planar separator algorithm.
+ - Divided into O(n/r) regions
+ - Each region containing <= r nodes and O(√r) boundary size
  - Total boundary size O(n/√r)
+ - Found in O(nlog(n))
+
 - Maximum independant set `MIS` approximation in planar graphs
  - Maximum set where no 2 nodes are connected.
  - NP-complete (MaxSNP–complete to approximate)
  - A planar graph is at most 4 colorable, so optimal solution <= n/4
- - Error is at most 1/√(log log n)
+ - Error is at most a factor of 1/√(log log n)
  1. find an r-division for r = log log n
- 2. remove all boundary nodes
- 3. solve MIS per pieces P (brute force)
- 4. return union over all pieces
+ 1. remove all boundary nodes
+ 1. solve MIS per pieces P (brute force)
+ 1. return union over all pieces
 
 http://www.cs.cmu.edu/~glmiller/Publications/Papers/Mi87.pdf
-- Cycle Separators (Miller)
+- Cycle Separators (Miller) (Simple cycle separators)
+ - Only applies to maximal planar graphs
  - Do BFS in the dual, beginning with the infinit face
  1. Successive iterations carve the graph from the outside.
  - At a certain point
