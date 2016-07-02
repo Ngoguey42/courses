@@ -17,6 +17,12 @@
 > https://www.youtube.com/watch?v=EzeYI7p9MjU&index=2&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp
 > http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/lecture-notes/MIT6_046JS15_lec02.pdf
 
+- Definition: `Divide and conquer`
+- Master theorem
+- Demo: `Convex hull`
+- 3d convex hull with `gift wrapping algorithm`
+https://youtu.be/EzeYI7p9MjU?list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&t=1217
+
 ## Module 2: Optimization - greedy and dynamic programming
 ## Module 3: Network Flow
 ## Module 4: Intractibility (and dealing with it)
