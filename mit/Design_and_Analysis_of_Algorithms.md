@@ -18,10 +18,22 @@
 > http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/lecture-notes/MIT6_046JS15_lec02.pdf
 
 - Definition: `Divide and conquer`
-- Master theorem
+- Ref: `Master theorem`
 - Demo: `Convex hull`
-- 3d convex hull with `gift wrapping algorithm`
-https://youtu.be/EzeYI7p9MjU?list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&t=1217
+- Ref: `3d convex hull with gift wrapping algorithm`
+- Demo: `2 finger algorithm for convex hull`
+- Median finding
+- Lower median / Upper median
+- median of medians
+
+#### Recitation 1: Matrix Multiplication and the Master Theorem (_Ling Ren_)
+> https://www.youtube.com/watch?v=09vU-wVwW3U&index=3&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp
+> http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/recitation-notes/MIT6_046JS15_Recitation1.pdf
+
+- Naive matrix-matrix multiplication with recursion
+- Weighted Interval Scheduling on multiple non-identical machine
+- Matrix-matrix multiplication with `Strassen algorithm`
+- Proof: `Master theorem`
 
 ## Module 2: Optimization - greedy and dynamic programming
 ## Module 3: Network Flow
