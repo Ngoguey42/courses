@@ -50,7 +50,7 @@
 - FFT
 
 <BR>
-STOP at (0:30:00)
+STOP at 0:30:00
 
 #### Recitation 2: 2-3 Trees and B-Trees (_Amartya Shanka Biswas_)
 > https://www.youtube.com/watch?v=TOb1tuEZ2X4&index=5&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp
@@ -62,6 +62,8 @@ STOP at (0:30:00)
 > https://www.youtube.com/watch?v=hmReJCupbNU&index=6&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp
 > http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/lecture-notes/MIT6_046JS15_lec04.pdf
 
+- van Emde Boas trees
+https://youtu.be/hmReJCupbNU?list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&t=1398
 
 ## Module 2: Optimization - greedy and dynamic programming
 ## Module 3: Network Flow
