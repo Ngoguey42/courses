@@ -35,6 +35,34 @@
 - Matrix-matrix multiplication with `Strassen algorithm`
 - Proof: `Master theorem`
 
+#### Lecture 3: Divide & Conquer: FFT (_Erik Demaine_)
+> https://www.youtube.com/watch?v=iTMn0Kt18tg&feature=youtu.be&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp
+> http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/lecture-notes/MIT6_046JS15_lec03.pdf
+
+- Vector notation for polynomials
+- Analysis of operations on polynomials
+- Horner's rule
+- Convolution of vectors
+- Dot product == Inner product
+- Representations of polynomials (Coeff vector, Roots, Samples)
+- Ref: `polynomial interpolation`
+- Vandermonde matrix
+- FFT
+
+<BR>
+STOP at (0:30:00)
+
+#### Recitation 2: 2-3 Trees and B-Trees (_Amartya Shanka Biswas_)
+> https://www.youtube.com/watch?v=TOb1tuEZ2X4&index=5&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp
+> http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/recitation-notes/MIT6_046JS15_Recitation2.pdf
+
+- B-Tree description
+
+#### Lecture 4: Divide & Conquer: van Emde Boas Trees (_Erik Demaine_)
+> https://www.youtube.com/watch?v=hmReJCupbNU&index=6&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp
+> http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/lecture-notes/MIT6_046JS15_lec04.pdf
+
+
 ## Module 2: Optimization - greedy and dynamic programming
 ## Module 3: Network Flow
 ## Module 4: Intractibility (and dealing with it)
