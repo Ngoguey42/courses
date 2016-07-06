@@ -61,9 +61,12 @@ STOP at 0:30:00
 #### Lecture 4: Divide & Conquer: van Emde Boas Trees (_Erik Demaine_)
 > https://www.youtube.com/watch?v=hmReJCupbNU&index=6&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp
 > http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/lecture-notes/MIT6_046JS15_lec04.pdf
+> http://webdiis.unizar.es/asignaturas/TAP/wp/wp-content/uploads/2011/04/Fig-20-6.jpg
+> https://docs.google.com/spreadsheets/d/1-k4HFWdZwipaEER0Hi5fqebDYn2FNNp6zmT9OlOOu2Q/edit#gid=0
 
-- van Emde Boas trees
-https://youtu.be/hmReJCupbNU?list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&t=1398
+- Van Emde Boas trees (`vEB tree`)
+- Space improvement: only store the non-empty items in clusters (with hashtbl instead of array)
+- Space improvement2: stop recursing when (u < O(lg lg U))
 
 ## Module 2: Optimization - greedy and dynamic programming
 ## Module 3: Network Flow
