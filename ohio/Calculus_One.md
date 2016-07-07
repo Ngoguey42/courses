@@ -60,20 +60,18 @@
 ### Lesson1: Introduction
 
 ### Lesson2: What are derivatives?
-
 - Differentiable function
 - Demo: `tangent and derivative`
 - Why isn't |x| differentiatiable
 
 ### Lesson3: Why would I care to find the derivative?
-
 - Ex: `Approximate nearby results with deriavative`
 
 ### Lesson4: How do differentiability and continuity relate?
-
 - Why is |x| continuous
 
 ### Lesson5: How do I find the derivative?
-
 - Power rule for derivatives
+- Sum of derivatives
+
 # Week5
