@@ -76,7 +76,10 @@
 - Rational function
 
 ### Lesson4: Higher Derivatives?
-
+- Concavity, inflection point
 
 ### Lesson5: How do I sketch a graph without a computer?
+- Local/global minimum/maximum/extremum
+- Fermat's theorem
+
 ### Lesson6: How do I differentiate e^x?
