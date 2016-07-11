@@ -1,6 +1,9 @@
 # Week1: Welcome to Calculus One
+> Welcome to Calculus! Join me on this journey through one of the great triumphs of human thought.
 
 # Week2: Functions and Limits
+> Functions are the main star of our journey. Calculus isn't numbers: it's relationships between things, and how one thing changing affects something else.
+
 ### Lesson1: Introduction
 
 ### Lesson2: Functions? What's a Function?
@@ -24,6 +27,8 @@
 - Demo: `speed of a ball`
 
 # Week3: The End of Limits
+> People have thought about infinity for thousands of years; limits provide one way to make such ponderings precise. Continuity makes precise the idea that small changes in the input don't affect the output much.
+
 ### Lesson1: Introduction
 
 ### Lesson1: Continuity
@@ -48,6 +53,8 @@
 - Def: `limit`
 
 # Week4: The Beginning of Derivatives
+> It is time to change topics, or rather, to study change itself! When we wiggle the input, the output value changes, and that ratio of output change to input change is the derivative.
+
 ### Lesson1: Introduction
 
 ### Lesson2: What are derivatives?
@@ -66,6 +73,8 @@
 - Sum of derivatives
 
 # Week5: Techniques of Differentiation
+> With the product rule and the quotient rule, we can differentiate products and quotients. And since the derivative is a function, we can differentiate the derivative to get the second derivative.
+
 ### Lesson1: Introduction
 
 ### Lesson2: How do I differentiate a product?
@@ -81,5 +90,36 @@
 ### Lesson5: How do I sketch a graph without a computer?
 - Local/global minimum/maximum/extremum
 - Fermat's theorem
+- Critical point of a function
+- Demo: `Draw a graph sketch by hand`
+- Ex: `for a function f, 2x2 table of f slope shape, given f' sign and f'' sign`
 
 ### Lesson6: How do I differentiate e^x?
+- Ex: `functions with f = f'`
+- Function being it's own derivative
+- Euler's number
+
+# Week6: Chain Rule
+> The chain rule lets us differentiate the composition of two functions. The chain rule can be used to compute the derivative of inverse functions, too.
+
+### Lesson1: Intro
+
+### Lesson2: What is the Chain Rule?
+- Ex: `Chain rule pictorialy`
+- Derivative of `(1+2x)^5`
+- Derivative of `sqrt(x^2 + 0.0001)`
+
+### Lesson3: How do I find the tangent line to a curve?
+- Implicit differentiation
+- Function vs Relation
+- https://www.geogebra.org/o/b8pSTJJF
+- foliom of Descartes
+- https://www.geogebra.org/o/qrHdwK63
+
+### Lesson4: How do I find the derivative of an inverse function?
+- Inverse function
+- Derivate of log function
+- Logarithmic differentiation
+
+### Lesson5: How can I multiply quickly?
+### Lesson6: How do I justify the derivative rules?
