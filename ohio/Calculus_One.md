@@ -169,4 +169,12 @@
 - Circular reasoning with l'Hôpital rule
 
 ### Lesson3: How can derivatives help me to understand rates of change in the real world?
+- Ex: `Gray goo`
+- Ex: `Sound of a car passing by`
+
 ### Lesson4: How do derivatives help me understand how two rates of change are related?
+- Ex: `Shadow length`
+- Ex: `Falling ladder`
+- Ex: `Water in a bowl`
+- Ex: `Water in a cone`
+- Ex: `Air in a balloon`
