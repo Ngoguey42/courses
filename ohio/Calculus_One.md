@@ -148,7 +148,16 @@
 
 ### Lesson4: How can I differentiate inverse trig functions?
 - Domain restriction of inverse trig functions
-- atan acos asin
+- Derivative of asin
+- Derivative of acos with asin
+- Derivative of atan
 
 ### Lesson5: What can we learn from the derivatives of trig functions?
+- Reason for sine oscillations
+- Calculation of sine value with recursive function
+
 ### Lesson6: Multiplying Trigonometric Functions with Slide Rules
+- Numbers multiplication with trigo functions
+
+# Week8: Derivatives in the Real World
+> Derivatives can be used to calculate limits via l'Hôpital's rule. Given a real-world equation involving two changing quantities, differentiating yields "related rates."
