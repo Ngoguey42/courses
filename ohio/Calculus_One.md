@@ -161,3 +161,12 @@
 
 # Week8: Derivatives in the Real World
 > Derivatives can be used to calculate limits via l'Hôpital's rule. Given a real-world equation involving two changing quantities, differentiating yields "related rates."
+
+### Lesson1: Intro
+
+### Lesson2: How can derivatives help with limits?
+- L'Hôpital rule
+- Circular reasoning with l'Hôpital rule
+
+### Lesson3: How can derivatives help me to understand rates of change in the real world?
+### Lesson4: How do derivatives help me understand how two rates of change are related?
