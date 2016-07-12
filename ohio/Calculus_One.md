@@ -139,9 +139,16 @@
 ### Lesson2: What is trigonometry?
 - Def: `Transcendental function`
 - Unusual trigonometric functions
+- Pythagorian identity `sin² + cos² = 1`
 
 ### Lesson3: How can I differentiate trig functions?
+- Derivative of sin/cos
+- Multiple derivatives of sin/cos
+- Derivate of tan
 
 ### Lesson4: How can I differentiate inverse trig functions?
+- Domain restriction of inverse trig functions
+- atan acos asin
+
 ### Lesson5: What can we learn from the derivatives of trig functions?
 ### Lesson6: Multiplying Trigonometric Functions with Slide Rules
