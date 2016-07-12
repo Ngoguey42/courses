@@ -122,4 +122,26 @@
 - Logarithmic differentiation
 
 ### Lesson5: How can I multiply quickly?
+- Quarter squares
+- Slide rule
+
 ### Lesson6: How do I justify the derivative rules?
+- Proof: `power rule`
+- Proof: `product rule`
+- Proof: `quotient rule`
+- Proof: `chain rule`
+
+# Week7: Derivatives of Transcendental (Trigonometric) Functions
+> So far, we can differentiate polynomials, exponential functions, and logarithms. Let's learn how to differentiate trigonometric functions.
+
+### Lesson1: Introduction
+
+### Lesson2: What is trigonometry?
+- Def: `Transcendental function`
+- Unusual trigonometric functions
+
+### Lesson3: How can I differentiate trig functions?
+
+### Lesson4: How can I differentiate inverse trig functions?
+### Lesson5: What can we learn from the derivatives of trig functions?
+### Lesson6: Multiplying Trigonometric Functions with Slide Rules
