@@ -200,3 +200,16 @@
 ### Lesson5: Optimization in Action
 - Ex: `Minimize bubble walls length`
 - Ex: `Hallway problem`
+
+# Week10: Linear Approximation
+> Replacing the curved graph by a straight line approximation helps us to estimate values and roots.
+
+# Lesson1: What is linear approximation?
+- Ex: `Volume of an orange rind`
+
+# Lesson2: What happens if I repeat linear approximation?
+3:25
+
+# Lesson3: What does dx mean by itself?
+# Lesson4: What is Newton's method?
+# Lesson5: What is the mean value theorem?
