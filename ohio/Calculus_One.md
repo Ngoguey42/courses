@@ -178,3 +178,25 @@
 - Ex: `Water in a bowl`
 - Ex: `Water in a cone`
 - Ex: `Air in a balloon`
+
+# Week9: Optimization
+> In the real world, we must makes choices, and wouldn't it be great if we could make the best choice? Such optimization is made possible with calculus.
+
+### Lesson1: Intro
+
+### Lesson2: Is optimization possible?
+- Extreme value theorem
+- Continuous image
+
+### Lesson3: Okay, so if optimization is possible, how do I do it?
+- Check endpoints and critical points for extreme values
+- http://www.wolframalpha.com/input/?i=x-%7Cx%5E2-2*x%7C%3D0
+- Ex: `Fence for my sheep`
+
+### Lesson4: Why would I want to optimize a function?
+- `Arithmetic geometric mean inequality` `AM-GM`
+- Ex: `Minimize soup can surface`
+
+### Lesson5: Optimization in Action
+- Ex: `Minimize bubble walls length`
+- Ex: `Hallway problem`
