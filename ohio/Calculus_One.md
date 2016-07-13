@@ -208,8 +208,17 @@
 - Ex: `Volume of an orange rind`
 
 # Lesson2: What happens if I repeat linear approximation?
-3:25
+- Ex: `Approximation of Euler's number (e)`
+- Ref: `pascal's triangle`
+- Euler's method
+- Ex: `Approximation of ln(2)`
 
 # Lesson3: What does dx mean by itself?
+TODO:revoir
+- Differential `dx`
+- `dy` is a change in the linearization of `y`
+
 # Lesson4: What is Newton's method?
+TODO:recommencer
+
 # Lesson5: What is the mean value theorem?
