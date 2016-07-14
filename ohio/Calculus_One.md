@@ -244,4 +244,17 @@
 - Locally constant function
 
 # Lesson4: Why is this so hard?
+- Antiderivative of `f(mx + b)`
+- Some antiderivates are not possible with elementary functions
+- Ex: `Factoring vs Multiply`
+
 # Lesson5: Why would anybody want to do this?
+- Ex: `Differential equation`
+- Half angle identity
+- Slope field
+
+```
+a(t) = 8
+v(t) = 8t + C
+p(t) = 4t² + Cx + D
+```
