@@ -214,11 +214,34 @@
 - Ex: `Approximation of ln(2)`
 
 # Lesson3: What does dx mean by itself?
-TODO:revoir
 - Differential `dx`
+- `Linearization` = `Linear approximation` = `Tangent line approximation`
 - `dy` is a change in the linearization of `y`
 
 # Lesson4: What is Newton's method?
-TODO:recommencer
+- Ref: `Galois theory`
+- Division with newton's method `Newton-Raphson division`
 
 # Lesson5: What is the mean value theorem?
+- `Mean Value Theorem` `MVT`
+- `f'(x) = 0` on an interval
+- `f'(x) > 0` on an interval
+
+# Week11: Antidifferentiation
+> Antidifferentiation is the process of untaking derivatives, of finding a function whose derivatives is a given function. Since it involves working backwards, antidifferentiation feels like "unbreaking a vase" and can be just as challenging.
+
+# Lesson1: Antidifferentiation
+
+# Lesson2: But there are so many antiderivatives!
+- All antiderivatives of a function differ by a constant
+
+# Lesson3: How am I supposed to compute antiderivatives?
+- Antiderivative of a sum
+- Antiderivative notation
+- Antiderivative of a power
+- Constant multiple rule
+- Antiderivative of an inverse
+- Locally constant function
+
+# Lesson4: Why is this so hard?
+# Lesson5: Why would anybody want to do this?
