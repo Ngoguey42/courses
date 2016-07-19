@@ -258,3 +258,32 @@ a(t) = 8
 v(t) = 8t + C
 p(t) = 4t² + Cx + D
 ```
+
+# Week12: Integration
+> By cutting up a curved region into thin rectangles and taking a limit of the sum of the areas of those rectangles, we compute (define!) the area of a curved region.
+
+# Lesson1: Introduction
+
+# Lesson2: What is summation notation?
+- Sum of odd numbers
+- Sum of squareds
+- Nicomachus' Theorem
+
+# Lesson3: What is area?
+- Area of a square being a limit
+
+# Lesson4: So how do we calculate area precisely?
+- {Left, Right} Riemann sum
+- Integrals
+
+# Lesson5: Can we compute any of these integrals?
+- Ex: `Integration of x² 0->1`
+- Ex: `Integration of x³ 0->2`
+- Sum of integrals
+
+# Lesson6: Can we understand anything conceptually about integrals?
+- Constant multiple of intagral
+- Accumulation function
+
+# Lesson7: Can we compute any other integrals?
+- Ex: `Integration of sin(x) -1->1`
