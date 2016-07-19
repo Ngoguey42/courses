@@ -68,6 +68,23 @@ STOP at 0:30:00
 - Space improvement: only store the non-empty items in clusters (with hashtbl instead of array)
 - Space improvement2: stop recursing when (u < O(lg lg U))
 
+#### Lecture 4: Amortization: Amortized Analysis (_Erik Demaine_)
+> https://www.youtube.com/watch?v=3MpzavN3Mco&index=7&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp
+> http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/lecture-notes/MIT6_046JS15_lec05.pdf
+
+- Aggregate method
+- Ex: `Amortization on 2-3 trees`
+- Accounting method
+- Ex: `Amortization on Table doubling`
+Pas compris accounting method
+https://youtu.be/3MpzavN3Mco?list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&t=1617
+
+- Charging method
+- Potential method
+
+- Binary counter
+
+
 ## Module 2: Optimization - greedy and dynamic programming
 ## Module 3: Network Flow
 ## Module 4: Intractibility (and dealing with it)

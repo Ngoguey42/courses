@@ -287,3 +287,14 @@ p(t) = 4t² + Cx + D
 
 # Lesson7: Can we compute any other integrals?
 - Ex: `Integration of sin(x) -1->1`
+
+# Week13: Fundamental Theorem of Calculus
+> Armed with the Fundamental Theorem of Calculus, evaluating a definite integral amounts to finding an antiderivative.
+
+# Lesson1: Introduction
+
+# Lesson2: What is the fundamental theorem of calculus?
+
+# Lesson3: How am I supposed to use the fundamental theorem of calculus?
+# Lesson4: What else can we compute this way?
+# Lesson5: But why is the fundamental theorem true?
