@@ -1,4 +1,4 @@
-## Module 1: Divide and Conquer - FFT, Randomized algorithms
+## Module 1: Divide and Conquer - FFT
 
 #### Lecture 1: Course Overview, Interval Scheduling (_Srinivas Devadas_)
 > https://www.youtube.com/watch?v=2P-yW7LQr08&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp
@@ -68,7 +68,7 @@ STOP at 0:30:00
 - Space improvement: only store the non-empty items in clusters (with hashtbl instead of array)
 - Space improvement2: stop recursing when (u < O(lg lg U))
 
-#### Lecture 4: Amortization: Amortized Analysis (_Erik Demaine_)
+#### Lecture 5: Amortization: Amortized Analysis (_Erik Demaine_)
 > https://www.youtube.com/watch?v=3MpzavN3Mco&index=7&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp
 > http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/lecture-notes/MIT6_046JS15_lec05.pdf
 
@@ -76,18 +76,28 @@ STOP at 0:30:00
 - Ex: `Amortization on 2-3 trees`
 - Accounting method
 - Ex: `Amortization on Table doubling`
-Pas compris accounting method
-https://youtu.be/3MpzavN3Mco?list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&t=1617
-
 - Charging method
+- Ex: `Amortization on Table doubling and halving`
 - Potential method
+- Ex: `Amortization on Binary counter`
+- Ex: `Amortization on 2-3 trees`
+- Ex: `Amortization on a-b trees`
 
-- Binary counter
 
+## Module 2: Randomized algorithms
 
-## Module 2: Optimization - greedy and dynamic programming
-## Module 3: Network Flow
-## Module 4: Intractibility (and dealing with it)
-## Module 5: Linear programming
-## Module 6: Sublinear algorithms, approximation algorithms
-## Module 7: Advanced topics
+#### Lecture 6: Randomization: Matrix Multiply, Quicksort
+> https://www.youtube.com/watch?v=cNB2lADK3_s&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=8
+> http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/lecture-notes/MIT6_046JS15_lec06.pdf
+
+- Probably correct: Monte-Carlo (runs in probabilistic * time)
+- Probably fast: Las-Vegas (runs in expected * time)
+- Comparisons of matrix multiplicatons algorithms
+https://youtu.be/cNB2lADK3_s?list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&t=1024
+
+## Module 3: Optimization - greedy and dynamic programming
+## Module 4: Network Flow
+## Module 5: Intractibility (and dealing with it)
+## Module 6: Linear programming
+## Module 7: Sublinear algorithms, approximation algorithms
+## Module 8: Advanced topics
