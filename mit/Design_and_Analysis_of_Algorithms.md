@@ -90,9 +90,10 @@ STOP at 0:30:00
 > https://www.youtube.com/watch?v=cNB2lADK3_s&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=8
 > http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/lecture-notes/MIT6_046JS15_lec06.pdf
 
-- Probably correct: Monte-Carlo (runs in probabilistic * time)
-- Probably fast: Las-Vegas (runs in expected * time)
+- Monte-Carlo, probably correct, runs in probabilistic * time, outputs false positives
+- Las-Vegas, probably fast, runs in expected * time
 - Comparisons of matrix multiplicatons algorithms
+- Frievald's algorithm
 https://youtu.be/cNB2lADK3_s?list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&t=1024
 
 ## Module 3: Optimization - greedy and dynamic programming
