@@ -335,3 +335,18 @@ p(t) = 4t² + Cx + D
 
 ### Lesson5: How does long division help?
 - Ex: `22/7 > pi`
+
+# Week 16: Applications of Integration
+> We have already used integrals to compute area; integration can also be used to compute volumes.
+
+### Lesson1: Applications of Integration: Introduction
+
+### Lesson2: How else can I calculate area?
+- Horizontal integration
+
+### Lesson3: How can I calculate volume?
+- Volumes with integration
+- Shells vs washers
+
+### Lesson4: How can I calculate length?
+- Length of an arc
