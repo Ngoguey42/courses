@@ -1,3 +1,16 @@
+```sh
+zsh --login "/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh" #School
+mkdir -p /Users/Shared/FPPS; cd /Users/Shared/FPPS #School
+
+docker-machine restart default #School if broken certs
+eval "$(docker-machine env default)" #School if broken certs
+
+mkdir -p ~/FPPS; cd ~/FPPS #Home, from quickstart terminal
+cd /cygdrive/c/Users/Ngo/FPPS #Home, from mintty
+
+docker run -it -v `pwd`:/workdir williamyeh/scala bash
+```
+
 # Week 1: Getting Started + Functions & Evaluation
 > Get up and running with Scala on your computer. Complete an example assignment to familiarize yourself with our unique way of submitting assignments. In this week, we'll learn the difference between functional imperative programming. We step through the basics of Scala; covering expressions, evaluation, conditionals, functions, and recursion
 
@@ -88,23 +101,18 @@ def sum(f: Int => Int, a_init: Int, b: Int) = {
 
 printf("(%d)\n",
   sum(x => x * x, 0, 3) +
-  sum((x: Int) => x, 4, 6))
-
-// Alternative syntax:
-// def sum(f: Int => Int)(a_init: Int, b: Int)
-// ...
-// printf("(%d)\n", sum(x => x * x)(0, 3)
-//   + sum((x: Int) => x)(4, 6))
-
-}
+  sum((x: Int) => x, 4, 6))}
 ```
 
 ### Lecture 2.2 - Currying
 https://www.coursera.org/learn/progfun1/lecture/fOuQ9/lecture-2-2-currying
 
 ```scala
-
+def sum(f: Int => Int): (Int, Int) => Int =
+def sum(f: Int => Int)(a_init: Int, b: Int) =
 ```
+
+
 ```scala
 
 ```
