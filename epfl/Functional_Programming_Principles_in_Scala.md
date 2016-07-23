@@ -402,6 +402,10 @@ val a: Array[Bart] = Array(new Bart, new Bart)
 // val b: Array[Homer] = a //error
 ```
 
+### Lecture 4.4 - Variance (Optional)
+- Functions are contravariant in their argument types and covariant in their result type
+
+
 ```scala
 
 ```
