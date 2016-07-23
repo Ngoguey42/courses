@@ -166,6 +166,64 @@ r max s
 > This week, we'll cover traits, and we'll learn how to organize classes into hierarchies. We'll cover the hierarchy of standard Scala types, and see how to organize classes and traits into packages. Finally, we'll touch upon the different sorts of polymorphism in Scala.
 
 ### Lecture 3.1 - Class Hierarchies
+- dynamic method dispatch
+```scala
+abstract class IntSet { //superclass, extends Object from java.lang package
+  def incl(x: Int): IntSet
+  def contains(x: Int): Boolean
+  def lol = 1
+}
+class Empty extends IntSet { //subclass
+  override lol = 2
+}
+object Empty extends IntSet { // alternative, singleton
+```
+
+### Lecture 3.2 - How Classes Are Organized
+- pervasive: scala, java.lang, scala.Predef
+- Single inheritance
+```scala
+package ft
+class Vector() {
+}
+////////////////////////
+import ft._ // wildcard import
+import ft.{Vector, fn}
+```
+```scala
+trait Planar { //no parameters
+
+}
+class Square extends Shape with Planar
+```
+- `Any` contains equals, hashCode, toString, ==, !=
+- `AnyRef` is java.lang.Object
+- `AnyVal` is primitive types from java
+- `Nothing`
+- `Null` value of type `null`
+```scala
+val x = null
+val y: String = null
+def v = if (true) 1 else false // v: AnyVal = 1
+```
+
+### Lecture 3.3 - Polymorphism
+- Cons Lists
+- Type erasure
+
+```scala
+trait List[T]
+class Cons[T](val head: T, val tail: List[T]) extends List[T] // `val` defines a field `head`
+
+def singleton[T](elem: T) = new Cons[T](elem, new Nil[T])
+```
+
+# Week4: Types and Pattern Matching
+> This week we'll learn about the relationship between functions and objects in Scala; functions *are* objects! We'll zoom in on Scala's type system, covering subtyping and generics, and moving on to more advanced aspects of Scala's type system like variance. Finally, we'll cover Scala's most widely used data structure, Lists, and one of Scala's most powerful tools, pattern matching.
+
+```scala
+
+```
 ```scala
 
 ```
