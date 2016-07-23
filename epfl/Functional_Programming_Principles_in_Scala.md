@@ -312,12 +312,7 @@ val f = new Function1[Int, Int] {
 ### Lecture 4.3 - Subtyping and Generics
 - Liscov Substitution Principle
 - Type bounds
-- `S <: T` S is a subtype of T
-- `S >: T` S is a supertype of T
-```scala
-def assertAllPos[S <: IntSet](r: S): S = .... //upper bound, S ⊆ {?}
-def assertAllPos[S >: NonEmpty](r: S): S = .... //lower bound, S ⊆ {NonEmpty | IntSet | AnyRef | Any}
-```
+- Ras le cul
 ```scala
 
 ```
