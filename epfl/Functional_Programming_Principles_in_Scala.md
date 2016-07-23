@@ -312,7 +312,105 @@ val f = new Function1[Int, Int] {
 ### Lecture 4.3 - Subtyping and Generics
 - Liscov Substitution Principle
 - Type bounds
-- Ras le cul
+```scala
+class Homer {}
+class Bart extends Homer {}
+class Lisa extends Homer {}
+
+object test_lowerbound {
+  def rose_donut[T <: Lisa](eater : T) = 42
+  def cola_donut[T <: Bart](eater : T) = 42
+  def choco_donut[T <: Homer](eater : T) = 42
+
+  // Shows `inheritance`
+  def test_concrete {
+    def h = new Homer()
+    def b = new Bart()
+    def l = new Lisa()
+
+    // rose_donut(h)
+    // rose_donut(b)
+    rose_donut(l)
+
+    // cola_donut(h)
+    cola_donut(b)
+    // cola_donut(l)
+
+    choco_donut(h)
+    choco_donut(b)
+    choco_donut(l)
+  }
+
+  // Shows `bound` being a compilation process only
+  def test_as_homer {
+    def h: Homer = new Homer()
+    def b: Homer = new Bart()
+    def l: Homer = new Lisa()
+
+    // rose_donut(h)
+    // rose_donut(b)
+    // rose_donut(l)
+
+    // cola_donut(h)
+    // cola_donut(b)
+    // cola_donut(l)
+
+    choco_donut(h)
+    choco_donut(b)
+    choco_donut(l)
+  }
+
+  // Shows `null` is a subtype of everything
+  def test_builtin_types {
+    choco_donut(null)
+    // choco_donut(42 : Any)
+  }
+}
+
+object test_upperbound {
+  def notHomerSubtype[T >: Homer]() = 42
+
+  // Type need to be explicitly specified (and not infered from parameter), because all values are castable to Any, and all types are upperbounded by any (including Any).
+  def test_concrete {
+    notHomerSubtype[Any]()
+    notHomerSubtype[AnyRef]()
+    notHomerSubtype[Homer]()
+    // notHomerSubtype[Lisa]()
+    // notHomerSubtype[Bart]()
+    // notHomerSubtype[Nothing]()
+    // notHomerSubtype[Unit]()
+    // notHomerSubtype[Nil]()
+  }
+}
+```
+```scala
+Bart <: Homer
+//Bart is a subtype of homer, Bart can be expressed as Homer
+//`Bart` is covariant in `T`
+
+List[Bart] <: List[Homer]
+//List[Bart] is a subtype of List[Homer], List[Bart] can be expressed as a List[Homer]
+//`List` is covariant in `T`
+
+not Array[Bart] <: Array[Homer]
+//Array[Bart] is a NOT subtype of Array[Homer], Array[Bart] CAN'T be expressed as a Array[Homer]
+//`Array` is invariant in `T`
+```
+- History: `Array covariance in Java`
+```scala
+val a: Array[Bart] = Array(new Bart, new Bart)
+// val b: Array[Homer] = a //error
+```
+
+```scala
+
+```
+```scala
+
+```
+```scala
+
+```
 ```scala
 
 ```
