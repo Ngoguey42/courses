@@ -105,14 +105,67 @@ printf("(%d)\n",
 ```
 
 ### Lecture 2.2 - Currying
-https://www.coursera.org/learn/progfun1/lecture/fOuQ9/lecture-2-2-currying
-
 ```scala
-def sum(f: Int => Int): (Int, Int) => Int =
-def sum(f: Int => Int)(a_init: Int, b: Int) =
+def sum(f: Int => Int): (Int, Int) => Int = ...
+def sum(f: Int => Int)(a_init: Int, b: Int) = ...
 ```
 
+### Lecture 2.3 - Example: Finding Fixed Points
 
+### Lecture 2.4 - Scala Syntax Summary
+- `Extended Backus-Naur form` `EBNF`
+
+### Lecture 2.5 - Functions and Data
+```scala
+class Rational(x: Int, y: Int) {
+  def numer : x
+  def denom : y
+
+  def add(that: Rational) =
+    new Rational(numer * ....)
+
+  override
+  def toString = nunber + "/" + denom
+
+}
+val x = new Rational(1, 2)
+x.numer
+```
+
+### Lecture 2.6 - More Fun With Rationals
+- `Don't repeat yourself` `DRY`
+- Primary constructor
+```scala
+class Rational(x: Int, y: Int) {
+  require(y != 0, "noob")
+
+  def this(x: Int) = this(x, 1)
+
+  private val g = gcd(x, y)
+  val numer : x
+  val denom : y
+  def max(that: Rational) = if (this.less(that)) that else this
+}
+```
+### Lecture 2.7 - Evaluation and Operators
+- Infix method notation
+- Identifiers can contain/begin with punctuation
+- Precedent of an operator is determined by its first char
+```scala
+class Rational(x: Int, y: Int) {
+  def < (that : Rational) = ...
+  def unary_- : Rational = new Rational(-numer, denom)
+}
+new Rational(1, 2).numer
+r add s
+r less s
+r max s
+```
+
+# Week 3: Data and Abstraction
+> This week, we'll cover traits, and we'll learn how to organize classes into hierarchies. We'll cover the hierarchy of standard Scala types, and see how to organize classes and traits into packages. Finally, we'll touch upon the different sorts of polymorphism in Scala.
+
+### Lecture 3.1 - Class Hierarchies
 ```scala
 
 ```
