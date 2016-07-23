@@ -162,6 +162,7 @@ r less s
 r max s
 ```
 
+
 # Week 3: Data and Abstraction
 > This week, we'll cover traits, and we'll learn how to organize classes into hierarchies. We'll cover the hierarchy of standard Scala types, and see how to organize classes and traits into packages. Finally, we'll touch upon the different sorts of polymorphism in Scala.
 
@@ -218,9 +219,105 @@ class Cons[T](val head: T, val tail: List[T]) extends List[T] // `val` defines a
 def singleton[T](elem: T) = new Cons[T](elem, new Nil[T])
 ```
 
+
 # Week4: Types and Pattern Matching
 > This week we'll learn about the relationship between functions and objects in Scala; functions *are* objects! We'll zoom in on Scala's type system, covering subtyping and generics, and moving on to more advanced aspects of Scala's type system like variance. Finally, we'll cover Scala's most widely used data structure, Lists, and one of Scala's most powerful tools, pattern matching.
 
+### Lecture 4.1 - Objects Everywhere
+- types: primitive, function, class
+- pure object orientation
+- Ex: `Pure Booleans`
+- Ad-hoc Polymorphism for methods
+```scala
+abstract class Bowlean {
+  def ifThenElse[T](t: => T, e: => T): T
+  def && (x: => Bowlean): Bowlean =
+    ifThenElse(x, flase)
+  def || (x: => Bowlean): Bowlean =
+    ifThenElse(trou, x)
+  def unary_! : Bowlean =
+    ifThenElse(flase, trou)
+  def == (x: Bowlean): Bowlean =
+    ifThenElse(x, x.unary_!)
+  def != (x: Bowlean): Bowlean =
+    ifThenElse(x.unary_!, x)
+}
+object trou extends Bowlean {
+ def ifThenElse[T](t: => T, e: => T) = t
+}
+object flase extends Bowlean {
+ def ifThenElse[T](t: => T, e: => T) = e
+}
+```
+- peano numbers
+```scala
+// Test
+package ft
+
+abstract class Nat {
+  def location() : String = {
+    def st = Thread.currentThread.getStackTrace()(3)
+    s"${st.getClassName}($this).${st.getMethodName}"
+  }
+  def isZero: scala.Boolean
+  def successor(): Nat = {
+    printf("%s\n", this.location)
+    def v = new Succ(this)
+    printf("%s created (%s)\n", this.location, v)
+    v
+  }
+  def predecessor(): Nat
+  def + (that: Nat): Nat
+  def - (that: Nat): Nat
+}
+
+object Zero extends Nat {
+  def isZero: scala.Boolean = true
+  def predecessor() = throw new Error("tamere")
+  def +(that: Nat) = {
+    printf("%s(that = %s)\n", this.location, that)
+    that
+  }
+  def -(that: Nat) =
+    if (that.isZero) this
+    else throw new Error("tamere2")
+  override def toString = "0"
+}
+
+class Succ(n: Nat) extends Nat {
+  def isZero = false
+  def predecessor() = n
+  def +(that: Nat) = {
+    printf("%s(that = %s)\n", this.location, that)
+    def v = new Succ(n + that)
+    printf("%s(that = %s) created (%s)\n", this.location, that, v)
+    v
+  }
+  def -(that: Nat) =
+    n - that.predecessor
+  override def toString = "" + (n.toString.toInt + 1)
+}
+```
+
+### Lecture 4.2 - Functions as Objects
+- `A => B` is an abbreviation for `scala.Function1[A, B]`
+- class function
+- eta-expansion
+```scala
+val f = new Function1[Int, Int] {
+  def apply(x: Int) = x * x
+}
+```
+
+### Lecture 4.3 - Subtyping and Generics
+- Liscov Substitution Principle
+- Type bounds
+- `S <: T` S is a subtype of T
+- `S >: T` S is a supertype of T
+```scala
+def assertAllPos[S <: IntSet](r: S): S = .... //upper bound, S ⊆ {?}
+def assertAllPos[S >: NonEmpty](r: S): S = .... //lower bound, S ⊆ {NonEmpty | IntSet | AnyRef | Any}
+```
 ```scala
 
 ```
