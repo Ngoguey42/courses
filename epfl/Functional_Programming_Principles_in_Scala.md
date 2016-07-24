@@ -473,7 +473,85 @@ def msort[T](l: List[t])(implicit ord: Ordering[T])
 ### Lecture 5.7 - A Larger Equational Proof on Lists
 
 # Week6: Collections
+> After a deep-dive into Lists, this week we'll explore other data structures; vectors, maps, ranges, arrays, and more. We'll dive into Scala's powerful and flexible for-comprehensions for querying data.
 
+### Lecture 6.1 - Other Collections
+- Vector implemented as persistent 32-tree
+- Hierarchy in containers `Iterable`, `Seq`/`Map`/`Set`, `List`/`Vector`/...
+- `Array` and `String` have same operations, and come from Java
+- `Range`
+```scala
+def scalarProduct(xs: Vector[Double], ys: Vector[Double]): Double =
+  (xs zip ys)
+    .map{case (x, y) => x * y}
+    .sum
+
+def isPrime(n: Int): Boolean =
+  (2 until u)
+    .forall(d => u % d != 0)
+```
+
+### Lecture 6.2 - Combinatorial Search and For-Expressions
+- `Indexed sequence`
+- `Generators` and `filters`
+```scala
+    def n = 10
+
+    ((1 until n).map(i =>
+      (1 until i).map(j => (i, j))))
+      .flatten
+      .filter(p => isPrime(p._1 + p._2))
+      .foreach(t =>
+      println(s"${t._1} + ${t._2} = ${t._1 + t._2}")
+    )
+
+    ((1 until n).flatMap(i =>
+      (1 until i).map(j => (i, j))))
+      .filter(p => isPrime(p._1 + p._2))
+      .foreach{case (i, j) =>
+        println(s"${i} + ${j} = ${i + j}")
+    }
+
+    ((1 until n).flatMap(i =>
+      (1 until i).map(j => (i, j))))
+      .filter{case (x, y) => isPrime(x + y)}
+      .foreach{case (i, j) =>
+        println(s"${i} + ${j} = ${i + j}")
+    }
+
+    (for {
+      i <- 1 until n
+      j <- 1 until i
+      if isPrime(i + j)
+    } yield (i, j))
+      .foreach{case (i, j) =>
+        println(s"${i} + ${j} = ${i + j}")
+    }
+
+    for {
+      i <- 1 until n
+      j <- 1 until i
+      if isPrime(i + j)}
+      println(s"${i} + ${j} = ${i + j}")
+```
+
+### Lecture 6.3 - Combinatorial Search Example
+Ex: `n-queens`
+https://www.coursera.org/learn/progfun1/lecture/H3cKk/lecture-6-3-combinatorial-search-example
+```scala
+(1 to 6)
+  .toSet
+  .filter(_ % 2 == 0) // Placeholder syntax
+```
+```scala
+
+```
+```scala
+
+```
+```scala
+
+```
 ```scala
 
 ```
