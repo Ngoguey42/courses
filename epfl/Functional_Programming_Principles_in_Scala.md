@@ -537,27 +537,32 @@ def isPrime(n: Int): Boolean =
 
 ### Lecture 6.3 - Combinatorial Search Example
 Ex: `n-queens`
-https://www.coursera.org/learn/progfun1/lecture/H3cKk/lecture-6-3-combinatorial-search-example
 ```scala
 (1 to 6)
   .toSet
   .filter(_ % 2 == 0) // Placeholder syntax
 ```
-```scala
 
-```
+### Lecture 6.4 - Maps
+- Ex: `Polynomials in a map`
+- Repeated parameters
 ```scala
+Map('I' -> 1, 'V' -> 5, 'x' -> 10)
+'I' -> 1 == ('I', 1)
 
-```
-```scala
+trait Option[+A]
+case class Some[+A](value: A) extends Option[A]
+object None extends Option[Nothing]
 
-```
-```scala
+fruit.sortWith(_.length < _.length)
 
-```
-```scala
+(for ((exp, coeff) <- terms.toList.sorted.reverse)
+  yield coef+"x^"+exp)
+.mkstring "+"
 
+def this(bindings: (Int, Double)*) = this(bindings.toMap)
 ```
-```scala
 
-```
+### Lecture 6.5 - Putting the Pieces Together
+
+### Conclusion
