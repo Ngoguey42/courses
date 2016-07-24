@@ -403,21 +403,77 @@ val a: Array[Bart] = Array(new Bart, new Bart)
 ```
 
 ### Lecture 4.4 - Variance (Optional)
-- Functions are contravariant in their argument types and covariant in their result type
 
+### Lecture 4.5 - Decomposition
+- Decomposition: Full methods vs Reflection+casts vs OO
 
+### Lecture 4.6 - Pattern Matching
+- Decomposition: Parrtern Matching
+- Companion objects of `case classes`
+- `Expression problem`
 ```scala
 
-```
-```scala
+trait Expr
+case class Number(n: Int) extends Expr
+case class Sum(e1: Expr, e2: Expr) extends Expr
 
+object test {
+  def main(args: Array[String]) = {
+    def v : Expr = Number(43)
+    def x = v match {
+      case Number(v) => 70
+      case Sum(e1, e2) => 72
+      case null => 50
+    }
+    println(s"${x}salut")
+  }
+}
 ```
-```scala
 
-```
+### Lecture 4.7 - Lists
+- Lists are immutable
+- Operator ending with `:` is right associative, and method calls the rhs
 ```scala
-
+x match {
+  case List() => true
+  case l => false
+}
 ```
+
+# Week5: Lists
+> This week we dive into Lists, the most commonly-used data structure in Scala.
+
+### Lecture 5.1 - More Functions on Lists
+
+### Lecture 5.2 - Pairs and Tuples
+```scala
+scala.Tuple2(42, "lol")
+(42, "lol")
+
+val (i, s) = scala.Tuple2(42, "lol")
+val (42, "lol") = scala.Tuple2(42, "lol")
+```
+
+### Lecture 5.3 - Implicit Parameters
+```scala
+def msort[T](l: List[t])(implicit ord: Ordering[T])
+```
+
+### Lecture 5.4 - Higher-Order List Functions
+- Same as OCaml
+
+### Lecture 5.5 - Reduction of Lists
+- Same as OCaml
+
+### Lecture 5.6 - Reasoning About Concat
+- Natural induction
+- Referential transparency
+- Structural induction
+
+### Lecture 5.7 - A Larger Equational Proof on Lists
+
+# Week6: Collections
+
 ```scala
 
 ```
