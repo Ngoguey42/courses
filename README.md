@@ -1,5 +1,6 @@
 
 > http://www.tablesgenerator.com/
+
 | Title                                 | Author                   | University | Year | Length | Status | Prog | When        |
 |---------------------------------------|--------------------------|------------|------|--------|--------|------|-------------|
 | Introduction to Graphics Architecture | John Owens               | UC Davis   | 2009 | 20h    | Done   | 75%  | Summer 2015 |
