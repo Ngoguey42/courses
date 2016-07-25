@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/07/25 08:32:25 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/07/25 14:14:30 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/07/25 15:01:51 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -26,7 +26,7 @@ docker run -it -v `pwd`:/workdir williamyeh/scala bash
 ```
 # Get titles from usb stick
 # ctrl-u, meta-shift-1
-export WEEK=1; export WHERE="/Volumes/Untitled/rprog2015/Week $WEEK"; export WHEREESC="$(echo $WHERE | sed -e 's/[\/&]/\\&/g')" ; ls -1 $WHERE/*.mp4 | sed "s/.mp4//g" | sed "s/$WHEREESC\/[0-9] - /### Lecture /g"
+export WEEK=2; export WHERE="/Volumes/Untitled/rprog2015/Week $WEEK"; export WHEREESC="$(echo $WHERE | sed -e 's/[\/&]/\\&/g')" ; ls -1 $WHERE/*.mp4 | sed "s/.mp4//g" | sed "s/$WHEREESC\/[0-9] - /### Lecture /g" | sed "s/(\([0-9]*\)-\([0-9]*\))/(\1:\2)/g"
 ```
 
 - Weeks 1, 2
@@ -60,6 +60,8 @@ export WEEK=1; export WHERE="/Volumes/Untitled/rprog2015/Week $WEEK"; export WHE
 
 
 ### Lecture 3 - Recap Functions and Pattern Matching (19:56)
+> https://www.youtube.com/watch?v=MjWe-0k0Ujc&index=2&list=PLMhMDErmC1TdBMxd3KnRfYiBV2ELvLyxN
+
 - `Partial functions`
 ```scala
 println(({ case "a" => "A" } : PartialFunction[String, String]).apply("a"))
@@ -81,6 +83,8 @@ println(f.isDefinedAt(List(42, 43, 44)))
 - Skipped
 
 ### Lecture 5 - Functional Random Generators (19:42)
+> https://www.youtube.com/watch?v=FOYASQx9hrg&list=PLMhMDErmC1TdBMxd3KnRfYiBV2ELvLyxN&index=4
+
 - For-Expressions with definition of `map`, `flatMap` and `with Filter`
 - Definitions of generators with for-expression
 - Ex: `Random tests`
@@ -114,6 +118,8 @@ object test {
 ```
 
 ### Lecture 7 - Monads (20:22)
+> https://www.youtube.com/watch?v=oUr1IQPHa9M&list=PLMhMDErmC1TdBMxd3KnRfYiBV2ELvLyxN&index=5
+
 - A `Monad` is a wrapper that have the following 2 operations and 3 properties (Scala notation)
  - with `v` any value of type `V`
  - with `m` any monad of type `M[V]`
@@ -180,3 +186,20 @@ def l = List(None, None, Some(3), Some(4), Some(5))
 l.map(x => x) // List[Option[Int]] = List(None, None, Some(3), Some(4), Some(5))
 l.flatMap(x => x) // List[Int] = List(3, 4, 5)
 ```
+
+# Week2
+
+### Lecture 1 - Functions and State (15:28)
+- lambda-calculus
+- `var` variables can be assigned
+- A stream does not necessary induce side effect if the whole file was cached at instanciation
+- Ex: `Bank account proxy`
+
+### Lecture 3 - Identity and Change (8:12)
+### Lecture 4 - Loops (8:25)
+### Lecture 5 - Extended Example Discrete Event Simulation (Optional) (10:54)
+### Lecture 6 - Discrete Event Simulation API and Usage (Optional) (10:57)
+### Lecture 7 - Discrete Event Simluation Implementation and Test (Optional) (18:12)
+### Lecture 8 - Imperative Event Handling The Observer Pattern (12:27)
+### Lecture 9 - Functional Reactive Programming (20:24)
+### Lecture 10 - A Simple FRP Implementation (19:32)

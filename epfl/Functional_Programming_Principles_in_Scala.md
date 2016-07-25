@@ -566,3 +566,6 @@ def this(bindings: (Int, Double)*) = this(bindings.toMap)
 ### Lecture 6.5 - Putting the Pieces Together
 
 ### Conclusion
+
+# Week 7: Lazy Evaluation (Not on coursera)
+> https://www.youtube.com/playlist?list=PLO9y7hOkmmSHz-a9tj_HvCM2KDB6MTYI5
