@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/07/25 08:32:25 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/07/25 10:26:44 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/07/25 11:59:42 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -25,17 +25,8 @@ docker run -it -v `pwd`:/workdir williamyeh/scala bash
 
 ```
 # Get titles from usb stick
-
 # ctrl-u, meta-shift-1
-ls -1 /Volumes/Untitled/rprog2015/Week\ 1/*.mp4
-
-# f5
-"/Volumes/Untitled/rprog2015/Week 1/3 - "
-"### Lecture "
-
-# f5
-".mp4"
-""
+export WEEK=1; export WHERE="/Volumes/Untitled/rprog2015/Week $WEEK"; export WHEREESC="$(echo $WHERE | sed -e 's/[\/&]/\\&/g')" ; ls -1 $WHERE/*.mp4 | sed "s/.mp4//g" | sed "s/$WHEREESC\/[0-9] - /### Lecture /g"
 ```
 
 - Weeks 1, 2
@@ -123,3 +114,20 @@ object test {
 ```
 
 ### Lecture 7 - Monads (20:22)
+- A `Monad` is a wrapper that have the following operations
+ - `unit(X) : Function[T, M[T]]` (basic constructor of class in scala)
+ - `bind(X) : Function[M[T], (T => M[U]), M[U]]` (`flatMap` in scala)
+- Then `map(x)` is `Function[M[T], (T => M[U]), M[M[U]]]`
+
+```scala
+// Test
+def square_pair_sum = ((_: Int) + (_: Int)).tupled andThen (_ ^ 2)
+
+l.map(x => f(x))
+// List[Option[Int]] = List(None, None, Some(3), Some(4), Some(5))
+
+l.flatMap(x => f(x))
+// List[Int] = List(3, 4, 5)
+
+
+```
