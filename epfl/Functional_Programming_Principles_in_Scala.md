@@ -569,3 +569,51 @@ def this(bindings: (Int, Double)*) = this(bindings.toMap)
 
 # Week 7: Lazy Evaluation (Not on coursera)
 > https://www.youtube.com/playlist?list=PLO9y7hOkmmSHz-a9tj_HvCM2KDB6MTYI5
+
+### Lecture 7.1 - Structural Induction on Trees
+- Ex: `Characterization of an int set with 3 laws`
+- Induction step of `Structural Induction` assumes the properties hold for subtrees
+
+### Lecture 7.2 - Streams
+- Stream's `tail` operation is implemented with a call-by-name function
+```scala
+Stream(1, 2, 3)
+(1 to 1000).toStream match {case hd #:: tl => tl}
+ftStreamRange(1, 10).take(3)
+```
+```scala
+import scala.language.postfixOps
+
+object test {
+  def ftStreamRange(lo: Int, hi: Int): Stream[Int] = {
+    print(s"${lo}->${hi} ")
+    if (lo >= hi) Stream.empty
+    else Stream.cons(lo, ftStreamRange(lo + 1, hi))
+  }
+
+  def main(Arr: Array[String]):Unit = {
+    ftStreamRange(0, 5)
+    println()
+    ftStreamRange(0, 5) take 3 toList; //`toList` postfix op
+    println()
+    def aux: Stream[Int] => Unit = {
+      case i #:: tl =>
+        print(s"(${i}) ")
+        aux(tl)
+      case Stream.Empty =>
+        println()
+    }
+    aux(ftStreamRange(0, 5))
+    ()
+  }
+}
+/*
+0->5
+0->5 1->5 2->5
+0->5 1->5 (0) 2->5 (1) 3->5 (2) 4->5 (3) 5->5 (4)
+*/
+```
+
+### Lecture 7.3 - Lazy Evaluation
+
+https://www.youtube.com/watch?v=-8inzxqT-No&index=3&list=PLO9y7hOkmmSHz-a9tj_HvCM2KDB6MTYI5
