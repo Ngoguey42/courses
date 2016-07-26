@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/07/25 08:32:25 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/07/26 11:51:17 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/07/26 15:04:44 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -204,12 +204,199 @@ l.flatMap(x => x) // List[Int] = List(3, 4, 5)
 
 ### Lecture 5 - Extended Example Discrete Event Simulation (Optional) (10:54)
 - Ex: `Digital Circuits`
+- `Half adder`, `Full adder`
 
 ### Lecture 6 - Discrete Event Simulation API and Usage (Optional) (10:57)
 
 ### Lecture 7 - Discrete Event Simluation Implementation and Test (Optional) (18:12)
+```scala
+object List {
+  def insert_where[T](elt: T, lst_init: List[T], f: Function2[T, T, Boolean]): List[T] = {
+    def aux : List[T] => List[T] = {
+      case hd::tl if f(hd, elt) =>
+        elt::hd::tl
+      case hd::tl =>
+        hd::aux(tl)
+      case Nil =>
+        elt::Nil
+    }
+    aux(lst_init)
+  }
+}
+
+trait Simulation {
+  type Action = () => Unit //test () to Unit
+
+  case class Event(time: Int, action: Action)
+  private type Agenda = List[Event]
+  private var agenda : Agenda = Nil //test Nil to List()
+  private var curtime = 0
+
+  def currentTime: Int = curtime
+
+  def afterDelay(delay: Int)(block: => Unit): Unit = {
+    val item = Event(curtime + delay, () => block)
+    agenda = List.insert_where(item, agenda, ((prev: Event, elt: Event) => elt.time < prev.time))
+  }
+
+  private def loop(): Unit = agenda match {
+    case hd::tl =>
+      agenda = tl
+      curtime = hd.time
+      // println(s"--Loop runcase t=$curtime--")
+      hd.action()
+      loop()
+    case Nil =>
+      println(s"--Loop endcase t=$curtime--")
+      ()
+  }
+
+  def run(): Unit = {
+    afterDelay(0) {
+      println("SIMULATION START AT " + curtime)
+    }
+    loop()
+  }
+}
+
+abstract class Gates extends Simulation {
+  def INVERTERDELAY: Int
+  def ANDGATEDELAY: Int
+  def ORGATEDELAY: Int
+
+  class Wire {
+    private var sigVal = false
+    private var actions: List[Action] = Nil
+
+    def getSignal: Boolean =
+      sigVal
+
+    def setSignal(s: Boolean): Unit = {
+      if (s != sigVal) {
+        sigVal = s
+        actions foreach (_()) //test .apply()
+      }
+    }
+    def addAction(a: Action): Unit = {
+      actions = a :: actions
+      a()
+    }
+  }
+
+  def inverter(in: Wire, out: Wire): Unit = {
+    in addAction {() =>
+      val inputSig = in.getSignal
+      afterDelay(INVERTERDELAY){
+        out setSignal !inputSig
+      }
+    }
+  }
+
+  def andGate(in1: Wire, in2: Wire, out: Wire): Unit = {
+    def andAction(): Unit = {
+      val in1sig = in1.getSignal
+      val in2sig = in2.getSignal
+      afterDelay(ANDGATEDELAY){
+        out setSignal (in1sig & in2sig)
+      }
+    }
+    in1 addAction andAction
+    in2 addAction andAction
+  }
+
+  def orGate(in1: Wire, in2: Wire, out: Wire): Unit = {
+    def orAction(): Unit = {
+      val in1sig = in1.getSignal
+      val in2sig = in2.getSignal
+      afterDelay(ORGATEDELAY){
+        out setSignal (in1sig | in2sig)
+      }
+    }
+    in1 addAction orAction
+    in2 addAction orAction
+  }
+
+  def probe(name: String, wire: Wire): Unit = {
+    wire addAction {() =>
+      println(s"[$name] t=$currentTime v=${wire.getSignal}")
+    }
+  }
+}
+
+abstract class Circuits extends Gates {
+  def halfAdder(a: Wire, b: Wire, s: Wire, c: Wire) {
+    val d, e = new Wire
+    orGate(a, b, d)
+    andGate(a, b, c)
+    inverter(c, e)
+    andGate(d, e, s)
+  }
+
+  def fullAdder(a: Wire, b: Wire, cin: Wire, sum: Wire, cout: Wire) {
+    val s, c1, c2 = new Wire
+    halfAdder(a, cin, s, c1)
+    halfAdder(b, s, sum, c2)
+    orGate(c1, c2, cout)
+  }
+}
+
+trait Parameters {
+  def INVERTERDELAY = 2
+  def ANDGATEDELAY = 3
+  def ORGATEDELAY = 5
+}
+
+object test {
+  object sim extends Circuits with Parameters
+
+  def main(Arr: Array[String]):Unit = {
+    println("Hello world")
+    val in1, in2, sum, carry = new sim.Wire
+    sim.halfAdder(in1, in2, sum, carry)
+    sim.probe("in1 probe", in1)
+    sim.probe("in2 probe", in2)
+    sim.probe("sum probe", sum)
+    sim.probe("carry probe", carry)
+    println()
+
+    sum setSignal false
+    carry setSignal false
+    in1 setSignal false
+    in2 setSignal false
+    println("0b + 0b = 0b")
+    sim.run()
+    println()
+
+    sum setSignal false
+    carry setSignal false
+    in1 setSignal false
+    in2 setSignal true
+    println("0b + 1b = 1b")
+    sim.run()
+    println()
+
+    sum setSignal false
+    carry setSignal false
+    in1 setSignal true
+    in2 setSignal false
+    println("1b + 0b = 1b")
+    sim.run()
+    println()
+
+    sum setSignal false
+    carry setSignal false
+    in1 setSignal true
+    in2 setSignal true
+    println("1b + 1b = 10b")
+    sim.run()
+    println()
+  }
+}
+```
 
 ### Lecture 8 - Imperative Event Handling The Observer Pattern (12:27)
+- Ex: `Bank account observer`
+- Uninitialized variable in class with value equals `_`
 
 ### Lecture 9 - Functional Reactive Programming (20:24)
 
