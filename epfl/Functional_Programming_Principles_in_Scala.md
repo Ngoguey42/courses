@@ -615,5 +615,48 @@ object test {
 ```
 
 ### Lecture 7.3 - Lazy Evaluation
+```scala
+def main(Arr: Array[String]):Unit = {
+  val x = {print('x'); 1}
+  lazy val y = {print('y'); 1}
+  def z = {print('z'); 1}
 
-https://www.youtube.com/watch?v=-8inzxqT-No&index=3&list=PLO9y7hOkmmSHz-a9tj_HvCM2KDB6MTYI5
+  z + x + z + y + z + y
+  println()
+  // xzzyz
+}
+```
+
+### Lecture 7.4 - Computing with Infinite Sequences
+- `#::` stream cons operator
+```scala
+    def from(n: Int): Stream[Int] =
+      n #:: from(n + 1)
+    val nats =
+      from(0)
+
+	def sieve(s: Stream[Int]): Stream[Int] =
+      s.head #:: sieve(s.tail filter (_ % s.head != 0))
+    val primes = sieve(from(2))
+    println(primes.take(10).toList)
+```
+```scala
+    def sqrtStream(x: Double): Stream[Double] = {
+      def improve(guess: Double) =
+        (guess + x / guess) / 2
+      lazy val guesses: Stream[Double] = 1 #:: (guesses map improve)
+      guesses
+    }
+
+    def isGoodEnough(epsilon: Double, x: Double)(guess: Double) =
+      math.abs((guess * guess - x) / x) < epsilon
+
+    println(sqrtStream(2.0) take 5 toList)
+    println(sqrtStream(42) filter isGoodEnough(0.000000001, 42) head)
+```
+
+### Lecture 7.5 - Case Study the Water Pouring Problem
+- Skipped
+
+### Lecture 7.6 - Course Conclusion
+- Ref: `Domain-Specific Languages`

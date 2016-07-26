@@ -12,7 +12,7 @@
 | Mathematics for Computer Science           | Leighton, van Dijk       | MIT                    | 2010 | 34h    | Done   | 100% | Spring 2016 |
 | Introduction to Algorithms                 | Demaine, Devadas, Costan | MIT                    | 2011 | 41h    | Done   | 100% | Spring 2016 |
 | Calculus One                               | Jim Fowler               | Ohio                   | 2014 | 17h30  | Done   | 100% | Summer 2016 |
-| Functional Programming Principles in Scala | Martin Odersky           | Polytechnique Lausanne | 2012 | 7h30   | Done   | 100% | Summer 2016 |
+| Functional Programming Principles in Scala | Martin Odersky           | Polytechnique Lausanne | 2012 | 9h     | Done   | 100% | Summer 2016 |
 |                                            |                          |                        |      |        |        |      |             |
 |                                            |                          |                        |      |        |        |      |             |
 |                                            |                          |                        |      |        |        |      |             |
