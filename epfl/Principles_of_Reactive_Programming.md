@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/07/25 08:32:25 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/07/25 15:01:51 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/07/26 11:51:17 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -196,10 +196,21 @@ l.flatMap(x => x) // List[Int] = List(3, 4, 5)
 - Ex: `Bank account proxy`
 
 ### Lecture 3 - Identity and Change (8:12)
+- Referential transparency
+
 ### Lecture 4 - Loops (8:25)
+- `while`, `repeat`, `until` keywords
+- `for` without `yield`
+
 ### Lecture 5 - Extended Example Discrete Event Simulation (Optional) (10:54)
+- Ex: `Digital Circuits`
+
 ### Lecture 6 - Discrete Event Simulation API and Usage (Optional) (10:57)
+
 ### Lecture 7 - Discrete Event Simluation Implementation and Test (Optional) (18:12)
+
 ### Lecture 8 - Imperative Event Handling The Observer Pattern (12:27)
+
 ### Lecture 9 - Functional Reactive Programming (20:24)
+
 ### Lecture 10 - A Simple FRP Implementation (19:32)
