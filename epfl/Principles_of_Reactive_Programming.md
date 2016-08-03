@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/07/25 08:32:25 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/07/26 15:04:44 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/08/03 09:01:43 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -211,7 +211,8 @@ l.flatMap(x => x) // List[Int] = List(3, 4, 5)
 ### Lecture 7 - Discrete Event Simluation Implementation and Test (Optional) (18:12)
 ```scala
 object List {
-  def insert_where[T](elt: T, lst_init: List[T], f: Function2[T, T, Boolean]): List[T] = {
+  def insert_where[T](elt: T, lst_init: List[T], f: Function2[T, T, Boolean])
+      : List[T] = {
     def aux : List[T] => List[T] = {
       case hd::tl if f(hd, elt) =>
         elt::hd::tl
@@ -225,37 +226,38 @@ object List {
 }
 
 trait Simulation {
-  type Action = () => Unit //test () to Unit
+  type Action = () => Unit
 
   case class Event(time: Int, action: Action)
   private type Agenda = List[Event]
-  private var agenda : Agenda = Nil //test Nil to List()
+  private var agenda : Agenda = Nil
   private var curtime = 0
 
-  def currentTime: Int = curtime
+  def currentTime: Int = this.curtime
 
-  def afterDelay(delay: Int)(block: => Unit): Unit = {
-    val item = Event(curtime + delay, () => block)
-    agenda = List.insert_where(item, agenda, ((prev: Event, elt: Event) => elt.time < prev.time))
+  def afterDelay(delay: Int)(expr: => Unit): Unit = {
+    val item = Event(this.curtime + delay, () => expr)
+    this.agenda = List.insert_where(
+      item, this.agenda, ((prev: Event, elt: Event) => elt.time < prev.time))
   }
 
-  private def loop(): Unit = agenda match {
+  private def loop(): Unit = this.agenda match {
     case hd::tl =>
-      agenda = tl
-      curtime = hd.time
+      this.agenda = tl
+      this.curtime = hd.time
       // println(s"--Loop runcase t=$curtime--")
       hd.action()
-      loop()
+      this.loop()
     case Nil =>
       println(s"--Loop endcase t=$curtime--")
       ()
   }
 
   def run(): Unit = {
-    afterDelay(0) {
-      println("SIMULATION START AT " + curtime)
+    this.afterDelay(0) {
+      println("SIMULATION START AT " + this.curtime)
     }
-    loop()
+    this.loop()
   }
 }
 
@@ -269,16 +271,17 @@ abstract class Gates extends Simulation {
     private var actions: List[Action] = Nil
 
     def getSignal: Boolean =
-      sigVal
+      this.sigVal
 
     def setSignal(s: Boolean): Unit = {
-      if (s != sigVal) {
-        sigVal = s
-        actions foreach (_()) //test .apply()
+      if (s != this.sigVal) {
+        this.sigVal = s
+        this.actions foreach (_())
       }
     }
+
     def addAction(a: Action): Unit = {
-      actions = a :: actions
+      this.actions ::= a
       a()
     }
   }
@@ -286,7 +289,7 @@ abstract class Gates extends Simulation {
   def inverter(in: Wire, out: Wire): Unit = {
     in addAction {() =>
       val inputSig = in.getSignal
-      afterDelay(INVERTERDELAY){
+      this.afterDelay(INVERTERDELAY){
         out setSignal !inputSig
       }
     }
@@ -296,7 +299,7 @@ abstract class Gates extends Simulation {
     def andAction(): Unit = {
       val in1sig = in1.getSignal
       val in2sig = in2.getSignal
-      afterDelay(ANDGATEDELAY){
+      this.afterDelay(ANDGATEDELAY){
         out setSignal (in1sig & in2sig)
       }
     }
@@ -308,7 +311,7 @@ abstract class Gates extends Simulation {
     def orAction(): Unit = {
       val in1sig = in1.getSignal
       val in2sig = in2.getSignal
-      afterDelay(ORGATEDELAY){
+      this.afterDelay(ORGATEDELAY){
         out setSignal (in1sig | in2sig)
       }
     }
@@ -326,17 +329,17 @@ abstract class Gates extends Simulation {
 abstract class Circuits extends Gates {
   def halfAdder(a: Wire, b: Wire, s: Wire, c: Wire) {
     val d, e = new Wire
-    orGate(a, b, d)
-    andGate(a, b, c)
-    inverter(c, e)
-    andGate(d, e, s)
+    this.orGate(a, b, d)
+    this.andGate(a, b, c)
+    this.inverter(c, e)
+    this.andGate(d, e, s)
   }
 
   def fullAdder(a: Wire, b: Wire, cin: Wire, sum: Wire, cout: Wire) {
     val s, c1, c2 = new Wire
-    halfAdder(a, cin, s, c1)
-    halfAdder(b, s, sum, c2)
-    orGate(c1, c2, cout)
+    this.halfAdder(a, cin, s, c1)
+    this.halfAdder(b, s, sum, c2)
+    this.orGate(c1, c2, cout)
   }
 }
 
