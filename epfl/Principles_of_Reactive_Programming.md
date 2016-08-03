@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/07/25 08:32:25 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/08/03 09:01:43 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/08/03 11:03:46 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -398,9 +398,68 @@ object test {
 ```
 
 ### Lecture 8 - Imperative Event Handling The Observer Pattern (12:27)
+- `Observer Pattern` aka `Publish/Subscribe` aka `MVC`
 - Ex: `Bank account observer`
 - Uninitialized variable in class with value equals `_`
 
 ### Lecture 9 - Functional Reactive Programming (20:24)
+- `Signals`
+- Assignment operator `=` is a sugar for method `update`
+```scala
+class Var[T](v_init: T) {
+  var v: T = v_init
+  def apply() =
+    v
+  def update(v_new: T) = {
+    v = v_new
+  }
+}
+object Var {
+  def apply[T](v: T) =
+    new Var[T](v)
+}
+
+class Signal[T](expr: => T) {
+  def apply() =
+    expr
+}
+object Signal {
+  def apply[T](expr: => T) =
+    new Signal[T](expr)
+}
+
+class BankAccount {
+  val balance = Var(0)
+  def deposit(amount: Int): Unit =
+    if (amount > 0) {
+      val b = this.balance()
+      this.balance() = b + amount
+    }
+  def withdraw(amount: Int): Unit =
+    if (amount > this.balance())
+      throw new Error("T POVR")
+    else if (amount > 0)
+    {
+      val b = this.balance()
+      this.balance() = b - amount
+    }
+}
+
+object test {
+  def consolidated(acc_lst: List[BankAccount]): Signal[Int] =
+    Signal(acc_lst.map(_.balance()).sum)
+
+  def main(Arr: Array[String]):Unit = {
+    println("Hello world")
+    val a = new BankAccount()
+    val b = new BankAccount()
+    val l = List(a, b)
+    val c = consolidated(List(a, b))
+    println(s"${c()}")
+    a deposit 20
+    println(s"${c()}")
+  }
+}
+```
 
 ### Lecture 10 - A Simple FRP Implementation (19:32)
