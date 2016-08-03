@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/07/25 08:32:25 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/08/03 11:03:46 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/08/03 15:12:41 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -463,3 +463,128 @@ object test {
 ```
 
 ### Lecture 10 - A Simple FRP Implementation (19:32)
+```scala
+// ************************************************************************** //
+//                                                                            //
+//                                                        :::      ::::::::   //
+//   test.sc                                            :+:      :+:    :+:   //
+//                                                    +:+ +:+         +:+     //
+//   By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+        //
+//                                                +#+#+#+#+#+   +#+           //
+//   Created: 2016/08/03 08:34:13 by ngoguey           #+#    #+#             //
+//   Updated: 2016/08/03 15:09:07 by ngoguey          ###   ########.fr       //
+//                                                                            //
+// ************************************************************************** //
+
+class StackableVariable[T](init: T) {
+  private var values: List[T] = List(init)
+  def value: T = values.head
+  def withValue[R](newValue: T)(expr: => R): R = {
+    this.values ::= newValue
+    try expr
+    finally this.values = this.values.tail
+  }
+}
+
+// sentinel object
+// `???` means unimplemented
+object NoSignal extends Signal[Nothing](???){
+  override def computeValue() = ()
+}
+
+class Signal[T](expr: => T) {
+  private var myExpr: () => T = _
+  private var myValue: T = _
+  private var observers: Set[Signal[_]] = Set()
+  this.update(expr)
+
+  protected def update(expr: => T): Unit = {
+    this.myExpr = () => expr
+    this.computeValue()
+  }
+  protected def computeValue(): Unit = {
+    val newValue = Signal.caller.withValue(this)(myExpr())
+    if (newValue != myValue)
+    {
+      this.myValue = newValue
+      val obs = this.observers
+      this.observers = Set()
+      obs.foreach(_.computeValue())
+    }
+  }
+  def apply() = {
+    this.observers += Signal.caller.value
+    assert(!Signal.caller.value.observers.contains(this),
+      "cyclic signal definition")
+    this.myValue
+  }
+
+  def debug() {
+    println(s"Signal.debug: this=$this, myValue=$myValue, observers=$observers")
+  }
+}
+
+object Signal {
+  /* `caller` used to:
+   *  1. detect cyclic dependencies
+   *  2. retrieve signal's observer
+   */
+  private val caller = new StackableVariable[Signal[_]](NoSignal)
+  // private val caller = new DynamicVariable[Signal[_]](NoSignal)
+  def apply[T](expr: => T) =
+    new Signal[T](expr)
+}
+class Var[T](expr: => T) extends Signal[T](expr) {
+  override def update(expr: => T): Unit =
+    super.update(expr)
+}
+object Var {
+  def apply[T](expr: => T) =
+    new Var[T](expr)
+}
+
+class BankAccount(name: String) {
+  val balance = Var(0)
+  def deposit(amount: Int): Unit =
+    if (amount > 0) {
+      val b = this.balance()
+      this.balance() = b + amount
+    }
+  def withdraw(amount: Int): Unit =
+    if (amount > this.balance())
+      throw new Error("T POVR")
+    else if (amount > 0)
+    {
+      val b = this.balance()
+      this.balance() = b - amount
+    }
+  def debug() = {
+    print(s"BankAccount.debug, name=$name, ")
+    balance.debug()
+  }
+}
+
+object test {
+  def consolidated(acc_lst: List[BankAccount]): Signal[Int] =
+    Signal(acc_lst.map(_.balance()).sum)
+
+  def main(Arr: Array[String]):Unit = {
+    println("Hello world")
+    val a = new BankAccount("a")
+    val b = new BankAccount("b")
+    println("#created a, b")
+    a.debug()
+    b.debug()
+
+    println("#created c")
+    val c = consolidated(List(a, b))
+    a.debug()
+    b.debug()
+    c.debug()
+
+    println(s"${c()}")
+    a deposit 20
+    println(s"${c()}")
+  }
+}
+```
