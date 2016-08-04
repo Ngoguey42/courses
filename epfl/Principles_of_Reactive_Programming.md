@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/07/25 08:32:25 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/08/03 15:12:41 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/08/04 09:49:30 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -77,6 +77,9 @@ println(f.isDefinedAt(List()))
 println(f.isDefinedAt(List(42)))
 println(f.isDefinedAt(List(42, 43)))
 println(f.isDefinedAt(List(42, 43, 44)))
+```
+```scala
+List(1, 2, 42) collect ({case 42 => 24}: PartialFunction[Int, Int]) //res21: List[Int] = List(24)
 ```
 
 ### Lecture 4 - Recap Collections (12:54)
@@ -588,3 +591,79 @@ object test {
   }
 }
 ```
+
+# Week3
+### Lecture 7 - Monads and Effects 1
+- {Sync, Async}+{One return value, Multiple return value}
+
+### Lecture 8 - Monads and Effects 2
+- Exception as an effect
+- `flatmap` with `Try monad` aka `result type`
+- `comprehension syntax` with `Try monad`
+
+```scala
+val treasure: Try[Treasure] = for {
+  coins <- adventure.collectCoins()
+  treasure <- buyTreasure(coins)
+} yield treasure
+```
+
+### Lecture 9 - Latency as an Effect 1
+- Ex: `Typical times of operations`
+
+### Lecture 10 - Latency as an Effect 2
+- `Future monad` and continuations with `scala.concurrent.ExecutionContext`
+
+### Lecture 11 - Combinators on Futures 1
+- Higher order functions on futures
+```scala
+trait Future[T] {
+  def filter: (T => Boolean) => Future[T]
+  def flatMap[U]: (T => Future[U]) => Future[U]
+  def map[T]: (T => S) => Future[U]
+  def recoverWith: (PartialFunction[Throwable, Future[T]) => Future[T]
+  def recover: (PartialFunction[Throwable, T) => Future[T]
+}
+```
+
+### Lecture 12 - Combinators on Futures 2
+- Code should never be blocking with an async computation
+- Ex: `scala.language.postfixOps`
+```scala
+trait Future[T] {
+  def fallbackTo: (=>Future[T]) => Future[T]
+}
+```
+```scala
+val socket = Socket()
+val packet: Future[Array[Byte]] =
+  socket.readFromMemory()
+val confirmation: Future[Array[Byte]] =
+  packet.flatMap(socket.sendToSafe(_))
+```
+```scala
+trait Awaitable[T] extends AnyRef {
+  abstract def ready(atMost: Duraction): Unit
+  abstract def result(atMost: Duration): T
+}
+val c = Await.result(confirmation, 2 seconds)
+println(c.toText)
+```
+
+### Lecture 13 - Composing Futures 1
+```scala
+val socket = Socket()
+val confirmation: Future[Array[Byte]] = for {
+  packet <- socket.readFromMemory()
+  confirmation <- socket.sendToSafe(packet)
+} yield
+```
+```scala
+trait Future[T] {
+  def retry: (Int, =>Future[T]) => Future[T]
+}
+```
+
+### Lecture 14 - Composing Futures 2
+### Lecture 15 - Async Await
+### Lecture 16 - Promises, promises
