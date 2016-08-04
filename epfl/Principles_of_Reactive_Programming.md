@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/07/25 08:32:25 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/08/04 09:49:30 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/08/04 11:29:12 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -621,8 +621,8 @@ trait Future[T] {
   def filter: (T => Boolean) => Future[T]
   def flatMap[U]: (T => Future[U]) => Future[U]
   def map[T]: (T => S) => Future[U]
-  def recoverWith: (PartialFunction[Throwable, Future[T]) => Future[T]
-  def recover: (PartialFunction[Throwable, T) => Future[T]
+  def recoverWith: (PartialFunction[Throwable, Future[T]]) => Future[T]
+  def recover: (PartialFunction[Throwable, T]) => Future[T]
 }
 ```
 
@@ -659,11 +659,75 @@ val confirmation: Future[Array[Byte]] = for {
 } yield
 ```
 ```scala
-trait Future[T] {
-  def retry: (Int, =>Future[T]) => Future[T]
-}
+  def retry[T]: (Int, =>Future[T]) => Future[T]
 ```
 
 ### Lecture 14 - Composing Futures 2
+- `foldLeft` `foldRight`
+- `Unit arrow` `()=>expr` `thunk`
+
 ### Lecture 15 - Async Await
+- `scala.async.Async` library
+- If an `await` statement fails with `Failure`, the whole `async` block is stopped and set to failure
+```scala
+def async[T]: (=> T) => Future[T]
+  = (expr) =>
+  ???
+def await[T]: Future[T] => T
+  = (fu) =>
+  ???
+```
+```scala
+def flatMap[U]: (T => Future[U]) => Future[U]
+  = (f) => async {
+  val x: T = await(this)
+  await(f(x))
+}
+```
+
 ### Lecture 16 - Promises, promises
+```scala
+def filter: (T => Boolean) => Future[T]
+= pred => {
+  val p = Promise[T]()
+
+  this onComplete {
+    case Failure(e) =>
+	  p.failure(e)
+    case Success(v) =>
+	  if (!pred(v)) p.failure(new NoSuchElementException)
+	  else p.success(x)
+  }
+  p.future
+}
+
+def race[T]: (Future[T], Future[T]) => Future[T]
+= (left, right) => {
+  val p = Promise[T]()
+  left onComplete { p.tryComplete(_) }
+  right onComplete { p.tryComplete(_) }
+  p.future
+}
+
+def zip[S, R]: (Future[S], ((T, S) => R)) => Future[R]
+= (that, f) => {
+  val p = Promise[R]()
+
+  this onComplete {
+  case Failure(e) =>
+    p.failure(e)
+  case Success(x) =>
+    that onComplete {
+      case Failure(e) => p.failure(e)
+	  case Success(y) => p.success(f(x, y))
+    }
+  }
+  p.future
+}
+
+def zip[S, R]: (Future[S], ((T, S) => R)) => Future[R]
+= (that, f) => async {
+  f(await(this), await(that))
+}
+
+```
