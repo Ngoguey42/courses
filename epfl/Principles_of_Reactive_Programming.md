@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/07/25 08:32:25 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/08/04 11:29:12 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/08/06 09:47:51 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -24,16 +24,18 @@ docker run -it -v `pwd`:/workdir williamyeh/scala bash
 ```
 
 ```
+
 # Get titles from usb stick
 # ctrl-u, meta-shift-1
 export WEEK=2; export WHERE="/Volumes/Untitled/rprog2015/Week $WEEK"; export WHEREESC="$(echo $WHERE | sed -e 's/[\/&]/\\&/g')" ; ls -1 $WHERE/*.mp4 | sed "s/.mp4//g" | sed "s/$WHEREESC\/[0-9] - /### Lecture /g" | sed "s/(\([0-9]*\)-\([0-9]*\))/(\1:\2)/g"
+export WEEK=4; export WHERE="/cygdrive/e/cours/rprog2015/Week $WEEK"; export WHEREESC="$(echo $WHERE | sed -e 's/[\/&]/\\&/g')" ; ls -1 $WHERE/*.mp4 | sed "s/.mp4//g" | sed "s/$WHEREESC\/[0-9] - /### Lecture /g" | sed "s/(\([0-9]*\)-\([0-9]*\))/(\1:\2)/g"
 ```
 
 - Weeks 1, 2
  - (_Martin Odersky_)
 - Weeks 3, 4
  - (_Eric Meyer_)
-- ending
+- Weeks 5, 6, 7
  - (_Roland Kuhn_)
 
 # Week1
@@ -731,3 +733,34 @@ def zip[S, R]: (Future[S], ((T, S) => R)) => Future[R]
 }
 
 ```
+
+# Week4
+### Lecture 1 - From Try to Future (5:22)
+### Lecture 8 - From Iterables to Observables 1 (8:06)
+### Lecture 9 - From Iterables to Observables 2 (9:44)
+### Lecture 10 - Hello World Observables (6:29)
+### Lecture 11 - RX Operators (11:39)
+### Lecture 12 - Subscriptions (10:34)
+### Lecture 13 - Promises and Subjects (8:55)
+### Lecture 14 - RX potpourri (11:30)
+### Lecture 15 - Observable Contract (14:19)
+
+# Week5
+### Lecture 1 - Introduction- Why Actors- (14:46)
+### Lecture 2 - The Actor Model (13:43)
+### Lecture 3 - Message Processing Semantics (27:28)
+### Lecture 5 - Designing Actor Systems (38:10)
+### Lecture 6 - Testing Actor Systems (17:16)
+
+# Week6
+### Lecture 1 - Failure Handling with Actors (22:38)
+### Lecture 2 - Lifecycle Monitoring and the Error Kernel (24:07)
+### Lecture 5 - Persistent Actor State (40:05)
+
+# Week 7
+### Lecture 1 - Actors are Distributed (36:30)
+### Lecture 2 - Actors are Distributed Part II (18-17 — optional)
+### Lecture 3 - Eventual Consistency (15:49)
+### Lecture 4 - Actor Composition (20:14)
+### Lecture 5 - Scalability (17:00)
+### Lecture 7 - Responsiveness (11:41)
