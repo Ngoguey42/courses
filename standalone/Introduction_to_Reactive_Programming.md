@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/08/06 11:23:56 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/08/06 12:29:44 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/08/06 13:38:02 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -122,6 +122,21 @@ responseStream.subscribe(response => {
 ### Lecture 5: Rendering on the DOM with RxJS (5:22)
 ### Lecture 6: New requests from refresh clicks (5:07)
 ### Lecture 7: Clear data while loading with RxJS startWith (6:28)
+- `startWith()`
+```
+refreshClickStream: ----------o---------o---->
+     requestStream: -r--------r---------r---->
+    responseStream: ----R----------R------R-->
+ suggestion1Stream: -N--s-----N----s----N-s-->
+ suggestion2Stream: -N--q-----N----q----N-q-->
+ suggestion3Stream: -N--t-----N----t----N-t-->
+```
+
 ### Lecture 8: Sharing network requests with RxJS merge (3:34)
+- `shareReplay`
+
 ### Lecture 9: Using cached network data with RxJS (7:44)
+- `withLatestFrom`
+
 ### Lecture 10: An overview of reactive concepts (2:14)
+- `Separation of concerns`: The declaration of a stream specifies the complete behavior over time.
