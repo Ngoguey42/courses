@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/08/06 11:23:56 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/08/06 13:38:02 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/08/06 13:40:37 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -35,9 +35,9 @@ result.subscribe(x => console.log(x))
 clickStream:       ----c------c--c-----c-----c-c--c-------|-->
                    vvv buffer(clickStream.throttle(250ms)) vvv
                    ---------a---------a----a-----------a--|-->
-				   vvvvvvvv map(array => array.length) vvvvvvv
-				   ---------1---------2----1-----------3--|-->
-				   vvvvvvvvv filter(len => len >= 2) vvvvvvvvv
+                   vvvvvvvv map(array => array.length) vvvvvvv
+                   ---------1---------2----1-----------3--|-->
+                   vvvvvvvvv filter(len => len >= 2) vvvvvvvvv
 doubleClickStream: -------------------2----------------3--|-->
 ```
 
@@ -74,9 +74,9 @@ var requestStream = Rx.Observable.just('https://api.github.com/users');
 requestStream.subscribe(requestUrl => {
   var responseStream = Rx.Observable.create(observer => {
     jQuery.getJSON(requestUrl)
-	  .done(response => observer.onNext(response))
-	  .fail(jqXHR, status, error => observer.onError(error))
-	  .always(() => observer.onCompleted())
+      .done(response => observer.onNext(response))
+      .fail(jqXHR, status, error => observer.onError(error))
+      .always(() => observer.onCompleted())
     });
 
   responseStream.subscribe(response => {
