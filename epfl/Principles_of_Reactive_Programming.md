@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/07/25 08:32:25 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/08/06 09:47:51 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/08/07 13:20:44 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -736,8 +736,12 @@ def zip[S, R]: (Future[S], ((T, S) => R)) => Future[R]
 
 # Week4
 ### Lecture 1 - From Try to Future (5:22)
+- `Try` and `Future` duality
+
 ### Lecture 8 - From Iterables to Observables 1 (8:06)
 ### Lecture 9 - From Iterables to Observables 2 (9:44)
+- `Iterable` and `Observable` duality
+
 ### Lecture 10 - Hello World Observables (6:29)
 ### Lecture 11 - RX Operators (11:39)
 ### Lecture 12 - Subscriptions (10:34)
