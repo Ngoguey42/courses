@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/07/25 08:32:25 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/08/07 13:20:44 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/08/08 08:24:24 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -743,8 +743,28 @@ def zip[S, R]: (Future[S], ((T, S) => R)) => Future[R]
 - `Iterable` and `Observable` duality
 
 ### Lecture 10 - Hello World Observables (6:29)
+```scala
+val ticks: Observable[Long] = Observable.interval(1 seconds)
+val evens: Observable[Long] = ticks.filter(_ % 2 == 0)
+val bufs: Observable[Seq[Long]] = evens.slidingBuffer(count = 2, skip = 1)
+val s = bufs.subscribe(println(_))
+```
+
 ### Lecture 11 - RX Operators (11:39)
+- Ex: `Nested streams merging`
+- `concat` method
+- Ex: `Earthquakes`
+- `groupBy` method
+
 ### Lecture 12 - Subscriptions (10:34)
+- `Cold observable` subscription causes side effect
+- `Hot observable`
+- `Unsubscribing` vs `cancellation`
+- `Composite subscription`
+- `Multi assignment subsription`
+- `Serial subscription`
+- Subscriptions are `idempotent`
+
 ### Lecture 13 - Promises and Subjects (8:55)
 ### Lecture 14 - RX potpourri (11:30)
 ### Lecture 15 - Observable Contract (14:19)
