@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/07/25 08:32:25 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/08/08 08:24:24 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/08/14 15:54:02 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -757,21 +757,43 @@ val s = bufs.subscribe(println(_))
 - `groupBy` method
 
 ### Lecture 12 - Subscriptions (10:34)
+> Video a chier
 - `Cold observable` subscription causes side effect
-- `Hot observable`
+- `Hot observable` subscription doesn't cause side effect
 - `Unsubscribing` vs `cancellation`
-- `Composite subscription`
+- `Composite subscription` is a wrapper of subscriptions, calling `unsubscribe` on the wapper unsubscribes the inner subscriptions.
 - `Multi assignment subsription`
 - `Serial subscription`
 - Subscriptions are `idempotent`
 
 ### Lecture 13 - Promises and Subjects (8:55)
+- `Publish subject` only replays onComplete and onError
+- `Replay subject` caches all value
+- `Async subject` caches the final value
+- `Behavior subject` caches the latest value
+
 ### Lecture 14 - RX potpourri (11:30)
+- `Materialize` `Notification` `.toBlocking` `.reduce`
+- Ref: `Rx wiki`
+- Ref: `backpressure`
+
 ### Lecture 15 - Observable Contract (14:19)
+> skipped
 
 # Week5
-### Lecture 1 - Introduction- Why Actors- (14:46)
+### Lecture 1 - Introduction Why Actors (14:46)
+- `Actors` history
+- Ex: `Concurrency in a bank account`
+- `.synchronized` method
+- `Ordering` to prevent `dead-locks`
+
 ### Lecture 2 - The Actor Model (13:43)
+- `Actor trait` from `akka`
+- `ActorRef`
+- `implicit` keyword
+- `ActorContext`
+- Actors are created by actors
+
 ### Lecture 3 - Message Processing Semantics (27:28)
 ### Lecture 5 - Designing Actor Systems (38:10)
 ### Lecture 6 - Testing Actor Systems (17:16)
