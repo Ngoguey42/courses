@@ -24,49 +24,63 @@
  - Equivalent to Epimorphism
 
 # 2.2: Monomorphisms, simple types (24:34)
-- Epimorphism (self deduction):
- - let a be an object
- - let b be an object
- - ∀ object c different than a and b
- - if there is only one morphism from b to c
- - then a morphism from a to b is epimorphic
+##### Epimorphism (self deduction):
+- let a be an object
+- let b be an object
+- ∀ object c different than a and b
+- if there is only one morphism from b to c
+- then a morphism from a to b is epimorphic
+
 - Injective function
  - Every elements of the source set is mapped to different elements in the destination set
  - Equivalent to Monomorphism
-- Monomorphism (self deduction):
- - let a be an object
- - let b be an object
- - ∀ elements c different than a and b
- - if there is only one morphism from c to a
- - then a morphism from a to b is epimorphic
+
+##### Monomorphism (self deduction):
+- let a be an object
+- let b be an object
+- ∀ elements c different than a and b
+- if there is only one morphism from c to a
+- then a morphism from a to b is epimorphic
+
 - Epi and Mono are universal properties
 - Epi + Mono does not make Iso
-- Empty set correspondance with types
- - In logic this corresponds to `false`
- - Type void in Haskell (function that does not return)
- - Function that would take a void is and `absurd` function in Haskell
- - An `absurd` function is `false` and can the return anything
- - Identity function for void `exists in vacuum`
-- Singleton set correspondance with types
- - In logic this corresponds to `true`
- - type unit, value unit
- - 'a -> unit, is a function called unit
-- Two elt set
- - Function that returns a bool is a `predicate`
+##### Empty set correspondance with types
+- In logic this corresponds to `false`
+- Type void in Haskell (function that does not return)
+- Function that would take a void is and `absurd` function in Haskell
+- Being `absurd` it can the return anything
+- Identity function for void `exists in vacuum`
+##### Singleton set correspondance with types
+- In logic this corresponds to `true`
+- type unit, value unit
+- 'a -> unit, is a function called unit
+##### Two elt set
+- Function that returns a bool is a `predicate`
 
 # 3.1: Examples of categories, orders, monoids (48:26)
-- Empty category `0`
+- Empty category is named `0`
 - Connection between graphs and categories
 - Free construction
-- `Order`, arrows represent relations
- - Ex: `<=` relation
- - pre order / partial order / total order
+
+##### Order as a category
+- Arrows represent relations
+- Ex: `<=` relation
+- pre order / partial order / total order
 - Thin category
  - Every morphism is epi and mono
 - A preorder is automatically a category
-- A `hom-set` C(a, b) is a set of arrow
+- A `hom-set` C(a, b) is the set of arrow from a to b
 - `Partial order` has no loops comparing to `pre order`
-https://youtu.be/aZjhqkD6k6w?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_&t=1698
+
+##### Monoid
+- Category with a single object called monoid
+- Implies that any pair of arrow is composable
+- In set theory
+ - An element of the set is called unit
+ - Associativity ∃e ∀a  e*a = a*e = a
+- Addition / Multipication / String concatenation / Lists addition
+- Ex: Monoid analogy to strongly typed language
+
 
 # 3.2: Kleisli category (41:58)
 
