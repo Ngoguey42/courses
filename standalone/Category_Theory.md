@@ -55,6 +55,18 @@
  - Function that returns a bool is a `predicate`
 
 # 3.1: Examples of categories, orders, monoids (48:26)
+- Empty category `0`
+- Connection between graphs and categories
+- Free construction
+- `Order`, arrows represent relations
+ - Ex: `<=` relation
+ - pre order / partial order / total order
+- Thin category
+ - Every morphism is epi and mono
+- A preorder is automatically a category
+- A `hom-set` C(a, b) is a set of arrow
+- `Partial order` has no loops comparing to `pre order`
+https://youtu.be/aZjhqkD6k6w?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_&t=1698
 
 # 3.2: Kleisli category (41:58)
 
