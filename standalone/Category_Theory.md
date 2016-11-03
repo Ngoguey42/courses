@@ -12,23 +12,47 @@
 
 # 1.1: Motivation and Philosophy (46:46)
 # 1.2: What is a category? (48:18)
+- A category contains `objects`
+- Can a set contain itself? Barber's paradox (shave)
+ - https://youtu.be/p54Hd7AmVFU?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_&t=459
+- A morphism goes between two objects
+- An object is a primitive, it has no property
+
 # 2.1: Functions, epimorphisms (46:14)
-- One property of epimorphism:
- - let a, b, c be elements of a category
- - let f be a morphism from a to b
- - let g be a morphism from b to c
- - let g1, g2 be a pair of morphism from b to c
- - if f is epimorphic and g1 o f = g2 o f then g1 = g2
+- Surjective function
+ - Every elements of the destitation set are mapped by the function
+ - Equivalent to Epimorphism
 
 # 2.2: Monomorphisms, simple types (24:34)
 - Epimorphism (self deduction):
- - let a be an element of a category
- - let b be an element of a category
- - ∀ elements c different than a and b
+ - let a be an object
+ - let b be an object
+ - ∀ object c different than a and b
  - if there is only one morphism from b to c
- - a morphism from a to b is epimorphic
-
-https://youtu.be/NcT7CGPICzo?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_&t=74
+ - then a morphism from a to b is epimorphic
+- Injective function
+ - Every elements of the source set is mapped to different elements in the destination set
+ - Equivalent to Monomorphism
+- Monomorphism (self deduction):
+ - let a be an object
+ - let b be an object
+ - ∀ elements c different than a and b
+ - if there is only one morphism from c to a
+ - then a morphism from a to b is epimorphic
+- Epi and Mono are universal properties
+- Epi + Mono does not make Iso
+- Empty set correspondance with types
+ - In logic this corresponds to `false`
+ - Type void in Haskell (function that does not return)
+ - Function that would take a void is and `absurd` function in Haskell
+ - An `absurd` function is `false` and can the return anything
+ - Identity function for void `exists in vacuum`
+- Singleton set correspondance with types
+ - In logic this corresponds to `true`
+ - type unit, value unit
+ - 'a -> unit, is a function called unit
+- Two elt set
+ - Function that returns a bool is a `predicate`
 
 # 3.1: Examples of categories, orders, monoids (48:26)
 
