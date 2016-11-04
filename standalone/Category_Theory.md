@@ -6,12 +6,14 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/10/07 07:18:17 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/10/07 09:02:07 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/11/04 21:57:00 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
-> https://bartoszmilewski.com/2014/10/28/category-theory-for-programmers-the-preface/
-> https://www.youtube.com/playlist?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_
+# Resources
+- https://bartoszmilewski.com/2014/10/28/category-theory-for-programmers-the-preface/
+- https://www.youtube.com/playlist?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_
+- http://www.logicmatters.net/categories/
 
 # 1.1: Motivation and Philosophy (46:46)
 # 1.2: What is a category? (48:18)
@@ -92,6 +94,18 @@
 - Ref: separation of concern
 
 # 4.1: Terminal and initial objects (47:47)
+##### Recap of 3.2
+- A category vs it's Kleisli representation
+- `a -> (a, string)` in general: `a -> ma`
+- Ref: functors
+|                 | category C | C's Kleisli category |
+|:---------------:|:----------:|:--------------------:|
+| unit (identity) |   a -> ma  |        a -> a        |
+|       bind      |   a -> mb  |        a -> b        |
+
+##### ?
+Universal construction
+
 
 # 4.2: Products (34:49)
 
