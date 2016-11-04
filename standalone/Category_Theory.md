@@ -10,6 +10,9 @@
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
+> https://bartoszmilewski.com/2014/10/28/category-theory-for-programmers-the-preface/
+> https://www.youtube.com/playlist?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_
+
 # 1.1: Motivation and Philosophy (46:46)
 # 1.2: What is a category? (48:18)
 - A category contains `objects`
@@ -81,8 +84,12 @@
 - Addition / Multipication / String concatenation / Lists addition
 - Ex: Monoid analogy to strongly typed language
 
-
 # 3.2: Kleisli category (41:58)
+- Every set is a subset of itself
+- Subset is a partial order relation
+
+##### Ex: logging
+- Ref: separation of concern
 
 # 4.1: Terminal and initial objects (47:47)
 
