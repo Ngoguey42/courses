@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/11/04 15:37:50 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/11/04 16:52:53 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/11/05 13:49:06 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -146,8 +146,19 @@ Red: Refister Windows, registers allocation
 RAS
 
 # L02S1 - Microcoded Microarchitecture (14:08) (7%)
+- Ex: Bus-based datapath for RISC
 
 # L02S2 - Pipeline Basics (30:51) (9%)
+- Ex: Unpipelined datapath for MIPS
+- 5 Stage pipeline
+ - Fetch phase aka instruction fetch phase aka `F` aka `IF` aka `IM`
+ - decode + register-fetch phase aka `D` aka `RF`
+ - Execute phase aka `X` aka `EX` aka `ALU`
+ - Memory phase aka `M` aka `MEM` aka `DM` (longest)
+ - Write back phase aka `W` aka `WB` aka `RW`
+- `Iron Law` of processor performance
+ - Time/Program = Instructions/Program * Cycles/Instruction * Time/Cycle
+- Microcoded / Unpipelined / Pipelined
 
 # L02S3 - Structural Hazard (10:13) (10%)
 
