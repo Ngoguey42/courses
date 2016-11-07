@@ -6,9 +6,22 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/11/04 15:37:50 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/11/05 13:49:06 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/11/07 04:05:06 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
+
+
+```
+*	i(n+2)	i(n+1)	i(n+0)	i(n-1)	i(n-2)
+*					-this-
+*	--following--	 		--previous---
+*	---earlier---			----later----
+*	---younger---			----older----
+*			  				---further---
+
+*  <-------------  -this-	------------>
+*  ---backward---			---forward---
+```
 
 # L00S1 - Course Introduction (9:06) (1%)
 RAS
@@ -161,16 +174,40 @@ RAS
 - Microcoded / Unpipelined / Pipelined
 
 # L02S3 - Structural Hazard (10:13) (10%)
+- 2 Instruction need the same hardware at the same time
+- Solutions: `Schedule` / `Stall` / `Duplicate`
+- 5-stage pipeline has no structural hazards
+- Ex: `Unified memory`
+- Ex: `2-cycle memory`
 
 # L02S4 - Data Hazards (46:33) (12%)
+- An instruction depends on a data value still in the pipeline
+- Solutions: `Schedule` / `Stall` / `Bypass` / `Speculate`
+- `Feedback`
+- Each stall or kill introduces a bubble in the pipeline (CPI > 1)
+- Stall: Multiplexer, interlocks, nop
+ - read enable / write enable
+- Bypass: Multiplexer
 
 # L03S1 - Control Hazards, Jumps (15:56) (13%)
+- `Speculation`
+ - Next instr is not going to be a jump, else early instructions need to be killed
 
 # L03S2 - Control Hazards, Branch (24:02) (15%)
 
+##### Reducing branch penalty
+- Zero detecter out of register file
+- Expose control hazard to software
+ - Branch delay slot (filled 70% says `specint`)
+
 # L03S3 - Control Hazards, Others(7:51) (15%)
+- Load delay slot
+- Exceptions, Interrupts
 
 # L03S4 - Memory Technologies (22:47) (17%)
+- Memory arrays Register File
+- SRAM
+- DRAM (DRAM refresh every few seconds)
 
 # L03S5 - Motivation for Caches (22:25) (18%)
 
@@ -361,6 +398,3 @@ test
  -test
   -test
    -test
-    -test
-     -test
-      -test
