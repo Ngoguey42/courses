@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/10/07 07:18:17 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/11/05 12:37:55 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/11/08 01:37:34 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -108,11 +108,15 @@
  - Incoming arrows
  - Unique incoming arrow from every object of the category (self included)
  - Terminal object
- - Any path to a singleton object can be shrunk to a single arrow
- - Terminal object is unique up to an isomorphism
+ - There is only one function in a hom-set to a singleton set
+  - Any composed path to a singleton object can be shrunk into a single arrow
+  - But there can be infinitely many functions in a hom-set to a bool set. (predicates)
+ - Terminal object is unique up to an unique isomorphism
 - Uniqueness is defined as equality in mathematics
 - Def: Empty set
- * Outcoming arrows
+ - Outcoming arrows
+ - Initial object
+ - Inverse of the terminal object
 
 # 4.2: Products (34:49)
 
