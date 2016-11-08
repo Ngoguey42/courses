@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/10/07 07:18:17 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/11/08 01:37:34 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/11/08 02:12:57 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -119,6 +119,17 @@
  - Inverse of the terminal object
 
 # 4.2: Products (34:49)
+- Every arrow from a terminal object to another object is a definition of a generalized element in this other object
+- The oposite category `Cop` of `C` is obtained by reversing every arrows
+
+##### Ex: Cartesian product
+- Projections
+- Universal construction
+- Loss of information
+- A categorical product of a and b is an object c.
+ - c has two projections p::c->a and q::c->b
+ - for any other c' that has p'::c'->a and q'::c'->b, there is a unique morphism m::c'->c
+- In the category of sets, every pair of set has a product
 
 # 5.1: Coproducts, sum types (36:47)
 
