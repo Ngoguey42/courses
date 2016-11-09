@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/11/04 15:37:50 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/11/07 04:05:06 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/11/09 22:22:12 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -210,14 +210,51 @@ RAS
 - DRAM (DRAM refresh every few seconds)
 
 # L03S5 - Motivation for Caches (22:25) (18%)
+- Bandwidth-delay product
+ - Amount of data that can be in flight at the same time (Little's law)
+- Memory size affects latency
+- Ex: Common and predictable memory reference patterns (graph: address / time)
+ - Temporal locality (exploited by cache when storing)
+ - Spatial locality (exploited by cache when fetching blocks)
 
 # L04S1 - Classifying Caches (28:07) (20%)
+- Address tag / Cache line / Data block
+- Cache miss / Cache miss / victim block
+- Block placement
+ - Direct mapped cache (modulo array)
+ - Set associative (n-way) (modulo bucket array)
+ - Fully associative (random access array)
+- Block replacement
+ - Random
+ - LRU
+ - FIFO
+ - NMRU (FIFO with exception for MRU blocks)
+- Write strategy
+ - Cache hit
+   - Write through
+   - Write back
+   - Both (multilvl cache)
+- Cache miss
+ - No Write Allocate
+ - Write Allocate
 
 # L04S2 - Cache Performance (17:11) (21%)
+- Types of cache misses:
+ - Compulsory
+ - Capacity
+ - Conflict
+- Rule of thumb1: *2 cache size /2^.5 miss rate
+- Rule of thumb2: miss-rate(direct-mapped(size: n)) = miss-rate(two-way(size: n/2))
 
 # L04S3 - Superscalar 1 (6:42) (21%)
+- Types of data hazard
+ - Data-dependence RAW
+ - Anti-dependence WAR
+ - Output-dependence WAW
 
 # L04S4 - Basic Two-way In-order Superscalar (4:56) (21%)
+- Ex: Two asymetric pipelines
+ - Issue logic/Instruction steering
 
 # L04S5 - Fetch Logic and Alignment (11:01) (22%)
 
