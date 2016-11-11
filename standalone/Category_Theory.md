@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/10/07 07:18:17 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/11/08 02:12:57 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/11/11 03:08:00 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -132,8 +132,82 @@
 - In the category of sets, every pair of set has a product
 
 # 5.1: Coproducts, sum types (36:47)
+- A coproduct is an object c with a pair of injections i,j going into it, such that any other object with injections i',j', there is an unique morphism from c to c'
+- In set theory the coproduct is the union of two sets
+ - The union of a set with itself is just the set. Unless it is a discriminated union (each elements are tagged with origin)
+ - The coproduct corresponds to a discriminated union
+ - There is a mapping from discriminated union to union. But not the inverse
+- In the type theory, it is a variant (tagged union)
+
+```ocaml
+type a = int
+type b = string
+
+type c = [`A of a | `B of b]
+type c' = [`A of a | `B of b] * float
+
+let i: a -> c = fun arg -> `A arg
+let j: b -> c = fun arg -> `B arg
+
+let m: c -> c' = fun arg -> (arg, 44.42)
+
+let i': a -> c' = fun arg -> (`A arg, 42.43)
+let j': b -> c' = fun arg -> (`B arg, 40.44)
+(* or *)
+let i': a -> c' = fun arg -> m (i arg)
+let j': b -> c' = fun arg -> m (j arg)
+```
+
+- In Haskell
+ - Sum type (not built in)
+```haskell
+data Either a b = Left a | Right b
+x::Either Int Bool
+
+f::Either Int Bool -> Bool
+f (Left i) = i > 0
+f (Right b) = b
+```
+
+- In C++
+ - use of nullptr is really a sum type
 
 # 5.2: Algebraic data types (33:14)
+
+##### In a type system
+- Product is a product type, coproduct is a sum type
+- Modulo isomorphism, product is a monoid
+- A product is symetric up to isomorphism
+```haskell
+swap:: (a, b) -> (b, a)
+swap p = (snd p, fst p)
+```
+- A product is associative up to isomorphism
+```haskell
+assoc ((a, b), c) = (a, (b, c))
+assoc_inverse (a, (b, c)) = ((a, b), c))
+```
+- A product has unit up to isomorphism
+```haskell
+make_unit (x, ()) = x
+make_unit_inverse x = (x, ())
+```
+- Coproduct is also a monoid up to isomorphism
+```haskell
+Either a b ~~~~~ Either b a
+data Triple a b c = Left a
+                  | Right c
+				  | Middle b
+Either a Void ~~~~~~ a
+```
+- Ex: Follows that `multiplication by 0` and `distributive law` work up to isomorphism
+- Ref: ring, rig(semi-ring)
+- Ex: `2 = 1 + 1` similar to `bool`
+- Ex: `1 + a` similar to `option`
+- Ex: Recursive variant
+```haskell
+data List a = Nil | Cons a (List a)
+```
 
 # 6.1: Functors (54:10)
 
