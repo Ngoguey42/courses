@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/10/07 07:18:17 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/11/11 03:08:00 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/11/18 21:08:28 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -210,7 +210,28 @@ data List a = Nil | Cons a (List a)
 ```
 
 # 6.1: Functors (54:10)
+- Ref: `natural transformation`
+- A `discrete category` has no morphisms (except identities)
+- A functor preserve structure
+- Preserving structure is preserving morphisms
+- A functor maps morphism and objects
+ - The functor has a function that maps the set of points
+ - The functor has functions that maps the set of morphisms in all hom-sets
+- Ex: mapping a stickfigure to a real person
+- A faithful functor is injective on all hom-set
+- A full functior is surjective on all hom-set
+- Constant functor
+- An endofunctor is a functor that maps in the same category
+- `fmap` in Haskell
+- Ref: `Threorem for free`
 
 # 6.2: Functors in programming (51:36)
+- Functor laws, a functor have to preserve composition and identity
+- Ex: Functor in type system
+- Lift
+- Ex: Reader
 
 # 7.1: Functoriality, bifunctors (56:32)
+- A category in which Functor are morphisms and categories are objects is called `cat`
+- Ex: Lift product (functor of 2 arguments)
+https://youtu.be/pUQ0mmbIdxs?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_&t=1701
