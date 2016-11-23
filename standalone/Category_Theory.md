@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/10/07 07:18:17 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/11/18 21:08:28 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/11/23 09:50:08 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -232,6 +232,23 @@ data List a = Nil | Cons a (List a)
 - Ex: Reader
 
 # 7.1: Functoriality, bifunctors (56:32)
+- Ref: `discrete category`
 - A category in which Functor are morphisms and categories are objects is called `cat`
+- Ex: Composition of the maybe functor after the list functor
+- Most constructors in haskell are functors
 - Ex: Lift product (functor of 2 arguments)
-https://youtu.be/pUQ0mmbIdxs?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_&t=1701
+- Product of categories (bifunctor)
+- A product in a category is a bifunctor
+- Cartesian category
+
+# 7.2: Monoidal Categories, Functoriality of ADTs, Profunctors (49:14)
+- Monoidal category
+- Multiplying by a terminal object gives back the same object
+- With categorical product for every pair of objects, and with a terminal object, we have a monoidal structure on objects. The same goes for coproduct and the unit object. In general to make a monoidal category we need a tensor product and a unit.
+- A functor that works on inverted arrows is called Contravariant
+- The arrow is a covariant functor in the return type
+- The arrow is a contravariant functor in the argument
+- Profunctor
+- An arrow is the simplest profunctor
+
+# 8.1: Function objects, exponentials (45:24)
