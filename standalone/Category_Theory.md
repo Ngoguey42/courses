@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/10/07 07:18:17 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/11/24 06:25:00 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/11/24 23:46:31 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -258,4 +258,13 @@ ras
 ras
 
 # 9.1: Natural transformations (51:26)
-https://youtu.be/2LJC-XD5Ffo?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_&t=1347
+- Natural transformation: mapping of a functor to another
+- Natural isomorphism: invertable natural transformation
+
+# 9.2: bicategories (43:03)
+- Diagram chasing
+- `a zero cell` = `object`
+- `a one cell` = `a one morphism` = `morphism between object`
+- `a two cell` = `a two morphism` = `morphism between morphism`
+- A hom-set in cat is a category
+- groupoid vs n-category
