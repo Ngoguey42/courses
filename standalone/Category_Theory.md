@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/10/07 07:18:17 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/11/23 09:50:08 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/11/24 06:25:00 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -252,3 +252,10 @@ data List a = Nil | Cons a (List a)
 - An arrow is the simplest profunctor
 
 # 8.1: Function objects, exponentials (45:24)
+ras
+
+# 8.2: Type algebra, Curry-Howard-Lambek isomorphism (20:55)
+ras
+
+# 9.1: Natural transformations (51:26)
+https://youtu.be/2LJC-XD5Ffo?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_&t=1347
