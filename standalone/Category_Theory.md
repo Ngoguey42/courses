@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/10/07 07:18:17 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/11/24 23:46:31 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/11/25 07:47:11 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -268,3 +268,9 @@ ras
 - `a two cell` = `a two morphism` = `morphism between morphism`
 - A hom-set in cat is a category
 - groupoid vs n-category
+
+# 10.1: Monads (75:28)
+- Point free style composition
+
+# 10.2: Monoid in the category of endofunctors (32:56)
+ras
