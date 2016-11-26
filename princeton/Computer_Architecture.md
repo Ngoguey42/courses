@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/11/04 15:37:50 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/11/09 22:22:12 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/11/26 08:43:57 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -257,24 +257,80 @@ RAS
  - Issue logic/Instruction steering
 
 # L04S5 - Fetch Logic and Alignment (11:01) (22%)
+ras
 
 # L05S1 - Baseline Superscalar and Alignment (4:16) (22%)
+ras
 
 # L05S2 - Interrupts and Bypassing (12:13) (23%)
+- Clustered superscalar
+- Decode + issue stage
+- 98% accurate branch prediction in modern day cpu
 
 # L05S3 - Interrupts and Exceptions (29:25) (25%)
+- Async interrupts (external event)
+ - input/output device service request
+ - timer expiration
+ - power disruptions
+ - hardware failure
+- Sync interrupts (exceptions / trap)
+ - undefined opcode
+ - privileged instruction
+ - arithmetic overflow
+ - FPU exception
+ - virtual memory exceptions
+ - syscalls
+- Commit point
 
 # L05S4 - Introduction to Out-of-Order Processors (30:53) (27%)
+- Table of all 5 types of ooo processors
+ - Frontend: Instruction fetch / decode
+ - Issue
+ - Writeback
+ - Commit
+- Ref: Dataflow machine
+- Functional unit
+- Ex: `I4`
+ - ARF: architecture register file
+ - SB: scoreboard
+
+| name | frontend-issue-writeback-commit |
+|------|---------------------------------|
+| I4   | IIII                            |
+| I2O2 | IIOO                            |
+| I2OI | IIOI                            |
+| IO3  | IOOO                            |
+| IO2I | IOOI                            |
 
 # L06S1 - Review of Out-of-Order Processors (3:26) (27%)
+ras
 
 # L06S2 - I2O2 Processors (19:58) (28%)
+- Scoreboard help track structural hazards
 
 # L06S3 - I2O1 Processors (28:44) (30%)
+- Structures
+ - SB
+ - ARF
+ - PRF: Physical register file (future file)
+ - ROB: Reorder buffer
+ - FSB: Finished store buffer
+- PRF written ooo, but ROB commits in order
+- FSB stalls the memory write
+- ARF is used when interrupts or branches
+- ROB
+ - Commit happen only when the oldest instruction in the ROB is finished
+ - Speculative bit
+- CSB: Commit store buffer
 
 # L06S4 - IO3 Processors (16:23) (31%)
+- Structures
+ - SB
+ - ARF
+ - IQ: Issue queue
 
 # L06S5 - IO2I Processors (4:31) (31%)
+ras
 
 # L07S1 - Speculation and Branch (14:37) (32%)
 
