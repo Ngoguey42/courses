@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/11/26 13:57:51 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/11/26 13:57:51 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/11/26 15:37:12 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -51,17 +51,26 @@
 > http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/lecture-notes/MIT6_046JS15_lec03.pdf
 
 - Vector notation for polynomials
-- Analysis of operations on polynomials
-- Horner's rule
+- Polynomial evalution
+ - O(N) (Horner's rule)
+- Polynomials addition
+ - O(N)
+- Polymonials multiplication
+ - `forall k, C_k = sum _(j=0) ^k a_j . b_(k-j)` O(N^2)
 - Convolution of vectors
 - Dot product == Inner product
 - Representations of polynomials (Coeff vector, Roots, Samples)
-- Ref: `polynomial interpolation`
-- Vandermonde matrix
-- FFT
 
-<BR>
-STOP at 0:30:00
+| Algo | Coef   | Roots | Samples                         |
+|------|--------|-------|---------------------------------|
+| Eval | O(n)   | O(n)  | O(n^2) polynomial interpolation |
+| Add  | O(n)   | inf   | O(n)                            |
+| Mult | O(n^2) | O(n)  | O(n)                            |
+
+- FFT converts between coef and samples in O(nlogn)
+- Coef representation with vandermonde matrix, and conversions in O(n^2)
+- FFT: from coef to samples, at the nth roots of unity
+- IFFT: same as FFT with the complex conjugates
 
 ### Recitation 2: 2-3 Trees and B-Trees (0:30:45) 14%
 > https://www.youtube.com/watch?v=TOb1tuEZ2X4&index=5&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp
