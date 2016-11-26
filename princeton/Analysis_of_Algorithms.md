@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/11/22 00:44:24 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/11/22 03:04:13 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/11/23 04:49:47 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -47,11 +47,16 @@ ras
 - Symbolic math (Maple16, soge, mathematica 8)
 - web references (oeis, wikipedia, mathworld, nist handbook)
 
-<img src="https://raw.githubusercontent.com/Ngoguey42/courses/master/princeton/test.svg" width="100%" height="144">
-
 # 3 - 1 - Computing Values (10-31) 20%
+- Recurrences
+
 # 3 - 2 - Telescoping (15-18) 22%
+- Linear first order recurrence
+
 # 3 - 3 - Types of Recurrences (12-51) 24%
+- Type of recurrences
+- Ex: `Newton's method`
+
 # 3 - 4 - Mergesort (18-03) 26%
 # 3 - 5 - Master Theorem (14-20) 28%
 # 4 - 1 - Counting with Generating Functions (27-32) 32%
