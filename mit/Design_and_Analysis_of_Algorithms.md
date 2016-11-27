@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/11/26 13:57:51 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/11/26 15:37:12 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/11/27 15:48:51 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -111,11 +111,43 @@
 - Monte-Carlo, probably correct, runs in probabilistic * time, outputs false positives
 - Las-Vegas, probably fast, runs in expected * time
 - Comparisons of matrix multiplicatons algorithms
-- Frievald's algorithm
-https://youtu.be/cNB2lADK3_s?list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&t=1024
+- Checking matrix multiplication result with `Frievald's algorithm`
+- Pick min or max as pivot
+ - Worst case O(N^2)
+- Intelligent pivot picking
+ - Median finding
+ - Does not work in practice
+- Random pivot picking
+ - Expected time O(nlogn)
+- Paranoid quicksort, guarantee balanced partition
+ - |L| <= 3/4 |A|
+ - |R| <= 3/4 |A|
+ - max log4/3(2cn) levels
+ - 2cn work per level
+ - O(nlogn)
 
 ### Recitation 4: Randomized Select and Randomized Quicksort (0:39:30) 26%
+> https://www.youtube.com/watch?v=QPk8MUtq5yA&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp
+
+##### Quick find
+- Find the ith smallest element in A of size n
+- Recursively partition with a randomly picked pivot
+- Induction proof for expected time
+
+##### Quick sort
+- Induction proof for expected time
+
 ### Lecture 7: Randomization: Skip Lists (1:20:56) 29%
+> https://www.youtube.com/watch?v=2g9OSRKJuzM&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp
+
+- William Pugh 1989
+- Ex: New York subway
+- Insertion:
+ - Randomly promote the inserted element
+- Union bomb
+https://youtu.be/2g9OSRKJuzM?list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&t=4123
+
+
 ### Lecture 8: Randomization: Universal & Perfect Hashing (1:21:51) 33%
 # Module 3: Optimization - greedy and dynamic programming
 ### Recitation 5: Dynamic Programming (0:52:03) 35%
