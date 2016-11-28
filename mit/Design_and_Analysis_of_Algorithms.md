@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/11/26 13:57:51 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/11/27 15:48:51 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/11/28 07:40:12 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -144,9 +144,8 @@
 - Ex: New York subway
 - Insertion:
  - Randomly promote the inserted element
-- Union bomb
-https://youtu.be/2g9OSRKJuzM?list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&t=4123
-
+- Union bound
+- Chernoff bound
 
 ### Lecture 8: Randomization: Universal & Perfect Hashing (1:21:51) 33%
 # Module 3: Optimization - greedy and dynamic programming
