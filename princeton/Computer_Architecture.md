@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/11/04 15:37:50 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/11/26 08:43:57 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/11/29 11:25:44 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -333,161 +333,79 @@ ras
 ras
 
 # L07S1 - Speculation and Branch (14:37) (32%)
-
 # L07S2 - Register Renaming Introduction (11:08) (33%)
-
 # L07S3 - Register Renaming with Pointers to IQ and ROB (24:54) (34%)
-
 # L07S4 - Register Renaming with Values in IQ and ROB (12:14) (35%)
-
 # L07S5 - Memory Disambiguation (9:49) (35%)
-
 # L08S1 - Limits of Out-of-Order Design Complexity (13:13) (36%)
-
 # L08S2 - Introduction to VLIW (21:57) (38%)
-
 # L08S3 - VLIW Compiler Optimizations (21:20) (39%)
-
 # L08S4 - Classic VLIW Challenges (8:18) (39%)
-
 # L08S5 - Introduction to Predication (9:51) (40%)
-
 # L09S1 - Scheduling Model Review (5:58) (40%)
-
 # L09S2 - Review of Predication (30:48) (42%)
-
 # L09S3 - Predication Implementation (10:06) (43%)
-
 # L09S4 - Speculation Execution (26:02) (44%)
-
 # L09S5 - Dynamic Events and Clustered VLIWs (10:42) (45%)
-
 # L09S6 - Case Study- IA-64-Itanium (21:10) (46%)
-
 # L10S1 - Branch Cost Motivation (6:37) (47%)
-
 # L10S2 - Branch Prediction Introduction (5:18) (47%)
-
 # L10S3 - Static Outcome Prediction (16:05) (48%)
-
 # L10S4 - Dynamic Outcome Prediction (29:12) (50%)
-
 # L10S5 - Target Address Prediction (18:45) (51%)
-
 # L11S1 - Basic Cache Optimizations (16:08) (52%)
-
 # L11S2 - Cache Pipelining (14:16) (53%)
-
 # L11S3 - Write Buffers (9:52) (53%)
-
 # L11S4 - Multilevel Caches (17:37) (54%)
-
 # L11S5 - Victim Caches (6:04) (55%)
-
 # L11S6 - Prefetching (12:34) (55%)
-
 # L12S1 - Multiporting and Banking (20:08) (57%)
-
 # L12S2 - Software Memory Optimizations (16:53) (58%)
-
 # L12S3 - Non-blocking Caches (19:29) (59%)
-
 # L12S4 - Critical Word First and Early Restart (3:06) (59%)
-
 # L13S1 - Memory Management Introduction (13:04) (60%)
-
 # L13S2 - Base and Bound Registers (11:44) (60%)
-
 # L13S3 - Page Based Memory Systems (27:04) (62%)
-
 # L13S4 - Translation and Protection (14:37) (63%)
-
 # L13S5 - TLB Processing (12:00) (64%)
-
 # L14S1 - Address Translation Review (9:36) (64%)
-
 # L14S2 - Cache and Memory Protection Interaction (22:18) (65%)
-
 # L14S3 - Vector Processor Introduction (18:04) (67%)
-
 # L14S4 - Vector Parallelism (6:44) (67%)
-
 # L14S5 - Vector Hardware Optimizations (18:52) (68%)
-
 # L14S6 - Vector Software and Compiler Optimizations (5:54) (68%)
-
 # L15S1 - Reduction, Scatter-Gather, and the Cray 1 (9:20) (69%)
-
 # L15S2 - SIMD (6:58) (69%)
-
 # L15S3 - GPUs (20:02) (71%)
-
 # L15S4 - Multithreading Motivation (7:33) (71%)
-
 # L15S5 - Course-Grain Multithreading (26:16) (73%)
-
 # L15S6 - Simultaneous Multithreading (12:53) (73%)
-
 # L16S1 - SMT Implementation (17:19) (74%)
-
 # L16S2 - Introduction to Parallelism (17:59) (76%)
-
 # L16S3 - Sequential Consistency (21:00) (77%)
-
 # L16S4 - Introduction to Locks (03:39) (77%)
-
 # L17S1 - Sequential Consistency Review (3:48) (77%)
-
 # L17S2 - Locks and Semaphores (10:01) (78%)
-
 # L17S3 - Atomic Operations (27:11) (79%)
-
 # L17S4 - Memory Fences (11:11) (80%)
-
 # L17S5 - Dekker-'s Algorithm (14:13) (81%)
-
 # L18S1 - Locking Review (2:04) (81%)
-
 # L18S2 - Bus Implementation (12:11) (82%)
-
 # L18S3 - Cache Coherence (17:04) (83%)
-
 # L18S4 - Bus-Based Multiprocessors (5:16) (83%)
-
 # L18S5 - Cache Coherence Protocols (49:00) (86%)
-
 # L19S1 - More Cache Coherence Protocols- (21:16) (87%)
-
 # L19S2 - Introduction to Interconnection Networks (8:29) (88%)
-
 # L19S3 - Message Passing (26:59) (90%)
-
 # L19S4 - Interconnect Design (15:06) (90%)
-
 # L20S1 - Networking Review (7:56) (91%)
-
 # L20S2 - Topology (18:53) (92%)
-
 # L20S3 - Topology Parameters (14:25) (93%)
-
 # L20S4 - Network Performance (15:35) (94%)
-
 # L20S5 - Routing and Flow Control (20:27) (95%)
-
 # L21S1 - Credit Based Flow Control (7:23) (96%)
-
 # L21S2 - Deadlock (10:09) (96%)
-
 # L21S3 - False Sharing (9:29) (97%)
-
 # L21S4 - Introduction to Directory Coherence (12:55) (97%)
-
 # L21S5 - Implementation (29:02) (99%)
-
 # L21S6 - Scalability of Directory Coherence (13:31) (100%)
-
-test
--test
- -test
-  -test
-   -test
