@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/11/26 13:57:51 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/11/29 09:54:21 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/11/29 11:24:44 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -190,11 +190,22 @@ Static dict problem
    - If the total space gets over c*n, repick a h_1 (2 expected tries with c = 2, O(lgn) w.h.p.)
  - Pick hash functions h_(2, j) for each small hashtbl
  - There must be no collision in the small hashtbl
-	 - If there is a collision, repick h_(2, j) (2 expected tries, O(lgn) w.h.p.)
+   - If there is a collision, repick h_(2, j) (2 expected tries, O(lgn) w.h.p.)
  - Markov inequality
 
 # Module 3: Optimization - greedy and dynamic programming
 ### Recitation 5: Dynamic Programming (0:52:03) 35%
+> https://www.youtube.com/watch?v=krZI60lKPek&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp
+
+##### DP
+- Ex: Num path in binary network
+- Ex: Make change
+- Ex: Knapsack
+- Ex: Rectangles stacking
+
+##### Hashing
+- Review universal hash function
+
 ### Lecture 9: Augmentation: Range Trees (1:24:34) 39%
 ### Lecture 10: Dynamic Programming: Advanced DP (1:20:08) 42%
 ### Lecture 11: Dynamic Programming: All-Pairs Shortest Paths (1:21:49) 46%
