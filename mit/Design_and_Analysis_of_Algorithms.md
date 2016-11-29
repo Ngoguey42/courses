@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/11/26 13:57:51 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/11/28 07:40:12 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/11/29 09:54:21 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -148,6 +148,51 @@
 - Chernoff bound
 
 ### Lecture 8: Randomization: Universal & Perfect Hashing (1:21:51) 33%
+> https://www.youtube.com/watch?v=z0lJ2k0sl1g&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp
+
+- Constant expected time
+- Hashtbl:
+ - u: space of the universe
+ - n: number of items in htbl
+ - m: number of slots in table
+ - h: hash functions that maps universe to index in table
+ - H: family of all hash functions
+- Simple uniform hashing
+ - `k_1 != k_2, Pr(h(k_1) = h(k_2)) = 1/m`
+ - requires keys are random
+- Etymology: Hash
+- Universal hashing
+ - Most useful
+ - Very few conflicts
+- Perfect hashing
+ - Works for static sets
+ - 0 conflicts
+
+##### Universal Hashing
+- ex1: Dot-product hash family
+ - m: prime, and table doubling with algorithm to find nearby prime
+ - u = m^r
+ - view keys in base m, a key can then be seen as a vector of digits (smaller than r)
+ - h_a(k) = a.k mod m
+ - H = {h_a | a in {0, 1, ..., u - 1}}
+- ex2:
+ - h(k) = [(a.k + b) mod p] mod m
+ - p: p > m, prime
+ - H = {H_(ab) | a, b in {0, 1, ..., u - 1}}
+- Proof ex1 is universal
+
+##### Perfect hashing (FKS hashing 1984)
+Static dict problem
+- Polynomial build time
+- Build a 2-depth hash table
+ - Pick a hash function h_1 for the big table
+ - The small hashtbl have a table size of n-elt^2
+   - If the total space gets over c*n, repick a h_1 (2 expected tries with c = 2, O(lgn) w.h.p.)
+ - Pick hash functions h_(2, j) for each small hashtbl
+ - There must be no collision in the small hashtbl
+	 - If there is a collision, repick h_(2, j) (2 expected tries, O(lgn) w.h.p.)
+ - Markov inequality
+
 # Module 3: Optimization - greedy and dynamic programming
 ### Recitation 5: Dynamic Programming (0:52:03) 35%
 ### Lecture 9: Augmentation: Range Trees (1:24:34) 39%
