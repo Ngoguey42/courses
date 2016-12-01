@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/11/04 15:37:50 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/11/29 11:25:44 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/12/01 11:42:37 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -313,7 +313,7 @@ ras
  - SB
  - ARF
  - PRF: Physical register file (future file)
- - ROB: Reorder buffer
+- ROB: Reorder buffer
  - FSB: Finished store buffer
 - PRF written ooo, but ROB commits in order
 - FSB stalls the memory write
@@ -333,10 +333,32 @@ ras
 ras
 
 # L07S1 - Speculation and Branch (14:37) (32%)
+ras
+
 # L07S2 - Register Renaming Introduction (11:08) (33%)
+- Name dependencies: WAW & WAR
+- True dependencies: RAW
+
 # L07S3 - Register Renaming with Pointers to IQ and ROB (24:54) (34%)
+- Structures
+ - FL: Free List. Entry: physical register, 1bit for busyness
+ - RT: Rename Table, Entry: architectural register, 1bit is pending, few bits for physical destination
+- ROB modifications
+ - Architectural register file specifier
+ - Previous physical register
+- Ref: Intel cpu with 100 instructions pending
+
 # L07S4 - Register Renaming with Values in IQ and ROB (12:14) (35%)
+- No FL
+- PRF merged into ROB
+- ROB modifications
+- IQ modifications
+- RT modifications
+
 # L07S5 - Memory Disambiguation (9:49) (35%)
+- Address speculation
+- Memory dependence prediction
+
 # L08S1 - Limits of Out-of-Order Design Complexity (13:13) (36%)
 # L08S2 - Introduction to VLIW (21:57) (38%)
 # L08S3 - VLIW Compiler Optimizations (21:20) (39%)
