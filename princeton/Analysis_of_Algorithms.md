@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/11/22 00:44:24 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/11/23 04:49:47 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/12/01 14:26:51 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -58,12 +58,52 @@ ras
 - Ex: `Newton's method`
 
 # 3 - 4 - Mergesort (18-03) 26%
+- Num binary digits being `floor(lg(N)) + 1`
+- Coefficient of the linear term for mergesort
+
 # 3 - 5 - Master Theorem (14-20) 28%
-# 4 - 1 - Counting with Generating Functions (27-32) 32%
-# 4 - 2 - Exponential Generating Functions (7-24) 32%
+1. Divide into `alpha` parts of size `N / beta`
+2. Solve recursively
+3. Combine solutions with extra cost `theta(N ^ gamma * logN ^ delta)`
+- Mergesort:
+ - alpha: 2
+ - beta: 2
+ - gamma: 1
+ - delta: 0
+- Batcher network
+- Katatsuba multiplication
+- Strassen matrix multiply
+- Theorem gives:
+ - `a_n = theta(n ^ gamma * logn ^ delta) when gamma < log_(beta) * alpha`
+ - `a_n = theta(n ^ gamma * logn ^ (delta + 1)) when gamma = log_(beta) * alpha`
+ - `a_n = theta(n ^ (log_(gamma) alpha) when gamma > log_(beta) * alpha`
+
+# 4 - 1 - Ordinary Generating Functions (16-25) 32%
+- OGF:
+ - `A(z) = sum_(k >= 0) a_k z^k` of an infinite sequence
+ - Noted `[z^N]A(z)` is "The coefficient of z^n in A(z)"
+- ex:
+ - `seq: 0, 1/2, 1/6, 1/24, ...` (1/N!)
+ - `sum_(N>=0) z^N / N! = e^z`
+ - `[z^n]e^z = 1/N!`
+
+- Scaling operation
+ - If `A(z) = sum_(k >= 0) a_k z^k` if the OGF of `a_0, a_1, ...`
+ - Then `A(cz) = sum_(k >= 0) c^k z^k` of `a_0 * c^0, a_1 * c^1, ...`
+- Addition
+- Differentiation
+- Integration
+- Partial sum
+- Convolution
+ - EX: OGF for natural numbers
+
+- Ref: Taylor theorem
+
+# 4 - 2 - Solving Recurrences (18-55) 32%
 # 4 - 3 - Catalan Numbers (14-04) 34%
-# 4 - 4 - Solving Recurrences (18-55) 37%
-# 4 - 5 - Ordinary Generating Functions (16-25) 39%
+# 4 - 4 - Exponential Generating Functions (7-24) 37%
+# 4 - 5 - Counting with Generating Functions (27-32) 39%
+
 # 5 - 1 - Standard Scale (18-52) 41%
 # 5 - 2 - Manipulating Expansions (19-23) 44%
 # 5 - 3 - Asymptotics of Finite Sums (16-42) 46%
