@@ -71,3 +71,36 @@
 - p-series
 
 ### Lesson 4: What Are p-series? How Large Can the Overhang in a Stack of Blocks Be?
+ras
+
+# Week 4
+> In this fourth module, we consider absolute and conditional convergence, alternating series and the alternating series test, as well as the limit comparison test. In short, this module considers convergence for series with some negative and some positive terms. Up until now, we had been considering series with nonnegative terms; it is much easier to determine convergence when the terms are nonnegative so in this module, when we consider series with both negative and positive terms, there will definitely be some new complications. In a certain sense, this module is the end of "Does it converge?" In the final two modules, we consider power series and Taylor series. Those last two topics will move us away from questions of mere convergence, so if you have been eager for new material, stay tuned!
+
+### Lesson 1: What is Absolute Convergence?
+- Absolute convergence: Sum of the absolute values converges
+ - if `sum_(1 <= n < inf) |a_n|` converges
+ - `sum_(1 <= n < inf) a_n + |a_n|` converges
+ - `sum_(1 <= n < inf) (a_n + |a_n|) - sum_(1 <= n < inf) (|a_n|)` converges
+ - so `sum_(1 <= n < inf) a_n` converges
+- Conditionally convergent (converging but not absolutly converging)
+- Alternating series (`a_n = (-1)^n * b_n` and `b_n` all have the same sign and decreasing)
+- Alternating series test
+
+### Lesson 2: What is an Alternating Series?
+- Bounds with alternating series
+- Limit comparison test
+
+### Lesson 3: How is Convergence Affected by the Choice of Initial Index? What is the Limit Comparison Test?
+- Convergence of tail
+- The Limit comparison test is a coarser version of the comparison test
+- Rearrangement theorem
+
+# Week 5
+> In this fifth module, we study power series. Up until now, we had been considering series one at a time; with power series, we are considering a whole family of series which depend on a parameter x. They are like polynomials, so they are easy to work with. And yet, lots of functions we care about, like e^x, can be represented as power series, so power series bring the relaxed atmosphere of polynomials to the trickier realm of functions like e^x.
+
+### Lesson 0: Introduction to Power Series
+
+### Lesson 1: Where Does a Power Series Converge?
+### Lesson 2: What is the Radius of Convergence? What if I'd Like a Power Series in Terms of (x-c)?
+### Lesson 3: Can I Do Calculus With Power Series?
+### Lesson 4: What is a Formula for the Fibonacci Numbers?
