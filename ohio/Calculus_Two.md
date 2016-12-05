@@ -82,7 +82,7 @@ ras
  - `sum_(1 <= n < inf) a_n + |a_n|` converges
  - `sum_(1 <= n < inf) (a_n + |a_n|) - sum_(1 <= n < inf) (|a_n|)` converges
  - so `sum_(1 <= n < inf) a_n` converges
-- Conditionally convergent (converging but not absolutly converging)
+- Conditionally convergent (converging but not absolutely converging)
 - Alternating series (`a_n = (-1)^n * b_n` and `b_n` all have the same sign and decreasing)
 - Alternating series test
 
@@ -99,8 +99,34 @@ ras
 > In this fifth module, we study power series. Up until now, we had been considering series one at a time; with power series, we are considering a whole family of series which depend on a parameter x. They are like polynomials, so they are easy to work with. And yet, lots of functions we care about, like e^x, can be represented as power series, so power series bring the relaxed atmosphere of polynomials to the trickier realm of functions like e^x.
 
 ### Lesson 0: Introduction to Power Series
+- `sum_(0 <= n < oo) a_n . x^n`
+- Similar to polynomials
 
 ### Lesson 1: Where Does a Power Series Converge?
+- Ex: Interval of convergence
+- A power series converges absolutely in an interval `x in {-R, R}` (R being the radius of convergence)
+
 ### Lesson 2: What is the Radius of Convergence? What if I'd Like a Power Series in Terms of (x-c)?
+- Ex: Infinite radius of convergence
+
 ### Lesson 3: Can I Do Calculus With Power Series?
+- centered interval `sum_(0 <= n < oo) c_n . (x - a)^n`
+- differentiation of power series
+- integration of power series
+- Ref: Abel's theorem
+- `e^x` as a power series
+- Power series multiplication
+
 ### Lesson 4: What is a Formula for the Fibonacci Numbers?
+- Fibonacci numbers sequence
+ - Using phi
+ - The technique of building a sequence analysing its associated power series is called `generating functions`
+
+# Week 6
+> In this last module, we introduce Taylor series. Instead of starting with a power series and finding a nice description of the function it represents, we will start with a function, and try to find a power series for it. There is no guarantee of success! But incredibly, many of our favorite functions will have power series representations. Sometimes dreams come true. Like many dreams, much will be left unsaid. I hope this brief introduction to Taylor series whets your appetite to learn more calculus.
+
+# Lesson 1: What Are Taylor Series?
+- Function approximation with linear approximation and power series
+
+# Lesson 2: What is Taylor's Theorem?
+# Lesson 3: What Can I Do With This, in Practice? What Can I Do With This, in Theory?
