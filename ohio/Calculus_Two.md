@@ -127,6 +127,19 @@ ras
 
 # Lesson 1: What Are Taylor Series?
 - Function approximation with linear approximation and power series
+- Taylor series centered at zero (Maclaurin series)
+ - `a_n = f^((n))(0) / n!`
+ - `f(x) = sum_(0 <= n < oo) f^((n))(0) / n! * x^n`
+- Taylor series
+- `f(x) = sum_(0 <= n < oo) f^((n))(a) / n! * (x - a)^n`
+- Ex: Sine power series
 
 # Lesson 2: What is Taylor's Theorem?
+- Ex: Complex number affection the radius of convergence
+- Relation taylor's theorem / mean value theorem
+
 # Lesson 3: What Can I Do With This, in Practice? What Can I Do With This, in Theory?
+- Ex: Approximation of cosine
+- Ref: Uniform convergence
+- Real analytic function
+- Venn diagramm of functions type (video: What is a real analytic function)
