@@ -23,5 +23,5 @@
 | Principles of Reactive Programming         | Odersky, Meyer, Kuhn           | EPFL       | 2013 | 11h30  | Pause  | 54%  | Summer 2016 |
 | Category Theory                            | Bartosz Milewski               | Seattle    | 2016 | 14h45  | Done   | 100% | Autumn 2016 |
 | Calculus Two                               | Jim Fowler                     | Ohio       | 2013 | 8h     | Done   | 100% | Autumn 2016 |
+| Analysis of Algorithms                     | Robert Sedgewick               | Princeton  | 2013 | 13h    | Pause  | 32%  | Autumn 2016 |
 | Computer Architecture                      | David Wentzlaff                | Princeton  | 2012 | 28h30  |        |      | Autumn 2016 |
-| Analysis of Algorithms                     | Robert Sedgewick               | Princeton  | 2013 | 13h    |        |      | Autumn 2016 |
