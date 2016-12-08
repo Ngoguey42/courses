@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/11/26 13:57:51 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/11/29 11:24:44 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/12/08 18:48:05 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -207,7 +207,30 @@ Static dict problem
 - Review universal hash function
 
 ### Lecture 9: Augmentation: Range Trees (1:24:34) 39%
+- Ex: Binary tree augmentation (data addition at each nodes)
+- Order-statistic trees
+ - ADT
+   - insert(x), delete(x), successor(x)
+   - rank(x) (index of x in sorted array)
+   - select(i) (find node of rank i) (rank(select(i)) == i)
+ - Ex:  Augmentation for tree height
+- Ex: Level linking augmentation in 2-3 trees
+ - Horizontal links between the levels
+ - Finger search property `search(x from y) in O(log|rank(x) - rank(y)|)`
+- Ex: B+ tree
+ - 2-3 tree with data in leaves
+ - Augmentation to store min&max of subtrees in nodes, enabling fast search
+
+##### Static range tree
+- Orthogonal range search
+- multi dimentional range search in polylog time
+- count in `O(lg^d n)`
+- search in `O(lg^d n + |output|)`
+- Perfect bst for the first dimention, then all nodes gets augmented with a pointer to a copy of itself where the nodes are sorted in the next dimention order.
+- `O(nlg^(d-1)n)` space
+
 ### Lecture 10: Dynamic Programming: Advanced DP (1:20:08) 42%
+
 ### Lecture 11: Dynamic Programming: All-Pairs Shortest Paths (1:21:49) 46%
 ### Lecture 12: Greedy Algorithms: Minimum Spanning Tree (1:22:10) 49%
 ### Recitation 6: Greedy Algorithms (0:22:24) 50%
