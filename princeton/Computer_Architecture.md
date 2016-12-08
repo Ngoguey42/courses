@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/11/04 15:37:50 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/12/01 11:42:37 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/12/08 19:25:52 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -360,7 +360,22 @@ ras
 - Memory dependence prediction
 
 # L08S1 - Limits of Out-of-Order Design Complexity (13:13) (36%)
+- Out-of-order control logic grows > W^2
+- Ex: Microchip photo showing control logic space taken
+- Ex: ISA bottleneck, compiler vs cpu
+
 # L08S2 - Introduction to VLIW (21:57) (38%)
+- Bundle of operations inside one instruction
+ - No dependency check in one bundle
+- Model: Equal scheduling(EQ)
+ - The operations take effect exactly at the specified latency
+ - Compiler handles everything
+ - Less physical registers
+ - Interrupts are hard to handle (or impossible)
+- Model: Less than or equals model (LEQ)
+ - The operations take effect exactly or faster than the specified latency
+- History
+
 # L08S3 - VLIW Compiler Optimizations (21:20) (39%)
 # L08S4 - Classic VLIW Challenges (8:18) (39%)
 # L08S5 - Introduction to Predication (9:51) (40%)
