@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/11/26 13:57:51 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/12/08 18:48:05 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/12/10 14:17:09 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -207,6 +207,7 @@ Static dict problem
 - Review universal hash function
 
 ### Lecture 9: Augmentation: Range Trees (1:24:34) 39%
+> https://www.youtube.com/watch?v=xVka6z1hu-I&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp
 - Ex: Binary tree augmentation (data addition at each nodes)
 - Order-statistic trees
  - ADT
@@ -230,6 +231,44 @@ Static dict problem
 - `O(nlg^(d-1)n)` space
 
 ### Lecture 10: Dynamic Programming: Advanced DP (1:20:08) 42%
+> https://www.youtube.com/watch?v=Tw1k46ywN6E&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp
+
+##### Finding the longest palindromic subsequence (non-contiguous)
+```python
+def L(x, i, j, cache):
+ if (i, j) in cache: return cache[(i, j)]
+ elif i == j: return 1
+ elif x[i] == x[j]
+  if i + 1 == j: return 2
+  else: return 2 + L(x, i + 1, j - 1, cache) # set cache
+ else return max(L(x, i, j - 1, cache), L(x, i + 1, j, cache)) # set cache
+```
+
+##### Optimal BSTs
+- Ordered nodes
+- Nodes have a search probability (weight)
+- e(i, j)
+ - i = j -> `w_i`
+ - else -> `min_(i <= r <= j)(e(i, r - 1) + e(r + 1, j)) + w(i, j)`
+
+##### Alternating coin game (1 vs 1 game from a coin deque)
+- Ex: Winning (or tie) strategy
+ - For the first player
+ - When starting with even number of coins on board
+ - Does not maximize gains
+- Ex: Maximize amount of money strategy
+ - For the first player
+ - Assumes opponent plays with the same strategy
+ - theta(n^2)
+```
+V(i, j) # Money gains from the interval [i, j] when my turn to play
+ i == j -> val(i)
+ i + 1 == j && val(i) >= val(j) -> val(i)
+ i + 1 == j && val(i) < val(j) -> val(j)
+ _ -> max
+      @@ val(i) + min V(i + 1, j - 1) V(i + 2, j)
+      @@ val(j) + min V(i + 1, j - 1) V(i, j + 2)
+```
 
 ### Lecture 11: Dynamic Programming: All-Pairs Shortest Paths (1:21:49) 46%
 ### Lecture 12: Greedy Algorithms: Minimum Spanning Tree (1:22:10) 49%
