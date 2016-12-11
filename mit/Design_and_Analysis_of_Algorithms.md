@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/11/26 13:57:51 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/12/10 14:17:09 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/12/11 19:09:45 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -271,11 +271,67 @@ V(i, j) # Money gains from the interval [i, j] when my turn to play
 ```
 
 ### Lecture 11: Dynamic Programming: All-Pairs Shortest Paths (1:21:49) 46%
+| Problem        | Algo                | Time       | Sparse   | Dense  |
+|----------------|---------------------|------------|----------|--------|
+| Unweighted     | BFS                 | O(V+E)     | O(V)     | O(VV)  |
+| Non-neg weight | Dijkstra            | O(VlogV+E) | O(VlogV) | O(VV)  |
+| General        | Bellman             | O(VE)      | O(VV)    | O(VVV) |
+| DAG            | Topo sort + Bellman | O(V+E)     | O(V)     | O(VV)  |
+| Allpairs gener | Johnson's           | O(VVlgV+VE)| O(VVlogV)| O(VVV) |
+
+##### All-pairs shortest path, Dynamic programming
+- O(N4)
+
+##### All-pairs shortest path, Matrix multiplication
+- Ref: ring semiring circle
+- Transitive closure
+
+##### All-pairs shortest path, Floyd-Warshall algorithm
+- O(N3)
+- Best for dense graph
+
+##### Johnson's algorithm
+ras
+
 ### Lecture 12: Greedy Algorithms: Minimum Spanning Tree (1:22:10) 49%
+- Greedy algorithm properties
+ 1. Optimal substructure
+ 2. Greedy choice property
+ - Both true for MST
+
+- Edge contraction in MST
+- Cut in MST
+- Prim's algorithm
+ - Cut with only one vertex, pick minimum weigth edge out of cut, grow the cut by 1, repeat
+- Kruskal's algorithm
+ - With union find algorithm
+
 ### Recitation 6: Greedy Algorithms (0:22:24) 50%
-### Lecture 13: Incremental Improvement: Max Flow, Min Cut (1:22:58) 54%
-### Lecture 14: Incremental Improvement: Matching (1:22:33) 57%
+ras
+
 # Module 4: Network Flow
+### Lecture 13: Incremental Improvement: Max Flow, Min Cut (1:22:58) 54%
+- No cycles of length 0 or 1
+- Skew symetry
+ - `f(a, b) = -f(b, a)`
+- Value of the flow `|f|`
+ - `|f| = sum_(AA v in V)f(s, v)`
+   -  `= f(s, V)` implicit sum notation
+ - `f(V, V) = 0`
+ - `|f| = f(s, V) = f(V, V - s)`
+- Residual network
+ - There is an augmenting path in the residual network iff there is a possible improvement to the network
+ - `C_f(u, v) = C(u, v) - f(u, v)`
+
+### Lecture 14: Incremental Improvement: Matching (1:22:33) 57%
+- Ford fulkerson algorithm
+ - Begin with an empty network and its residual network
+ - While there exist an augmentation path, augment the network with this path
+- Max flow min cut theorem
+- Pathological execution of ford fulkerson
+- Edmonds Karp O(VEE)
+- Ex: Baseball
+
 ### Recitation 7: Network Flow and Matching (0:51:12) 59%
 # Module 6: Linear programming
 ### Lecture 15: Linear Programming: LP, reductions, Simplex (1:22:27) 63%
