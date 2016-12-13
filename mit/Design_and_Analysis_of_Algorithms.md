@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/11/26 13:57:51 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/12/11 19:09:45 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/12/13 18:38:18 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -330,11 +330,62 @@ ras
 - Max flow min cut theorem
 - Pathological execution of ford fulkerson
 - Edmonds Karp O(VEE)
+ - Same as ford fulkerson, but finds shortest path
 - Ex: Baseball
 
 ### Recitation 7: Network Flow and Matching (0:51:12) 59%
+- Dinic's algorithm
+ - Edmonds karp improvement
+ - Find all shortest paths
+- Bipartite matching
+ - vertex cover
+
 # Module 6: Linear programming
 ### Lecture 15: Linear Programming: LP, reductions, Simplex (1:22:27) 63%
+> https://www.youtube.com/watch?v=WwMz2fJwUCg&index=21&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp
+> https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/lecture-notes/MIT6_046JS15_lec15.pdf
+
+- Ex: Politics advertising campain
+ - Votes obtained per dollar spent
+ - `x_1 ... x_4` denote the policies
+ - A dollar spent multiplied by a constant gives you a number of votes aquired (positive or negative)
+- n variables, m constrains. Goal is polynomial in n
+- Standard form for LP
+ - Maximize linear objective function subject to linear inequalities (or equations)
+ - variables: `bar x = ((x_1),(x_2),(...),(x_n))`
+ - objective function: `bar c * bar x = c_1*x_1 + ... + c_n*x_n`
+ - inequalities: `A * bar x <= bar b`
+ - `max bar c * bar x`, such that inequalities hold and `bar x >= 0`
+- Certificate of optimality
+ - Confirms a result
+ - Merge inequalities with certain coefficients to get a new inequality
+- LP duality
+ - There exist a dual form of LP
+- Convertion to standard form
+- Ex: Max flow with LP
+- Ex: Shortest path with LP
+ - Using triangle inequality
+
+##### Simplex algorithm
+- Represent LP in slack form
+- Convert from one slack form to the other, until the optimal solutions pops out
+- O(2^n) `((m + n),(n))`
+- Slack form:
+ - Represent inequalities and their slack with new variables, called basic variables
+ - Manipulate the vector of all nonbasic+basic values
+ - Have an objective value `z`
+- Start
+ - Trivial starting point
+ - Set all nonbasic variables to 0
+- Pivoting
+ - Swap roles between a basic variable and a nonbasic variable
+ - Pick the nonbasic variable `x_e` whose coefficient is positive
+ - Increase `x_e` as much as possible without violating any constraints
+ - This increase leads to select the basic variable involved in the tightest constraint
+ - Rewrite all constraints
+- Stop
+ - When all nonbasic variables are negative
+
 # Module 5: Intractibility (and dealing with it)
 ### Lecture 16: Complexity: P, NP, NP-completeness, Reductions (1:25:25) 66%
 ### Recitation 8: NP-Complete Problems (0:45:47) 68%
