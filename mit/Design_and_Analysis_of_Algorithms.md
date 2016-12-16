@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/11/26 13:57:51 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/12/13 18:38:18 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/12/15 19:09:06 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -388,8 +388,35 @@ ras
 
 # Module 5: Intractibility (and dealing with it)
 ### Lecture 16: Complexity: P, NP, NP-completeness, Reductions (1:25:25) 66%
+- Ref: CoNP
+- Ex: 3SAT
+- X is NP-hard if every NP problem reduces to X
+- Reduction
+ - Using a poly-time converting algorithm
+- Ref: 6.045 (Theory of computation)
+- Ex: Super mario
+- Ref: Gadgets
+- Ref: 6.890 (Algorithmic Lower Bounds: Fun with Hardness Proofs)
+- Always reduce from the known hard to the unknown hard
+- Ex: 3D Matching
+ - From 3SAT to 3D Mathching
+ - From formula with variables and clauses to gadgets
+ - Variable gadget
+- Ex: Subset sum
+ - Weakly np-hard (with pseudo polynomial)
+- Ex: Partition
+- Ex: Rectangle packing
+- Ex: Jigsaw puzzle
+
 ### Recitation 8: NP-Complete Problems (0:45:47) 68%
+- Ex: Hamiltonian cycle/path
+- Ex: k clique/independent set
+- Ex: clique size >= k / Max 2 sat
+
 ### Lecture 17: Complexity: Approximation Algorithms (1:21:08) 72%
+- `rho(n)-approximation algorithmn`
+- `(1 + epsilon)-approximation algoritm`
+
 ### Lecture 18: Complexity: Fixed-Parameter Algorithms (1:17:43) 75%
 # Module 7: Sublinear algorithms, approximation algorithms
 ### Recitation 9: Approximation Algorithms: Traveling Salesman Problem (0:31:59) 76%
