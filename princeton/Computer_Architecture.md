@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/11/04 15:37:50 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/12/08 19:25:52 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/12/18 00:07:20 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -377,6 +377,16 @@ ras
 - History
 
 # L08S3 - VLIW Compiler Optimizations (21:20) (39%)
+- Loop unrolling
+- Software pipelining
+ - Prolog, iterationg, epilog
+- Basic block
+ - Piece of code with single entry/exit
+- Trace Scheduling
+ - Follow the most probable branches, forming a trace
+ - Schedule the whole trace at once
+ - Add fixup code to cope with branchese jumping out of trace
+
 # L08S4 - Classic VLIW Challenges (8:18) (39%)
 # L08S5 - Introduction to Predication (9:51) (40%)
 # L09S1 - Scheduling Model Review (5:58) (40%)
