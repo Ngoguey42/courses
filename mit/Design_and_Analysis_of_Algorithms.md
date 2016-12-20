@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/11/26 13:57:51 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/12/15 19:09:06 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/12/20 18:38:20 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -414,8 +414,41 @@ ras
 - Ex: clique size >= k / Max 2 sat
 
 ### Lecture 17: Complexity: Approximation Algorithms (1:21:08) 72%
+> https://www.youtube.com/watch?v=MEz1J9wY2iM&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp
+> https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/lecture-notes/MIT6_046JS15_lec17.pdf
+- Approximation algorithm
+ - Algorithm proved to output a solution within some factor of the optimal solution
 - `rho(n)-approximation algorithmn`
+ - In minimization problems `rho(n) > C/C_(opt)`
+ - In maximization problems `rho(n) > C_(opt)/C`
+ - `rho(n)` being an approximation ratio
 - `(1 + epsilon)-approximation algoritm`
+ - `C = (1 + epsilon)C_(opt)`
+- `PTAS`
+ - Polynomial Time Approximation Scheme
+ - Runs in poly time in n
+ - Ex: `O(n^(2/epsilon))`
+- `FPTAS`
+ - Fully Polynomial Time Approximation Scheme
+ - Runs in poly time in n and epsilon
+ - Ex: `O(n/epsilon^2)`
+
+##### Vertex cover
+- Ex: Maximum degree pick greedy algorithm
+ - logn-approx algo
+- Ex: Pick edges randomly and keep both ends
+ - Edges won't share vertices
+ - 2-approx algo
+
+##### Set cover
+- Cover a set with subsets, minimizing the number of subsets
+- Ex: Greedy with largest subset
+ - `lnn+1-approx algo`
+
+##### Partition
+- Partition in 2 a set S
+1. Find an optimal partition for a subset of the set S
+2. Add all remaining items to the partitions with a greedy pick on weight
 
 ### Lecture 18: Complexity: Fixed-Parameter Algorithms (1:17:43) 75%
 # Module 7: Sublinear algorithms, approximation algorithms
