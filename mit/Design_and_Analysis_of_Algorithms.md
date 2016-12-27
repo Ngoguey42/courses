@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/11/26 13:57:51 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/12/20 18:38:20 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/12/21 19:01:33 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -451,6 +451,19 @@ ras
 2. Add all remaining items to the partitions with a greedy pick on weight
 
 ### Lecture 18: Complexity: Fixed-Parameter Algorithms (1:17:43) 75%
+> https://www.youtube.com/watch?v=4q-jmGrmxKs&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=25
+> https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/lecture-notes/MIT6_046JS15_lec18.pdf
+
+- In a NP-hard problem, confine the exponential part into a parameter to be polynomial in the problem size
+- FPT: Fixed-Parameter tractable
+ - Can be solved in `f(k) * n^O(1)`
+- k-Vertex cover
+ - Ex: Brute force algorithm `O(E*V^k)`
+ - Ex: Bounded-search-tree algorithm
+- Kernelization
+ - Self-reduction
+- Kernelization of k-vertex cover
+
 # Module 7: Sublinear algorithms, approximation algorithms
 ### Recitation 9: Approximation Algorithms: Traveling Salesman Problem (0:31:59) 76%
 # Module 8: Advanced topics
