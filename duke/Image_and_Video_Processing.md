@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/12/16 15:55:51 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/12/17 17:08:56 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/12/18 21:16:09 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -153,7 +153,12 @@ ras
 ras
 
 ## Lecture 32 - Degradation Function (11:41) 37%
+- Ref: Camera calibration
+- Motion blurring
+
 ## Lecture 33 - Wiener filtering (12:35) 39%
+- Minimize the mean square error
+
 ## Lecture 34 - Demo - Wiener and Box filters (03:20) 39%
 ## Lecture 35 - Concluding remarks (00:34) 39%
 
