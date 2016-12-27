@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/12/14 14:42:33 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/12/14 15:48:05 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/12/27 19:02:25 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -88,3 +88,123 @@ x = 2; y = 1;
 
 ### Motivation 5: Why MiniZinc? (4:00)
 - MiniZinc is free and open source
+
+## MiniZinc Introduction
+### MZI 1: A First Step into MiniZinc (9:00)
+- MZI developped by NICTA at university of melbourne and monash
+- MZI is a subset of Zinc
+- Ex: Toy factory production
+- In output
+ - `----------` indicates a solution
+ - `==========` indicates a best solution
+- Ex: Map coloring of australia
+- `solve satisfy;` instruction commands a solution that satisfies among all
+
+### MZI 2: MiniZinc Basic Components (10:00)
+- Parameters
+ - `par int: i=3;` (optional `par` keyword)
+ - `int: i;` `i=3;`
+- Decision variables
+ - Decided by the solver
+ - `var int: i; constraint i >= 0; constraint i <= 4;`
+ - using range `var 0..4: i;`
+ - using set `var {0,1,2,3,4}: i;`
+- Types
+ - `int`
+ - `float`
+ - `bool`
+ - `string` cant be decision var
+ - `arrays`
+ - `sets`
+- Strings
+ - `output <list of strings>;`
+ - `show(v)` ???
+ - `\(v)` interpolation
+ - `"truc "++"muche"`
+- Arithmetic expressions
+ - int `*, /, +, -`
+ - fp `*, div, mod, +, -`
+ - `int2float(42)` along with implicit conversions
+- Constraints
+ - `constraint <bool expr>`
+- Arithmetic constraints
+ - Arithmetic equalities / comparisons
+- Structure of a model
+ - Order of items do not matter
+ - `include <filename>;`
+- Solve
+ - Exaclty one solve per model
+ - `solve satisfy`
+ - `solve maximize <arith expr>`
+ - `solve minimize <arith expr>`
+- Predicate, function, test items, annotation items...
+
+### MZI 3: Models and Instances (8:00)
+- Model
+ - Formal description of a class of optimisation problems
+- Instance
+ - One particular optimisation problem
+ - A model with a data (from .dnz or from variable initialization)
+- Ex: Loan
+ - Fixing `var` in `.dbz`, leaving the others to the solver
+
+### MZI 4: Modeling Objects (9:00)
+- Ex: Knapsack general model
+ - Arbirary number of objects in data
+ - `set of /*type*/`
+ - `array[range] of /*var decl*/`
+ - `forall(i in /*range*/)(/*bool expr*/)`
+ - `sum(i in /*range*/)(/*expr*/)`
+
+### MZI 5: Arrays, Sets, Comprehensions (16:00)
+- Ex: Toy factory (again)
+```mzn
+`array[PRODUCT] of var float: produce;`
+
+constraint forall (p in PRODUCT) (
+ produce[p] >= 0.0
+);
+
+constraint forall (r in RESOURCE) (
+ sum(p in PRODUCT)(consumption[p, r] * produce[p]) <= capacity[r]
+);
+
+solve maximize sum(p in PRODUCT)(profit[p] * produce[p]);
+
+output [show(produce)];
+```
+```dzn
+nproducts = 2;
+profit = [25.0, 30.0];
+nresources = 1;
+capacity = [40.0];
+consumption = [|1.0/200.0, 1.0/140.0|]; % 2-d array syntax, same as OCaml
+```
+
+- Set
+ - Unary op `card` (cardinality)
+ - Binary op `in, union, intersect, subset, superset, diff, symdiff`
+- Arrays
+ - The `index set` can be an `int range` or an `int set without holes`
+ - `length` function
+ - `array2d` conversion functions
+- Comprehension
+ - `{i + j | i, j in 1..4 where i < j}`
+- Functions over list or set
+ - `sum, product, min, max`
+
+### MZI 6: Linear Models (10:00)
+- Scale to 100k variables / constraints
+- Ex: Problem solved 700x faster with MIP
+- Unbounded integers are bad for many solvers
+
+### MZI 7: Global Constraints (8:00)
+- `alldifferent([7, 3, 2, 5, 1, 6])`
+- `lex_less([7, 3, 5, 4, 2], [7, 3, 5, 7, 2])` lexicographical less
+- `table([5, 12, 13], [|3, 4, 5 | 5, 12, 13 | 6, 8, 10|])`
+- `circuit([2, 3, 4, 1])` hamiltonian cycle
+- `regular([x1, ..., x1], A, S, d, q0, F)` Regular constraint, is list in the language
+- `geost()` pack k dimensional objects so they don't overlap
+- etc...
+ - 100+ in MiniZinc
+ - 300+ in the Global Constraint Catalog
