@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/12/14 14:42:33 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/12/27 19:02:25 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/12/29 18:41:07 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -208,3 +208,88 @@ consumption = [|1.0/200.0, 1.0/140.0|]; % 2-d array syntax, same as OCaml
 - etc...
  - 100+ in MiniZinc
  - 300+ in the Global Constraint Catalog
+
+# Week2: Core Decisions
+> In this module you will examine some of the archetypal forms of decisions that need to be made in discrete optimization problems and how to represent them in MiniZinc. After this module Sudoku problems will never bother you again.
+
+## Modeling with Sets
+
+### Sets 1: Selecting A Sets (8:00)
+- Ex: 0-1 knapsack
+- `array[OBJ] of var 0..1: x;`
+```mzn
+set of int: OBJ = 1..n;
+var set of OBJ: x; % Subset
+
+constraint sum(i in x)(size[i]) <= capacity;
+```
+- 0-1 knapsack best solve with mips solver
+
+### Sets 2: Choosing A Set Representation - Example (5:00)
+ras
+
+### Sets 3: Choosing A Fixed Cardinality Sets (12:00)
+- Ex: Use an array instead of a subset, when |subset| is small
+```mzn
+for(i, j in 1..u where i < j)
+  (x[i] != x[j]);
+```
+
+### Sets 4: Choosing A Bounded Cardinality Sets (9:00)
+ras
+
+### Sets 5: Modeling With Multisets (3:00)
+ras
+
+## Modeling with Functions
+### Functions 1: Modeling Functions (10:00)
+- Assignement problem: injective function
+- Matching problem: bijective function
+- `DOM` vs `COD` === domain vs codomain
+- `include "global.mzn";`
+- The pure assignement problem has specialized algorithms, not used with minizinc
+
+### Functions 2: Example Assignment Problem (6:00)
+```mzn
+set of PRISONER: female;
+set of PRISONER: male = PRISONER diff female; % dependent parameter declaration
+```
+
+### Functions 3: Modeling Partitions (18:00)
+- Intermediate variables
+```mzn
+array[DAY] of var 0..n: onnight =
+  [ sum(n in NURSE)(bool2int(x[n, d] = night))
+  | d in DAY];
+constraint forall(d in DAY)
+  (onnight[d] >= 0 /\ onnight[d] <= u)
+```
+```mzn
+array[DAY] of var 1..u: onnight =
+  [ sum(n in NURSE)(bool2int(x[n, d] = night))
+  | d in DAY];
+```
+
+- conjuction `/\`
+- disjunctopn `\/`
+- implication `->`
+- bi-implication `<->`
+- negation `not`
+```mzn
+forall(n in NURSE, d in 1..m-2)
+  (x[n, d] = night /\ x[m, d + 1] = night
+  -> x[n, d + 2] != night);
+```
+- Bound the occurrences of v_i in x
+ - `global_cardinality_low_up(x, v, lo, hi) % 4 arrays`
+```mzn
+forall(d in DAY)(
+  global_cardinality_low_up(
+    [x[n, d] | n in NURSE],
+	[day, night],
+	[o, l],
+	[o, u])
+);
+```
+
+### Functions 4: Pure Partitioning (12:00)

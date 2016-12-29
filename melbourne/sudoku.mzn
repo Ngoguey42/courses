@@ -12,7 +12,7 @@ int: GRID_SIZE = ROW_SIZE * COL_SIZE;
 int: GRID_LASTID = GRID_SIZE - 1;
 
 
-array[0..MAX_Y, 0..MAX_X] of var int: grid;
+array[0..MAX_Y, 0..MAX_X] of var 1..MAX_DIGIT: grid;
 
 constraint grid[0,2] = 2;
 constraint grid[0,4] = 9;
@@ -33,11 +33,6 @@ constraint grid[7,3] = 5;
 constraint grid[8,3] = 1;
 
 include "alldifferent.mzn";
-
-% Digit range
-constraint forall(x in 0..MAX_Y, y in 0..MAX_X)(
-  grid[y,x] >= 1 /\ grid[y,x] <= MAX_DIGIT
-);
 
 % Columns diff
 constraint forall(x in 0..MAX_X)(
