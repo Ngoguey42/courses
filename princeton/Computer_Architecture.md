@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/11/04 15:37:50 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/12/18 00:07:20 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2016/12/29 23:52:42 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -388,8 +388,16 @@ ras
  - Add fixup code to cope with branchese jumping out of trace
 
 # L08S4 - Classic VLIW Challenges (8:18) (39%)
+ras
+
 # L08S5 - Introduction to Predication (9:51) (40%)
+- Partial predication `movz` `movnz`
+- Full predicatiopn
+ - Predicate register
+
 # L09S1 - Scheduling Model Review (5:58) (40%)
+
+
 # L09S2 - Review of Predication (30:48) (42%)
 # L09S3 - Predication Implementation (10:06) (43%)
 # L09S4 - Speculation Execution (26:02) (44%)
