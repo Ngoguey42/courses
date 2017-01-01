@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/12/16 15:55:51 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/12/18 21:16:09 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2017/01/01 18:17:30 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -160,17 +160,40 @@ ras
 - Minimize the mean square error
 
 ## Lecture 34 - Demo - Wiener and Box filters (03:20) 39%
-## Lecture 35 - Concluding remarks (00:34) 39%
+ras
 
-# Week 4
+## Lecture 35 - Concluding remarks (00:34) 39%
+ras
+
+# Week 4: Image and video segmentation
 ## Lecture 36 - Introduction to Segmentation (04:18) 39%
+ras
+
 ## Lecture 37 - On Edges and Regions (05:17) 40%
+ras
+
 ## Lecture 38 - Hough Transform with Matlab Demo (21:00) 42%
+- Detected segments of an image from (x, y) coordinate system to (rho, theta) system
+- Circles detection
+
 ## Lecture 39 - Line Segment Detector with Demo (03:21) 43%
+ras
+
 ## Lecture 40 - Otsus Segmentation with Demo (14:26) 44%
+- Otsu's Image Segmentation
+
 ## Lecture 41 - Congratulations! :D (00:18) 44%
+ras
+
 ## Lecture 42 - Interactive Image Segmentation (21:14) 47%
+- Ex: Picture of forest with fake faces
+- Process
+ 1. Feature distribution estimation (scribbles draws by user)
+ 2. Weighted distance transform (geodesic distance)
+ 3. Refine (relaunch the algorithm with new scribbles constructed by algo)
+
 ## Lecture 43 - Graph Cuts (09:35) 48%
+
 ## Lecture 44 - Mumford-Shah (05:51) 48%
 ## Lecture 45 - Active Contours (05:58) 49%
 ## Lecture 46 - Behind the Scenes of Adobes Roto Brush (31:30) 52%
