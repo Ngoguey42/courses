@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/11/26 13:57:51 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2016/12/21 19:01:33 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2017/01/04 17:08:46 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -413,6 +413,7 @@ ras
 - Ex: k clique/independent set
 - Ex: clique size >= k / Max 2 sat
 
+# Module 7: Sublinear algorithms, approximation algorithms
 ### Lecture 17: Complexity: Approximation Algorithms (1:21:08) 72%
 > https://www.youtube.com/watch?v=MEz1J9wY2iM&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp
 > https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/lecture-notes/MIT6_046JS15_lec17.pdf
@@ -459,13 +460,38 @@ ras
  - Can be solved in `f(k) * n^O(1)`
 - k-Vertex cover
  - Ex: Brute force algorithm `O(E*V^k)`
- - Ex: Bounded-search-tree algorithm
+ - Ex: Bounded-search-tree algorithm `O(V*2^k)`
 - Kernelization
  - Self-reduction
+ - A problem is FPT iff there exist a kernelization
 - Kernelization of k-vertex cover
+ - From G = (V, E) and k
+ - try to shrink the graph to G' = (V', E') and k
+ - with V' subset of V, E' subset of E and k <= k
+ - and |E'| <= k^2 and |V'| <= 2k^2
+ - if it was not possible, then there is no `k-vertex cover` for the initial graph
+ - The best algorithm to date: `O(kV + 1.274k)` by [Chen, Kanj, Xia - TCS 2010]
+- Connection to Approximation Algorithms
+ - EPTAS (Efficient PTAS)
+ - Absolute error / relative error
 
-# Module 7: Sublinear algorithms, approximation algorithms
 ### Recitation 9: Approximation Algorithms: Traveling Salesman Problem (0:31:59) 76%
+- TSP and its approximation algorithm are NP-hard
+- Metric TSP
+ - Triangle inequality holds
+ - `H^*_G` min hamiltonian cycle in G
+ - `c(H^*_G)` cost of this path
+- 2-approximation for metric TSP
+ - From a rooted MST `T`
+ - It's cycle path `C` that contains many duplicates
+ - Build a path `C'` from `C` bypassing the duplicates
+ - `c(C) = 2c(T) => c(C') <= 2c(T) => c(C') <= 2c(H^*_G)`
+- Perfect matching
+ - In a complete graph you can find a perfect matching in polytime
+- Euler circuit (euler tour) iff all vertex has even degree
+
+https://youtu.be/zM5MW5NKZJg?list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&t=1292
+
 # Module 8: Advanced topics
 ### Lecture 19: Synchronous Distributed Algorithms: Symmetry Breaking. Shortest-Paths Spanning Trees (1:17:34) 80%
 ### Lecture 20: Asynchronous Distributed Algorithms: Shortest-Paths Spanning Trees (1:12:03) 83%
