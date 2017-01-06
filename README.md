@@ -23,6 +23,6 @@
 | Category Theory                            | Bartosz Milewski               | Seattle    | 2016 | 14h45  | Done   | 100% | Autumn 2016 |
 | Calculus Two                               | Jim Fowler                     | Ohio       | 2013 | 8h     | Done   | 100% | Autumn 2016 |
 | Analysis of Algorithms                     | Robert Sedgewick               | Princeton  | 2013 | 13h    | Pause  | 32%  | Autumn 2016 |
-| Design and Analysis of Algorithms          | Demaine, Devadas               | MIT        | 2015 | 41h    |        |      | Autumn 2016 |
+| Design and Analysis of Algorithms          | Demaine, Devadas, Nancy Lynch  | MIT        | 2015 | 41h    |        |      | Autumn 2016 |
 | Computer Architecture                      | David Wentzlaff                | Princeton  | 2012 | 28h30  |        |      | Autumn 2016 |
 | Image and Video Processing                 | Guillermo Sapiro               | Duke       | 2012 | 15h20  |        |      | Autumn 2016 |

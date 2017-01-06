@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/11/26 13:57:51 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2017/01/06 18:13:39 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2017/01/06 19:48:46 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -508,7 +508,75 @@ ras
 
 # Module 8: Advanced topics
 ### Lecture 19: Synchronous Distributed Algorithms: Symmetry Breaking. Shortest-Paths Spanning Trees (1:17:34) 80%
+> https://www.youtube.com/watch?v=mUBmcbbJNf4&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=27
+> https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/lecture-notes/MIT6_046JS15_lec19.pdf
+> Nancy Ann Lynch
+
+- Studied since 1967: Edsger Dijkstra, Leslie Lamport
+- Sources
+ - Books
+   - Lynch, Distributed Algorithms
+   – Attiya and Welch, Distributed Computing: Fundamentals, Simulations, and Advanced Topics
+   – Morgan Claypool series of monographs on Distributed Computing Theory
+ – Conferences
+   - Principles of Distributed Computing (PODC)
+   - Distributed Computing (DISC)
+- Distributed network
+ - undirected graph
+ - `n = |V|`
+ - `Gamma(u)` set of neighbors of vertex u
+ - `Process` for a node in a graph, `infinite-state automaton`
+ - two directed communication channels with each edge
+
+#### Synchronous distributed (algorithms|network)
+- Synchronous Network Model
+ - each process has output ports and input ports
+ - a port is not labeled with its source/destination, it only has a local name
+ - processes are not distinguishable
+ - algorithm executes in `synchronous rounds`
+   - in each round a process sends 0 or 1 message in each output ports, depending on its state
+   - it then computes its new state depending on its state and the arriving messages
+ - ignoring cost of local computations
+
+##### Sync: Leader Election
+- Election of a leader among the processes
+- In a clique such an algorithm cannot exist
+- A basic problem for distributed algorithms `breaking symmetry`
+ - With UIDs
+   - Elements of some totally-ordered set
+  - With randomness
+- Solve leader election with UIDs in clique
+ - 1 round, n^2 messages
+- Solve leader election with randomness in clique
+ - probably 1 round
+
+##### Sync: Maximal independent set
+- No uids, known good upper bound on n
+- Unsolvable by deterministic algorithms in some graphs
+- Ex: biology `Sensory Organ Precursor` in `fruit fly's`
+- `Michael Luby's MIS Algorithm`
+ - Executes in 2-round phases
+ - P1, forall active nodes
+   - broadcast random number self.v
+   - if all neighbors.v < self.v: broadcast `in`; self.active = False
+ - P2, forall active nodes
+   - if received `in`: broadcast `out`; self.active = False
+ - probably finishes in 4 log n phases
+
+##### Sync: Breadth-first spanning trees
+
+https://youtu.be/mUBmcbbJNf4?list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&t=2963
+
+
+##### Sync: Shortest paths trees
+
+##### Async: Breadth-first spanning trees
+##### Async: Shortest paths trees
+
 ### Lecture 20: Asynchronous Distributed Algorithms: Shortest-Paths Spanning Trees (1:12:03) 83%
+- Asynchronous distributed (algorithms|networks)
+
+
 ### Recitation 10: Distributed Algorithms (0:50:19) 85%
 ### Lecture 21: Cryptography: Hash Functions (1:22:01) 89%
 ### Lecture 22: Cryptography: Encryption (1:24:15) 92%
