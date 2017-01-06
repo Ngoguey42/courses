@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/11/26 13:57:51 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2017/01/04 17:08:46 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2017/01/06 18:13:39 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -476,6 +476,8 @@ ras
  - Absolute error / relative error
 
 ### Recitation 9: Approximation Algorithms: Traveling Salesman Problem (0:31:59) 76%
+> https://youtu.be/zM5MW5NKZJg?list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp
+> https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/recitation-notes/MIT6_046JS15_Recitation9.pdf
 - TSP and its approximation algorithm are NP-hard
 - Metric TSP
  - Triangle inequality holds
@@ -485,12 +487,24 @@ ras
  - From a rooted MST `T`
  - It's cycle path `C` that contains many duplicates
  - Build a path `C'` from `C` bypassing the duplicates
- - `c(C) = 2c(T) => c(C') <= 2c(T) => c(C') <= 2c(H^*_G)`
+ - `c(H^*_G) >= c(T)`
+ - `c(C) = 2c(T)  =>  c(C') <= 2c(T)  =>  c(C') <= 2c(H^*_G)`
 - Perfect matching
  - In a complete graph you can find a perfect matching in polytime
 - Euler circuit (euler tour) iff all vertex has even degree
-
-https://youtu.be/zM5MW5NKZJg?list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&t=1292
+- In a graph there cannot be an odd number of odd degree vertices
+ - `forall vertices let d_i be it's degree`
+ - `forall even degree vertices let de_i be it's degree`
+ - `forall odd degree vertices let do_i be it's degree`
+ - `sum_(de_i) is even by definition`
+ - `sum_(d_i) = 2 * |E|`
+ - `sum_(d_i) = sum_(do_i) + sum_(de_i)`
+ - `sum_(do_i) % 2 = 0 = |V_(degree-odd)| * 1 % 2   =>  |V_(degree-odd)| % 2 = 0`
+- Christofides algorithm 3/2-approximation algorithm
+ - From a rooted MST `T`
+ - Compute `M` the perfect matching of all odd-degree vertices in `T`
+ - `G' = {M U T}` the graph where all vertices have an even degree
+ - Keep the euler tour in `G'` with duplicates removed
 
 # Module 8: Advanced topics
 ### Lecture 19: Synchronous Distributed Algorithms: Symmetry Breaking. Shortest-Paths Spanning Trees (1:17:34) 80%
