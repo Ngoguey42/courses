@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/11/26 13:57:51 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2017/01/06 19:48:46 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2017/01/08 16:38:11 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -564,20 +564,50 @@ ras
  - probably finishes in 4 log n phases
 
 ##### Sync: Breadth-first spanning trees
-
-https://youtu.be/mUBmcbbJNf4?list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&t=2963
-
+- rooted
+- convergecast strategy
 
 ##### Sync: Shortest paths trees
-
-##### Async: Breadth-first spanning trees
-##### Async: Shortest paths trees
+- Bellman-Ford shortest path
 
 ### Lecture 20: Asynchronous Distributed Algorithms: Shortest-Paths Spanning Trees (1:12:03) 83%
-- Asynchronous distributed (algorithms|networks)
+- Distributed computing theory has many impossibilities, because of the limitation where each nodes only knows whats happening to his neighborhood
 
+##### Asynchronous distributed (algorithms|networks)
+ - Processes act concurrently
+ - A few nondeterminism
+- Channel automaton `C_(u,v)`
+ - `send(m)_(u,v)`
+ - `receive(m)_(u,v)`
+- Liveness
+ - Process keep working
+ - Channels keep sending
+- Ex: Max_u process automaton
+- Message complexity
+ - `O(n * |E|)`
+- Time complexity
+ - Assuming real-time upper bounds on independent operations
+
+##### Async: Breadth-first spanning trees
+ras
+
+##### Async: Shortest paths trees
+ras
+
+ref: mit 6.852, 18.437, distributed algorithms
 
 ### Recitation 10: Distributed Algorithms (0:50:19) 85%
+> https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/recitation-notes/MIT6_046JS15_Recitation10.pdf
+#### Sync: Leader election in a ring
+- Algo: Naive
+ - time O(n)
+ - message O(n^2)
+- Algo: Filtering uid broadcast
+ - message O(nlogn)
+
+#### Sync: Counting the nodes
+- Build spanning tree
+
 ### Lecture 21: Cryptography: Hash Functions (1:22:01) 89%
 ### Lecture 22: Cryptography: Encryption (1:24:15) 92%
 ### Recitation 11: Cryptography: More Primitives (0:49:30) 94%
