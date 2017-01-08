@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/12/16 15:55:51 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2017/01/01 18:17:30 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2017/01/08 18:11:12 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -193,10 +193,42 @@ ras
  3. Refine (relaunch the algorithm with new scribbles constructed by algo)
 
 ## Lecture 43 - Graph Cuts (09:35) 48%
+- Boykov and Jolly (2001)
+- Each pixel
+ - Connected connected to its neighbors (4-neighborhood or 8-neighborhood), with weight
+ - Connected to an abstract vertex foreground, with weight
+ - Connected to an abstract vertex background, with weight
+- Min-cut
 
 ## Lecture 44 - Mumford-Shah (05:51) 48%
+- Concept
+ - Move away from the original image. eg: penalizing the amount of boundaries
+ - Stay close to the original image. eg: penalizing the mean-square-error
+
 ## Lecture 45 - Active Contours (05:58) 49%
+- Snakes
+- Exemples from ipol.im
+
 ## Lecture 46 - Behind the Scenes of Adobes Roto Brush (31:30) 52%
+- Inside `After effects cs5`
+- Problem for video segmentation
+ - Pixel level accuracy
+ - Minimal user intervention
+ - Interactive real-time
+- Challenges
+ - Overlapping color distribution
+ - Weak boundaries
+ - Topology changes
+ - Dynamic backgrounds
+- Steps
+ 1. Localized classifiers
+   - Shape prior
+   - Color models, GMM Gaussial mixture models (Color distribution for bg/fg)
+ 1. Multi-frame propagation
+ 1. Local correction
+ 1. Post-processing
+
+
 ## Lecture 47 - End of the Week (00:22) 52%
 ## Lecture 48 - Introduction to PDEs in Image and Video Processing (10:23) 54%
 ## Lecture 49 - Planar Differential Geometry (38:33) 58%
