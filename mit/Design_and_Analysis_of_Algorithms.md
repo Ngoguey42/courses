@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/11/26 13:57:51 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2017/01/12 15:48:20 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2017/01/12 17:35:14 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -616,6 +616,62 @@ ref: mit 6.852, 18.437, distributed algorithms
 ras
 
 ### Lecture 21: Cryptography: Hash Functions (1:22:01) 89%
+> https://www.youtube.com/watch?v=KqqOXndnvic&index=30&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp
+> https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/lecture-notes/MIT6_046JS15_lec21.pdf
+
+#### Hash functions
+- `h: {0,1}^* -> {0,1}^d`
+- Deterministic, Public, Random
+- Poly-time computation
+- Ex: MD4, MD5, SHA-1, SHA-3, SHA-256, SHA-512
+- Collision resistance
+
+#### Random oracle model
+- Book
+- Ideal model but not achievable
+ - Theory: Requires infinite storage
+ - Practice: Use pseudo-random functions
+
+#### Desirable Properties
+1. One-way (OW) (pre-image resistance)
+ - In h(x) = y, given y, infeasible to find x
+ - Random oracle: would require to iterable the whole book
+1. Strong collision-resistance (CR)
+ - Finding a collision is infeasible
+1. (Target|Weak) collision-resistance (TCR)
+ - Finding a collision given x is infeasible
+1. Pseudo-randomness (PRF)
+ - Behavior is indistinguishable from a random oracle
+1. Non-malleability (NM)
+ - Related keys should not have related hashes
+- `CR imply TCR`
+- `OW does not imply CR, TCR`
+ - Ex: Ignore the first bit of x results in pairing keys 2 by 2
+- `TCR does not imply OW`
+ - Ex: Do nothing
+
+#### Applications to security
+##### Password Storage
+- Requires OW
+
+##### File Authenticity
+- Requires TCR
+
+##### Digital Signature
+- `PK`, public key
+- `SK`, secret key
+- `M`, seed
+- `sigma`, signature
+- `sigma = sign(SK, M)`
+- `verify(M, sigma, PK) = (true|false)`
+- RSA
+- goto Recitation 11
+
+https://youtu.be/KqqOXndnvic?list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&t=4223
+##### Commitments
+
+
+
 ### Lecture 22: Cryptography: Encryption (1:24:15) 92%
 ### Recitation 11: Cryptography: More Primitives (0:49:30) 94%
 ### Lecture 23: Cache-Oblivious Algorithms: Medians & Matrices (0:57:57) 97%
