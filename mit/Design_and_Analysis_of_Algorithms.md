@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/11/26 13:57:51 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2017/01/08 16:38:11 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2017/01/12 15:48:20 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -598,15 +598,22 @@ ref: mit 6.852, 18.437, distributed algorithms
 
 ### Recitation 10: Distributed Algorithms (0:50:19) 85%
 > https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/recitation-notes/MIT6_046JS15_Recitation10.pdf
-#### Sync: Leader election in a ring
+
+#### Sync/async: Leader election in a ring
 - Algo: Naive
  - time O(n)
  - message O(n^2)
-- Algo: Filtering uid broadcast
+- Hirshberg-Sinclair algo: Filtering uid broadcast
+ - binary search idea
+ - logn phases
+   - after ith phase, each node knows if it is the greatest among its 2^i closest neighbors
+   - if it is not, stop sending messages at the beginning of next phases
+   - after nth phase, each node knows if it is the greatest among its 2^n closest neighbors
+   - at the last phase, the two messages from the greatest node will traverse the whole ring (coming back to the sender)
  - message O(nlogn)
 
-#### Sync: Counting the nodes
-- Build spanning tree
+#### Async: Counting the nodes
+ras
 
 ### Lecture 21: Cryptography: Hash Functions (1:22:01) 89%
 ### Lecture 22: Cryptography: Encryption (1:24:15) 92%
