@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/12/16 15:55:51 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2017/01/08 18:11:12 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2017/01/10 17:45:21 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -222,17 +222,77 @@ ras
  - Dynamic backgrounds
 - Steps
  1. Localized classifiers
+   - Motion estimation
    - Shape prior
    - Color models, GMM Gaussial mixture models (Color distribution for bg/fg)
+   - Foreach frame, foreach block, merge shape prior and color probability to obtain confidence map
  1. Multi-frame propagation
  1. Local correction
+   - Spatial-temporal local correction, manual
  1. Post-processing
-
+   - Smooth segmentation
 
 ## Lecture 47 - End of the Week (00:22) 52%
+ras
+
+# Week 5: Partial Differential Equations (PDEs)
 ## Lecture 48 - Introduction to PDEs in Image and Video Processing (10:23) 54%
+- Images as continuous objects
+
 ## Lecture 49 - Planar Differential Geometry (38:33) 58%
+- Books
+ - Geometric Partial Differential Equations and Image Analysis. Guillermon Sapiro
+ - Numerical Geometry of Images, Rom Kimmel
+
+### Curve on the plane
+- `C(p) = {x(p), y(p)}, p in [0, 1]`
+- If the curve is closed, `C(0) = C(1)`
+- Tangent `vec t = C_p / |C_p| = C_s`
+ - first derivative
+ - `C_p = delta C / delta p = [x_p, y_p]`
+ - `C_s` Tangent with unit length
+ - `|C_s| = <C_s, C_s> = 1` inner product of 2 vectors, magnitude of the first derivative
+- Normal `C_(ss) = kappa * vec n`
+ - second derivative
+ - `C_s perp C_(ss)`
+ - `kappa` curvature, magnitude of the second derivative
+ - `s` is the `arc length`
+- Strait line has `0` curvature
+- Circle has `1/r` curvature
+- `s` and `kappa` are preserved over some transformations
+
+### Linear transformations
+- Affine transformation
+ - `{x', y'}^T = A{x, y}^T + bar b`
+ - `{x, y}^T` vector ?of magnitude T?
+ - `bar b` rotation
+ - `A` transformation matrix
+- An `affine transformation` is an `euclidean transformation` where `A = [bar u_1, bar u_2], where <bar u_1, bar u_2> = 0 and <bar u_i, bar u_i> = 1`, results in a rotation+translation
+- An `equi-affine transformation` is an `affine transformation` where `det(A) = 1`, results in a transformation where area is preserved
+
+### Differential Signatures
+- Euclidean invariant signature `{S, kappa(S)}`, up to a rotation and a translation
+- Cartan Theorem
+
+### Euclidean arclength
+- Length is preserved
+- `ds = sqrt(dx^2 + dy^2) = |C_p| dp`
+- `s = int |C_p| dp`
+- Length `L = int_0^1 |C_p| dp = int_0^1 sqrt(<C_p, C_p>) dp = int_0^L ds`
+
+### Equi-affine arclength
+- Area is preserved
+- `v` affine arclength
+- `dv = kappa^(1/3)ds`
+- equi-affine invariant signature `{v, mu(v)}`
+
 ## Lecture 50 - Surface Differential Geometry (11:44) 59%
+- Surfaces in 3d
+- 2 parameters `u, v`
+
+
+
+
 ## Lecture 51 - Curve Evolution (31:11) 62%
 ## Lecture 52 - Level Sets and Curve Evolution (25:35) 65%
 ## Lecture 53 - Calculus of Variations (14:04) 67%
