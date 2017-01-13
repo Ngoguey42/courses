@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/11/26 13:57:51 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2017/01/13 14:35:22 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2017/01/13 18:34:47 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -704,8 +704,48 @@ ras
 - Loophole: The pirates could use their own key `b`/`g^b`
  - Man-in-the-middle
 
-#### Public Key Encryption
-https://youtu.be/9TNI2wHmaeI?list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&t=2192
+#### Public Key Encryption, RSA
+- `p`, `q` 2 large secret primes
+- `N = p * q`
+- `e` encryption exponent
+ - `gcd(e, (p − 1)(q − 1)) = 1`
+ - prime
+ - small for performances
+- `d` decryption exponent
+ - `e * d -= 1 mod (p − 1)(q − 1)`
+- `(N, e)` Public key
+- `(d, p, q)` Private key
+
+- `c = m^e mod N` encryption process
+- `m = c^d mod N` decryption process
+- `m^(ed) = m mod N` encryption + decryption at once
+
+##### Proof
+- `ed = 1 + k * phi`
+- Case1 `gcd(m, p) = 1`
+ - Using Fermat's little theorem
+ - `m^(p - 1) -= 1 mod p`
+ - `m^((p - 1) * (k * (q - 1))) -= 1 mod p`
+ - `m^(k * phi) -= 1 mod p`
+ - `m^(k * phi) * m -= m mod p`
+ - `m^(k * phi + 1) -= m mod p`
+ - `m^(ed) -= m mod p`
+- Case2 `gcd(m, p) = p`
+ - `m -= 0 mod p`
+ - `m -= m mod p`
+ - `m^(ed) -= m mod p`
+- the same proof goes for q
+- p and q being distinct primes
+ - `m^(ed) -= m mod N`
+
+##### Hardness
+- 512 bit N in the 70'
+- 8192 bit N in the 10' (recommended by NSA)
+- "Factoring": N into p and q
+- "RSA Problem": from e and c find an m satifying `m^e -= c mod N`
+
+#### NP-completeness
+https://youtu.be/9TNI2wHmaeI?list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&t=4020
 
 ### Recitation 11: Cryptography: More Primitives (0:49:30) 94%
 ### Lecture 23: Cache-Oblivious Algorithms: Medians & Matrices (0:57:57) 97%
