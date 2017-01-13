@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/11/26 13:57:51 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2017/01/12 17:35:14 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2017/01/13 14:35:22 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -667,12 +667,46 @@ ras
 - RSA
 - goto Recitation 11
 
-https://youtu.be/KqqOXndnvic?list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&t=4223
 ##### Commitments
-
-
+ras
 
 ### Lecture 22: Cryptography: Encryption (1:24:15) 92%
+> https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/lecture-notes/MIT6_046JS15_lec22.pdf
+
+#### Symmetric key encryption
+- Ref: Enigma
+- `k` secret key
+- `c` ciphertext
+- `m` plaintext
+- `e` encryption function, permutes
+- `d` decryption function, reverse-permutes
+- `c = e_k(m)`
+- `m = d_k(c)`
+- AES, RC5, DES
+
+#### Key exchange
+- Ex: Pirates
+- Box with 0->1->2->1->0 locks on it, never exchange key of locks
+- Nested boxes don't work
+- Commutativity between the locks
+- Loophole: The pirates could put their own lock on the box
+
+#### Diffie-Hellman Key Exchange
+- `a` private to alice
+- `b` private to bob
+- `g` public
+- `p` public
+- `g^a` exchanged
+- `g^b` exchanged
+- `g^(ab) mod p = k`
+- Discrete log problem: from `g^a` computing `log_g(g^a)` to get `a` is hard
+- Diffie Hellman Problem: from `g^a` and `g^b` computing `g^(ab)` is hard
+- Loophole: The pirates could use their own key `b`/`g^b`
+ - Man-in-the-middle
+
+#### Public Key Encryption
+https://youtu.be/9TNI2wHmaeI?list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&t=2192
+
 ### Recitation 11: Cryptography: More Primitives (0:49:30) 94%
 ### Lecture 23: Cache-Oblivious Algorithms: Medians & Matrices (0:57:57) 97%
 ### Lecture 24: Cache-Oblivious Algorithms: Searching & Sorting (1:17:41) 100%
