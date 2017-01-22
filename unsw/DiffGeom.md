@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2017/01/21 16:51:28 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2017/01/21 23:40:14 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2017/01/22 20:46:14 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -137,7 +137,69 @@
 - Euler, Lagrange, 1797
 - Lagrange expansion, tayler expansion, pascal's triange
 - Approximations to a curve at a given point
- 1. function's value
- 1. tangent plane
- 1. tangent conic
- 1. tangent cubic
+ 1. function's value `T^0_r p(x)`
+ 1. tangent plane `T^1_r p(x)`
+ 1. tangent conic `T^2_r p(x)`
+ 1. tangent cubic `T^3_r p(x)`
+
+# DiffGeom5: Tangent conics and tangent quadrics
+- Taylor polynomial of p at r, obtained by truncating the polynomial
+- The k'th coefficient in `p(x)` is `D_k p = D^k p / k!` (`D^k`: k'th derivative)
+ - Each is called a subderivative
+- For a cubic polynomial p(x), all the tangent conics `T^2_r p(x)` are distincts
+- At an inflection point, the tangent conic is the same as the tangent
+
+### Polynomials of 2-variables, cubic surfaces with folium of Descartes
+- Quadric: conic in 3d with 2 variables
+- Taylor polynomials at `[r, s]`
+- `T^k_([r, s]) p`, sum of all terms of total degree <= k
+- Tangent plane: `T^1_([r, s]) p`
+- Tangent quadric: `T^2_([r, s]) p`
+- Ex: 2d representation with level lines
+- Level curves characteristics
+ - Each level line is a cubic
+ - `z > 1` single curve, nearly straight
+ - `z = 1` a curve and a point
+ - `z > 0` a curve and an ellipse
+ - `z = 0` folium of Descartes
+ - `z < 0` curve
+
+# DiffGeom6: Visualizing the folium surface with GeoGebra
+- https://ggbm.at/U8RPgaQd
+- Nature of the conic
+ - `determinant > 0` elliptic
+ - `determinant < 0` hyperbolic (saddle)
+
+# DiffGeom7: Differential geometry with finite fields
+### Finite field
+- `FF = FF_p = {0, 1, 2, ..., p-1}` where p is a prime
+- All operations mod p
+ - `+`
+ - `*`
+ - `^-1` inverse
+ - `^` exponentiation
+- The multiplicative group
+ - `FF_p^* = {1, 2, ..., p - 1} = FF_p \ {0}`
+ - is cyclic
+ - any element is `a_n` for some distinguished `a` called a `primitive root`
+
+- Ex: In `FF_11` the powers of 2 runs over all the elements in the field
+ - 2 is a primitive root for `FF_11`
+| n      | 0 | 1 | 2 | 3 | 4 | 5  | 6 | 7 | 8 | 9 | 10 |
+|--------|---|---|---|---|---|----|---|---|---|---|----|
+| `FF_n` | 1 | 2 | 4 | 8 | 5 | 10 | 9 | 7 | 3 | 6 | 1  |
+
+- Least primitive roots for `p` prime
+| p | 2 | 3 | 5 | 7 | 11 | 13 | 17 | 19 | 23 | 29 | 41 |
+|---|---|---|---|---|----|----|----|----|----|----|----|
+| r | 1 | 2 | 2 | 3 | 2  | 2  | 3  | 2  | 5  | 2  | 6  |
+
+### Alternative view of finite field
+- `a / b, w, b in WW, b !-= 0 mod p`
+- `a / b = c / d <=> ad - bc -= 0 mod p`
+
+### Calculus overe a finite field
+- Ex: Polynomial arithmetic in `FF_p`
+ - Coefficients in `FF_p`
+ - Powers in `WW`
+https://youtu.be/2yGuKIz2wfE?t=991
