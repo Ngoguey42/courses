@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2017/01/21 16:51:28 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2017/01/22 20:46:14 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2017/01/23 19:48:35 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -200,6 +200,45 @@
 
 ### Calculus overe a finite field
 - Ex: Polynomial arithmetic in `FF_p`
- - Coefficients in `FF_p`
+ - Constants in `FF_p`
  - Powers in `WW`
-https://youtu.be/2yGuKIz2wfE?t=991
+ - Indeterminate in `FF_p`
+ - Result in `FF_p`
+- We can do calculus in a finite field
+- in `FF_p`
+ - `(alpha + beta)^p = alpha^p + beta^p`
+- in `FF_p`, if `q = alpha^p`
+ - The p'th subderivative is equal to 1, all other are equal to 0
+- `a^p = a` forall a in FF_p
+ - Proof with Fermat, because a and p are relatively prime
+
+- Ex: plotting a a polynomial in a matrix, an it's tangent conics
+ - All tangent conics are disjoint
+ - All conics have a self symetry
+ - 5 is a point of inflection in the exemple, the quadratic term vanshes, this is a tangent line
+
+### Example
+- `f(x) = 8 - 5x + 4x^3 - x^4`
+- A, point on f(x)
+- `r = x(A)`
+- `   tline(x) = (8 - 5r + 4r^3 - r^4) + (-5 + 12r^2 - 4r^3)(x - r)^1`
+- `  tconic(x) = (8 - 5r + 4r^3 - r^4) + (-5 + 12r^2 - 4r^3)(x - r)^1 + (24r - 12 r^2)(x - r)^2`
+- `tquartic(x) = (8 - 5r + 4r^3 - r^4) + (-5 + 12r^2 - 4r^3)(x - r)^1 + (24r - 12 r^2)(x - r)^2 + (24 - 24r)(x - r)^3`
+- intersections of tquartic(x) and tline(x)
+- https://ggbm.at/MtMaYzZB
+
+# DiffGeom8: The differential calculus for curves (II)
+- Curve `y = f(x)` vs `p(x, y) = 0`
+- Implicit differentiation
+ - `xx + yy = 1`
+ - `2xdx + 2ydy = 0 <=> dy/dx = -x / y`
+- Ex: Curve `p(x, y) = 0` passing through the origin
+ - Approximations using the low order terms for the tangent line/conic at the origin
+- Ex: Using translations approximate at another point
+ - https://ggbm.at/cRxk6hHD
+- Lemniscate of Bernouilli `(xx + yy)^2 = 2(xx - yy)`
+ - Tangent conics
+ - Discriminant conic, hyperbola separating the tangent hyperbolas and the tangent ellipses
+- A quatric in 3d is a curve of degree 2
+
+- next MathHistory8: Projective geometry https://www.youtube.com/watch?v=NYK0GBQVngs
