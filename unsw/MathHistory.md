@@ -6,12 +6,47 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2017/01/15 13:16:24 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2017/01/15 15:12:11 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2017/01/24 16:08:34 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
 > https://www.youtube.com/playlist?list=PL55C7C83781CF4316
 
+## Lecture 8: Projective geometry
+- Begins with Girard Desargues in 1600
+- Geometry of the straight edges
+- Pappus theorem in 300
+ - 2 lines with 3 points on each
+ - the complete bipartite matching creates 3 colinear points
+- Colinear points: a line passes through those points
+- Pascal's theorem in 1660
+ - 6 points on a conic
+ - bipartite matchine cretes 3 colinear points
+- Desargues theorem
+ - If 2 triangles are perspective via a point P, then they are perspective via a line L
+- Ref: courses `WT31->41` on projective geometry
+- New understanding with Mobius, Plucker, Chasles, Klein, von Staudt, Cayley in 1800
+- Renaissance artists
+ - Problems of perspective
+ - Ex: Tiled floor
+ - Parallel lines meet on the horizon
+ - Straight lines must be represented by straight lines
+ - The image of a conic is also a conic
+- Desargues theorem with parallel lines
+ - Points are colinear are infinity
+- Line at infinity
+ - Every family of parallel lines meet at a new point on the line at infinity
+- Projective plane
+ - Any two lines meet at a point
+ - Any two points join to make a line
+ - Duality point/lines
+- Ex: All the conics look the same projectively
+- Ex: Topologically the projective line is a circle
+- Homogeneous coordinates
+ - The projective line is the space of 1-dimentional subspaces in 2-dimentional space
+ - The projective plane is the space of 1-dimentional subspaces in 3-dimentional space
+- All conics gives 2 ellipses when projected on a sphere centered at the origin
+- Projections of cubics on a sphere
 
 ## Lecture 16: Differential Geometry
 - Differential geometry is a combination of `calculus` + `analytic geometry`
