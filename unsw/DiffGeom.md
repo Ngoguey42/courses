@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2017/01/21 16:51:28 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2017/01/23 19:48:35 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2017/01/24 23:15:43 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -242,3 +242,97 @@
 - A quatric in 3d is a curve of degree 2
 
 - next MathHistory8: Projective geometry https://www.youtube.com/watch?v=NYK0GBQVngs
+
+# DiffGeom9: Projective view of conics and quadrics
+- Affine geometry
+ - vector spaces / linear algebra / parallelism
+ - euclidean / relative
+- Projective geometry
+ - perspective / algebraic geometry
+ - hyperbolic / elliptic / spherical
+- Ref: Course `WT32->40` on projective geometry
+
+### Projective Geometry
+#### Subspaces
+- In the 3d vector space, we call `1d subspace` a line passing through the origin
+- In any plane `P` not passing through the origin (ex: `Z = 1`)
+ - Almost all `1d subspaces` crosses `P`
+ - The `1d subspaces` embeded in the parallel plane to `P` don't cross `P` (ex: `Z = 0`)
+- The `projective plane` `PP^2` is the union of all `1d subspaces` in `3d vector space`
+ - In `PP^2` parallel lines from the `3d vector space` meets
+
+#### Homogeneous coordinates
+- Moebius, Plucker
+- `[X:Y:Z]` denotes a line passing through the origin
+ - `[X, Y, Z]` is a point on that line
+ - `[lambda X, lambda Y, lambda Z]` is a point on that line
+ - This line will appear as a point `p` on a projectiON plane `P` like `Z = 1`
+ - In the 3d space, `p` has coordinates `[X/Z, Y/Z, 1]`
+ - In the 2d space of `P`, `p` has coordinates `[X/Z, Y/Z]`
+
+#### Parabola on the projection plane
+- let x, y be coordinate in the plane `P` `Z = 1`
+- The parabola `p` lies in `P` with the equation `y = x^2`
+- `y = x^2 => Y / Z = (X / Z)^2 => YZ = X^2`
+- `YZ = X^2 `is the equation of `p` in homogeneous form
+- On `P` the point at infinity is missing
+- In `YZ = X^2` the point at infinty is represented when `Z = 0`, giving `X = 0` and `Y = lambda`
+ - The equation of this line is `[0:1:0]`, the point at infinity
+
+#### Projection of conics
+- Depending on the point of view, all conics looks like an ellises on the projectiON plane
+- Ellise
+ - Already an ellipse
+- Parabola
+ - In the conic section, the two branches on the parabola run on the side of the cone
+ - At infinity the two branches will meet on the other side of the cone
+- Hyperbola
+ - In the the conic section, one half is in front of the point of view and the other half is behind
+ - Two branches of a half won't meet at infinity
+ - If we project both in front and behind the plane, the two halves will meet forming an ellipses
+
+# DiffGeom10: Duality, polarity and projective linear algebra
+
+## Conic equation
+- General case if affine x, y plane
+ - `axx + 2dxy + byy + 2fx + 2gy + c = 0`
+- Homogeneous quadratic expression
+ - `aXX + bYY + cZZ + 2dXY + 2fXZ + 2gYZ = 0`
+ - `(X, Y, Z) * ((a, d, f), (d, b, g), (f, g, c)) * ((X), (Y), (Z)) = 0`
+ - `pAp^T = 0` where A is a general 3x3 symetric matrix `A^T = A`
+- Homogeneous equation means that all the terms have the same degree
+
+## Projective linear algebra
+### Projective points
+- aka p-points
+- aka points
+- 1-dim subspaces of XZY vector space
+- line through the origin
+- `[X:Y:Z]`
+- `[X Y Z]` 1x3 projective matrix
+
+### Projective lines
+- aka p-lines
+- aka lines
+- 2-dim subspaces of XYZ vector space
+- plane through the origin
+- `lX + mY + nZ = 0` general equation
+- `[(l) (m) (n)]` 3x1 projective matrix
+- Join of two ppoints `a_1 = [X_1, Y_1, Z_1]` and  `a_2 = [X_2, Y_2, Z_2]`
+ - We need the cross product to find the normal
+ - `a_1a_2 = [(Y_1 * Z_2 - Y_2 * Z_1) (Z_1 * X_2 - Z_2 - X_1) (X_1 - Y_2 - X_2 - Y_1)]`
+- Meet of two lines `L_1L_2`
+ - `L1 = [(l1) (m1) (n1)]`
+ - `L2 = [(l2) (m2) (n2)]`
+ - We need the cross product to find the perpendicular of the two planes
+ - Same formula
+ - `L_1L_2 = [m_1 * n_2 - m_2 * n_1   n_1 * l_2 - n_2 - l_1   l_1 - m_2 - l_2 - m_1)]`
+
+### Duality
+- a pline and a ppoint are incident if
+ - `lX + mY + nZ = 0`
+ - `pL = 0` matrix product
+- Pappus' theorem and it's duality
+- Concurent lines == parallel
+
+### Exemple with numbers
