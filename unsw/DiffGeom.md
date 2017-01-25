@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2017/01/21 16:51:28 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2017/01/24 23:15:43 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2017/01/25 21:44:36 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -266,11 +266,11 @@
 - `[X:Y:Z]` denotes a line passing through the origin
  - `[X, Y, Z]` is a point on that line
  - `[lambda X, lambda Y, lambda Z]` is a point on that line
- - This line will appear as a point `p` on a projectiON plane `P` like `Z = 1`
+ - This line will appear as a point `p` on a projective plane `P` like `Z = 1`
  - In the 3d space, `p` has coordinates `[X/Z, Y/Z, 1]`
  - In the 2d space of `P`, `p` has coordinates `[X/Z, Y/Z]`
 
-#### Parabola on the projection plane
+#### Parabola on the projective plane
 - let x, y be coordinate in the plane `P` `Z = 1`
 - The parabola `p` lies in `P` with the equation `y = x^2`
 - `y = x^2 => Y / Z = (X / Z)^2 => YZ = X^2`
@@ -280,7 +280,7 @@
  - The equation of this line is `[0:1:0]`, the point at infinity
 
 #### Projection of conics
-- Depending on the point of view, all conics looks like an ellises on the projectiON plane
+- Depending on the point of view, all conics looks like an ellises on the projective plane
 - Ellise
  - Already an ellipse
 - Parabola
@@ -336,3 +336,170 @@
 - Concurent lines == parallel
 
 ### Exemple with numbers
+
+# DiffGeom11: Duality, polarity and projective linear algebra (II)
+- ppoint
+ - projective row vector
+ - invariant under scaling
+ - they are not all zero
+- if 3 plines are the same (L1, L2, L3)
+ - det ((l1 l2 l3) (m1 m2 m3) (n1 n2 n3)) = 0
+
+## Exemple
+- in the plane `PP^2` with `Z = 1`
+- let `p1 = [0, 2] = [0 2 1]`
+- let `p2 = [3, 0] = [3 0 1]`
+- let `l` be the point passing through p1 and p2
+ - `l: 2x + 3y - 6 = 0  =>  [(2) (3) (-6)]`
+- let `v` be a vector of `l`
+ - `v = (-3, 2)`
+- The intersection of `v` with the line at infinity is `pi = [-3 2 0]`
+- Proof `l` passes through `pi`
+ - if `l * pi = 0`
+ - `[(2) (3) (-6)] * [-3 2 0] = 0`
+ - `2 * -3 + 3 * 2 + -6 * 0 = -6 + 6 = 0`
+- All lines parallel to `l` will have equation of the form `2x + 3y - k = 0`
+ - They all meet at infinity
+
+## Linear transformations
+- point `p` to point `q`
+ - `p = [x, y]`
+ - `q = [x', y'] = (x y)((a b) (c d))`
+- homo coords
+ - `p = [X Y Z]`
+ - `q = [X Y Z][(a b 0) (c d 0) (0 0 1)]`
+
+### Translation
+- point `p` to point `q`
+ - `p = [x, y]`
+ - `q = [x + a, y + b]`
+- homo coords
+ - `p = [X Y Z]`
+ - `q = [X Y Z][(1 0 0) (0 1 0) (a b 1)] = [X + aZ  Y + bz  Z]`
+
+## Symmetry matrix in dot product
+- Reminder: two vectors are perpendicular iff `v.w = 0`
+- The dot product(aka inner product)(aka symmetric bilinear form) in 3d space is determined by a 3x3 matrix called symmetry matrix
+- Product of two row vector v, w
+ - `v.w = v.A.w^T`
+- Usually the symmetry is the identity matrix
+- If the symmetry matrix is `((1 0 0) (0 1 0) (0 0 -1))`
+ - `(x1, y1, z1).(x2, y2, z2) = x1x2 + y1y2 - z1z2`
+ - the dot product is called relativistic(or Lorentz)(or Minkowski)(or Einstein)
+
+## The projective notion of perpendicularity
+- let `p` a ppoint
+- let `L` the pline, perpendicular to `p` in the projective sense
+ - All points on `L` are said perpendicular to `p`
+- let `v` be the 3d vector of the ppoint `p`
+- let `P` be the 3d plane perpendicular to `v`
+- `L` is the pline of `P`
+
+#### Proof
+- let `q` a ppoint on `L`
+ - `A.q^T = L`
+- let `A` be the symmetry matrix used for the dot product
+- `p perp q` <=> `0 = p.A.q^T = p.(A.q^T) = p.L`
+
+## Conic in projective geometry
+- Standard form for a conic
+ - let `A` be a 3x3 matrix associated to the `symetric bilinear form` of a conic `C`
+ - `p.A.p^T = 0`
+ - `[X Y Z] * [(a d f) (d b g) (f g c)] * [(X) (Y) (Z)] = 0`
+ - `aXX + bYY + cZZ + 2dXY + 2fXZ + 2gYZ = 0` homogeneous
+ - `axx + byy + 2dxy + 2fx + 2gy + c = 0` non-homogeneous
+- The projective plane is a cross section of the conic
+- In general: conic <=> quadratic form <=> symmetric bilinear forms <=> metrical structure
+
+## Using the symmetric bilinear form of a conic as symmetry matrix
+- https://fr.wikipedia.org/wiki/P%C3%B4le_et_polaire
+- let `p` be the symmetric point of `L`
+- `p` is the pole of `L`
+- `L` is the polar of `p`
+- The pole and polar can be constructed without using their 3d attributes, by intersecting several lines with the conic
+- Ex: If `p` is on the conic, `L` is the tangent to the conic at `p`
+
+- Ref: Apollonius
+- Ref: Light cone, photons
+
+****
+
+# DiffGeom12: Metrical structure and curvature of a parabola
+
+## Metrical Structure
+- From both Affine and Projective geometry, we can add a metrical structure via a symmetric matrix
+
+### Notions in the affine plane `FF^2`
+- `v = (x, y)`
+- `A = ((a, b), (b, c))` fixed symmetric matrix
+- Symmetric bilinear form
+ - `v.w = v.A.w^T = (vw, vy).((a b), (b c)).((wx), (wy)) = avxwv + bvxwy + bwxvy + cvywy`
+ - Symmetric: `vw = wv`
+ - Bilinear: `(av + bw).u = w v.u + b w.u`
+- Quadratic form
+ - `Q(v) = v.v = v A v^T` quadrance of v
+- Perpendicularity
+ - `v perp w` <=> `v.w = 0`
+- Null vector
+ - `Q(v) = v.v = 0`
+
+##### Exemple: euclidean geometry `A = ((1, 0), (0, 1))`
+- Referenced as `blue` in this course
+- Dot product: `v1.v2 = x1*x2 + y1*y2`
+- Quadrance `Q(v) = xx + yy`
+- Circle
+ - `(x - a)^2 + (y - b)^2 = k`
+- Null vector: the zero vector
+- `(l, m)` vector is perpendicular to `(-m, l)` vector
+
+
+##### Exemple: relativistic geometry `A = ((1, 0), (0, -1))`
+- Referenced as `red` in this course
+- Dot product: `v1.v2 = x1*x2 - y1*y2`
+- Quadrance `Q(v) = xx - yy`
+- Circle
+ - `(x - a)^2 - (y - b)^2 = k`
+ - Null circle or hyperbola
+- Null lines: `x = y`, `x = -y`
+- `(l, m)` vector is perpendicular to `(m, l)` vector
+ - Reflections of each other with the line `y = x`
+ - a null line is perpendicular to itself
+
+##### Exemple: relativistic geometry `A = ((0, 1), (1, 0))`
+- Referenced as `green` in this course
+- Dot product: `v1.v2 = x1*y2 + x2*y1`
+- Quadrance `Q(v) = 2xy`
+- Circle
+ - Null circle or hyperbola
+- Null lines: `x = y`, `x = -y`
+
+### Notions in 3d space `FF^3`
+- `v = (x, y, z)`
+- `A = ((a, d, f), (d, b, g), (f, g, c))` with determinent != 0, so it can be invertible
+- Symmetric bilinear form
+ - `v.w = v.A.w^T`
+- Quadratic form
+ - `Q(v) = v.v = v A v^T` quadrance of v
+- Perpendicularity
+ - `v perp w` <=> `v.w = 0`
+- Null vector
+ - `Q(v) = 0`
+- Ex: relativistic
+ - Null cone
+ - `lY + mY - nZ = 0` the plane perpendicular to the vector `(l, m, n)`
+ - Spheres
+   - `Q(u) = 1` Hyperboloid of revolution/ Hyperboloid of one sheet
+   - `Q(u) = -2` Hyperboloid of two sheet
+
+### ?
+-
+https://youtu.be/z0-u7dbCIF4?t=1644
+
+
+
+
+
+
+
+
+************
