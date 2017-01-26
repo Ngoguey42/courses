@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2017/01/21 16:51:28 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2017/01/25 21:44:36 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2017/01/26 18:11:44 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -488,18 +488,55 @@
  - Null cone
  - `lY + mY - nZ = 0` the plane perpendicular to the vector `(l, m, n)`
  - Spheres
-   - `Q(u) = 1` Hyperboloid of revolution/ Hyperboloid of one sheet
-   - `Q(u) = -2` Hyperboloid of two sheet
+    - `Q(u) = 1` Hyperboloid of revolution / Hyperboloid of one sheet
+    - `Q(u) = -2` Hyperboloid of two sheet
+- Perpendicularity in general affine geometry relative to tangents of spheres/circles
 
-### ?
--
-https://youtu.be/z0-u7dbCIF4?t=1644
+## Curvature of a parabola
+- https://ggbm.at/zEDW3aSj
+- let `F` be a point on the y axis
+ - coordinates: `F = [0, f]`
+- let `l` be a line
+ - equation: `y = -f`
+- let `a` be a value
+ - `a = 1/(4f)`
+- let `P` a parabola
+ - of focus `f`
+ - of directrix `l`
+ - equation: `y = axx`
+- let `X` a point on `P`
+ - coordinates: `X = [t, att]`
+- let `T` be the tangent of `P` at `X`
+ - direction vector: `(1, 2at)`
+ - equation: `y = x(2at) - att`
+- let `N` be the normal of `P` at `X`
+ - direction vector: `(2at, -1)`
+ - equation: `x*(1) + y*(2at) = (t)*(1) + (att)*(2at)`
+    - `x + y(2at)` gotten from the tangent equation
+    - `t + 2at(att)` is the constant factor gotten from the previous line evaluated at x
+- let `M` be the intersection of `N` with the y axis
+ - equation: `y = 1/(2a) + att`
+    - `(0)*(1) + y*(2at) = (t)*(1) + (att)*(2at)`
+    - `y*(2at) = (t)*(1) + (att)*(2at)`
+    - `y = (t + (att)*(2at)) / (2at)`
+    - `y = t/(2at) + att`
+    - `y = 1/(2a) + att`
+- let `C` be the center of curvature of `P`
+ - as `t` approaches 0, `M` approaches `C`
+ - coordinates: `C = [0, 1/(2a)]`
+- The following holds also holds: `Q(X, F) = Q(X, l)`
+ - `x^2 + (y - f)^2 = (y + f)^2`
+ - `y = xx/(4f)`
+ - `a = 1/(4f)`
+- Theorem at `[0, 0]` for a parabola `y=axx`
+ - Focus at `[0, 1/(4a)]`
+ - Center of curvature at `[0, 1/(2a)]`
+ - `r` Radius of curvature at `1/(2a)`
+ - `k` Curvature at `2a`
 
+****
 
-
-
-
-
+# DiffGeom13: Curvature for the general parabola
 
 
 ************
