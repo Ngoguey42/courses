@@ -6,8 +6,8 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2017/01/21 16:51:28 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2017/01/26 18:11:44 by ngoguey          ###   ########.fr      -->
-<!--                                                                         -->
+<!-- Updated: 2017/01/26 18:14:34 by ngoguey          ###   ########.fr      -->
+<!--                                                                        -->
 <!-- *********************************************************************** -->
 
 > https://www.youtube.com/playlist?list=PLIljB45xT85DWUiFYYGqJVtfnkUFWkKtP
@@ -105,12 +105,12 @@
 - Circle
  - Cartesian form: `x^2 + y^2 = 1`
  - Parametric form: `(cos theta, sin theta)`
-   - bad because approximate
+    - bad because approximate
  - Parametric form: `(1 - t^2) / (1 + t^2), 2t / (1+t^2)`
-   - `t` a point on the `y` axis
-   - rational parameterization
-   - more in courses `MF29` or `WT14` or `HG?`
-   - Ref: pythagorian triples with `(1 - t^2)^2 + (2t)^2 = (1 + t^2)^2`
+    - `t` a point on the `y` axis
+    - rational parameterization
+    - more in courses `MF29` or `WT14` or `HG?`
+    - Ref: pythagorian triples with `(1 - t^2)^2 + (2t)^2 = (1 + t^2)^2`
 - Conic
 - Algebraic curve
  - Curve with equation of the form `p(x, y) = 0` p polynomial in x and y
