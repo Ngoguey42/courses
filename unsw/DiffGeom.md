@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2017/01/21 16:51:28 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2017/01/26 18:14:34 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2017/01/27 19:52:38 by ngoguey          ###   ########.fr      -->
 <!--                                                                        -->
 <!-- *********************************************************************** -->
 
@@ -537,6 +537,71 @@
 ****
 
 # DiffGeom13: Curvature for the general parabola
+- The space of conics is 5 dimensional
+ - Because 6 coefficients adjustable to a scale
+- There are several tangent conic in general
 
+## In `PP^2`
+- A parabola is a conic tangent to the line at infinity `[[0], [0], [1]]` (vector of the normal to the plane Z=0)
 
-************
+### Vertex of the parabola at [0, 0]
+- https://ggbm.at/dtQgBn6h
+- let `T` the tangent pline at the vertex
+ - plane equation: `lx + my = 0` (**GIVEN**)
+ - plane normal vector: `[[l], [m], [0]]` (**GIVEN**)
+ - pline: `(m, -l)`
+- let `N` the normal pline at the vertex
+ - plane equation: `mx - ly = 0`
+ - plane normal vector: `[[m], [-l], [0]]`
+ - pline: `(l, m)` (**GIVEN**)
+- let `I` the ppoint at infinity intersecting with `N`
+ - line vector: `[l, m, 0]` (**GIVEN**)
+- `[(a d f) (d b g) (f g c)]` General matrix of a conic
+ - `aXX + bYY + cZZ + 2dXY + 2fXZ + 2gYZ = 0` General homogeneous equation
+ - `axx + byy + 2dxy + 2fx + 2gy + c = 0` General non-homogeneous equation
+- `[(a d l) (d b m) (l m 0)]` General matrix of a parabola with vertex tangent to `T` (`lx + my = 0`)
+ - `[[-dmm, dlm, llm], [dlm, -dll, mml], [llm, mml, 0]]` solved
+ - `-d m m x² - d l l y² + 2d l m x y + 2 l l m x z + 2 m m l y z = 0` homogeneous equation
+ - `d (m x - l y)^2 = 2 l m (l x + m y)` non-homogeneous equation
+ - assuming `l, m` are not 0
+
+### Focus/directrix definition of parabola
+- let `F` focus of `P`
+ - `[f, g]`
+- let `l` the directrix of `P`
+ - `[-f, -g]`
+ - `fx + gy + ff + gg = 0`
+- let `alpha` be the degree0 coefficient of the curve at 0
+- let `beta` be the degree1 coefficient of the curve at 0
+- equation of the parabola
+ - `(gx - fy)^2 = 4(ff + gg)(fx + gy)`
+ - `f = -(alpha (1 + alpha^2)) / (4 beta)`
+ - `g = (1 + alpha^2) / (4 beta)`
+
+# DiffGeom14: Quadratic curvature for algebraic curves
+- https://ggbm.at/qAksDdVk
+- general conic passing through [0, 0]
+ - `Z: lx + my + nxx + 2pxy + qyy = 0`
+- the normal parabola to `Z`
+ - `P: (nmm - 2plm + qll)(mx - ly)^2 + (ll + mm)^2 (lx+my) = 0`
+- the focus of `P`
+ - `F = [f, g]`
+ - `f = -l * delta / 4`
+ - `g = -m * delta / 4`
+ - `delta = (ll + mm) / (nmm - 2plm + qll)`
+- the line passing through `F` and `[0, 0]`
+ - `V: -g x + fy = 0`
+- the directrix, perpendicular to `V`
+ - `D: f x + g y = -f f - g g`
+- quadrance of curvature
+ - `R = 4(ff + gg)`
+- quadratic curvature
+ - `K = 1/R`
+
+# DiffGeom15: Quadratic curvature for algebraic curves (cont)
+- let `Y` the quadratic function also approximating
+ - `Y: y = alpha x + beta x x`
+
+********************************************************************************
+********************************************************************************
+********************************************************************************
