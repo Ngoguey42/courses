@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2017/01/21 16:51:28 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2017/01/27 19:52:38 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2017/01/28 12:46:36 by ngoguey          ###   ########.fr      -->
 <!--                                                                        -->
 <!-- *********************************************************************** -->
 
@@ -578,11 +578,16 @@
  - `f = -(alpha (1 + alpha^2)) / (4 beta)`
  - `g = (1 + alpha^2) / (4 beta)`
 
-# DiffGeom14: Quadratic curvature for algebraic curves
+# DiffGeom14/15: Quadratic curvature for algebraic curves
 - https://ggbm.at/qAksDdVk
 - general conic passing through [0, 0]
  - `Z: lx + my + nxx + 2pxy + qyy = 0`
+ - The absence of constent term guarantees it passes through the origin
+ - The quadratic part has matrix `((n, p), (p, q))`
+- the tangent line to `Z`
+ - `T: lx + my = 0`
 - the normal parabola to `Z`
+ - Looks exactly the same as `Z` close to 0, quadraticly
  - `P: (nmm - 2plm + qll)(mx - ly)^2 + (ll + mm)^2 (lx+my) = 0`
 - the focus of `P`
  - `F = [f, g]`
@@ -597,10 +602,34 @@
  - `R = 4(ff + gg)`
 - quadratic curvature
  - `K = 1/R`
+ - `K = 4(n m m - 2 p l m + q l l)^2 / (l l + m m)^3`
 
-# DiffGeom15: Quadratic curvature for algebraic curves (cont)
-- let `Y` the quadratic function also approximating
- - `Y: y = alpha x + beta x x`
+- the function that approximates `Z` near 0 up to quadratic terms
+ - `Y: y = alpha x + beta xx`
+ - `y'(0) = alpha`
+ - `y''(0) = 2*beta`
+ - `alpha = -l/m`
+ - `beta = -(n m m - 2 p l m + q l l) / m^3`
+ - `R = (1 + alpha^2)^3 / (4 beta^2)`
+ - `K = (4 beta^2) / (1 + alpha^2)^3`
+ - `r = (1 + alpha^2)^(3/2)/(2*beta)`
+ - `k = 2 beta / (1 + alpha^2)^(3/2)`
+ - `k = y''(0) / (1 + y'(0)^2)^(3/2)` Huygens & Newton formula
+
+## Algorihm, curvature for algebraic curve
+- let `W` be the curve
+- let `X` be a point on `W`
+##### 1. Translate W with X to the origin
+- `p(x-r, y+s)`
+##### 2. Find the tangent conic
+- keep the quadratic terms
+##### 3. Find the focus of the tangent conic
+- `F`
+##### 4. Find the center of curvature
+- `C = X + 2F`
+
+- Ex: `p(x, y) = x x - y`
+ - Evolute `y = 1/2 + 3/4*(2x)^(2/3)`
 
 ********************************************************************************
 ********************************************************************************
