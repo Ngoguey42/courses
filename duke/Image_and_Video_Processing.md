@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/12/16 15:55:51 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2017/01/10 17:45:21 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2017/01/28 18:08:19 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -238,6 +238,9 @@ ras
 # Week 5: Partial Differential Equations (PDEs)
 ## Lecture 48 - Introduction to PDEs in Image and Video Processing (10:23) 54%
 - Images as continuous objects
+ - Integrals vs Sums
+ - image pocessing as iteration of infinitesimal operations (PDEs)
+ - numerical analysis to get continuous from discrete
 
 ## Lecture 49 - Planar Differential Geometry (38:33) 58%
 - Books
@@ -249,20 +252,21 @@ ras
 - If the curve is closed, `C(0) = C(1)`
 - Tangent `vec t = C_p / |C_p| = C_s`
  - first derivative
- - `C_p = delta C / delta p = [x_p, y_p]`
+ - `C_p = delta C / delta p = [x_p, y_p]`, first derivative at p
  - `C_s` Tangent with unit length
  - `|C_s| = <C_s, C_s> = 1` inner product of 2 vectors, magnitude of the first derivative
-- Normal `C_(ss) = kappa * vec n`
- - second derivative
+- the inner product between the first and second derivative is 0, ie. they are perpendicular
+- Normal `C_(ss) = k * vec n`
+ - second derivative with respect to the euclidean arclength
  - `C_s perp C_(ss)`
- - `kappa` curvature, magnitude of the second derivative
+ - `k` curvature, magnitude of the second derivative
  - `s` is the `arc length`
 - Strait line has `0` curvature
 - Circle has `1/r` curvature
 - `s` and `kappa` are preserved over some transformations
 
 ### Linear transformations
-- Affine transformation
+ - Affine transformation
  - `{x', y'}^T = A{x, y}^T + bar b`
  - `{x, y}^T` vector ?of magnitude T?
  - `bar b` rotation
@@ -286,14 +290,32 @@ ras
 - `dv = kappa^(1/3)ds`
 - equi-affine invariant signature `{v, mu(v)}`
 
+- `mu` affine invariant curvature
+- equi-affine invariant signature `{v, mu(v)}`
+- https://en.wikipedia.org/wiki/Affine_curvature
+
 ## Lecture 50 - Surface Differential Geometry (11:44) 59%
 - Surfaces in 3d
-- 2 parameters `u, v`
-
-
-
+- `S(u, v) = {x(u,v), y(u,v),z(u,v)}`
+- `S_u, S_v` tangents
+- `vec N = S_u cross S_v / |S_u cross S_v|` normalized vector
+- `dA = S_u cross S_v` local area, determinent of the matrix formed by those two vectors
+- `A = int int |S_u cross S_v| du dv` total area
+- Normal curvature
+- Principal curvature of a surface
+- Mean curvature
+- Gaussian curvature
 
 ## Lecture 51 - Curve Evolution (31:11) 62%
+- `C_t = vec V` Velocity at every point of a curve
+ - `vec V` can be decomposed into a vector colinear to the tangent and a vector colinear to the normal
+ - the tangential component do not affect the shape of the curve, only the normal component
+ - `<=> C_t = <vec V, vec n> vec n`
+
+### Curvature motion
+- `C_t = k vec n` defomation proportional to curvature
+- Ref: Heat equation
+
 ## Lecture 52 - Level Sets and Curve Evolution (25:35) 65%
 ## Lecture 53 - Calculus of Variations (14:04) 67%
 ## Lecture 54 - Anisotropic Diffusion (11:18) 68%
