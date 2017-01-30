@@ -6,17 +6,19 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2017/01/29 15:15:23 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2017/01/30 12:33:54 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2017/01/30 20:11:21 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
-> Udacity
-> Irfan Essa
-> L02-04, 14 videos, 0:27:58
-> L02-05, 18 videos, 0:28:11
-> Course, 620 videos, ~17:33:21
-> https://classroom.udacity.com/courses/ud955
-> docker run -it -v `pwd`:/home/scientist/shared tsutomu7/python-opencv bash
+> - Udacity
+> - Irfan Essa
+> - L02-04, 14 videos, 0:27:58
+> - L02-05, 18 videos, 0:28:11
+> - Course, 620 videos, ~17:33:21
+> - https://www.udacity.com/course/computational-photography--ud955
+> - https://classroom.udacity.com/courses/ud955
+> - docker run -it -v `pwd`:/home/scientist/shared tsutomu7/python-opencv bash
+>  - Make sure to run this command with docker daemon ON, and from a sharable directory
 
 # Glossary
 
@@ -170,10 +172,101 @@ cv2.imwrite('labas.png', img)
  - Thin multi-pixel wide edges down to single pixel wide edges
 
 # 03-01 Cameras
+- Detail: Single lens reflex camera
+- Ex: Camera obscura (pinhole camera)
+- Aperture
+- Desired aperture size
+ - Diffraction vs light quantity
+ - d: aperture diameter
+ - f: sensor-aperture distance
+ - pi: wavelength of light
+ - `d = 2 sqrt(1/2 fpi)`
+- Lens detail
+
 # 03-02 Lenses
+- Focal length
+ - low fov (degree) <=> low focal length (mm)
+- Sensor sizes
+- Ex: Scene
+ - f = 18m, sensor = 35mm, d1 = 0.5m, d2 = 2m, object appear thiner and darker
+ - f = 180m, sensor = 35mm, d1 = 3m, d2 = 4.5m, objects appear closer
+ - vertigo effect, Hitchcock, Lord of the Ring
+- Projection
+ - exemple using lhs rule
+ - 2d image plane projection coord `x_i, y_i`
+ - 3d space object coord `X_0, Y_0, Z_0`
+ - object at `[X_0, Y_0, Z_0]` => `[X_0:Y_0:Z_0]` = `[X_0/Z_0:Y_0/Z_0:1]`
+ - image at `[-x_i, -y_i, -f]` => `[-x_i:-y_i:-f]` = `[x_i/f:y_i/f:1]`
+ - then `X_0/Z_0 = x_i/f` <=> `x_i = f X_0/Z_0`
+ - then `Y_0/Z_0 = y_i/f` <=> `y_i = f Y_0/Z_0`
+
 # 03-03 Exposure
+- Exposure triangle
+ - Aperture
+ - Shutter speed
+ - ISO
+- Exposure
+ - `Exposure = Irradiance * Time`
+ - `H = E * T`
+- Irradiance
+ - light.distance^(-2).time^(-1)
+ - Controller by aperture
+- Exposure Time
+ - Shutter time open
+- Ref: Pentaprism
+- Shutter speed
+ - Ex: Waterfall
+- Aperture
+ - `f` focal length
+ - `N` aperture number (aka `f/N`)
+    - Inv proportional to area
+ - `Area = pi (f / (2N))^2` area of a circle
+ - Ex: `f = 50mm`, `N = 2.0` => `aperture = 25mm`
+ - Ex: To cut light by 2, increase N by sqrt(2)
+- Ref: Shallow depth of field
+- ISO
+ - Sensitivity
+ - Proportional to quantity of noise
+ - Proportional to the quantity of light
+ - Ex: `100` when sunny / `1600` when dark
+- Ex: (Under|Over)exposed scene with aperture and shutter speed
+- Ex: (Under|Over)exposed scene with ISO and shutter speed
+- Exposure triange
+ - increase ISO: grain
+ - increase Shutter speed: motion blur
+ - increase aperture: depth of field
+
 # 03-04 Sensor
+- Detail: Film
+- CCD
+ - Charge-Coupled Device
+ - Store incoming photons as electron charges
+ 1. Micro lenses, focus light
+ 2. Hot mirror, simple filter
+ 3. Color filter, split colors (Bayer Array)
+ 4. Photodiodes, photons to electrons
+ 5. Well (depletion layer), electrons collection
+- Bayer Filter
+- CMOS
+ - Complementary metal oxide semiconductor
+ - Ref: Rolling shutter artefact
+- Raw file format
+
 # 04-01 Fourier Transform
+- `f(t) = A cos(n omega t)`
+ - `omega` frequency
+ - `n` number of periods
+ - `A` amplitude
+
+```octave
+n = 4;
+t = linspace(0, n, n * 90); % vector of `n * 90` values ranging from 0 to 4 (ordered)
+A = 2; % amplitude
+
+f1 = A * cos(1 * (2 * pi) * t); % vector of `n * 90` values ranging from -1 to 1
+plot(t, f1); % x and y axes
+```
+
 # 04-02 Blending
 # 04-03 Pyramids
 # 04-04 Cuts
