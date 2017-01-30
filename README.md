@@ -27,3 +27,5 @@
 | Computer Architecture                      | David Wentzlaff                | Princeton  | 2012 | 28h30  |        |      | Autumn 2016 |
 | Image and Video Processing                 | Guillermo Sapiro               | Duke       | 2012 | 15h20  |        |      | Autumn 2016 |
 | Modeling Discrete Optimization             | Peter James Stuckey            | Melbourne  | 2015 | 13h30  |        |      | Autumn 2016 |
+| Differential Geometry                      | Norman John Wildberger         | UNSW       | 2013 | 25h45  |        |      | Winter 2017 |
+| Computational Photography                  | Irfan Essa                     | Gatech     | 2016 | 17h30  |        |      | Winter 2017 |
