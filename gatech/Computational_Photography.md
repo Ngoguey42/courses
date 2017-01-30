@@ -6,12 +6,15 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2017/01/29 15:15:23 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2017/01/29 19:46:19 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2017/01/30 12:33:54 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
 > Udacity
 > Irfan Essa
+> L02-04, 14 videos, 0:27:58
+> L02-05, 18 videos, 0:28:11
+> Course, 620 videos, ~17:33:21
 > https://classroom.udacity.com/courses/ud955
 > docker run -it -v `pwd`:/home/scientist/shared tsutomu7/python-opencv bash
 
@@ -89,11 +92,83 @@ cv2.imwrite('labas.png', img)
 - inherited from work done in dark room
 
 # 02-04 Smoothing
-
+- Smoothing borders of an image by duplicating the existing edge further away
+- `Kernel`
+ - matrix used for smoothing
+- `F[i,j]` input
+- `G[i,j]` output
+- `h[i,j]` kernel
+- Cross-corellation (aka x-corellation)
+- Box Filtering (aka averaging)
+- Median Filtering
+ - Using median instead of mean
+ - `Nonlinear operation`
+ - reduces noise
+ - preserve edges and sharp lines
+ - kills salt and pepper noise
 
 # 02-05 Convolution and cross-correlation
+- Def: Cross-corellation
+ 1. Measure of similarity of two waveforms as a function of tim-lag applied to one of them
+ 2. Sliding dot product
+ 3. `sum_(u=-k)^(k) sum_(v=-k)^(k) h[u, v] * F[i + u, j + v]`
+ 4. `G = h ox F` cross-corellated
+- Gaussian filter
+ - Normal distribution in the kernel
+ - `sigma` determines extent of smoothing, variance
+- Convolution
+- Impulse image
+ - Image filled with 0, and 1 in the middle
+- Filtering == Sliding the kernel
+- Filtering in an impulse image applied the kernel mirrored in `G`
+- Def: Convolution
+ 1. Operation on two functions `F` and `h` producing `G`, the overlap of the two first
+ 2. `sum_(u=-k)^(k) sum_(v=-k)^(k) h[u, v] * F[i - u, j - v]`
+ 3. `G = h * F`
+- Convolution and X-correlation is the same when the kernel is symmetric
+- Convolution is commutative and associative
+- Kernel combination with convolution
+- Ex: Sharpening filter
+
 # 02-06 Gradients
+- Discontinuities in a scene
+ - Surface normal
+ - Depth
+ - Surface color
+ - Illumination
+- Gradient of an image
+ - changes in one direction at a time
+ - `Delta F = [deltaF / deltax, deltaF/deltay]`
+ - The gradient points in the most rapid direction `Theta`, has an angle and a magnitude
+ - `Theta = tan^-1 [deltaF / deltax / deltaF/deltay]` angle
+ - `||Delta F|| = sqrt((deltaF / deltax)^2 + (deltaF/deltay)^2)` magnitude
+- Ex: `Delta F = [deltaF / deltax, 0]`
+- Ex: `Delta F = [0, deltaF / deltay]`
+- Ex:`Delta F = [deltaF / deltax, deltaF/deltay]`
+- Def: continuous image grandient
+ - `deltaF(x, y) / deltax = lim_(epsilon->0) (F(x + epsilon, y) - F(x, y)) / epsilon` partial derivative according to x
+- Def: discrete image grandient
+ - `deltaF(x, y) / deltax ~= (F(x + 1, y) - F(x, y)) / 1` partial derivative according to x
+- Ex: Zebra gradient
+ - According to x
+ - According to y
+ - Magnitude
+ - Gradiant angle (visualisation: arrow / 3d height)
+
 # 02-07 Edges
+- Derivative as a local product
+ - `deltaF(x, y) / deltax = (F(x + 1, y) - F(x, y)) / 1`
+ - `= [-1, 1].[F(x, y), F(x + 1, y)]^T` dot product
+ - `= kernel ox input`
+- Cross-corellation with `[-1, 1]` `[[0, 0], [-1, 1], [0, 0]]` `[[0, 0, 0], [-1/2,, 0, 1/2], [0, 0, 0]]`
+- Ex
+ - Prewitt kernel: `[[-1, 0, 1], [-1, 0, 1], [-1, 0, 1]]`
+ - Sovel kernel:  `[[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]]`
+ - Roberts kernel:  `[[0, 1], [-1 0]]`
+- Impact of Noise on Gradients
+- Canny Edge Detector
+ - Thin multi-pixel wide edges down to single pixel wide edges
+
 # 03-01 Cameras
 # 03-02 Lenses
 # 03-03 Exposure
