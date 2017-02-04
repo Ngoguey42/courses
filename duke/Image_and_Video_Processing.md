@@ -243,6 +243,7 @@ ras
  - numerical analysis to get continuous from discrete
 
 ## Lecture 49 - Planar Differential Geometry (38:33) 58%
+- https://ggbm.at/KUK3FHa3
 - Books
  - Geometric Partial Differential Equations and Image Analysis. Guillermon Sapiro
  - Numerical Geometry of Images, Rom Kimmel
