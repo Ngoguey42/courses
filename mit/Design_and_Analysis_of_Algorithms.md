@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/11/26 13:57:51 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2017/01/13 18:34:47 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2017/02/05 12:36:08 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -745,8 +745,46 @@ ras
 - "RSA Problem": from e and c find an m satifying `m^e -= c mod N`
 
 #### NP-completeness
-https://youtu.be/9TNI2wHmaeI?list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&t=4020
+- Some NP-complete problems are hard in the worst case, but not in the average case
+ - Ex: `is 3-colorable` (scanning for a 4-clique is easy to do)
+ - Ex: `knapsack`
+- `Super-increasing knapsack problem` O(N)
+ - `w_j >= sum_(i = 1)^(j - 1) w_i`
+ - Any term is `>=` than the sum of all the smaller ones
+ - ex: `{2, 3, 6, 13, 27, 52}`
+- `Merkle Hellman cryptosystem` public key encryption with `Super-increasing knapsack problem` (weak)
+ - private: `N = 31`
+ - private: `M = 105`
+ - private: `key = {2, 3, 6, 13, 27, 52}`
+ - public: `key = {2N%M, 3N%M, 6N%M, 13N%M, 27N%M, 52N%M} = {62, 93, 81, 88, 102, 37}`
+ - private: message = `011000`
+ - public: message = `0*62 + 1*93 + 1*81 + 0*88 + ... = 174`
+ - dectryption computing `N^-1 mod M`
+ - problem: this is not always hard to decypher `174 = 93 + 81` using `lattice` based techniques
 
 ### Recitation 11: Cryptography: More Primitives (0:49:30) 94%
+> https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/recitation-notes/MIT6_046JS15_Recitation11.pdf
+
+#### Digital signatures
+- Two functions
+ - `sigma = sign(sk_A, m)` `signature = sign(secret key, message)`
+ - `b = verify(pk_A, m, sigma)` `boolean = verify(public key, message, signature)`
+ - sign call is private
+ - verify call is public
+- Properties
+ - Correctness
+ - Unforgeability
+    - From known valid pairs `(sigma_1, m_1), (sigma_2, m_2), ...` hard to forge a new pair `(sigma^*, m^*)`
+##### Ex: Weak RSA
+- secret key: `(n, e)`
+- `sign: sigma = m^d mod n`
+- `verify: b = sigma^e -= m mod n`
+https://youtu.be/ZLOhV4XQ_tI?list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&t=574
+
+- Multiplicative homomorphism
+- From two valid pairs `(sigma_1, m_1), (sigma_2, m_2)`
+- `sigma_1 * sigma_2 = m_1^d * m_2^d -= (m_1 * m_2)^d mod n`
+
+
 ### Lecture 23: Cache-Oblivious Algorithms: Medians & Matrices (0:57:57) 97%
 ### Lecture 24: Cache-Oblivious Algorithms: Searching & Sorting (1:17:41) 100%
