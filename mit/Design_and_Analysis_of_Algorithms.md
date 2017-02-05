@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/11/26 13:57:51 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2017/02/05 16:49:28 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2017/02/05 18:16:16 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -823,7 +823,7 @@ ras
 - Amortized cost over bandwidth `latancy / (block size) + 1 / (bandwidth) `
 
 #### External memory and cache-oblivious models
-ras
+- Cache-oblivious: Doesn't know the cache size/block size
 
 #### Scanning
 ras
@@ -832,8 +832,41 @@ ras
 - `T(N)` time
 - `MT(N)` memory transfert
 
-#### LRU block replacement
-- Resource augmentation
 
 ### Lecture 24: Cache-Oblivious Algorithms: Searching & Sorting (1:17:41) 100%
 > https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/lecture-notes/MIT6_046JS15_lec24.pdf
+
+#### LRU block replacement
+- Resource augmentation
+- Online algorithms, makes decision seeing the past
+- Offline algorithm, makes decision seeing the future
+- `LRU_M <= OPT_M`
+ - M being cache size
+
+#### Algortihms
+- Search - van Emde Boas layout [Prokop 1999]
+- Search cache aware
+- Sort cache aware
+- Search cache obivious
+- Sort cache obivious
+
+#### Courses
+- 6.047 Computational biology, undergrad
+- 6.854 Advanced algorithms, first graduate class, intense
+- 6.850 Computational geometry
+- 6.849 Folding algorithms
+- 6.851 Advanced datastructures
+- 6.852 Distributed algorithms
+- 6.853 Algorithm game theory
+- 6.855 Network optimization
+- 6.856 Randomized algorithms
+- 6.857 Applied cryptography
+- 6.875 Theoretical cryptography
+- 6.816 Multicore programming
+- 6.045 Theory of computation, undergrad
+- 6.840 Theory of computation, grad
+- 6.841 Advanced complexity theory
+- 6.842 Randomized complexity theory
+- 6.845 Quantum complexity theory
+- 6.440 Coding theory
+- 6.441 Coding theory
