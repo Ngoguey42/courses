@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/11/26 13:57:51 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2017/02/05 12:36:08 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2017/02/05 16:49:28 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -775,16 +775,65 @@ ras
  - Correctness
  - Unforgeability
     - From known valid pairs `(sigma_1, m_1), (sigma_2, m_2), ...` hard to forge a new pair `(sigma^*, m^*)`
+
 ##### Ex: Weak RSA
-- secret key: `(n, e)`
+- secret key: `(n = p * q, e)`
 - `sign: sigma = m^d mod n`
-- `verify: b = sigma^e -= m mod n`
-https://youtu.be/ZLOhV4XQ_tI?list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&t=574
+- `verify: b = (sigma^e -=? m mod n)`
+- Multiplicative homomorphism (maleable)
+ - From two valid pairs `(sigma_1, m_1), (sigma_2, m_2)`
+ - `sigma_1 * sigma_2 = m_1^d * m_2^d -= (m_1 * m_2)^d mod n`
 
-- Multiplicative homomorphism
-- From two valid pairs `(sigma_1, m_1), (sigma_2, m_2)`
-- `sigma_1 * sigma_2 = m_1^d * m_2^d -= (m_1 * m_2)^d mod n`
+##### Improvements wish hashing
+- Adhoc security
+- ANSI X931
 
+|           | symetric                    | asymetric             |
+|-----------|-----------------------------|-----------------------|
+| secrecy   | private-key encryption      | public-key encryption |
+| integrity | message authentication code | digital signature     |
 
-### Lecture 23: Cache-Oblivious Algorithms: Medians & Matrices (0:57:57) 97%
+#### Message Authentication Codes
+- `sigma = MAC(k, m)` `signature = MAC(key, message)`
+- `b = (sigma == MAC(k, m))`
+
+#### Merkle Tree (hash tree)
+- Objective: Hashing a directory containing files
+
+- Procedure
+ 1. Hash all files
+ 2. Group the files 2 by 2 and compute a hash by hashing their hashes
+ 3. Group the groups 2 by 2, forming a tree of lgN levels
+ 4. Only carry the root hash to verify the integrity of a file in `space O(1)` and `time O(lgN)`
+
+#### Knapsack cryposystem review
+ras
+
+### Lecture 23: Cache-Oblivious Algorithms: Medians & Matrices (1:20:27) 97%
+> https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/lecture-notes/MIT6_046JS15_lec23.pdf
+
+#### Memory hierarchy
+- Latency vs bandwidth
+
+| CPU     | L1   | L2    | L3   | memory | disk |
+|---------|------|-------|------|--------|------|
+| size    | 10KB | 100KB | MB   | GB     | TB   |
+| latency | 1ns  | 10ns  | 10ns | 100ns  | 10ms |
+
+- Amortized cost over bandwidth `latancy / (block size) + 1 / (bandwidth) `
+
+#### External memory and cache-oblivious models
+ras
+
+#### Scanning
+ras
+
+#### Divide & conquer (medians & matrix mult)
+- `T(N)` time
+- `MT(N)` memory transfert
+
+#### LRU block replacement
+- Resource augmentation
+
 ### Lecture 24: Cache-Oblivious Algorithms: Searching & Sorting (1:17:41) 100%
+> https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/lecture-notes/MIT6_046JS15_lec24.pdf
