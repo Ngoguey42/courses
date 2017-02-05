@@ -8,7 +8,7 @@
 | 3  | Compilers                                  | Alex Aiken                     | Stanford   | 2012 | 16h    | Abort  | 20%  | Winter 2016 |
 | 4  | Heterogeneous Parallel Programming         | Wen-mei W. Hwu                 | Illinois   | 2014 | 14h    | Done   | 100% | Winter 2016 |
 | 5  | Algorithms, Part I                         | Robert Sedgewick               | Princeton  | 2012 | 12h    | Done   | 100% | Winter 2016 |
-| 6  | Algorithms, Part II                        | Robert Sedgewick               | Princeton  | 2012 | 12h    | Done   | 96%  | Winter 2016 |
+| 6  | Algorithms, Part II                        | Robert Sedgewick               | Princeton  | 2012 | 12h    | Done   | 100% | Winter 2016 |
 | 7  | Mathematics for Computer Science           | Leighton, van Dijk             | MIT        | 2010 | 34h    | Done   | 100% | Spring 2016 |
 | 8  | Database Systems                           | Jens Dittrich                  | Saarland   | 2013 | 17h30  | Pause  | 33%  | Spring 2016 |
 | 9  | Introduction to Algorithms                 | Demaine, Devadas, Costan       | MIT        | 2011 | 41h    | Done   | 100% | Spring 2016 |
@@ -22,9 +22,9 @@
 | 17 | Category Theory                            | Bartosz Milewski               | Seattle    | 2016 | 14h45  | Done   | 100% | Autumn 2016 |
 | 18 | Calculus Two                               | Jim Fowler                     | Ohio       | 2013 | 8h     | Done   | 100% | Autumn 2016 |
 | 19 | Analysis of Algorithms                     | Robert Sedgewick               | Princeton  | 2013 | 13h    | Pause  | 32%  | Autumn 2016 |
-| 20 | Design and Analysis of Algorithms          | Demaine, Devadas               | MIT        | 2015 | 41h    |        | 95%  | Autumn 2016 |
+| 20 | Design and Analysis of Algorithms          | Demaine, Devadas               | MIT        | 2015 | 41h    | Done   | 100% | Autumn 2016 |
 | 21 | Computer Architecture                      | David Wentzlaff                | Princeton  | 2012 | 28h30  |        | 40%  | Autumn 2016 |
 | 22 | Image and Video Processing                 | Guillermo Sapiro               | Duke       | 2012 | 15h20  |        | 50%  | Autumn 2016 |
 | 23 | Modeling Discrete Optimization             | Peter James Stuckey            | Melbourne  | 2015 | 15h20  |        | 27%  | Autumn 2016 |
 | 24 | Differential Geometry                      | Norman John Wildberger         | UNSW       | 2013 | 25h45  |        | 50%  | Winter 2017 |
-| 25 | Computational Photography                  | Irfan Essa                     | Gatech     | 2016 | 17h30  |        | 25%  | Winter 2017 |
+| 25 | Computational Photography                  | Irfan Essa                     | Gatech     | 2016 | 17h30  |        | 50%  | Winter 2017 |
