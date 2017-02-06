@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2017/01/29 15:15:23 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2017/01/30 20:11:21 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2017/02/06 22:01:54 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -253,23 +253,61 @@ cv2.imwrite('labas.png', img)
 - Raw file format
 
 # 04-01 Fourier Transform
-- `f(t) = A cos(n omega t)`
+## Reconstruction of a signal
+- `f^T(t)` target signal
+ - function of time
+- Single wave `f(t) = A cos(n omega t)`
+ - `f` function of time
  - `omega` frequency
  - `n` number of periods
  - `A` amplitude
+- Target signal as a sum of N waves
+ - `f^T(t) = sum_(n = 1)^N A cos(n omega t)`
 
+## Misc.
 ```octave
 n = 4;
 t = linspace(0, n, n * 90); % vector of `n * 90` values ranging from 0 to 4 (ordered)
 A = 2; % amplitude
 
-f1 = A * cos(1 * (2 * pi) * t); % vector of `n * 90` values ranging from -1 to 1
+f1 = A * cos(1 * (2 * pi) * t); % vector of `n * 90` values ranging from -A to A
 plot(t, f1); % x and y axes
 ```
 
+- Ex: Box filter `A Sum_(k=1)^(oo) 1/k sin(2 pi k t)`
+
 # 04-02 Blending
+- Ex: Blending two different furs
+- Cross-fading
+ - Window size theory
+ - To avoid seams: size of the largest feature
+ - To avoid ghosting: <= 2x size of the smallest feature
+- Using fourier transform
+- Ref: Octave
+- Ref: Feather
+
 # 04-03 Pyramids
+- Skrink image by 2 with gaussian kernel
+ - Form a 3d pyramid by stacking the images (gaussian pyramid)
+ - `g_k = h ox g_(k - 1)` level k from the level k-1 with kernel `h`
+ - `g_k = REDUCE(g_(k - 1))`
+- We can do corse computations at the top of the pyramid and fine computations at the bottom
+- `EXPAND` reverses `REDUCE`
+- Laplacian image
+ - `g_(0,1) = EXPAND(REDUCE(g_0)) - g_(0)`
+ - This is the error induced by the successive reduce and expand
+ - This is the difference between two Gaussian images
+- Laplacian pyramid is computed from successive laplacian images
+- Ref: Combined pyramids
+
 # 04-04 Cuts
+- Minimizing overlap error
+ - Compute the square of the difference of the overlap zone, compute a seam taking the weighted shortest path with the errors for each pixels
+- Extending images
+- Ex: TextureTransfer software
+- Maxflow mincut / dynamic programming
+- Seam carving
+
 # 04-05 Features
 # 04-06 Feature Detection and Matching
 # 05-01 Image Transformation
