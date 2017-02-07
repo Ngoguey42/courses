@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2017/01/29 15:15:23 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2017/02/06 22:01:54 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2017/02/07 16:21:04 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -309,7 +309,19 @@ plot(t, f1); % x and y axes
 - Seam carving
 
 # 04-05 Features
+- Corner detection
+ - Requires gradient change in two directions
+- Ref: Second moment matrix
+ - Summarizes the predominent direction of the gradient near a point
+- Ref: Eigenvalues
+ - Corner/Edges/Flat regions
+- Ref: Harris detector algortihm
+- Ref: Scale Invariant detector
+
 # 04-06 Feature Detection and Matching
+- Scale invariant detection
+- SIFT
+
 # 05-01 Image Transformation
 # 05-02 Image Morphing
 # 05-03 Panorama
@@ -322,7 +334,6 @@ plot(t, f1); % x and y axes
 # 06-01 Video Processing
 # 06-02 Video Textures
 # 06-03 Video Stabilization
-
 
 ********************************************************************************
 ********************************************************************************
