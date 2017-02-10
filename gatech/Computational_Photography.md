@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2017/01/29 15:15:23 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2017/02/07 16:21:04 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2017/02/10 17:39:06 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -310,22 +310,146 @@ plot(t, f1); % x and y axes
 
 # 04-05 Features
 - Corner detection
+ - Moving a window in flat/edge/corner regions
  - Requires gradient change in two directions
-- Ref: Second moment matrix
- - Summarizes the predominent direction of the gradient near a point
-- Ref: Eigenvalues
- - Corner/Edges/Flat regions
-- Ref: Harris detector algortihm
-- Ref: Scale Invariant detector
+- Change in appearance in math
+ - `E(u, v) = sum_(forall x, y) w(x, y) (I(x+u, y+v) - I(x, y))^2`
+ - `E(u, v)` Change in appearance of the window moved by `u, v`
+    - 0 means no change
+ - `sum_(forall x, y)` Sum for all pixels in the window
+ - `w(x, y)` Weight applied to pixels in the window (gaussian/box/...)
+ - `(I(x+u, y+v) - I(x, y))^2` Square difference of the change of intensity at this pixel
+ - `E(u, v) ~= [u, v] M [[u], [v]]` quadratic approximation with taylor expansion
+    - Second moment matrix
+    - Summarizes the predominent direction of the gradient near a point
+	- `M = sum(forall x, y) w(x,y) [[I_x^2, I_x I_y], [I_x I_y, I_y^2]]` with the image derivates `I_x, I_y`
+ - `E(u, v) = sum_(forall x, y) w(x, y) (uu I_x^2 + 2uv I_x I_y + vv I_y^2)`
+  - at each x, y we have the equation of an ellispse
+  - axis lengths are the eigenvalues, they can be used to know if in flat/edge/corner region
+  - orientations are the eigenvectors
 
 # 04-06 Feature Detection and Matching
-- Scale invariant detection
+- Harris detector algorithm
+ - Invariant to rotation and intensity changes
+ - Corner response function
+```python
+"""Harris Corner Detection"""
+
+import numpy as np
+import cv2
+
+def find_corners(img):
+    """Find corners in an image using Harris corner detection method."""
+
+    # Convert to grayscale, if necessary
+    img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) if len(img.shape) == 3 else img
+
+    # Compute Harris corner detector response (params: block size, Sobel aperture, Harris alpha)
+    h_response = cv2.cornerHarris(img_gray, 2, 3, 0.04)
+    print('h_response', str(h_response))
+
+    # Display Harris response image
+    h_min, h_max, _, _ = cv2.minMaxLoc(h_response)  # for thresholding, display scaling
+    print('h_min', (h_min))
+    print('h_max', (h_max))
+    cv2.imwrite("HarrisResponse.png", np.uint8((h_response - h_min) * (255.0 / (h_max - h_min))))
+
+    # Select corner pixels above threshold
+    h_thresh = 0.01 * h_max
+    print('h_thresh', (h_thresh))
+    _, h_selected = cv2.threshold(h_response, h_thresh, 1, cv2.THRESH_TOZERO)
+    print('h_selected', str(h_selected))
+
+    # Pick corner pixels that are local maxima
+    nhood_size = 5  # neighborhood size for non-maximal suppression (odd)
+    print("nhood_size %s" % nhood_size)
+    nhood_r = int(nhood_size / 2)  # neighborhood radius = size / 2
+    corners = []  # list of corner locations as (x, y, response) tuples
+    for y in range(h_selected.shape[0]):
+        for x in range(h_selected.shape[1]):
+            if h_selected.item(y, x):
+                h_value = h_selected.item(y, x)  # response value at (x, y)
+                nhood = h_selected[(y - nhood_r):(y + nhood_r + 1), (x - nhood_r):(x + nhood_r + 1)]
+                if not nhood.size:
+                    continue  # skip empty neighborhoods (which can happen at edges)
+                local_max = np.amax(nhood)  # compute neighborhood maximum
+                if h_value == local_max:
+                    corners.append((x, y, h_value))  # add to list of corners
+                    h_selected[(y - nhood_r):(y + nhood_r), (x - nhood_r):(x + nhood_r)] = 0  # clear
+                    h_selected.itemset((y, x), h_value)  # retain maxima value to suppress others
+
+    h_suppressed = np.uint8((h_selected - h_thresh) * (255.0 / (h_max - h_thresh)))
+    cv2.imwrite("SuppressedHarrisResponse.png", h_suppressed)
+    return corners
+
+
+def test():
+    """Test find_corners() with sample input."""
+
+    # Read image
+    img = cv2.imread("octagon.png")
+    # cv2.imwrite("Image.png", img)
+
+    # Find corners
+    corners = find_corners(img)
+    print("\n".join("{} {}".format(corner[0], corner[1]) for corner in corners))
+
+    # Display output image with corners highlighted
+    img_out = img.copy()
+    for (x, y, resp) in corners:
+        cv2.circle(img_out, (x, y), 1, (0, 0, 255), -1)  # red dot
+        cv2.circle(img_out, (x, y), 5, (0, 255, 0), 1)  # green circle
+    cv2.imwrite("Output.png", img_out)
+
+if __name__ == "__main__":
+  test()
+```
+- Harris-Laplacian detector
+ - Look for corners at different scale
 - SIFT
+ - Invariant to scale
 
 # 05-01 Image Transformation
+- Global function
+- Global warping
+- Uniform scaling `[[a, 0], [0, a]]`
+- Mirror `[[-1, 0], [0, 0]]`
+- Shear `[[1, a], [b, 1]]`
+- Rotation `[[cos(theta), -sin(theta)], [sin(theta), cos(theta)]]`
+- Linear transformation
+- Translations with homogeneous coordinates
+ - `[[1, 0, t_x], [0, 1, t_y], [0, 0, 1]]`
+- Transformation combination
+|              |                   | preservation | preservation | preservation | preservation | preservation   |
+|              | degree of freedom | orientation  | length       | angles       | parallelism  | straight lines |
+|--------------|-------------------|--------------|--------------|--------------|--------------|----------------|
+| translation  | 2                 | x            | x            | x            | x            | x              |
+| euclidean    | 3                 |              | x            | x            | x            | x              |
+| similarity   | 4                 |              |              | x            | x            | x              |
+| affine       | 6                 |              |              |              | x            | x              |
+| projective   | 8                 |              |              |              |              | x              |
+
 # 05-02 Image Morphing
+- Image transformation vs warping
+ - lines to lines vs points to points
+- Forward / Inverse warping
+- Aliasing and blocking artefacts
+- Mesh based warping
+  displacement field
+- Ex: Michael jackson, black or white
+
 # 05-03 Panorama
+- Bundle of rays
+- Image reprojection
+- Homography
+- RANSAC, Ransom sample consensus
+- Ex: With opencv
+- Ex: apg kolor autopano giga v3
+- Planar/Cylindrical/Spherical panoramas
+
 # 05-04 High Dynamic Range
+https://classroom.udacity.com/courses/ud955/lessons/3629558828/concepts/36624085740923
+
 # 05-05 Stereo
 # 05-06 Photosynth
 # 05-07 Extrinsic Camera Parameters (opt)
@@ -334,6 +458,11 @@ plot(t, f1); % x and y axes
 # 06-01 Video Processing
 # 06-02 Video Textures
 # 06-03 Video Stabilization
+# 06-04 Panoramic Video Textures
+# 07-01 Light Field
+# 07-02 Projector-Camera Systems
+# 07-03 Coded Photography
+# 07-04 And Remember…
 
 ********************************************************************************
 ********************************************************************************
