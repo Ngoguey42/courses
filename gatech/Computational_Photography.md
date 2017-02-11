@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2017/01/29 15:15:23 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2017/02/10 17:39:06 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2017/02/11 14:54:02 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -448,10 +448,57 @@ if __name__ == "__main__":
 - Planar/Cylindrical/Spherical panoramas
 
 # 05-04 High Dynamic Range
-https://classroom.udacity.com/courses/ud955/lessons/3629558828/concepts/36624085740923
+- Luminance candela/area `cd/m^2`
+ - `log cd/m^2` often range from -6 to 8
+- Static contast ratio, human 100:1
+- Dynamic contast ratio, human 10^6:1
+- Image aquisition pipeline
+ 1. Scene radiance `L = W / sr / m^2` `power(watt) / solid angle(steradian) / area`
+ 1. Sensor irradiance `E = W / m^2`
+ 1. Sensor exposure `H = W / m^2 / s`
+ 1. Capacitors voltages
+ 1. Digital values (raw image)
+ 1. Pixel values `I`
+- pipeline `g: L -> E -> H -> I`
+- inverse pipeline `g^-1: I -> H -> E -> L`
+- camera attributes
+ - geometric
+ - radiometric / photometric
+- From a stack of images with different exposures, and a bunch of points matched on all images, each point has its own curve (I / log H)
+ 1. The objective is to merge the curves to obtain a single smooth response curve for all points
+ 2. We now have a high radiance map of the scene (can be stored as rgbe (e for exponent))
+ 3. Tone mapping to a display with limited range
 
 # 05-05 Stereo
+- Stereophotography
+- Range image
+- Depth cues, compution shape from x
+ - Vanishing lines
+ - Known size of objects (size of human, shape of a texture)
+ - Occlusion
+ - Illumination with structured light
+ - From focus/defocus
+ - From several images and motion
+- Human eyes ~63mm apart, aka baseline, aka `T_x`
+- Ex: Stereo pair, anaglyph
+ - `np.dstack()`
+- Disparity: x distance `d = x_l - x_r` of a point on the two projection planes (`y_r = y_r`)
+- Disparity values (0 - 64), 0 means no info, 64 means confidence
+- Epipolar constraint
+ - Reduce the search space to 1d line
+ - Reduce the search along the `y` axis
+- RGBD camera (depth)
+ - kinect
+ - time of flight camera
+ - project tango
+ - amazon fire
+- Ex: Fujifilm 3d camera
+
 # 05-06 Photosynth
+- Photo tourism = photo synthessis = photosynth
+- Video: Photo Tourism, Exploring photo collections in 3D, SIGGRAPH 2006
+https://classroom.udacity.com/courses/ud955/lessons/3725258770/concepts/37255391660923
+
 # 05-07 Extrinsic Camera Parameters (opt)
 # 05-08 Intrinsic Camera Parameters (opt)
 # 05-09 Calibrating Cameras (opt)
