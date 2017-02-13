@@ -25,7 +25,7 @@
 | 20 | Modeling Discrete Optimization             | Peter James Stuckey            | Melbourne  | 2015 | 15h20  | Pause  | 27%  | Autumn 2016 |
 | 21 | Design and Analysis of Algorithms          | Demaine, Devadas               | MIT        | 2015 | 41h    | Done   | 100% | Autumn 2016 |
 | 22 | Computer Architecture                      | David Wentzlaff                | Princeton  | 2012 | 28h30  | Pause  | 40%  | Autumn 2016 |
-| 23 | Data Science for Biologists                | Kutz, Brunton, Brunton         | UW         | 2016 | 18h10  | Done   | 65%  | Winter 2017 |
-| 24 | Image and Video Processing                 | Guillermo Sapiro               | Duke       | 2012 | 15h20  |        | 50%  | Autumn 2016 |
-| 25 | Differential Geometry                      | Norman John Wildberger         | UNSW       | 2013 | 25h45  |        | 50%  | Winter 2017 |
-| 26 | Computational Photography                  | Irfan Essa                     | Gatech     | 2016 | 17h30  |        | 74%  | Winter 2017 |
+| 23 | Computational Photography                  | Irfan Essa                     | Gatech     | 2016 | 17h30  | Done   | 74%  | Winter 2017 |
+| 24 | Data Science for Biologists                | Kutz, Brunton, Brunton         | UW         | 2016 | 18h10  | Done   | 65%  | Winter 2017 |
+| 25 | Image and Video Processing                 | Guillermo Sapiro               | Duke       | 2012 | 15h20  |        | 50%  | Autumn 2016 |
+| 26 | Differential Geometry                      | Norman John Wildberger         | UNSW       | 2013 | 25h45  |        | 50%  | Winter 2017 |
