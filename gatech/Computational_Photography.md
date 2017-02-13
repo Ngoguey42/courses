@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2017/01/29 15:15:23 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2017/02/12 21:07:26 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2017/02/13 17:26:42 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -499,8 +499,6 @@ if __name__ == "__main__":
 - Video: Photo Tourism, Exploring photo collections in 3D, SIGGRAPH 2006
 
 # 05-07 Extrinsic Camera Parameters (opt)
-https://classroom.udacity.com/courses/ud955/lessons/3878278541/concepts/29548388670923
-
 # 05-08 Intrinsic Camera Parameters (opt)
 # 05-09 Calibrating Cameras (opt)
 # 06-01 Video Processing
