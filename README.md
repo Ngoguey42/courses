@@ -27,5 +27,6 @@
 | 22 | Computer Architecture                      | David Wentzlaff                | Princeton  | 2012 | 28h30  | Pause  | 40%  | Autumn 2016 |
 | 23 | Computational Photography                  | Irfan Essa                     | Gatech     | 2016 | 17h30  | Done   | 74%  | Winter 2017 |
 | 24 | Data Science for Biologists                | Kutz, Brunton, Brunton         | UW         | 2016 | 18h10  | Done   | 65%  | Winter 2017 |
-| 25 | Image and Video Processing                 | Guillermo Sapiro               | Duke       | 2012 | 15h20  |        | 50%  | Autumn 2016 |
-| 26 | Differential Geometry                      | Norman John Wildberger         | UNSW       | 2013 | 25h45  |        | 50%  | Winter 2017 |
+| 25 | The Numpy Stack in Python                  | (Lazy Programmer)              | (Youtube)  | 2016 | 1h40   | Done   | 100% | Winter 2017 |
+| 26 | Image and Video Processing                 | Guillermo Sapiro               | Duke       | 2012 | 15h20  |        | 50%  | Autumn 2016 |
+| 27 | Differential Geometry                      | Norman John Wildberger         | UNSW       | 2013 | 25h45  |        | 50%  | Winter 2017 |
