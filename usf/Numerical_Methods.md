@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2017/02/22 17:36:45 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2017/02/26 15:38:31 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2017/02/26 21:30:29 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -23,22 +23,76 @@
 --------------------------------------------------------------------------------
 
 # 04 - Simultaneous Linear Equations
+
+----------------------------------------
+
 ## 04.01 - Background (Primer on Matrix Algebra) (Background for Simultaneous Linear Equations)
 > - https://www.youtube.com/playlist?list=PL7318E7805F259B12
 > - https://www.youtube.com/playlist?list=PLF3196BEC6433FD98
 - Skip 7/8 video `Primer on Matrix Algebra`
 
 ### Setting up Equations in a Matrix Form
+- Notation `[A] [X] = [C]`
+ - `[A]` Coefficient matrix
+ - `[X]` Solution vector | Unknown vector
+ - `[C]` rhs vector
 
+----------------------------------------
 
 ## 04.06 - Gaussian Elimination
 > - https://www.youtube.com/playlist?list=PLF99FF87A29023BBF
 
+### Naive Gaussian elimination: Theory: Part 1 of 2
+- Two steps
+ 1. Forward elimination
+ 2. Back substitution
+
+#### Forward Elimination
+- Transform the coef matrix to an upper triangle matrix
+- Proceed column by column from `col 0` to `col n-1`, making the coefficients under the diagonal equal to 0
+
+### Naive Gaussian Elimination: Theory: Part 2 of 2
+#### Back Substitution
+- Solve equations from bottom to top (the last equation have only one unknown)
+
+### Naive Gaussian Elimination: Example: Part 1 of 2 (Forward Elimination)
+`[[25, 5, 1], [64, 8, 1], [144, 12, 1]]` `[[106.8], [177.2], [279.2]]`
+`[[25, 5, 1], [0, -4.8, -1.56], [144, 12, 1]]` `[[106.8], [-96.208], [279.2]]`
+`[[25, 5, 1], [0, -4.8, -1.56], [0, -16.8, -4.76]]` `[[106.8], [-96.208], [-335.968]]`
+`[[25, 5, 1], [0, -4.8, -1.56], [0, 0, 0.7]]` `[[106.8], [-96.208], [0.76]]`
+
+### Naive Gaussian Elimination: Example: Part 2 of 2 (Back Substitution)
+`a_3 = 1.08571`
+`a_2 = 19.6905`
+`a_1 = 0.290472`
+
+### Pitfalls of Naive Gaussian Elimination
+- Division by 0 in steps of forward elimination
+- Floating point rounding error
+
+### Naive Gaussian Elimination Example: Round Off Error Issues Part 1 of 3
+ras
+
+### Naive Gaussian Elimination Example: Round Off Error Issues Part 2 of 3
+ras
+
+### Naive Gaussian Elimination Example: Round Off Error Issues Part 3 of 3
+ras
+
+### Gaussian Elimination with Partial Pivoting: Theory
+https://youtu.be/DAMKhFwSaw8?list=PLF99FF87A29023BBF&t=290
+
+----------------------------------------
+
 ## 04.07 - Gauss-Seidel Method
 > - https://www.youtube.com/playlist?list=PL0DF06015DDF4E24C
 
+----------------------------------------
+
 ## 04.08 - LU Decomposition
 > - https://www.youtube.com/playlist?list=PL025E2EC677B70051
+
+----------------------------------------
 
 ## 04.11 - Cholesky And LDL^T Decomposition
 - Skip 10/10 video
