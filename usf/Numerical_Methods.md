@@ -6,23 +6,55 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2017/02/22 17:36:45 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2017/02/23 21:08:31 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2017/02/26 15:38:31 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
 > - http://mathforcollege.com/nm/#sthash.vz8u2hme.dpbs
 > - http://mathforcollege.com/nm/videos/index.html
+> - https://www.youtube.com/user/numericalmethodsguy/playlists
 > - University of South Florida
 > - USF
 > - 2009
 > - Autar Kaw
 > - 48.445h
 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+# 04 - Simultaneous Linear Equations
+## 04.01 - Background (Primer on Matrix Algebra) (Background for Simultaneous Linear Equations)
+> - https://www.youtube.com/playlist?list=PL7318E7805F259B12
+> - https://www.youtube.com/playlist?list=PLF3196BEC6433FD98
+- Skip 7/8 video `Primer on Matrix Algebra`
+
+### Setting up Equations in a Matrix Form
+
+
+## 04.06 - Gaussian Elimination
+> - https://www.youtube.com/playlist?list=PLF99FF87A29023BBF
+
+## 04.07 - Gauss-Seidel Method
+> - https://www.youtube.com/playlist?list=PL0DF06015DDF4E24C
+
+## 04.08 - LU Decomposition
+> - https://www.youtube.com/playlist?list=PL025E2EC677B70051
+
+## 04.11 - Cholesky And LDL^T Decomposition
+- Skip 10/10 video
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
 # 05 - Interpolation
+
+----------------------------------------
+
 ## 05.01 - Interpolation Background (Primer on Interpolation)
 > - https://www.youtube.com/playlist?list=PL89BE3BEA7B10C2B3
 
 ### Uniqueness of Interpolating Polynomial: Part 1 of 2
+ras
 
 ### Uniqueness of Interpolating Polynomial: Part 2 of 2
 - Ref: Forward elimitation, Gaussian elimination, upper triangular matrix
@@ -30,6 +62,8 @@
  - Direct method
  - Lagrangian interpolation
  - Newton's divided difference method
+
+----------------------------------------
 
 ## 05.02 - Direct Method
 > - https://www.youtube.com/playlist?list=PL9822701A25E9E2B2
@@ -48,6 +82,8 @@
 
 ### Direct Method of Interpolation: Cubic Interpolation - Part 2
 - Ex: Integration with the found cubic formula
+
+----------------------------------------
 
 ## 05.03 - Newton Divided Difference Method
 > - https://www.youtube.com/playlist?list=PL4F3ADBFA72919113
@@ -85,6 +121,8 @@ ras
 ### General Order: Newton's Divided Difference Polynomial: Example: Part 1 of 2
 ras
 
+----------------------------------------
+
 ## 05.04 - Lagrangian Interpolation
 > - https://www.youtube.com/playlist?list=PL158349DD0B52EE85
 > - https://en.wikipedia.org/wiki/Lagrange_polynomial
@@ -109,10 +147,13 @@ ras
 ### Lagrangian Interpolation: Cubic Interpolation: Example: Part 2 of 2
 ras
 
+----------------------------------------
+
 ## 05.05 - Spline Interpolation
 > - https://www.youtube.com/playlist?list=PLDAB608CD1A9A0D55
 ras
 
+----------------------------------------
 
 ## 05.06 - Anecdotes on Interpolation (Special Topics of Interpolation)
 > - https://www.youtube.com/playlist?list=PL286E49455B0F4A83
@@ -127,3 +168,6 @@ ras
 
 ### Interpolating a Smooth and Shortest Path for Robot
 - Spline vs Polynomial
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
