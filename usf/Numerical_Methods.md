@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2017/02/22 17:36:45 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2017/02/27 11:48:01 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2017/02/27 14:49:46 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -29,7 +29,14 @@
 ## 04.01 - Background (Primer on Matrix Algebra) (Background for Simultaneous Linear Equations)
 > - https://www.youtube.com/playlist?list=PL7318E7805F259B12
 > - https://www.youtube.com/playlist?list=PLF3196BEC6433FD98
-- Skip 7/8 video `Primer on Matrix Algebra`
+- Skip 6/8 videos from `Primer on Matrix Algebra`
+
+### Inverse of a Matrix: Definition
+- Inverse only defined for some square matrices
+- If `[B] [A] = [I]`
+ - Where `I` identity matrix
+ - Then `A` and `B` are mutually inverses (matrix multiplication is commutative in this case)
+ - Then `A` and `B` are called `invertable` (aka `non-singular`)
 
 ### Setting up Equations in a Matrix Form
 - Notation `[A] [X] = [C]`
@@ -146,7 +153,43 @@ ras
 ## 04.08 - LU Decomposition
 > - https://www.youtube.com/playlist?list=PL025E2EC677B70051
 
+### LU Decomposition Method: Basis
+- From `[A] [X] = [C]`
+ 1. `[L] [U] [X] = [C]`
+	- This step to get `L` and `U`
+    - `A` decomposed into a lower `L` and upper `U` triangle matrices
+ 2. `[L] [Z] = [C]`
+	- This step to get `Z` a n*1 matrix
+	- `L` being a lower triangle matrix, we can easily get `Z` by forward substitution
+ 3. `[U] [X] = [Z]`
+    - This step to get `X`
+	- `U` being an upper triangle matrix, we can easily get `X` by backward substitution
 
+### LU Decompostion Method: Example
+ras
+
+### LU Decomposition: Why Part 1 of 2
+ras
+
+### LU Decomposition: Why Part 2 of 2
+- Ex: Finding the inverse of a matrix
+ - naive gaussian elimination
+    - Forward elimination `~= C * n^3 / 3` (n times)
+	- Backward substitution `~= C * n^2 / 2` (n times)
+ - LU decomposition
+    - Forward elimination `~= C * n^3 / 3` (1 time)
+	- Forward substitution `~= C * n^2 / 2` (n time)
+	- Backward substitution `~= C * n^2 / 2` (n time)
+ - 4x faster with LU decomposition
+
+### LU Decomposition Method: Decomposing a Matrix Example: Part 1 of 2
+- LU decomposition of a square matrix
+
+### LU Decomposition Method: Decomposing a Matrix Example: Part 2 of 2
+ras
+
+### LU Decomposition Method: Finding Inverse of a Matrix : Background
+- Solve column by column
 
 ----------------------------------------
 
