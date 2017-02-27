@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2017/02/22 17:36:45 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2017/02/26 21:30:29 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2017/02/27 11:48:01 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -80,17 +80,73 @@ ras
 ras
 
 ### Gaussian Elimination with Partial Pivoting: Theory
-https://youtu.be/DAMKhFwSaw8?list=PLF99FF87A29023BBF&t=290
+- Avoid division by 0 when coef matrix is invertible
+- Decrease round error
+- In forward elimination, at the beginning of each column step, swap two rows
+ - Line1: The line containing the diagonal number in this column
+ - Line2: The line containing the greatest absolute value in this column
+
+### Gaussian Elimination with Partial Pivoting: Example: Part 1 of 3 (Forward Elimination)
+ras
+
+### Gaussian Elimination with Partial Pivoting: Example: Part 2 of 3 (Forward Elimination)
+ras
+
+### Gaussian Elimination with Partial Pivoting: Example: Part 3 of 3 (Back Substitution)
+ras
+
+### Gaussian Elimination with Partial Pivoting: Round Off Issues: Example: Part 1 of 3
+ras
+
+### Gaussian Elimination with Partial Pivoting: Round Off Issues: Example: Part 2 of 3
+ras
+
+### Gaussian Elimination with Partial Pivoting: Round Off Issues: Example: Part 3 of 3
+ras
+
+### Determinant of a Matrix Using Forward Elimination: Background
+- Apply the forward elimination to obtain an upper triangle matrix
+- Determinent is the multiplication of the diagonal elements
+
+### Determinant of a Matrix Using Forward Elimination Method: Example
+ras
 
 ----------------------------------------
 
 ## 04.07 - Gauss-Seidel Method
 > - https://www.youtube.com/playlist?list=PL0DF06015DDF4E24C
 
+### Gauss-Seidel Method of Solving Simultaneous Linear Equations: Theory: Part 1 of 2
+- May be cheaper that gaussian elimination
+- Precision gradually converges, can be stopped at any time
+
+### Gauss-Seidel Method of Solving Simultaneous Linear Equations: Theory: Part 2 of 2
+ras
+
+### Gauss-Seidel Method of Solving Simultaneous Linear Equations: Example: Part 1 of 2
+- Start with an initial guess for the unknowns and refine them
+ - ex: start with 0s
+
+### Gauss-Seidel Method of Solving Simultaneous Linear Equations: Example: Part 2 of 2
+- 3 digits of precision after 6 iterations
+
+### Gauss-Seidel Method of Solving Simultaneous Linear Equations: Pitfalls and Advantages: Part 1 of 2
+- Gauss-Seidel may not converge
+ - If the coef matrix is `diagonally dominent` => converges
+ - If the coef matrix is not `diagonally dominent` may converges
+
+### Gauss-Seidel Method of Solving Simultaneous Linear Equations: Pitfalls and Advantages: Part 2 of 2
+- Def: `diagonally dominent` (`dd`)
+ - In all lines, |diag number| >= sum |other numbers in the line|
+ - In at least one line, |diag number| > sum |other numbers in the line|
+- Ex: `not dd` matrix with lines that can be reordered into a `dd` matrix
+
 ----------------------------------------
 
 ## 04.08 - LU Decomposition
 > - https://www.youtube.com/playlist?list=PL025E2EC677B70051
+
+
 
 ----------------------------------------
 
@@ -205,6 +261,7 @@ ras
 
 ## 05.05 - Spline Interpolation
 > - https://www.youtube.com/playlist?list=PLDAB608CD1A9A0D55
+
 ras
 
 ----------------------------------------
