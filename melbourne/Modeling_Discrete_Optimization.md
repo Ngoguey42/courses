@@ -16,7 +16,7 @@
 ## Preliminaries (optional)
 ### Motivation 1: Dragonspeech 101 (4:00) 1%
 - Combinatorics aka Discrete Optimizations
- - Solving exp problems
+  - Solving exp problems
 
 ### Motivation 2: Modeling is Magic (7:00) 2%
 - True names of frequent combinatorial substructures
@@ -25,37 +25,37 @@
 - Def: NLP, NonLinear Programming
 - Def: MINLP, mixed integer nonlinear programming
 - Solvers with MiniZinc
- - MIP: CPLEX commercial (IBM), Gurobi commercial
- - CP: Geocode, OR-tools (google), cpx, choco
- - local search solver: Oscar
- - LP: cpl, glpk, lp_solve
- - NLP: ipopt, dfo, filterSD
- - MINLP: scip, couenne
+  - MIP: CPLEX commercial (IBM), Gurobi commercial
+  - CP: Geocode, OR-tools (google), cpx, choco
+  - local search solver: Oscar
+  - LP: cpl, glpk, lp_solve
+  - NLP: ipopt, dfo, filterSD
+  - MINLP: scip, couenne
 - Ex: MiniZinc exemple for sudoku `.mzn`
 - Ex: Rectangle packing, carpet cutting
 - Model:
- - Specification of the problem
+  - Specification of the problem
 
 ### Motivation 3: Why Should We Model? (8:00) 3%
 - No free lunch theorem
- - `any two optimization algorithms are equivalent when their performance is averaged across all possible problems.`
+  - `any two optimization algorithms are equivalent when their performance is averaged across all possible problems.`
 
 ### Motivation 4: How MiniZinc Works (5:00) 4%
 - MiniZinc is a modeling language
- - independent of the underlying solver
+  - independent of the underlying solver
 - toolchain
- - mzn2fzn: model compilation
- - solns2out: output formater
+  - mzn2fzn: model compilation
+  - solns2out: output formater
 - soling components
- - solver: solves the problem
- - solver library: defines how constraints are treated by the solver
+  - solver: solves the problem
+  - solver library: defines how constraints are treated by the solver
 - Model components
- - model
- - data
+  - model
+  - data
 - toolchain
- - model, global constraints, libraries `.mzn` and data `.dzn` to `mzn2fzn` outputs `.fzn` and `.ozn`
- - `.fzn` to `solver` outputs `solution`
- - `solution` and `.ozn` to `solns2out` outputs to stdout
+  - model, global constraints, libraries `.mzn` and data `.dzn` to `mzn2fzn` outputs `.fzn` and `.ozn`
+  - `.fzn` to `solver` outputs `solution`
+  - `solution` and `.ozn` to `solns2out` outputs to stdout
 - `.fzn` FlatZinc
 
 #### Exemple
@@ -98,66 +98,66 @@ ras
 - MZI is a subset of Zinc
 - Ex: Toy factory production
 - In output
- - `----------` indicates a solution
- - `==========` indicates a best solution
+  - `----------` indicates a solution
+  - `==========` indicates a best solution
 - Ex: Map coloring of australia
 - `solve satisfy;` instruction commands a solution that satisfies among all
 
 ### MZI 2: MiniZinc Basic Components (10:00) 8%
 - Parameters
- - `par int: i=3;` (optional `par` keyword)
- - `int: i;` `i=3;`
+  - `par int: i=3;` (optional `par` keyword)
+  - `int: i;` `i=3;`
 - Decision variables
- - Decided by the solver
- - `var int: i; constraint i >= 0; constraint i <= 4;`
- - using range `var 0..4: i;`
- - using set `var {0,1,2,3,4}: i;`
+  - Decided by the solver
+  - `var int: i; constraint i >= 0; constraint i <= 4;`
+  - using range `var 0..4: i;`
+  - using set `var {0,1,2,3,4}: i;`
 - Types
- - `int`
- - `float`
- - `bool`
- - `string` cant be decision var
- - `arrays`
- - `sets`
+  - `int`
+  - `float`
+  - `bool`
+  - `string` cant be decision var
+  - `arrays`
+  - `sets`
 - Strings
- - `output <list of strings>;`
- - `show(v)` ???
- - `\(v)` interpolation
- - `"truc "++"muche"`
+  - `output <list of strings>;`
+  - `show(v)` ???
+  - `\(v)` interpolation
+  - `"truc "++"muche"`
 - Arithmetic expressions
- - int `*, /, +, -`
- - fp `*, div, mod, +, -`
- - `int2float(42)` along with implicit conversions
+  - int `*, /, +, -`
+  - fp `*, div, mod, +, -`
+  - `int2float(42)` along with implicit conversions
 - Constraints
- - `constraint <bool expr>`
+  - `constraint <bool expr>`
 - Arithmetic constraints
- - Arithmetic equalities / comparisons
+  - Arithmetic equalities / comparisons
 - Structure of a model
- - Order of items do not matter
- - `include <filename>;`
+  - Order of items do not matter
+  - `include <filename>;`
 - Solve
- - Exaclty one solve per model
- - `solve satisfy`
- - `solve maximize <arith expr>`
- - `solve minimize <arith expr>`
+  - Exaclty one solve per model
+  - `solve satisfy`
+  - `solve maximize <arith expr>`
+  - `solve minimize <arith expr>`
 - Predicate, function, test items, annotation items...
 
 ### MZI 3: Models and Instances (8:00) 9%
 - Model
- - Formal description of a class of optimisation problems
+  - Formal description of a class of optimisation problems
 - Instance
- - One particular optimisation problem
- - A model with a data (from .dnz or from variable initialization)
+  - One particular optimisation problem
+  - A model with a data (from .dnz or from variable initialization)
 - Ex: Loan
- - Fixing `var` in `.dbz`, leaving the others to the solver
+  - Fixing `var` in `.dbz`, leaving the others to the solver
 
 ### MZI 4: Modeling Objects (9:00) 10%
 - Ex: Knapsack general model
- - Arbirary number of objects in data
- - `set of /*type*/`
- - `array[range] of /*var decl*/`
- - `forall(i in /*range*/)(/*bool expr*/)`
- - `sum(i in /*range*/)(/*expr*/)`
+  - Arbirary number of objects in data
+  - `set of /*type*/`
+  - `array[range] of /*var decl*/`
+  - `forall(i in /*range*/)(/*bool expr*/)`
+  - `sum(i in /*range*/)(/*expr*/)`
 
 ### MZI 5: Arrays, Sets, Comprehensions (16:00) 12%
 - Ex: Toy factory (again)
@@ -185,16 +185,16 @@ consumption = [|1.0/200.0, 1.0/140.0|]; % 2-d array syntax, same as OCaml
 ```
 
 - Set
- - Unary op `card` (cardinality)
- - Binary op `in, union, intersect, subset, superset, diff, symdiff`
+  - Unary op `card` (cardinality)
+  - Binary op `in, union, intersect, subset, superset, diff, symdiff`
 - Arrays
- - The `index set` can be an `int range` or an `int set without holes`
- - `length` function
- - `array2d` conversion functions
+  - The `index set` can be an `int range` or an `int set without holes`
+  - `length` function
+  - `array2d` conversion functions
 - Comprehension
- - `{i + j | i, j in 1..4 where i < j}`
+  - `{i + j | i, j in 1..4 where i < j}`
 - Functions over list or set
- - `sum, product, min, max`
+  - `sum, product, min, max`
 
 ### MZI 6: Linear Models (10:00) 14%
 - Scale to 100k variables / constraints
@@ -209,8 +209,8 @@ consumption = [|1.0/200.0, 1.0/140.0|]; % 2-d array syntax, same as OCaml
 - `regular([x1, ..., x1], A, S, d, q0, F)` Regular constraint, is list in the language
 - `geost()` pack k dimensional objects so they don't overlap
 - etc...
- - 100+ in MiniZinc
- - 300+ in the Global Constraint Catalog
+  - 100+ in MiniZinc
+  - 300+ in the Global Constraint Catalog
 
 ## Getting Started with Workshops and Assignments
 ### Installing MiniZinc (10:00) 16%
@@ -298,7 +298,7 @@ forall(n in NURSE, d in 1..m-2)
   -> x[n, d + 2] != night);
 ```
 - Bound the occurrences of v_i in x
- - `global_cardinality_low_up(x, v, lo, hi) % 4 arrays`
+  - `global_cardinality_low_up(x, v, lo, hi) % 4 arrays`
 ```mzn
 forall(d in DAY)(
   global_cardinality_low_up(

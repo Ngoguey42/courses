@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2016/12/16 15:55:51 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2017/01/28 18:08:19 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2017/02/13 17:37:14 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -21,13 +21,13 @@
 ## Lecture 4 - Images are everywhere (06:32) 3%
 ## Lecture 5 - Human visual system (17:11) 5%
 - Human eye
- - Cones, rods / vision angle
- - Blind spot
+  - Cones, rods / vision angle
+  - Blind spot
 - Weber law
- - Perception of color changes relative to background lighting intensity
+  - Perception of color changes relative to background lighting intensity
 - Mach band
- - Optical illusions
- - Perception of two insensities side by side in an image
+  - Optical illusions
+  - Perception of two insensities side by side in an image
 
 ## Lecture 6 - Image formation - Sampling Quantization (28:18) 8%
 - Sampling, quantization / Spacial, color
@@ -36,18 +36,18 @@
 
 ## Lecture 7 - The why and how of compression (14:17) 10%
 - General case
- - Encoder: Mapper, quantizer, symbol coder
- - Decoder: Symbol decoder, inverse mapper
+  - Encoder: Mapper, quantizer, symbol coder
+  - Decoder: Symbol decoder, inverse mapper
 - JPEG
- - Encoder:
-   1. Cut in 8*8 images
-   2. Forward transform (Descrete cosine transform)
-   3. Quantizer
-   4. Symbol encoder
- - Decoder:
-   1. Symbol decoder
-   2. Inverse transform
-   3. Merge images
+  - Encoder:
+    1. Cut in 8*8 images
+    2. Forward transform (Descrete cosine transform)
+    3. Quantizer
+    4. Symbol encoder
+  - Decoder:
+    1. Symbol decoder
+    2. Inverse transform
+    3. Merge images
 
 ## Lecture 8 - Huffman coding (20:12) 12%
 - Symbol encoder
@@ -55,7 +55,7 @@
 
 ## Lecture 9 - JPEGs 8x8 blocks (05:38) 13%
 - `YC_bC_r`
- - Y luminance (black and white)
+  - Y luminance (black and white)
 - MSE, Mean square error
 - Kahynen-Loeve
 
@@ -68,7 +68,7 @@ ras
 
 ## Lecture 12 - JPEG_LS and MPEG (19:33) 20%
 - JPEG lossless
- - Predective coding
+  - Predective coding
 
 ## Lecture 13 - Bonus Run-length compression (04:30) 21%
 ras
@@ -94,8 +94,8 @@ ras
 ## Lecture 19 - Mathematical properties of averaging (11:01) 28%
 - Minimizing the square error with average
 - Gaussian filtering
- - `f(x, y, sigma) = f(x, y) * G(0, sigma)`
- - sigma: variance of the gaussian
+  - `f(x, y, sigma) = f(x, y) * G(0, sigma)`
+  - sigma: variance of the gaussian
 - Heat flow
 
 ## Lecture 20 - Non-Local means (07:28) 29%
@@ -108,9 +108,9 @@ ras
 
 ## Lecture 22 - Median filter (07:21) 30%
 - Ex: Circuit board
- - Salt and pepper noise
+  - Salt and pepper noise
 - Median filter
- - Sort pixels in a block by noise, pick the median
+  - Sort pixels in a block by noise, pick the median
 - The absolute difference is minimum for the median
 - The square difference is minimum for the mean
 
@@ -129,12 +129,12 @@ ras
 # Week 3 - Image restoration
 ## Lecture 27 - What is image restoration (07:50) 32%
 - General process of the image degradation/restoration
- - Degradation phase
-   - Degradation function `H(x, y)` (blurring, out of focus, motion blur)
-   - Noise function `eta(x, y)` (sensors of camera)
-   - `g(x, y) = f(x, y) * H(x, y) + eta(x, y)` (additive noise in this formula, can convert multiplicative noise to additive with log)
- - Restoration phase
-   - `hat f(x, y) ~= f(x, y)`
+  - Degradation phase
+    - Degradation function `H(x, y)` (blurring, out of focus, motion blur)
+    - Noise function `eta(x, y)` (sensors of camera)
+    - `g(x, y) = f(x, y) * H(x, y) + eta(x, y)` (additive noise in this formula, can convert multiplicative noise to additive with log)
+  - Restoration phase
+    - `hat f(x, y) ~= f(x, y)`
 
 ## Lecture 28 - Noise types (12:44) 34%
 - Gaussian noise
@@ -188,22 +188,22 @@ ras
 ## Lecture 42 - Interactive Image Segmentation (21:14) 47%
 - Ex: Picture of forest with fake faces
 - Process
- 1. Feature distribution estimation (scribbles draws by user)
- 2. Weighted distance transform (geodesic distance)
- 3. Refine (relaunch the algorithm with new scribbles constructed by algo)
+  1. Feature distribution estimation (scribbles draws by user)
+  2. Weighted distance transform (geodesic distance)
+  3. Refine (relaunch the algorithm with new scribbles constructed by algo)
 
 ## Lecture 43 - Graph Cuts (09:35) 48%
 - Boykov and Jolly (2001)
 - Each pixel
- - Connected connected to its neighbors (4-neighborhood or 8-neighborhood), with weight
- - Connected to an abstract vertex foreground, with weight
- - Connected to an abstract vertex background, with weight
+  - Connected connected to its neighbors (4-neighborhood or 8-neighborhood), with weight
+  - Connected to an abstract vertex foreground, with weight
+  - Connected to an abstract vertex background, with weight
 - Min-cut
 
 ## Lecture 44 - Mumford-Shah (05:51) 48%
 - Concept
- - Move away from the original image. eg: penalizing the amount of boundaries
- - Stay close to the original image. eg: penalizing the mean-square-error
+  - Move away from the original image. eg: penalizing the amount of boundaries
+  - Stay close to the original image. eg: penalizing the mean-square-error
 
 ## Lecture 45 - Active Contours (05:58) 49%
 - Snakes
@@ -212,25 +212,25 @@ ras
 ## Lecture 46 - Behind the Scenes of Adobes Roto Brush (31:30) 52%
 - Inside `After effects cs5`
 - Problem for video segmentation
- - Pixel level accuracy
- - Minimal user intervention
- - Interactive real-time
+  - Pixel level accuracy
+  - Minimal user intervention
+  - Interactive real-time
 - Challenges
- - Overlapping color distribution
- - Weak boundaries
- - Topology changes
- - Dynamic backgrounds
+  - Overlapping color distribution
+  - Weak boundaries
+  - Topology changes
+  - Dynamic backgrounds
 - Steps
- 1. Localized classifiers
-   - Motion estimation
-   - Shape prior
-   - Color models, GMM Gaussial mixture models (Color distribution for bg/fg)
-   - Foreach frame, foreach block, merge shape prior and color probability to obtain confidence map
- 1. Multi-frame propagation
- 1. Local correction
-   - Spatial-temporal local correction, manual
- 1. Post-processing
-   - Smooth segmentation
+  1. Localized classifiers
+    - Motion estimation
+    - Shape prior
+    - Color models, GMM Gaussial mixture models (Color distribution for bg/fg)
+    - Foreach frame, foreach block, merge shape prior and color probability to obtain confidence map
+  1. Multi-frame propagation
+  1. Local correction
+    - Spatial-temporal local correction, manual
+  1. Post-processing
+    - Smooth segmentation
 
 ## Lecture 47 - End of the Week (00:22) 52%
 ras
@@ -238,40 +238,40 @@ ras
 # Week 5: Partial Differential Equations (PDEs)
 ## Lecture 48 - Introduction to PDEs in Image and Video Processing (10:23) 54%
 - Images as continuous objects
- - Integrals vs Sums
- - image pocessing as iteration of infinitesimal operations (PDEs)
- - numerical analysis to get continuous from discrete
+  - Integrals vs Sums
+  - image pocessing as iteration of infinitesimal operations (PDEs)
+  - numerical analysis to get continuous from discrete
 
 ## Lecture 49 - Planar Differential Geometry (38:33) 58%
 - https://ggbm.at/KUK3FHa3
 - Books
- - Geometric Partial Differential Equations and Image Analysis. Guillermon Sapiro
- - Numerical Geometry of Images, Rom Kimmel
+  - Geometric Partial Differential Equations and Image Analysis. Guillermon Sapiro
+  - Numerical Geometry of Images, Rom Kimmel
 
 ### Curve on the plane
 - `C(p) = {x(p), y(p)}, p in [0, 1]`
 - If the curve is closed, `C(0) = C(1)`
 - Tangent `vec t = C_p / |C_p| = C_s`
- - first derivative
- - `C_p = delta C / delta p = [x_p, y_p]`, first derivative at p
- - `C_s` Tangent with unit length
- - `|C_s| = <C_s, C_s> = 1` inner product of 2 vectors, magnitude of the first derivative
+  - first derivative
+  - `C_p = delta C / delta p = [x_p, y_p]`, first derivative at p
+  - `C_s` Tangent with unit length
+  - `|C_s| = <C_s, C_s> = 1` inner product of 2 vectors, magnitude of the first derivative
 - the inner product between the first and second derivative is 0, ie. they are perpendicular
 - Normal `C_(ss) = k * vec n`
- - second derivative with respect to the euclidean arclength
- - `C_s perp C_(ss)`
- - `k` curvature, magnitude of the second derivative
- - `s` is the `arc length`
+  - second derivative with respect to the euclidean arclength
+  - `C_s perp C_(ss)`
+  - `k` curvature, magnitude of the second derivative
+  - `s` is the `arc length`
 - Strait line has `0` curvature
 - Circle has `1/r` curvature
 - `s` and `kappa` are preserved over some transformations
 
 ### Linear transformations
- - Affine transformation
- - `{x', y'}^T = A{x, y}^T + bar b`
- - `{x, y}^T` vector ?of magnitude T?
- - `bar b` rotation
- - `A` transformation matrix
+  - Affine transformation
+  - `{x', y'}^T = A{x, y}^T + bar b`
+  - `{x, y}^T` vector ?of magnitude T?
+  - `bar b` rotation
+  - `A` transformation matrix
 - An `affine transformation` is an `euclidean transformation` where `A = [bar u_1, bar u_2], where <bar u_1, bar u_2> = 0 and <bar u_i, bar u_i> = 1`, results in a rotation+translation
 - An `equi-affine transformation` is an `affine transformation` where `det(A) = 1`, results in a transformation where area is preserved
 
@@ -297,9 +297,9 @@ ras
 
 ## Lecture 50 - Surface Differential Geometry (11:44) 59%
 - Surfaces in 3d
-- `S(u, v) = {x(u,v), y(u,v),z(u,v)}`
-- `S_u, S_v` tangents
-- `vec N = S_u cross S_v / |S_u cross S_v|` normalized vector
+- `S(u, v) = {x(u,v), y(u,v), z(u,v)}` Surface in 3d according to a plane
+- `S_u, S_v` tangents at a point
+- `vec N = S_u cross S_v / |S_u cross S_v|` normal vector normalized
 - `dA = S_u cross S_v` local area, determinent of the matrix formed by those two vectors
 - `A = int int |S_u cross S_v| du dv` total area
 - Normal curvature
@@ -309,9 +309,9 @@ ras
 
 ## Lecture 51 - Curve Evolution (31:11) 62%
 - `C_t = vec V` Velocity at every point of a curve
- - `vec V` can be decomposed into a vector colinear to the tangent and a vector colinear to the normal
- - the tangential component do not affect the shape of the curve, only the normal component
- - `<=> C_t = <vec V, vec n> vec n`
+  - `vec V` can be decomposed into a vector colinear to the tangent and a vector colinear to the normal
+  - the tangential component do not affect the shape of the curve, only the normal component
+  - `<=> C_t = <vec V, vec n> vec n`
 
 ### Curvature motion
 - `C_t = k vec n` defomation proportional to curvature

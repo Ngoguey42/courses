@@ -30,62 +30,62 @@ RAS
 - Course: ELE 475
 - Prerequisites: ELE375 ELE206
 - Books:
- - Computer Architecture a quantitative approach v5
- - Modern processor design and fundamental of superscalar processors
+  - Computer Architecture a quantitative approach v5
+  - Modern processor design and fundamental of superscalar processors
 
 # L01S2 - Motivation (16:40) (2%)
 - Computer Architecture is mapping applications to physics
- - Ex: compass
+  - Ex: compass
 - Abstractions:
- 1. Application
- 1. Algorithm
- 1. Programming language
- 1. OS/VM
- 1. Instruction set architecture (ELE475)
- 1. Microarchitecture (ELE475)
- 1. Register-transfer level (ELE475)
- 1. Gates
- 1. Circuits
- 1. Devices
- 1. Physics
+  1. Application
+  1. Algorithm
+  1. Programming language
+  1. OS/VM
+  1. Instruction set architecture (ELE475)
+  1. Microarchitecture (ELE475)
+  1. Register-transfer level (ELE475)
+  1. Gates
+  1. Circuits
+  1. Devices
+  1. Physics
 - Ref: IAS machine John Von Nuemann
 - log-plot Performances / years (Moor's law)
- - RISC computers
- - multi-core processors
+  - RISC computers
+  - multi-core processors
 
 # L01S3 - Course Content (9:10) (2%)
 ##### 375 vs 475
 - ELE375
- - RISC 1 processor (50k transistors)
- - basic cache, pipelining, memory system, digital logic
+  - RISC 1 processor (50k transistors)
+  - basic cache, pipelining, memory system, digital logic
 - ELE475
- - i7 (700m transistors)
+  - i7 (700m transistors)
 
 ##### Content
 - Instruction level parallelism
- - superscalar
- - very long instruction word (vliw)
+  - superscalar
+  - very long instruction word (vliw)
 - Pipeline parallelism
 - Advanced memory caches
 - data parallelism
- - vector
- - gpu
+  - vector
+  - gpu
 - thred level parallelism
- - multithreading
- - multiprocessor
- - multicore
- - manycore
+  - multithreading
+  - multiprocessor
+  - multicore
+  - manycore
 
 # L01S4 - Architecture and Microarchitecture (23:37) (4%)
 - **A**rchitecture aka Instruction Set Architecture (ISA)
- - Abstract machine model (programmer visible state)
- - Operations (instructions)
- - Execution semantics (interrupts)
- - Input/Output
- - Data types (float, byte, word, etc..)
+  - Abstract machine model (programmer visible state)
+  - Operations (instructions)
+  - Execution semantics (interrupts)
+  - Input/Output
+  - Data types (float, byte, word, etc..)
 - Microarchitecture aka Origanization aka Implementation of ISA
- - frequency, energy, cost
- - pipeline/ALU/bus depth/number/width
+  - frequency, energy, cost
+  - pipeline/ALU/bus depth/number/width
 
 ##### History
 Ex: AMD Phenom x4 vs Intel Atom (both x86 IS)
@@ -107,17 +107,17 @@ Ex: `C = A + B` instructions on all 4 machine models
 # L01S6 - ISA Characteristics (25:47) (6%)
 ##### Classes of Instructions
 1. Data transfer
- - `LD load`, `ST store`, `MFC1 move from control reg`, `MTC1 move to c.r.`
+  - `LD load`, `ST store`, `MFC1 move from control reg`, `MTC1 move to c.r.`
 1. ALU
- - `Add`, `SUB`, `XOR`, `SLT set less then`, etc...
+  - `Add`, `SUB`, `XOR`, `SLT set less then`, etc...
 1. Control flow
- - `BEQZ branch`, `JR jump`, `TRAP`
+  - `BEQZ branch`, `JR jump`, `TRAP`
 1. Floating point
- - `Add.D`, `C.LT.D compare`, `CVT.S.W convert`, etc...
+  - `Add.D`, `C.LT.D compare`, `CVT.S.W convert`, etc...
 1. Multimedia (SIMD)
- - `ADD.PS`
+  - `ADD.PS`
 1. String
- - `REP MOVSB`
+  - `REP MOVSB`
 
 ##### Addressing Modes:
 1. Register (move)
@@ -138,17 +138,17 @@ Ex: `C = A + B` instructions on all 4 machine models
 
 ##### Encoding of instructions
 1. Fixed width
- - RISC, MISP, PPC, SPARC, ARM
- - MISP (every instruction 4 bytes)
+  - RISC, MISP, PPC, SPARC, ARM
+  - MISP (every instruction 4 bytes)
 1. variable length instruction
- - Ref: `Hoffman encoding`
- - CISC, IBM 360, x86, 68k, VAX
- - x86 (between 1 and 17bytes)
+  - Ref: `Hoffman encoding`
+  - CISC, IBM 360, x86, 68k, VAX
+  - x86 (between 1 and 17bytes)
 1. mostly fixed aka compressed
- - MIPS16, THUMB (2 or 4 bytes)
- - PPC, VLIW (compression / decompression)
+  - MIPS16, THUMB (2 or 4 bytes)
+  - PPC, VLIW (compression / decompression)
 1. Long instruction word:
- - Multiflow, Lx, TI C6000
+  - Multiflow, Lx, TI C6000
 - Table comparison of real world instruction sets
 
 <br>
@@ -164,13 +164,13 @@ RAS
 # L02S2 - Pipeline Basics (30:51) (9%)
 - Ex: Unpipelined datapath for MIPS
 - 5 Stage pipeline
- - Fetch phase aka instruction fetch phase aka `F` aka `IF` aka `IM`
- - decode + register-fetch phase aka `D` aka `RF`
- - Execute phase aka `X` aka `EX` aka `ALU`
- - Memory phase aka `M` aka `MEM` aka `DM` (longest)
- - Write back phase aka `W` aka `WB` aka `RW`
+  - Fetch phase aka instruction fetch phase aka `F` aka `IF` aka `IM`
+  - decode + register-fetch phase aka `D` aka `RF`
+  - Execute phase aka `X` aka `EX` aka `ALU`
+  - Memory phase aka `M` aka `MEM` aka `DM` (longest)
+  - Write back phase aka `W` aka `WB` aka `RW`
 - `Iron Law` of processor performance
- - Time/Program = Instructions/Program * Cycles/Instruction * Time/Cycle
+  - Time/Program = Instructions/Program * Cycles/Instruction * Time/Cycle
 - Microcoded / Unpipelined / Pipelined
 
 # L02S3 - Structural Hazard (10:13) (10%)
@@ -186,19 +186,19 @@ RAS
 - `Feedback`
 - Each stall or kill introduces a bubble in the pipeline (CPI > 1)
 - Stall: Multiplexer, interlocks, nop
- - read enable / write enable
+  - read enable / write enable
 - Bypass: Multiplexer
 
 # L03S1 - Control Hazards, Jumps (15:56) (13%)
 - `Speculation`
- - Next instr is not going to be a jump, else early instructions need to be killed
+  - Next instr is not going to be a jump, else early instructions need to be killed
 
 # L03S2 - Control Hazards, Branch (24:02) (15%)
 
 ##### Reducing branch penalty
 - Zero detecter out of register file
 - Expose control hazard to software
- - Branch delay slot (filled 70% says `specint`)
+  - Branch delay slot (filled 70% says `specint`)
 
 # L03S3 - Control Hazards, Others(7:51) (15%)
 - Load delay slot
@@ -211,50 +211,50 @@ RAS
 
 # L03S5 - Motivation for Caches (22:25) (18%)
 - Bandwidth-delay product
- - Amount of data that can be in flight at the same time (Little's law)
+  - Amount of data that can be in flight at the same time (Little's law)
 - Memory size affects latency
 - Ex: Common and predictable memory reference patterns (graph: address / time)
- - Temporal locality (exploited by cache when storing)
- - Spatial locality (exploited by cache when fetching blocks)
+  - Temporal locality (exploited by cache when storing)
+  - Spatial locality (exploited by cache when fetching blocks)
 
 # L04S1 - Classifying Caches (28:07) (20%)
 - Address tag / Cache line / Data block
 - Cache miss / Cache miss / victim block
 - Block placement
- - Direct mapped cache (modulo array)
- - Set associative (n-way) (modulo bucket array)
- - Fully associative (random access array)
+  - Direct mapped cache (modulo array)
+  - Set associative (n-way) (modulo bucket array)
+  - Fully associative (random access array)
 - Block replacement
- - Random
- - LRU
- - FIFO
- - NMRU (FIFO with exception for MRU blocks)
+  - Random
+  - LRU
+  - FIFO
+  - NMRU (FIFO with exception for MRU blocks)
 - Write strategy
- - Cache hit
-   - Write through
-   - Write back
-   - Both (multilvl cache)
+  - Cache hit
+    - Write through
+    - Write back
+    - Both (multilvl cache)
 - Cache miss
- - No Write Allocate
- - Write Allocate
+  - No Write Allocate
+  - Write Allocate
 
 # L04S2 - Cache Performance (17:11) (21%)
 - Types of cache misses:
- - Compulsory
- - Capacity
- - Conflict
+  - Compulsory
+  - Capacity
+  - Conflict
 - Rule of thumb1: *2 cache size /2^.5 miss rate
 - Rule of thumb2: miss-rate(direct-mapped(size: n)) = miss-rate(two-way(size: n/2))
 
 # L04S3 - Superscalar 1 (6:42) (21%)
 - Types of data hazard
- - Data-dependence RAW
- - Anti-dependence WAR
- - Output-dependence WAW
+  - Data-dependence RAW
+  - Anti-dependence WAR
+  - Output-dependence WAW
 
 # L04S4 - Basic Two-way In-order Superscalar (4:56) (21%)
 - Ex: Two asymetric pipelines
- - Issue logic/Instruction steering
+  - Issue logic/Instruction steering
 
 # L04S5 - Fetch Logic and Alignment (11:01) (22%)
 ras
@@ -269,30 +269,30 @@ ras
 
 # L05S3 - Interrupts and Exceptions (29:25) (25%)
 - Async interrupts (external event)
- - input/output device service request
- - timer expiration
- - power disruptions
- - hardware failure
+  - input/output device service request
+  - timer expiration
+  - power disruptions
+  - hardware failure
 - Sync interrupts (exceptions / trap)
- - undefined opcode
- - privileged instruction
- - arithmetic overflow
- - FPU exception
- - virtual memory exceptions
- - syscalls
+  - undefined opcode
+  - privileged instruction
+  - arithmetic overflow
+  - FPU exception
+  - virtual memory exceptions
+  - syscalls
 - Commit point
 
 # L05S4 - Introduction to Out-of-Order Processors (30:53) (27%)
 - Table of all 5 types of ooo processors
- - Frontend: Instruction fetch / decode
- - Issue
- - Writeback
- - Commit
+  - Frontend: Instruction fetch / decode
+  - Issue
+  - Writeback
+  - Commit
 - Ref: Dataflow machine
 - Functional unit
 - Ex: `I4`
- - ARF: architecture register file
- - SB: scoreboard
+  - ARF: architecture register file
+  - SB: scoreboard
 
 | name | frontend-issue-writeback-commit |
 |------|---------------------------------|
@@ -310,24 +310,24 @@ ras
 
 # L06S3 - I2O1 Processors (28:44) (30%)
 - Structures
- - SB
- - ARF
- - PRF: Physical register file (future file)
+  - SB
+  - ARF
+  - PRF: Physical register file (future file)
 - ROB: Reorder buffer
- - FSB: Finished store buffer
+  - FSB: Finished store buffer
 - PRF written ooo, but ROB commits in order
 - FSB stalls the memory write
 - ARF is used when interrupts or branches
 - ROB
- - Commit happen only when the oldest instruction in the ROB is finished
- - Speculative bit
+  - Commit happen only when the oldest instruction in the ROB is finished
+  - Speculative bit
 - CSB: Commit store buffer
 
 # L06S4 - IO3 Processors (16:23) (31%)
 - Structures
- - SB
- - ARF
- - IQ: Issue queue
+  - SB
+  - ARF
+  - IQ: Issue queue
 
 # L06S5 - IO2I Processors (4:31) (31%)
 ras
@@ -341,11 +341,11 @@ ras
 
 # L07S3 - Register Renaming with Pointers to IQ and ROB (24:54) (34%)
 - Structures
- - FL: Free List. Entry: physical register, 1bit for busyness
- - RT: Rename Table, Entry: architectural register, 1bit is pending, few bits for physical destination
+  - FL: Free List. Entry: physical register, 1bit for busyness
+  - RT: Rename Table, Entry: architectural register, 1bit is pending, few bits for physical destination
 - ROB modifications
- - Architectural register file specifier
- - Previous physical register
+  - Architectural register file specifier
+  - Previous physical register
 - Ref: Intel cpu with 100 instructions pending
 
 # L07S4 - Register Renaming with Values in IQ and ROB (12:14) (35%)
@@ -366,26 +366,26 @@ ras
 
 # L08S2 - Introduction to VLIW (21:57) (38%)
 - Bundle of operations inside one instruction
- - No dependency check in one bundle
+  - No dependency check in one bundle
 - Model: Equal scheduling(EQ)
- - The operations take effect exactly at the specified latency
- - Compiler handles everything
- - Less physical registers
- - Interrupts are hard to handle (or impossible)
+  - The operations take effect exactly at the specified latency
+  - Compiler handles everything
+  - Less physical registers
+  - Interrupts are hard to handle (or impossible)
 - Model: Less than or equals model (LEQ)
- - The operations take effect exactly or faster than the specified latency
+  - The operations take effect exactly or faster than the specified latency
 - History
 
 # L08S3 - VLIW Compiler Optimizations (21:20) (39%)
 - Loop unrolling
 - Software pipelining
- - Prolog, iterationg, epilog
+  - Prolog, iterationg, epilog
 - Basic block
- - Piece of code with single entry/exit
+  - Piece of code with single entry/exit
 - Trace Scheduling
- - Follow the most probable branches, forming a trace
- - Schedule the whole trace at once
- - Add fixup code to cope with branchese jumping out of trace
+  - Follow the most probable branches, forming a trace
+  - Schedule the whole trace at once
+  - Add fixup code to cope with branchese jumping out of trace
 
 # L08S4 - Classic VLIW Challenges (8:18) (39%)
 ras
@@ -393,7 +393,7 @@ ras
 # L08S5 - Introduction to Predication (9:51) (40%)
 - Partial predication `movz` `movnz`
 - Full predicatiopn
- - Predicate register
+  - Predicate register
 
 # L09S1 - Scheduling Model Review (5:58) (40%)
 

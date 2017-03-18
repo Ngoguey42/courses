@@ -5,13 +5,13 @@
 - Acronym: `m/c` `machine code`
 - m/c: relocatable vs absolute
 - Phases:
- 1. HLL
- 2. Lexical analysis (LA) -> stream of tokens
- 3. Syntax analysis (SA) -> parse tree
- 4. Semantic analysis -> parse tree (semantically verified)
- 5. Intermediate code generation (IGC) -> ex: `three address code`
- 6. Code optimization (CO)
- 7. Target code generation (TCG) -> assembly
+  1. HLL
+  2. Lexical analysis (LA) -> stream of tokens
+  3. Syntax analysis (SA) -> parse tree
+  4. Semantic analysis -> parse tree (semantically verified)
+  5. Intermediate code generation (IGC) -> ex: `three address code`
+  6. Code optimization (CO)
+  7. Target code generation (TCG) -> assembly
 - `Symbol table manager` / `Error handler`
 - Lexemes
 - `Front end` vs `Back end`

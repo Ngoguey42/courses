@@ -52,11 +52,11 @@
 
 - Vector notation for polynomials
 - Polynomial evalution
- - O(N) (Horner's rule)
+  - O(N) (Horner's rule)
 - Polynomials addition
- - O(N)
+  - O(N)
 - Polymonials multiplication
- - `forall k, C_k = sum _(j=0) ^k a_j . b_(k-j)` O(N^2)
+  - `forall k, C_k = sum _(j=0) ^k a_j . b_(k-j)` O(N^2)
 - Convolution of vectors
 - Dot product == Inner product
 - Representations of polynomials (Coeff vector, Roots, Samples)
@@ -113,18 +113,18 @@
 - Comparisons of matrix multiplicatons algorithms
 - Checking matrix multiplication result with `Frievald's algorithm`
 - Pick min or max as pivot
- - Worst case O(N^2)
+  - Worst case O(N^2)
 - Intelligent pivot picking
- - Median finding
- - Does not work in practice
+  - Median finding
+  - Does not work in practice
 - Random pivot picking
- - Expected time O(nlogn)
+  - Expected time O(nlogn)
 - Paranoid quicksort, guarantee balanced partition
- - |L| <= 3/4 |A|
- - |R| <= 3/4 |A|
- - max log4/3(2cn) levels
- - 2cn work per level
- - O(nlogn)
+  - |L| <= 3/4 |A|
+  - |R| <= 3/4 |A|
+  - max log4/3(2cn) levels
+  - 2cn work per level
+  - O(nlogn)
 
 ### Recitation 4: Randomized Select and Randomized Quicksort (0:39:30) 26%
 > https://www.youtube.com/watch?v=QPk8MUtq5yA&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp
@@ -143,7 +143,7 @@
 - William Pugh 1989
 - Ex: New York subway
 - Insertion:
- - Randomly promote the inserted element
+  - Randomly promote the inserted element
 - Union bound
 - Chernoff bound
 
@@ -152,46 +152,46 @@
 
 - Constant expected time
 - Hashtbl:
- - u: space of the universe
- - n: number of items in htbl
- - m: number of slots in table
- - h: hash functions that maps universe to index in table
- - H: family of all hash functions
+  - u: space of the universe
+  - n: number of items in htbl
+  - m: number of slots in table
+  - h: hash functions that maps universe to index in table
+  - H: family of all hash functions
 - Simple uniform hashing
- - `k_1 != k_2, Pr(h(k_1) = h(k_2)) = 1/m`
- - requires keys are random
+  - `k_1 != k_2, Pr(h(k_1) = h(k_2)) = 1/m`
+  - requires keys are random
 - Etymology: Hash
 - Universal hashing
- - Most useful
- - Very few conflicts
+  - Most useful
+  - Very few conflicts
 - Perfect hashing
- - Works for static sets
- - 0 conflicts
+  - Works for static sets
+  - 0 conflicts
 
 ##### Universal Hashing
 - ex1: Dot-product hash family
- - m: prime, and table doubling with algorithm to find nearby prime
- - u = m^r
- - view keys in base m, a key can then be seen as a vector of digits (smaller than r)
- - h_a(k) = a.k mod m
- - H = {h_a | a in {0, 1, ..., u - 1}}
+  - m: prime, and table doubling with algorithm to find nearby prime
+  - u = m^r
+  - view keys in base m, a key can then be seen as a vector of digits (smaller than r)
+  - h_a(k) = a.k mod m
+  - H = {h_a | a in {0, 1, ..., u - 1}}
 - ex2:
- - h(k) = [(a.k + b) mod p] mod m
- - p: p > m, prime
- - H = {H_(ab) | a, b in {0, 1, ..., u - 1}}
+  - h(k) = [(a.k + b) mod p] mod m
+  - p: p > m, prime
+  - H = {H_(ab) | a, b in {0, 1, ..., u - 1}}
 - Proof ex1 is universal
 
 ##### Perfect hashing (FKS hashing 1984)
 Static dict problem
 - Polynomial build time
 - Build a 2-depth hash table
- - Pick a hash function h_1 for the big table
- - The small hashtbl have a table size of n-elt^2
-   - If the total space gets over c*n, repick a h_1 (2 expected tries with c = 2, O(lgn) w.h.p.)
- - Pick hash functions h_(2, j) for each small hashtbl
- - There must be no collision in the small hashtbl
-   - If there is a collision, repick h_(2, j) (2 expected tries, O(lgn) w.h.p.)
- - Markov inequality
+  - Pick a hash function h_1 for the big table
+  - The small hashtbl have a table size of n-elt^2
+    - If the total space gets over c*n, repick a h_1 (2 expected tries with c = 2, O(lgn) w.h.p.)
+  - Pick hash functions h_(2, j) for each small hashtbl
+  - There must be no collision in the small hashtbl
+    - If there is a collision, repick h_(2, j) (2 expected tries, O(lgn) w.h.p.)
+  - Markov inequality
 
 # Module 3: Optimization - greedy and dynamic programming
 ### Recitation 5: Dynamic Programming (0:52:03) 35%
@@ -210,17 +210,17 @@ Static dict problem
 > https://www.youtube.com/watch?v=xVka6z1hu-I&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp
 - Ex: Binary tree augmentation (data addition at each nodes)
 - Order-statistic trees
- - ADT
-   - insert(x), delete(x), successor(x)
-   - rank(x) (index of x in sorted array)
-   - select(i) (find node of rank i) (rank(select(i)) == i)
- - Ex:  Augmentation for tree height
+  - ADT
+    - insert(x), delete(x), successor(x)
+    - rank(x) (index of x in sorted array)
+    - select(i) (find node of rank i) (rank(select(i)) == i)
+  - Ex:  Augmentation for tree height
 - Ex: Level linking augmentation in 2-3 trees
- - Horizontal links between the levels
- - Finger search property `search(x from y) in O(log|rank(x) - rank(y)|)`
+  - Horizontal links between the levels
+  - Finger search property `search(x from y) in O(log|rank(x) - rank(y)|)`
 - Ex: B+ tree
- - 2-3 tree with data in leaves
- - Augmentation to store min&max of subtrees in nodes, enabling fast search
+  - 2-3 tree with data in leaves
+  - Augmentation to store min&max of subtrees in nodes, enabling fast search
 
 ##### Static range tree
 - Orthogonal range search
@@ -248,18 +248,18 @@ def L(x, i, j, cache):
 - Ordered nodes
 - Nodes have a search probability (weight)
 - e(i, j)
- - i = j -> `w_i`
- - else -> `min_(i <= r <= j)(e(i, r - 1) + e(r + 1, j)) + w(i, j)`
+  - i = j -> `w_i`
+  - else -> `min_(i <= r <= j)(e(i, r - 1) + e(r + 1, j)) + w(i, j)`
 
 ##### Alternating coin game (1 vs 1 game from a coin deque)
 - Ex: Winning (or tie) strategy
- - For the first player
- - When starting with even number of coins on board
- - Does not maximize gains
+  - For the first player
+  - When starting with even number of coins on board
+  - Does not maximize gains
 - Ex: Maximize amount of money strategy
- - For the first player
- - Assumes opponent plays with the same strategy
- - theta(n^2)
+  - For the first player
+  - Assumes opponent plays with the same strategy
+  - theta(n^2)
 ```
 V(i, j) # Money gains from the interval [i, j] when my turn to play
  i == j -> val(i)
@@ -295,16 +295,16 @@ ras
 
 ### Lecture 12: Greedy Algorithms: Minimum Spanning Tree (1:22:10) 49%
 - Greedy algorithm properties
- 1. Optimal substructure
- 2. Greedy choice property
- - Both true for MST
+  1. Optimal substructure
+  2. Greedy choice property
+  - Both true for MST
 
 - Edge contraction in MST
 - Cut in MST
 - Prim's algorithm
- - Cut with only one vertex, pick minimum weigth edge out of cut, grow the cut by 1, repeat
+  - Cut with only one vertex, pick minimum weigth edge out of cut, grow the cut by 1, repeat
 - Kruskal's algorithm
- - With union find algorithm
+  - With union find algorithm
 
 ### Recitation 6: Greedy Algorithms (0:22:24) 50%
 ras
@@ -313,32 +313,32 @@ ras
 ### Lecture 13: Incremental Improvement: Max Flow, Min Cut (1:22:58) 54%
 - No cycles of length 0 or 1
 - Skew symetry
- - `f(a, b) = -f(b, a)`
+  - `f(a, b) = -f(b, a)`
 - Value of the flow `|f|`
- - `|f| = sum_(AA v in V)f(s, v)`
-   -  `= f(s, V)` implicit sum notation
- - `f(V, V) = 0`
- - `|f| = f(s, V) = f(V, V - s)`
+  - `|f| = sum_(AA v in V)f(s, v)`
+    -  `= f(s, V)` implicit sum notation
+  - `f(V, V) = 0`
+  - `|f| = f(s, V) = f(V, V - s)`
 - Residual network
- - There is an augmenting path in the residual network iff there is a possible improvement to the network
- - `C_f(u, v) = C(u, v) - f(u, v)`
+  - There is an augmenting path in the residual network iff there is a possible improvement to the network
+  - `C_f(u, v) = C(u, v) - f(u, v)`
 
 ### Lecture 14: Incremental Improvement: Matching (1:22:33) 57%
 - Ford fulkerson algorithm
- - Begin with an empty network and its residual network
- - While there exist an augmentation path, augment the network with this path
+  - Begin with an empty network and its residual network
+  - While there exist an augmentation path, augment the network with this path
 - Max flow min cut theorem
 - Pathological execution of ford fulkerson
 - Edmonds Karp O(VEE)
- - Same as ford fulkerson, but finds shortest path
+  - Same as ford fulkerson, but finds shortest path
 - Ex: Baseball
 
 ### Recitation 7: Network Flow and Matching (0:51:12) 59%
 - Dinic's algorithm
- - Edmonds karp improvement
- - Find all shortest paths
+  - Edmonds karp improvement
+  - Find all shortest paths
 - Bipartite matching
- - vertex cover
+  - vertex cover
 
 # Module 6: Linear programming
 ### Lecture 15: Linear Programming: LP, reductions, Simplex (1:22:27) 63%
@@ -346,45 +346,45 @@ ras
 > https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/lecture-notes/MIT6_046JS15_lec15.pdf
 
 - Ex: Politics advertising campain
- - Votes obtained per dollar spent
- - `x_1 ... x_4` denote the policies
- - A dollar spent multiplied by a constant gives you a number of votes aquired (positive or negative)
+  - Votes obtained per dollar spent
+  - `x_1 ... x_4` denote the policies
+  - A dollar spent multiplied by a constant gives you a number of votes aquired (positive or negative)
 - n variables, m constrains. Goal is polynomial in n
 - Standard form for LP
- - Maximize linear objective function subject to linear inequalities (or equations)
- - variables: `bar x = ((x_1),(x_2),(...),(x_n))`
- - objective function: `bar c * bar x = c_1*x_1 + ... + c_n*x_n`
- - inequalities: `A * bar x <= bar b`
- - `max bar c * bar x`, such that inequalities hold and `bar x >= 0`
+  - Maximize linear objective function subject to linear inequalities (or equations)
+  - variables: `bar x = ((x_1),(x_2),(...),(x_n))`
+  - objective function: `bar c * bar x = c_1*x_1 + ... + c_n*x_n`
+  - inequalities: `A * bar x <= bar b`
+  - `max bar c * bar x`, such that inequalities hold and `bar x >= 0`
 - Certificate of optimality
- - Confirms a result
- - Merge inequalities with certain coefficients to get a new inequality
+  - Confirms a result
+  - Merge inequalities with certain coefficients to get a new inequality
 - LP duality
- - There exist a dual form of LP
+  - There exist a dual form of LP
 - Convertion to standard form
 - Ex: Max flow with LP
 - Ex: Shortest path with LP
- - Using triangle inequality
+  - Using triangle inequality
 
 ##### Simplex algorithm
 - Represent LP in slack form
 - Convert from one slack form to the other, until the optimal solutions pops out
 - O(2^n) `((m + n),(n))`
 - Slack form:
- - Represent inequalities and their slack with new variables, called basic variables
- - Manipulate the vector of all nonbasic+basic values
- - Have an objective value `z`
+  - Represent inequalities and their slack with new variables, called basic variables
+  - Manipulate the vector of all nonbasic+basic values
+  - Have an objective value `z`
 - Start
- - Trivial starting point
- - Set all nonbasic variables to 0
+  - Trivial starting point
+  - Set all nonbasic variables to 0
 - Pivoting
- - Swap roles between a basic variable and a nonbasic variable
- - Pick the nonbasic variable `x_e` whose coefficient is positive
- - Increase `x_e` as much as possible without violating any constraints
- - This increase leads to select the basic variable involved in the tightest constraint
- - Rewrite all constraints
+  - Swap roles between a basic variable and a nonbasic variable
+  - Pick the nonbasic variable `x_e` whose coefficient is positive
+  - Increase `x_e` as much as possible without violating any constraints
+  - This increase leads to select the basic variable involved in the tightest constraint
+  - Rewrite all constraints
 - Stop
- - When all nonbasic variables are negative
+  - When all nonbasic variables are negative
 
 # Module 5: Intractibility (and dealing with it)
 ### Lecture 16: Complexity: P, NP, NP-completeness, Reductions (1:25:25) 66%
@@ -392,18 +392,18 @@ ras
 - Ex: 3SAT
 - X is NP-hard if every NP problem reduces to X
 - Reduction
- - Using a poly-time converting algorithm
+  - Using a poly-time converting algorithm
 - Ref: 6.045 (Theory of computation)
 - Ex: Super mario
 - Ref: Gadgets
 - Ref: 6.890 (Algorithmic Lower Bounds: Fun with Hardness Proofs)
 - Always reduce from the known hard to the unknown hard
 - Ex: 3D Matching
- - From 3SAT to 3D Mathching
- - From formula with variables and clauses to gadgets
- - Variable gadget
+  - From 3SAT to 3D Mathching
+  - From formula with variables and clauses to gadgets
+  - Variable gadget
 - Ex: Subset sum
- - Weakly np-hard (with pseudo polynomial)
+  - Weakly np-hard (with pseudo polynomial)
 - Ex: Partition
 - Ex: Rectangle packing
 - Ex: Jigsaw puzzle
@@ -418,33 +418,33 @@ ras
 > https://www.youtube.com/watch?v=MEz1J9wY2iM&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp
 > https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/lecture-notes/MIT6_046JS15_lec17.pdf
 - Approximation algorithm
- - Algorithm proved to output a solution within some factor of the optimal solution
+  - Algorithm proved to output a solution within some factor of the optimal solution
 - `rho(n)-approximation algorithmn`
- - In minimization problems `rho(n) > C/C_(opt)`
- - In maximization problems `rho(n) > C_(opt)/C`
- - `rho(n)` being an approximation ratio
+  - In minimization problems `rho(n) > C/C_(opt)`
+  - In maximization problems `rho(n) > C_(opt)/C`
+  - `rho(n)` being an approximation ratio
 - `(1 + epsilon)-approximation algoritm`
- - `C = (1 + epsilon)C_(opt)`
+  - `C = (1 + epsilon)C_(opt)`
 - `PTAS`
- - Polynomial Time Approximation Scheme
- - Runs in poly time in n
- - Ex: `O(n^(2/epsilon))`
+  - Polynomial Time Approximation Scheme
+  - Runs in poly time in n
+  - Ex: `O(n^(2/epsilon))`
 - `FPTAS`
- - Fully Polynomial Time Approximation Scheme
- - Runs in poly time in n and epsilon
- - Ex: `O(n/epsilon^2)`
+  - Fully Polynomial Time Approximation Scheme
+  - Runs in poly time in n and epsilon
+  - Ex: `O(n/epsilon^2)`
 
 ##### Vertex cover
 - Ex: Maximum degree pick greedy algorithm
- - logn-approx algo
+  - logn-approx algo
 - Ex: Pick edges randomly and keep both ends
- - Edges won't share vertices
- - 2-approx algo
+  - Edges won't share vertices
+  - 2-approx algo
 
 ##### Set cover
 - Cover a set with subsets, minimizing the number of subsets
 - Ex: Greedy with largest subset
- - `lnn+1-approx algo`
+  - `lnn+1-approx algo`
 
 ##### Partition
 - Partition in 2 a set S
@@ -457,54 +457,54 @@ ras
 
 - In a NP-hard problem, confine the exponential part into a parameter to be polynomial in the problem size
 - FPT: Fixed-Parameter tractable
- - Can be solved in `f(k) * n^O(1)`
+  - Can be solved in `f(k) * n^O(1)`
 - k-Vertex cover
- - Ex: Brute force algorithm `O(E*V^k)`
- - Ex: Bounded-search-tree algorithm `O(V*2^k)`
+  - Ex: Brute force algorithm `O(E*V^k)`
+  - Ex: Bounded-search-tree algorithm `O(V*2^k)`
 - Kernelization
- - Self-reduction
- - A problem is FPT iff there exist a kernelization
+  - Self-reduction
+  - A problem is FPT iff there exist a kernelization
 - Kernelization of k-vertex cover
- - From G = (V, E) and k
- - try to shrink the graph to G' = (V', E') and k
- - with V' subset of V, E' subset of E and k <= k
- - and |E'| <= k^2 and |V'| <= 2k^2
- - if it was not possible, then there is no `k-vertex cover` for the initial graph
- - The best algorithm to date: `O(kV + 1.274k)` by [Chen, Kanj, Xia - TCS 2010]
+  - From G = (V, E) and k
+  - try to shrink the graph to G' = (V', E') and k
+  - with V' subset of V, E' subset of E and k <= k
+  - and |E'| <= k^2 and |V'| <= 2k^2
+  - if it was not possible, then there is no `k-vertex cover` for the initial graph
+  - The best algorithm to date: `O(kV + 1.274k)` by [Chen, Kanj, Xia - TCS 2010]
 - Connection to Approximation Algorithms
- - EPTAS (Efficient PTAS)
- - Absolute error / relative error
+  - EPTAS (Efficient PTAS)
+  - Absolute error / relative error
 
 ### Recitation 9: Approximation Algorithms: Traveling Salesman Problem (0:31:59) 76%
 > https://youtu.be/zM5MW5NKZJg?list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp
 > https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/recitation-notes/MIT6_046JS15_Recitation9.pdf
 - TSP and its approximation algorithm are NP-hard
 - Metric TSP
- - Triangle inequality holds
- - `H^*_G` min hamiltonian cycle in G
- - `c(H^*_G)` cost of this path
+  - Triangle inequality holds
+  - `H^*_G` min hamiltonian cycle in G
+  - `c(H^*_G)` cost of this path
 - 2-approximation for metric TSP
- - From a rooted MST `T`
- - It's cycle path `C` that contains many duplicates
- - Build a path `C'` from `C` bypassing the duplicates
- - `c(H^*_G) >= c(T)`
- - `c(C) = 2c(T)  =>  c(C') <= 2c(T)  =>  c(C') <= 2c(H^*_G)`
+  - From a rooted MST `T`
+  - It's cycle path `C` that contains many duplicates
+  - Build a path `C'` from `C` bypassing the duplicates
+  - `c(H^*_G) >= c(T)`
+  - `c(C) = 2c(T)  =>  c(C') <= 2c(T)  =>  c(C') <= 2c(H^*_G)`
 - Perfect matching
- - In a complete graph you can find a perfect matching in polytime
+  - In a complete graph you can find a perfect matching in polytime
 - Euler circuit (euler tour) iff all vertex has even degree
 - In a graph there cannot be an odd number of odd degree vertices
- - `forall vertices let d_i be it's degree`
- - `forall even degree vertices let de_i be it's degree`
- - `forall odd degree vertices let do_i be it's degree`
- - `sum_(de_i) is even by definition`
- - `sum_(d_i) = 2 * |E|`
- - `sum_(d_i) = sum_(do_i) + sum_(de_i)`
- - `sum_(do_i) % 2 = 0 = |V_(degree-odd)| * 1 % 2   =>  |V_(degree-odd)| % 2 = 0`
+  - `forall vertices let d_i be it's degree`
+  - `forall even degree vertices let de_i be it's degree`
+  - `forall odd degree vertices let do_i be it's degree`
+  - `sum_(de_i) is even by definition`
+  - `sum_(d_i) = 2 * |E|`
+  - `sum_(d_i) = sum_(do_i) + sum_(de_i)`
+  - `sum_(do_i) % 2 = 0 = |V_(degree-odd)| * 1 % 2   =>  |V_(degree-odd)| % 2 = 0`
 - Christofides algorithm 3/2-approximation algorithm
- - From a rooted MST `T`
- - Compute `M` the perfect matching of all odd-degree vertices in `T`
- - `G' = {M U T}` the graph where all vertices have an even degree
- - Keep the euler tour in `G'` with duplicates removed
+  - From a rooted MST `T`
+  - Compute `M` the perfect matching of all odd-degree vertices in `T`
+  - `G' = {M U T}` the graph where all vertices have an even degree
+  - Keep the euler tour in `G'` with duplicates removed
 
 # Module 8: Advanced topics
 ### Lecture 19: Synchronous Distributed Algorithms: Symmetry Breaking. Shortest-Paths Spanning Trees (1:17:34) 80%
@@ -514,54 +514,54 @@ ras
 
 - Studied since 1967: Edsger Dijkstra, Leslie Lamport
 - Sources
- - Books
-   - Lynch, Distributed Algorithms
+  - Books
+    - Lynch, Distributed Algorithms
    – Attiya and Welch, Distributed Computing: Fundamentals, Simulations, and Advanced Topics
    – Morgan Claypool series of monographs on Distributed Computing Theory
  – Conferences
-   - Principles of Distributed Computing (PODC)
-   - Distributed Computing (DISC)
+    - Principles of Distributed Computing (PODC)
+    - Distributed Computing (DISC)
 - Distributed network
- - undirected graph
- - `n = |V|`
- - `Gamma(u)` set of neighbors of vertex u
- - `Process` for a node in a graph, `infinite-state automaton`
- - two directed communication channels with each edge
+  - undirected graph
+  - `n = |V|`
+  - `Gamma(u)` set of neighbors of vertex u
+  - `Process` for a node in a graph, `infinite-state automaton`
+  - two directed communication channels with each edge
 
 #### Synchronous distributed (algorithms|network)
 - Synchronous Network Model
- - each process has output ports and input ports
- - a port is not labeled with its source/destination, it only has a local name
- - processes are not distinguishable
- - algorithm executes in `synchronous rounds`
-   - in each round a process sends 0 or 1 message in each output ports, depending on its state
-   - it then computes its new state depending on its state and the arriving messages
- - ignoring cost of local computations
+  - each process has output ports and input ports
+  - a port is not labeled with its source/destination, it only has a local name
+  - processes are not distinguishable
+  - algorithm executes in `synchronous rounds`
+    - in each round a process sends 0 or 1 message in each output ports, depending on its state
+    - it then computes its new state depending on its state and the arriving messages
+  - ignoring cost of local computations
 
 ##### Sync: Leader Election
 - Election of a leader among the processes
 - In a clique such an algorithm cannot exist
 - A basic problem for distributed algorithms `breaking symmetry`
- - With UIDs
-   - Elements of some totally-ordered set
+  - With UIDs
+    - Elements of some totally-ordered set
   - With randomness
 - Solve leader election with UIDs in clique
- - 1 round, n^2 messages
+  - 1 round, n^2 messages
 - Solve leader election with randomness in clique
- - probably 1 round
+  - probably 1 round
 
 ##### Sync: Maximal independent set
 - No uids, known good upper bound on n
 - Unsolvable by deterministic algorithms in some graphs
 - Ex: biology `Sensory Organ Precursor` in `fruit fly's`
 - `Michael Luby's MIS Algorithm`
- - Executes in 2-round phases
- - P1, forall active nodes
-   - broadcast random number self.v
-   - if all neighbors.v < self.v: broadcast `in`; self.active = False
- - P2, forall active nodes
-   - if received `in`: broadcast `out`; self.active = False
- - probably finishes in 4 log n phases
+  - Executes in 2-round phases
+  - P1, forall active nodes
+    - broadcast random number self.v
+    - if all neighbors.v < self.v: broadcast `in`; self.active = False
+  - P2, forall active nodes
+    - if received `in`: broadcast `out`; self.active = False
+  - probably finishes in 4 log n phases
 
 ##### Sync: Breadth-first spanning trees
 - rooted
@@ -574,19 +574,19 @@ ras
 - Distributed computing theory has many impossibilities, because of the limitation where each nodes only knows whats happening to his neighborhood
 
 ##### Asynchronous distributed (algorithms|networks)
- - Processes act concurrently
- - A few nondeterminism
+  - Processes act concurrently
+  - A few nondeterminism
 - Channel automaton `C_(u,v)`
- - `send(m)_(u,v)`
- - `receive(m)_(u,v)`
+  - `send(m)_(u,v)`
+  - `receive(m)_(u,v)`
 - Liveness
- - Process keep working
- - Channels keep sending
+  - Process keep working
+  - Channels keep sending
 - Ex: Max_u process automaton
 - Message complexity
- - `O(n * |E|)`
+  - `O(n * |E|)`
 - Time complexity
- - Assuming real-time upper bounds on independent operations
+  - Assuming real-time upper bounds on independent operations
 
 ##### Async: Breadth-first spanning trees
 ras
@@ -601,16 +601,16 @@ ref: mit 6.852, 18.437, distributed algorithms
 
 #### Sync/async: Leader election in a ring
 - Algo: Naive
- - time O(n)
- - message O(n^2)
+  - time O(n)
+  - message O(n^2)
 - Hirshberg-Sinclair algo: Filtering uid broadcast
- - binary search idea
- - logn phases
-   - after ith phase, each node knows if it is the greatest among its 2^i closest neighbors
-   - if it is not, stop sending messages at the beginning of next phases
-   - after nth phase, each node knows if it is the greatest among its 2^n closest neighbors
-   - at the last phase, the two messages from the greatest node will traverse the whole ring (coming back to the sender)
- - message O(nlogn)
+  - binary search idea
+  - logn phases
+    - after ith phase, each node knows if it is the greatest among its 2^i closest neighbors
+    - if it is not, stop sending messages at the beginning of next phases
+    - after nth phase, each node knows if it is the greatest among its 2^n closest neighbors
+    - at the last phase, the two messages from the greatest node will traverse the whole ring (coming back to the sender)
+  - message O(nlogn)
 
 #### Async: Counting the nodes
 ras
@@ -629,26 +629,26 @@ ras
 #### Random oracle model
 - Book
 - Ideal model but not achievable
- - Theory: Requires infinite storage
- - Practice: Use pseudo-random functions
+  - Theory: Requires infinite storage
+  - Practice: Use pseudo-random functions
 
 #### Desirable Properties
 1. One-way (OW) (pre-image resistance)
- - In h(x) = y, given y, infeasible to find x
- - Random oracle: would require to iterable the whole book
+  - In h(x) = y, given y, infeasible to find x
+  - Random oracle: would require to iterable the whole book
 1. Strong collision-resistance (CR)
- - Finding a collision is infeasible
+  - Finding a collision is infeasible
 1. (Target|Weak) collision-resistance (TCR)
- - Finding a collision given x is infeasible
+  - Finding a collision given x is infeasible
 1. Pseudo-randomness (PRF)
- - Behavior is indistinguishable from a random oracle
+  - Behavior is indistinguishable from a random oracle
 1. Non-malleability (NM)
- - Related keys should not have related hashes
+  - Related keys should not have related hashes
 - `CR imply TCR`
 - `OW does not imply CR, TCR`
- - Ex: Ignore the first bit of x results in pairing keys 2 by 2
+  - Ex: Ignore the first bit of x results in pairing keys 2 by 2
 - `TCR does not imply OW`
- - Ex: Do nothing
+  - Ex: Do nothing
 
 #### Applications to security
 ##### Password Storage
@@ -702,17 +702,17 @@ ras
 - Discrete log problem: from `g^a` computing `log_g(g^a)` to get `a` is hard
 - Diffie Hellman Problem: from `g^a` and `g^b` computing `g^(ab)` is hard
 - Loophole: The pirates could use their own key `b`/`g^b`
- - Man-in-the-middle
+  - Man-in-the-middle
 
 #### Public Key Encryption, RSA
 - `p`, `q` 2 large secret primes
 - `N = p * q`
 - `e` encryption exponent
- - `gcd(e, (p − 1)(q − 1)) = 1`
- - prime
- - small for performances
+  - `gcd(e, (p − 1)(q − 1)) = 1`
+  - prime
+  - small for performances
 - `d` decryption exponent
- - `e * d -= 1 mod (p − 1)(q − 1)`
+  - `e * d -= 1 mod (p − 1)(q − 1)`
 - `(N, e)` Public key
 - `(d, p, q)` Private key
 
@@ -723,20 +723,20 @@ ras
 ##### Proof
 - `ed = 1 + k * phi`
 - Case1 `gcd(m, p) = 1`
- - Using Fermat's little theorem
- - `m^(p - 1) -= 1 mod p`
- - `m^((p - 1) * (k * (q - 1))) -= 1 mod p`
- - `m^(k * phi) -= 1 mod p`
- - `m^(k * phi) * m -= m mod p`
- - `m^(k * phi + 1) -= m mod p`
- - `m^(ed) -= m mod p`
+  - Using Fermat's little theorem
+  - `m^(p - 1) -= 1 mod p`
+  - `m^((p - 1) * (k * (q - 1))) -= 1 mod p`
+  - `m^(k * phi) -= 1 mod p`
+  - `m^(k * phi) * m -= m mod p`
+  - `m^(k * phi + 1) -= m mod p`
+  - `m^(ed) -= m mod p`
 - Case2 `gcd(m, p) = p`
- - `m -= 0 mod p`
- - `m -= m mod p`
- - `m^(ed) -= m mod p`
+  - `m -= 0 mod p`
+  - `m -= m mod p`
+  - `m^(ed) -= m mod p`
 - the same proof goes for q
 - p and q being distinct primes
- - `m^(ed) -= m mod N`
+  - `m^(ed) -= m mod N`
 
 ##### Hardness
 - 512 bit N in the 70'
@@ -746,34 +746,34 @@ ras
 
 #### NP-completeness
 - Some NP-complete problems are hard in the worst case, but not in the average case
- - Ex: `is 3-colorable` (scanning for a 4-clique is easy to do)
- - Ex: `knapsack`
+  - Ex: `is 3-colorable` (scanning for a 4-clique is easy to do)
+  - Ex: `knapsack`
 - `Super-increasing knapsack problem` O(N)
- - `w_j >= sum_(i = 1)^(j - 1) w_i`
- - Any term is `>=` than the sum of all the smaller ones
- - ex: `{2, 3, 6, 13, 27, 52}`
+  - `w_j >= sum_(i = 1)^(j - 1) w_i`
+  - Any term is `>=` than the sum of all the smaller ones
+  - ex: `{2, 3, 6, 13, 27, 52}`
 - `Merkle Hellman cryptosystem` public key encryption with `Super-increasing knapsack problem` (weak)
- - private: `N = 31`
- - private: `M = 105`
- - private: `key = {2, 3, 6, 13, 27, 52}`
- - public: `key = {2N%M, 3N%M, 6N%M, 13N%M, 27N%M, 52N%M} = {62, 93, 81, 88, 102, 37}`
- - private: message = `011000`
- - public: message = `0*62 + 1*93 + 1*81 + 0*88 + ... = 174`
- - dectryption computing `N^-1 mod M`
- - problem: this is not always hard to decypher `174 = 93 + 81` using `lattice` based techniques
+  - private: `N = 31`
+  - private: `M = 105`
+  - private: `key = {2, 3, 6, 13, 27, 52}`
+  - public: `key = {2N%M, 3N%M, 6N%M, 13N%M, 27N%M, 52N%M} = {62, 93, 81, 88, 102, 37}`
+  - private: message = `011000`
+  - public: message = `0*62 + 1*93 + 1*81 + 0*88 + ... = 174`
+  - dectryption computing `N^-1 mod M`
+  - problem: this is not always hard to decypher `174 = 93 + 81` using `lattice` based techniques
 
 ### Recitation 11: Cryptography: More Primitives (0:49:30) 94%
 > https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/recitation-notes/MIT6_046JS15_Recitation11.pdf
 
 #### Digital signatures
 - Two functions
- - `sigma = sign(sk_A, m)` `signature = sign(secret key, message)`
- - `b = verify(pk_A, m, sigma)` `boolean = verify(public key, message, signature)`
- - sign call is private
- - verify call is public
+  - `sigma = sign(sk_A, m)` `signature = sign(secret key, message)`
+  - `b = verify(pk_A, m, sigma)` `boolean = verify(public key, message, signature)`
+  - sign call is private
+  - verify call is public
 - Properties
- - Correctness
- - Unforgeability
+  - Correctness
+  - Unforgeability
     - From known valid pairs `(sigma_1, m_1), (sigma_2, m_2), ...` hard to forge a new pair `(sigma^*, m^*)`
 
 ##### Ex: Weak RSA
@@ -781,8 +781,8 @@ ras
 - `sign: sigma = m^d mod n`
 - `verify: b = (sigma^e -=? m mod n)`
 - Multiplicative homomorphism (maleable)
- - From two valid pairs `(sigma_1, m_1), (sigma_2, m_2)`
- - `sigma_1 * sigma_2 = m_1^d * m_2^d -= (m_1 * m_2)^d mod n`
+  - From two valid pairs `(sigma_1, m_1), (sigma_2, m_2)`
+  - `sigma_1 * sigma_2 = m_1^d * m_2^d -= (m_1 * m_2)^d mod n`
 
 ##### Improvements wish hashing
 - Adhoc security
@@ -801,10 +801,10 @@ ras
 - Objective: Hashing a directory containing files
 
 - Procedure
- 1. Hash all files
- 2. Group the files 2 by 2 and compute a hash by hashing their hashes
- 3. Group the groups 2 by 2, forming a tree of lgN levels
- 4. Only carry the root hash to verify the integrity of a file in `space O(1)` and `time O(lgN)`
+  1. Hash all files
+  2. Group the files 2 by 2 and compute a hash by hashing their hashes
+  3. Group the groups 2 by 2, forming a tree of lgN levels
+  4. Only carry the root hash to verify the integrity of a file in `space O(1)` and `time O(lgN)`
 
 #### Knapsack cryposystem review
 ras
@@ -841,7 +841,7 @@ ras
 - Online algorithms, makes decision seeing the past
 - Offline algorithm, makes decision seeing the future
 - `LRU_M <= OPT_M`
- - M being cache size
+  - M being cache size
 
 #### Algortihms
 - Search - van Emde Boas layout [Prokop 1999]

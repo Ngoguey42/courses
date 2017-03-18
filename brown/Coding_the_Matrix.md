@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@student.42.fr>            +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2017/02/13 19:22:12 by ngoguey           #+#    #+#            -->
-<!-- Updated: 2017/02/13 23:05:34 by ngoguey          ###   ########.fr      -->
+<!-- Updated: 2017/02/15 17:46:52 by ngoguey          ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -36,20 +36,54 @@
 
 # Lecture 3 - GF(2), The Vector introduction
 > - September 8 2014 (50:35) 8%
+> - http://codingthematrix.com/slides/The_Field.pdf
+> - http://codingthematrix.com/slides/The_Vector.pdf
+
+- `GF(2)` addition is binary xor
+- `GF(2)` multiplication is binary mul
 
 # Lecture 4 - More Vector Intro
 > - September 10 2014 (45:17) 10%
+> - http://codingthematrix.com/slides/The_Vector.pdf
+
+- Segment between point a and b (set of all points between)
+  - `{alpha[ax, ay] + [bx, by] : alpha in RR, 0<=alpha<=1}`
+  - `{alpha[ax, ay] + (1 - alpha)[bx, by] : alpha in RR, 0<=alpha<=1}`
+  - `{alpha[ax, ay] + beta[bx, by] : alpha in RR, beta in RR, beta >= 0, alpha + beta = 1}` convex combination
+  - `{alpha[ax, ay] + beta[bx, by] : alpha in RR, beta in RR, alpha + beta = 1}` affine combination
+- Ex: `Lights Out`
+- dot-product aka scalar product
 
 # Lecture 5 - Uses of dot-product, linear equations, Vec class, triangular systems and back-sub
 > - September 12 2014 (47:26) 13%
+> - http://codingthematrix.com/slides/The_Vector.pdf
+
+ras
 
 # Lecture 6 - The Vector Space
 > - Introduction
 > - September 15 2014 (48:59) 16%
+> - http://codingthematrix.com/slides/The_Vector_Space.pdf
+
+- Def: Linear combination
+  - List of vectors
+  - List of coefficients
+- `Expressing a vector as a linear combination of other vectors`
+- Ex: There are 4 vectors in the Span `{[1, 1], [0, 1]}` over the field GF(2)
+  - 0 [1, 1] + 0 [0, 1] = [0, 0]
+  - 0 [1, 1] + 1 [0, 1] = [0, 1]
+  - 1 [1, 1] + 0 [0, 1] = [1, 1]
+  - 1 [1, 1] + 1 [0, 1] = [1, 0]
+- Geometric representations of linear combinations
+- Vector space
 
 # Lecture 7 - The Vector Space
 > - Affine spaces and Linear Systems
 > - September 17 2014 (45:27) 18%
+
+- Affine space
+- Affine combination
+- Affine hull
 
 # Lecture 8 - The Matrix
 > - Intro

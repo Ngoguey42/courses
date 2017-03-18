@@ -36,11 +36,11 @@
 - Partial sum `S_n`: From a sequence, to a series, to the sequence of partial sums
 - Divergence vs convergence
 - Ex:
- - `S_n = sum_(0 <= k <= n) 1 / 2k`
- - `sum_(0 <= k < inf) 1 / 2^k = 2`
- - `lim_(n -> inf) S_n = 2`
+  - `S_n = sum_(0 <= k <= n) 1 / 2k`
+  - `sum_(0 <= k < inf) 1 / 2^k = 2`
+  - `lim_(n -> inf) S_n = 2`
 - Geometric series
- - `(1 - r) * S_n = 1 - r^(n + 1)` == `lim_(n -> inf) S_n = lim_(n -> inf) (1 - r^(n + 1)) / (1 - r)` -
+  - `(1 - r) * S_n = 1 - r^(n + 1)` == `lim_(n -> inf) S_n = lim_(n -> inf) (1 - r^(n + 1)) / (1 - r)` -
 
 ### Lesson 2: What is a Telescoping Series? How Can I Prove That Some Series Diverge?
 - `sum_(1 <= k <= n) f(k) - f(k + 1) = f(1) - f(n + 1)`
@@ -50,7 +50,7 @@
 - Harmonic series divergence (Limit of the nth term is 0, but the series does not converges) (Shown with grouping)
 - Comparison test (Two partial sum sequences with one that may bound the other)
 - Cauchy condensation (Grouping with sizes powers of two)
- - Condensed series of a series (Overestimating the series)
+  - Condensed series of a series (Overestimating the series)
 - Ex: `sum_(1 <= n < inf) 1 / n^2 = pi^2 / 6`
 
 ### Lesson 4: What is Point Nine Repeating? What About Numbers That "Go to the Left" Instead of the Right?
@@ -61,7 +61,7 @@
 
 ### Lesson 1: What is the Ratio Test?
 - Ratio test. (Limit of the ratio between subsequent terms lesser than one)
- - Ratio^k as a geometric series
+  - Ratio^k as a geometric series
 
 ### Lesson 2: What is the Ratio Test Good For?
 - Stirling's approximation
@@ -78,10 +78,10 @@ ras
 
 ### Lesson 1: What is Absolute Convergence?
 - Absolute convergence: Sum of the absolute values converges
- - if `sum_(1 <= n < inf) |a_n|` converges
- - `sum_(1 <= n < inf) a_n + |a_n|` converges
- - `sum_(1 <= n < inf) (a_n + |a_n|) - sum_(1 <= n < inf) (|a_n|)` converges
- - so `sum_(1 <= n < inf) a_n` converges
+  - if `sum_(1 <= n < inf) |a_n|` converges
+  - `sum_(1 <= n < inf) a_n + |a_n|` converges
+  - `sum_(1 <= n < inf) (a_n + |a_n|) - sum_(1 <= n < inf) (|a_n|)` converges
+  - so `sum_(1 <= n < inf) a_n` converges
 - Conditionally convergent (converging but not absolutely converging)
 - Alternating series (`a_n = (-1)^n * b_n` and `b_n` all have the same sign and decreasing)
 - Alternating series test
@@ -119,8 +119,8 @@ ras
 
 ### Lesson 4: What is a Formula for the Fibonacci Numbers?
 - Fibonacci numbers sequence
- - Using phi
- - The technique of building a sequence analysing its associated power series is called `generating functions`
+  - Using phi
+  - The technique of building a sequence analysing its associated power series is called `generating functions`
 
 # Week 6
 > In this last module, we introduce Taylor series. Instead of starting with a power series and finding a nice description of the function it represents, we will start with a function, and try to find a power series for it. There is no guarantee of success! But incredibly, many of our favorite functions will have power series representations. Sometimes dreams come true. Like many dreams, much will be left unsaid. I hope this brief introduction to Taylor series whets your appetite to learn more calculus.
@@ -128,8 +128,8 @@ ras
 # Lesson 1: What Are Taylor Series?
 - Function approximation with linear approximation and power series
 - Taylor series centered at zero (Maclaurin series)
- - `a_n = f^((n))(0) / n!`
- - `f(x) = sum_(0 <= n < oo) f^((n))(0) / n! * x^n`
+  - `a_n = f^((n))(0) / n!`
+  - `f(x) = sum_(0 <= n < oo) f^((n))(0) / n! * x^n`
 - Taylor series
 - `f(x) = sum_(0 <= n < oo) f^((n))(a) / n! * (x - a)^n`
 - Ex: Sine power series

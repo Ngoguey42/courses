@@ -34,15 +34,15 @@
 ### Inverse of a Matrix: Definition
 - Inverse only defined for some square matrices
 - If `[B] [A] = [I]`
- - Where `I` identity matrix
- - Then `A` and `B` are mutually inverses (matrix multiplication is commutative in this case)
- - Then `A` and `B` are called `invertable` (aka `non-singular`)
+  - Where `I` identity matrix
+  - Then `A` and `B` are mutually inverses (matrix multiplication is commutative in this case)
+  - Then `A` and `B` are called `invertable` (aka `non-singular`)
 
 ### Setting up Equations in a Matrix Form
 - Notation `[A] [X] = [C]`
- - `[A]` Coefficient matrix
- - `[X]` Solution vector | Unknown vector
- - `[C]` rhs vector
+  - `[A]` Coefficient matrix
+  - `[X]` Solution vector | Unknown vector
+  - `[C]` rhs vector
 
 ----------------------------------------
 
@@ -51,8 +51,8 @@
 
 ### Naive Gaussian elimination: Theory: Part 1 of 2
 - Two steps
- 1. Forward elimination
- 2. Back substitution
+  1. Forward elimination
+  2. Back substitution
 
 #### Forward Elimination
 - Transform the coef matrix to an upper triangle matrix
@@ -90,8 +90,8 @@ ras
 - Avoid division by 0 when coef matrix is invertible
 - Decrease round error
 - In forward elimination, at the beginning of each column step, swap two rows
- - Line1: The line containing the diagonal number in this column
- - Line2: The line containing the greatest absolute value in this column
+  - Line1: The line containing the diagonal number in this column
+  - Line2: The line containing the greatest absolute value in this column
 
 ### Gaussian Elimination with Partial Pivoting: Example: Part 1 of 3 (Forward Elimination)
 ras
@@ -132,20 +132,20 @@ ras
 
 ### Gauss-Seidel Method of Solving Simultaneous Linear Equations: Example: Part 1 of 2
 - Start with an initial guess for the unknowns and refine them
- - ex: start with 0s
+  - ex: start with 0s
 
 ### Gauss-Seidel Method of Solving Simultaneous Linear Equations: Example: Part 2 of 2
 - 3 digits of precision after 6 iterations
 
 ### Gauss-Seidel Method of Solving Simultaneous Linear Equations: Pitfalls and Advantages: Part 1 of 2
 - Gauss-Seidel may not converge
- - If the coef matrix is `diagonally dominent` => converges
- - If the coef matrix is not `diagonally dominent` may converges
+  - If the coef matrix is `diagonally dominent` => converges
+  - If the coef matrix is not `diagonally dominent` may converges
 
 ### Gauss-Seidel Method of Solving Simultaneous Linear Equations: Pitfalls and Advantages: Part 2 of 2
 - Def: `diagonally dominent` (`dd`)
- - In all lines, |diag number| >= sum |other numbers in the line|
- - In at least one line, |diag number| > sum |other numbers in the line|
+  - In all lines, |diag number| >= sum |other numbers in the line|
+  - In at least one line, |diag number| > sum |other numbers in the line|
 - Ex: `not dd` matrix with lines that can be reordered into a `dd` matrix
 
 ----------------------------------------
@@ -155,13 +155,13 @@ ras
 
 ### LU Decomposition Method: Basis
 - From `[A] [X] = [C]`
- 1. `[L] [U] [X] = [C]`
+  1. `[L] [U] [X] = [C]`
 	- This step to get `L` and `U`
     - `A` decomposed into a lower `L` and upper `U` triangle matrices
- 2. `[L] [Z] = [C]`
+  2. `[L] [Z] = [C]`
 	- This step to get `Z` a n*1 matrix
 	- `L` being a lower triangle matrix, we can easily get `Z` by forward substitution
- 3. `[U] [X] = [Z]`
+  3. `[U] [X] = [Z]`
     - This step to get `X`
 	- `U` being an upper triangle matrix, we can easily get `X` by backward substitution
 
@@ -173,14 +173,14 @@ ras
 
 ### LU Decomposition: Why Part 2 of 2
 - Ex: Finding the inverse of a matrix
- - naive gaussian elimination
+  - naive gaussian elimination
     - Forward elimination `~= C * n^3 / 3` (n times)
 	- Backward substitution `~= C * n^2 / 2` (n times)
- - LU decomposition
+  - LU decomposition
     - Forward elimination `~= C * n^3 / 3` (1 time)
 	- Forward substitution `~= C * n^2 / 2` (n time)
 	- Backward substitution `~= C * n^2 / 2` (n time)
- - 4x faster with LU decomposition
+  - 4x faster with LU decomposition
 
 ### LU Decomposition Method: Decomposing a Matrix Example: Part 1 of 2
 - LU decomposition of a square matrix
@@ -212,9 +212,9 @@ ras
 ### Uniqueness of Interpolating Polynomial: Part 2 of 2
 - Ref: Forward elimitation, Gaussian elimination, upper triangular matrix
 - Polynomial forms
- - Direct method
- - Lagrangian interpolation
- - Newton's divided difference method
+  - Direct method
+  - Lagrangian interpolation
+  - Newton's divided difference method
 
 ----------------------------------------
 
@@ -223,7 +223,7 @@ ras
 
 ### Direct Method of Interpolation: Linear Interpolation
 - Ref: Gaussian elimitation method
- - To solve a matrix
+  - To solve a matrix
 - Ref: Extrapolation / interpolation
 
 ### Direct Method of Interpolation: Quadratic Interpolation
@@ -245,8 +245,8 @@ ras
 ### Newton's Divided Difference Polynomial: Linear Interpolation: Theory
 - NDDP: Newton's Divided Difference Polynomial
 - `f_1(x) = b_0 + b_1(x - x_0)`
- - `b_0 = f(x_0) = f[x_0]` zero'th divided difference
- - `b_1 = (f(x_1) - f(x_0)) / (x_1 - x_0) = f[x_1, x_0]` first divided difference
+  - `b_0 = f(x_0) = f[x_0]` zero'th divided difference
+  - `b_1 = (f(x_1) - f(x_0)) / (x_1 - x_0) = f[x_1, x_0]` first divided difference
 
 ### Newton's Divided Difference Polynomial: Linear Interpolation: Example
 - To interpolate x, use the 2 closest data points, bracketing x
@@ -263,7 +263,7 @@ ras
 
 ### General Order: Newton's Divided Difference Polynomial: Theory: Part 1 of 2
 - `b_m = f[x_m, ..., x_0]`
- - `= (f[x_m, ..., x_1] - f[x_(m-1), ..., x_0]) / (x_m - x_0)`
+  - `= (f[x_m, ..., x_1] - f[x_(m-1), ..., x_0]) / (x_m - x_0)`
 
 ### General Order: Newton's Divided Difference Polynomial: Theory: Part 2 of 2
 ras
@@ -282,8 +282,8 @@ ras
 
 ### Lagrangian Interpolation - Theory
 - `f_n(x) = sum_(i=0)^n L_i(x) f(x_i)`
- - `L_i(x) = prod_(j=0, j!=i)^n (x - x_j) / (x_i - x_j)`
- - Each `i` point is weighted by `L_i(x)`
+  - `L_i(x) = prod_(j=0, j!=i)^n (x - x_j) / (x_i - x_j)`
+  - Each `i` point is weighted by `L_i(x)`
 
 ### Lagrangian Interpolation: Linear Interpolation: Example
 ras
@@ -317,7 +317,7 @@ ras
 
 ### Higher Order Interpolation is a Bad Idea
 - Runge's function
- - Use spline
+  - Use spline
 - Ref: Chebyshev points repartition
 
 ### Interpolating a Smooth and Shortest Path for Robot

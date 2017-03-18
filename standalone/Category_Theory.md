@@ -19,14 +19,14 @@
 # 1.2: What is a category? (48:18)
 - A category contains `objects`
 - Can a set contain itself? Barber's paradox (shave)
- - https://youtu.be/p54Hd7AmVFU?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_&t=459
+  - https://youtu.be/p54Hd7AmVFU?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_&t=459
 - A morphism goes between two objects
 - An object is a primitive, it has no property
 
 # 2.1: Functions, epimorphisms (46:14)
 - Surjective function
- - Every elements of the destitation set are mapped by the function
- - Equivalent to Epimorphism
+  - Every elements of the destitation set are mapped by the function
+  - Equivalent to Epimorphism
 
 # 2.2: Monomorphisms, simple types (24:34)
 ##### Epimorphism (self deduction):
@@ -37,8 +37,8 @@
 - then a morphism from a to b is epimorphic
 
 - Injective function
- - Every elements of the source set is mapped to different elements in the destination set
- - Equivalent to Monomorphism
+  - Every elements of the source set is mapped to different elements in the destination set
+  - Equivalent to Monomorphism
 
 ##### Monomorphism (self deduction):
 - let a be an object
@@ -72,7 +72,7 @@
 - Ex: `<=` relation
 - pre order / partial order / total order
 - Thin category
- - Every morphism is epi and mono
+  - Every morphism is epi and mono
 - A preorder is automatically a category
 - A `hom-set` C(a, b) is the set of arrow from a to b
 - `Partial order` has no loops comparing to `pre order`
@@ -81,8 +81,8 @@
 - Category with a single object called monoid
 - Implies that any pair of arrow is composable
 - In set theory
- - An element of the set is called unit
- - Associativity ∃e ∀a  e*a = a*e = a
+  - An element of the set is called unit
+  - Associativity ∃e ∀a  e*a = a*e = a
 - Addition / Multipication / String concatenation / Lists addition
 - Ex: Monoid analogy to strongly typed language
 
@@ -105,18 +105,18 @@
 
 ##### Universal construction
 - Def: Singleton set
- - Incoming arrows
- - Unique incoming arrow from every object of the category (self included)
- - Terminal object
- - There is only one function in a hom-set to a singleton set
-  - Any composed path to a singleton object can be shrunk into a single arrow
-  - But there can be infinitely many functions in a hom-set to a bool set. (predicates)
- - Terminal object is unique up to an unique isomorphism
+  - Incoming arrows
+  - Unique incoming arrow from every object of the category (self included)
+  - Terminal object
+  - There is only one function in a hom-set to a singleton set
+    - Any composed path to a singleton object can be shrunk into a single arrow
+    - But there can be infinitely many functions in a hom-set to a bool set. (predicates)
+  - Terminal object is unique up to an unique isomorphism
 - Uniqueness is defined as equality in mathematics
 - Def: Empty set
- - Outcoming arrows
- - Initial object
- - Inverse of the terminal object
+  - Outcoming arrows
+  - Initial object
+  - Inverse of the terminal object
 
 # 4.2: Products (34:49)
 - Every arrow from a terminal object to another object is a definition of a generalized element in this other object
@@ -127,16 +127,16 @@
 - Universal construction
 - Loss of information
 - A categorical product of a and b is an object c.
- - c has two projections p::c->a and q::c->b
- - for any other c' that has p'::c'->a and q'::c'->b, there is a unique morphism m::c'->c
+  - c has two projections p::c->a and q::c->b
+  - for any other c' that has p'::c'->a and q'::c'->b, there is a unique morphism m::c'->c
 - In the category of sets, every pair of set has a product
 
 # 5.1: Coproducts, sum types (36:47)
 - A coproduct is an object c with a pair of injections i,j going into it, such that any other object with injections i',j', there is an unique morphism from c to c'
 - In set theory the coproduct is the union of two sets
- - The union of a set with itself is just the set. Unless it is a discriminated union (each elements are tagged with origin)
- - The coproduct corresponds to a discriminated union
- - There is a mapping from discriminated union to union. But not the inverse
+  - The union of a set with itself is just the set. Unless it is a discriminated union (each elements are tagged with origin)
+  - The coproduct corresponds to a discriminated union
+  - There is a mapping from discriminated union to union. But not the inverse
 - In the type theory, it is a variant (tagged union)
 
 ```ocaml
@@ -159,7 +159,7 @@ let j': b -> c' = fun arg -> m (j arg)
 ```
 
 - In Haskell
- - Sum type (not built in)
+  - Sum type (not built in)
 ```haskell
 data Either a b = Left a | Right b
 x::Either Int Bool
@@ -170,7 +170,7 @@ f (Right b) = b
 ```
 
 - In C++
- - use of nullptr is really a sum type
+  - use of nullptr is really a sum type
 
 # 5.2: Algebraic data types (33:14)
 
@@ -215,8 +215,8 @@ data List a = Nil | Cons a (List a)
 - A functor preserve structure
 - Preserving structure is preserving morphisms
 - A functor maps morphism and objects
- - The functor has a function that maps the set of points
- - The functor has functions that maps the set of morphisms in all hom-sets
+  - The functor has a function that maps the set of points
+  - The functor has functions that maps the set of morphisms in all hom-sets
 - Ex: mapping a stickfigure to a real person
 - A faithful functor is injective on all hom-set
 - A full functior is surjective on all hom-set

@@ -66,42 +66,42 @@ ras
 2. Solve recursively
 3. Combine solutions with extra cost `theta(N ^ gamma * logN ^ delta)`
 - Mergesort:
- - alpha: 2
- - beta: 2
- - gamma: 1
- - delta: 0
+  - alpha: 2
+  - beta: 2
+  - gamma: 1
+  - delta: 0
 - Batcher network
 - Katatsuba multiplication
 - Strassen matrix multiply
 - Theorem gives:
- - `a_n = theta(n ^ gamma * logn ^ delta) when gamma < log_(beta) * alpha`
- - `a_n = theta(n ^ gamma * logn ^ (delta + 1)) when gamma = log_(beta) * alpha`
- - `a_n = theta(n ^ (log_(gamma) alpha) when gamma > log_(beta) * alpha`
+  - `a_n = theta(n ^ gamma * logn ^ delta) when gamma < log_(beta) * alpha`
+  - `a_n = theta(n ^ gamma * logn ^ (delta + 1)) when gamma = log_(beta) * alpha`
+  - `a_n = theta(n ^ (log_(gamma) alpha) when gamma > log_(beta) * alpha`
 
 # 4 - 1 - Ordinary Generating Functions (16-25) 32%
 - An OGF is a power series where the coefficients encode an infinite sequence of numbers.
 - OGF: `A(z) = sum_(0 <= n < oo) a_n z^n`
- - `z` a free variable
- - `a_n` the terms of the sequence described by this ogf
- - `[z^n]A(z) = a_n` the notating meaning `The coefficient of z^n in A(z)`
+  - `z` a free variable
+  - `a_n` the terms of the sequence described by this ogf
+  - `[z^n]A(z) = a_n` the notating meaning `The coefficient of z^n in A(z)`
 - Ex1:
- - Seq: `1, 1, 1, 1, 1, ...`
- - OGF: `sum_(0 <= n < oo) 1 * z^n = 1 / (1 - z)` `if z in [0, 1[`
- - Notation: `[z^n]sum_(0 <= n < oo) 1 * z^n = 1` or `[z^n]1 / (1 - z) = 1`
+  - Seq: `1, 1, 1, 1, 1, ...`
+  - OGF: `sum_(0 <= n < oo) 1 * z^n = 1 / (1 - z)` `if z in [0, 1[`
+  - Notation: `[z^n]sum_(0 <= n < oo) 1 * z^n = 1` or `[z^n]1 / (1 - z) = 1`
 - Ex2:
- - Seq: `1, 1/2, 1/6, 1/24, 1/120, ...`
- - OGF: `sum_(0 <= n < oo) z^n / n! = e^z`
- - Notation: `[z^n]sum_(0 <= n < oo) z^n/n! = 1/n!` or `[z^n]e^z = 1/n!`
+  - Seq: `1, 1/2, 1/6, 1/24, 1/120, ...`
+  - OGF: `sum_(0 <= n < oo) z^n / n! = e^z`
+  - Notation: `[z^n]sum_(0 <= n < oo) z^n/n! = 1/n!` or `[z^n]e^z = 1/n!`
 
 ### Operations on OGF
 ##### Scaling
 - Given the sequence SA of 1 repeated `1, 1, 1, 1, ...`
- - The OGF A of SA is `A(z) = 1 / (1 - z) = sum_(0 <= n < oo) z^n`
- - `The coefficient of z^n in A(z)` == `1` == `[z^n]A(z)` == `[z^n]1 / (1 - z)`
+  - The OGF A of SA is `A(z) = 1 / (1 - z) = sum_(0 <= n < oo) z^n`
+  - `The coefficient of z^n in A(z)` == `1` == `[z^n]A(z)` == `[z^n]1 / (1 - z)`
 - Let B be the OGF `B(z) = A(cz)`
- - `B(cz) = 1 / (1 - cz) = sum_(0 <= n < oo) c^n z^n`
- - `The coefficient of z^n in B(cz)` == `c^n` == `[z^n]B(cz)` == `[z^n]1 / (1 - cz)`
- - Giving the sequence `c^0, c^2, c^2, ...`
+  - `B(cz) = 1 / (1 - cz) = sum_(0 <= n < oo) c^n z^n`
+  - `The coefficient of z^n in B(cz)` == `c^n` == `[z^n]B(cz)` == `[z^n]1 / (1 - cz)`
+  - Giving the sequence `c^0, c^2, c^2, ...`
 
 ##### Differentiation
 - OGF: `[z^n]1/(1-z)^1 = 1` seq: `1, 1, 1, 1, ...`
@@ -117,42 +117,42 @@ ras
 - Addition
 - Integration
 - Convolution
- - EX: OGF for natural numbers
+  - EX: OGF for natural numbers
 - Ref: Taylor theorem
 
 # 4 - 2 - Solving Recurrences (18-55) 32%
 - General procedure to solve linear recurrences with OGF
- 1. Make recurrence valid for all n
- 1. Multiply by z^n and sum on n
- 1. Evaluate the sums to derive an equation satisfied by the OGF
- 1. Solve the equation to derive an explicit formula for the OGF
- 1. Expand the OGF to find coefficients
+  1. Make recurrence valid for all n
+  1. Multiply by z^n and sum on n
+  1. Evaluate the sums to derive an equation satisfied by the OGF
+  1. Solve the equation to derive an explicit formula for the OGF
+  1. Expand the OGF to find coefficients
 
 ### Ex1:
 - `a_n = 5a_(n-1) - 6a_(n-1)` for `n >= 2` with `a_o = 0` and `a1 = 1`
 - Make recurrence valid for all n
- - Assume 0 for all negative n in a_n
- - `a_n = 5a_(n-1) - 6a_(n-1) + delta_(n1)`
-   - `a_0 = 5 * 0 - 6 * 0 + 0 = 0`
-   - `a_1 = 5 * a_0 - 6 * 0 + 1 = 1`
-   - `a_2 = 5 * a_1 - 6 * a_0 + 0 = 5`
-   - `a_3 = 5 * a_1 - 6 * a_0 + 0 = 19`
+  - Assume 0 for all negative n in a_n
+  - `a_n = 5a_(n-1) - 6a_(n-1) + delta_(n1)`
+    - `a_0 = 5 * 0 - 6 * 0 + 0 = 0`
+    - `a_1 = 5 * a_0 - 6 * 0 + 1 = 1`
+    - `a_2 = 5 * a_1 - 6 * a_0 + 0 = 5`
+    - `a_3 = 5 * a_1 - 6 * a_0 + 0 = 19`
 - Multiply by z^n and sum on n
- - `A(Z) = 5zA(z) - 6z^2A(z) + z`
-   - `n = 0` `a_n = 0 * z^n`
-   - `n = 1` `a_n = 1 * z^n = z`
-   - `n = 2` `a_n = 5 * z^n = 5z * a_(n - 1)`
-   - `n = 3` `a_n = 25*z^n - 6*z^n = 5z * a_(n - 1) - 6z^n * a_(n - 2)`
+  - `A(Z) = 5zA(z) - 6z^2A(z) + z`
+    - `n = 0` `a_n = 0 * z^n`
+    - `n = 1` `a_n = 1 * z^n = z`
+    - `n = 2` `a_n = 5 * z^n = 5z * a_(n - 1)`
+    - `n = 3` `a_n = 25*z^n - 6*z^n = 5z * a_(n - 1) - 6z^n * a_(n - 2)`
 - Solve equation
- - `A(z) = z / (1 - 5z + 6z^2)`
+  - `A(z) = z / (1 - 5z + 6z^2)`
 - Extract coefficients (in this case with partial fractions (factoring the denominator))
- - `A(z) = c_0 / (1 - 3z) + c_1 / (1 - 2z)`
+  - `A(z) = c_0 / (1 - 3z) + c_1 / (1 - 2z)`
 - Solve for coefficients
- - `A(z) = 1 / (1 - 3z) - 1 / (1 - 2z)`
-   - `c_0 + c_1 = 0`
-   - `2c_0 + 3c_1 = -1`
+  - `A(z) = 1 / (1 - 3z) - 1 / (1 - 2z)`
+    - `c_0 + c_1 = 0`
+    - `2c_0 + 3c_1 = -1`
 - Expand
- - `a_n = 3^n - 2^n` (two power series)
+  - `a_n = 3^n - 2^n` (two power series)
 
 -----
 

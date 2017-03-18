@@ -16,35 +16,35 @@
 - Begins with Girard Desargues in 1600
 - Geometry of the straight edges
 - Pappus theorem in 300
- - 2 lines with 3 points on each
- - the complete bipartite matching creates 3 colinear points
+  - 2 lines with 3 points on each
+  - the complete bipartite matching creates 3 colinear points
 - Colinear points: a line passes through those points
 - Pascal's theorem in 1660
- - 6 points on a conic
- - bipartite matchine cretes 3 colinear points
+  - 6 points on a conic
+  - bipartite matchine cretes 3 colinear points
 - Desargues theorem
- - If 2 triangles are perspective via a point P, then they are perspective via a line L
+  - If 2 triangles are perspective via a point P, then they are perspective via a line L
 - Ref: courses `WT31->41` on projective geometry
 - New understanding with Mobius, Plucker, Chasles, Klein, von Staudt, Cayley in 1800
 - Renaissance artists
- - Problems of perspective
- - Ex: Tiled floor
- - Parallel lines meet on the horizon
- - Straight lines must be represented by straight lines
- - The image of a conic is also a conic
+  - Problems of perspective
+  - Ex: Tiled floor
+  - Parallel lines meet on the horizon
+  - Straight lines must be represented by straight lines
+  - The image of a conic is also a conic
 - Desargues theorem with parallel lines
- - Points are colinear are infinity
+  - Points are colinear are infinity
 - Line at infinity
- - Every family of parallel lines meet at a new point on the line at infinity
+  - Every family of parallel lines meet at a new point on the line at infinity
 - Projective plane
- - Any two lines meet at a point
- - Any two points join to make a line
- - Duality point/lines
+  - Any two lines meet at a point
+  - Any two points join to make a line
+  - Duality point/lines
 - Ex: All the conics look the same projectively
 - Ex: Topologically the projective line is a circle
 - Homogeneous coordinates
- - The projective line is the space of 1-dimentional subspaces in 2-dimentional space
- - The projective plane is the space of 1-dimentional subspaces in 3-dimentional space
+  - The projective line is the space of 1-dimentional subspaces in 2-dimentional space
+  - The projective plane is the space of 1-dimentional subspaces in 3-dimentional space
 - All conics gives 2 ellipses when projected on a sphere centered at the origin
 - Projections of cubics on a sphere
 
@@ -52,18 +52,18 @@
 - Differential geometry is a combination of `calculus` + `analytic geometry`
 - `curvature` is central
 - 1673 C. Huygens
- - studied `planar curves`
- - introduced involute of a curve
- - invented the pendulum clock
+  - studied `planar curves`
+  - introduced involute of a curve
+  - invented the pendulum clock
 - Ref: Louis XIV, French Academy of Science
 
 ### Involute of a curve
 - An involute of a curve `C` at point `p`, is a curve `C'` passing through `p`
 - A points `d'` of an involute `C'` is tight to a point `d` of `C`
- - let `t` be the tangent of `C` at `d`
- - let `t'` be the tangent of `C'` at `d'`
- - `t` and `t'` meet at `d'`
- - `t` and `t'` are perpendicular
+  - let `t` be the tangent of `C` at `d`
+  - let `t'` be the tangent of `C'` at `d'`
+  - `t` and `t'` meet at `d'`
+  - `t` and `t'` are perpendicular
 - All the involutes are disjoint
 
 ### Evolute of a curve
@@ -74,9 +74,9 @@
 - Let `C` be a curve, `p` a point on that curve, `n` the normal of that curve at this point
 - The normals of all the points near `p` meet at a point called the `center of curvature`
 - The normals of 3 points near `p` (including `p`)
- - Meet at the center of curvature `d`
- - Define a circle with center `d` (3 points define a circle, if they are not colinear), called the `osculating circle` of `C` at `p`
- - This circle is the best circle that approximates the curve at the point `p` (similar to the tangent being the best line that approximate the curve at the point `p`)
+  - Meet at the center of curvature `d`
+  - Define a circle with center `d` (3 points define a circle, if they are not colinear), called the `osculating circle` of `C` at `p`
+  - This circle is the best circle that approximates the curve at the point `p` (similar to the tangent being the best line that approximate the curve at the point `p`)
 - The succesive centers of curvature of the points of `C` form the `evolute` of `C`
 - The `evolute` is the locus of the center of curvature
 - The radius of the `osculating circle` `rho` is the `radius of curvature`
@@ -90,16 +90,16 @@
 ### Exemples of plane curves
 - Ex: The involute of a cycloid is another cycloid
 - Ex: The involute of a catenary is a tractrix
- - Rock dragged on a leash
+  - Rock dragged on a leash
 - Ex: The evolute of a parabola `y = x^2` is a semi-cubical parabola `y = 1/2 + 3/4(2x)^(2/3)`
 
 ### Exemples of space curves
 - Clairaut/Euler/Cauchy
 - `Osculating plane` from 3 nearby points on a space curve
 - Directions from a space curve at a point
- - Tangent direction, in the osculating plane
- - Principal normal direction, perpendicular to the tangent direction in the osculating plane
- - Binormal direction, perpendicular to the osculating plane
+  - Tangent direction, in the osculating plane
+  - Principal normal direction, perpendicular to the tangent direction in the osculating plane
+  - Binormal direction, perpendicular to the osculating plane
 
 ### 3d surfaces, from Euler 1760 / Monge, exemple with surface of the hand
 - `z = f(x, y)`
@@ -107,24 +107,24 @@
 - let `p` a point of `S`
 - let `P` the tangent plane of `S` at `p`
 - let `n` the normal of `S` at `p`
- - `n` is perpendicular to `P`
+  - `n` is perpendicular to `P`
 - let any plane `Q` perpendicular to `P` and containing `n` with an angle `theta`
 - let `C` the planar curve at the intersection of `Q` and `S`
- - planar cross-section of `S`
+  - planar cross-section of `S`
 - The curvature `k(theta)` of `C` at `p`
 - The principal curvatures `k_1 = k(theta_k_min)`, `k_2 = k(theta_k_max)` at the point `p`
 - Ref: Sign of a curvature
- - The side of the hand where the circle of curvature is
+  - The side of the hand where the circle of curvature is
 
 ### Gauss, theorema egregium
 - The gaussian curvature `k_1 * k_2 = K` of a surface at a point
- - Determinable from the surface itself
+  - Determinable from the surface itself
 - Ex: Sphere of radius `rho`
- - A sphere is a `surface of constant curvature`
- - Curvature have radius `rho` here, then `k_1 = k_2 = 1/rho`, then `K = 1/p^2`
+  - A sphere is a `surface of constant curvature`
+  - Curvature have radius `rho` here, then `k_1 = k_2 = 1/rho`, then `K = 1/p^2`
 - Ex: Pseudosphere
- - from a tractrix revolved
- - constant negative gaussian curvature
+  - from a tractrix revolved
+  - constant negative gaussian curvature
 
 ### Riemann, n dimentional space
 - Used by Einstein for general relativity
