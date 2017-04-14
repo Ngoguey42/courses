@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@airware.com>                                       -->
 <!--                                                                         -->
 <!-- Created: 2017/04/14 13:05:23 by ngoguey                                 -->
-<!-- Updated: 2017/04/14 13:41:19 by ngoguey                                 -->
+<!-- Updated: 2017/04/14 18:59:51 by ngoguey                                 -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -17,6 +17,7 @@
 > - Cost 10 euro
 > - https://www.udemy.com/machinelearning/
 > - https://www.udemy.com/machinelearning/learn/v4/overview
+> - https://www.superdatascience.com/machine-learning/
 > - 40h32
 > - 11 Part (~3h41 each)
 > - 40 Section (~1h01 each)
@@ -27,19 +28,72 @@
 # Part 0: Intro
 ## Section 1: Welcome to the course! (5 video)
 ### Video 1: Applications of Machine Learning (03:22 00:03:22/40:32:42 0%)
+ras
+
 ### Video 2: Why Machine Learning is the Future (06:37 00:09:59/40:32:42 0%)
+- Metaphore
+  - B, word
+  - kB, page
+  - mB, book
+  - gB, genome
+  - tB, 1 life of HD video
+  - petaB, all the Amazonian trees to paper and to books
+  - exaB
+    - 130eB ''''''produced'''''' by humanity up to 2005
+	- 40900eB ''''''produced'''''' by humanity up to ~2020
+
 ### Video 3: Installing R and R Studio (MAC & Windows) (05:40 00:15:39/40:32:42 1%)
+- R installed with windows installer
+- ESS installed this way
+```sh
+cd configurations
+git submodule add https://github.com/emacs-ess/ESS
+cd ESS/lisp
+make
+# Plus update emacs conf file
+```
+
 ### Video 4: Installing Python and Anaconda (MAC & Windows) (07:30 00:23:10/40:32:42 1%)
+ras
+
 ### Document 5: BONUS: Meet your instructors
+ras
+
 # Part 1: Data Preprocessing
 ## Section 2: Part 1: Data Preprocessing (11 video)
 ### Video 6: Welcome to Part 1 - Data Preprocessing (01:35 00:24:45/40:32:42 1%)
+ras
+
 ### Video 7: Get the dataset (06:58 00:31:43/40:32:42 1%)
+- Use independent variable to predict a dependent variable
+
 ### Video 8: Importing the Libraries (05:20 00:37:03/40:32:42 2%)
+- Run in R
+```R
+install.packages("caTools")
+```
+
 ### Video 9: Importing the Dataset (11:54 00:48:57/40:32:42 2%)
+- [mlaz/one.py](mlaz/one.py)
+- [mlaz/one.R](mlaz/one.R)
+
 ### Document 10: For Python learners, summary of Object-oriented programming: classes & objects
+ras
+
 ### Video 11: Missing Data (15:57 01:04:54/40:32:42 3%)
+- [mlaz/one.py](mlaz/one.py)
+- [mlaz/one.R](mlaz/one.R)
+- `sklearn.preprocessing.Imputer` to create missing data
+
 ### Video 12: Categorical Data (18:00 01:22:55/40:32:42 3%)
+- [mlaz/one.py](mlaz/one.py)
+- [mlaz/one.R](mlaz/one.R)
+- `Categorical variable`: enum
+- `dummy encoding` aka `one-hot scheme` aka `one-of-K scheme`: turn an enum to boolean matrix of |enum| columns
+- python: `OneHotEncoder`
+- python: `LabelEncoder`
+- R: `label`
+
 ### Video 13: Splitting the Dataset into the Training set and Test set (17:37 01:40:32/40:32:42 4%)
 ### Video 14: Feature Scaling (15:36 01:56:08/40:32:42 5%)
 ### Video 15: And here is our Data Preprocessing Template! (08:48 02:04:56/40:32:42 5%)
