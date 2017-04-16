@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@airware.com>                                       -->
 <!--                                                                         -->
 <!-- Created: 2017/04/14 13:05:23 by ngoguey                                 -->
-<!-- Updated: 2017/04/16 15:38:55 by ngoguey                                 -->
+<!-- Updated: 2017/04/16 17:19:53 by ngoguey                                 -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -98,14 +98,18 @@ ras
 - R: `label`
 
 ### Video 13: Splitting the Dataset into the Training set and Test set (17:37 01:40:32/40:32:42 4%)
-ras
+- [mlaz/one.py](mlaz/one.py)
+- [mlaz/one.R](mlaz/one.R)
 
 ### Video 14: Feature Scaling (15:36 01:56:08/40:32:42 5%)
+- [mlaz/one.py](mlaz/one.py)
+- [mlaz/one.R](mlaz/one.R)
 - Some machine learning model are based on Euclidean distance
 - Standardisation vs normalisation
 
 ### Video 15: And here is our Data Preprocessing Template! (08:48 02:04:56/40:32:42 5%)
-ras
+- [mlaz/one.py](mlaz/one.py)
+- [mlaz/one.R](mlaz/one.R)
 
 ### Quiz 1: Data Preprocessing
 skip
@@ -116,17 +120,36 @@ skip
 # Part 2: Regression
 ## Section 3: Part 2: Regression (1 video)
 ### Document 16: Welcome to Part 2 - Regression
-
+ras
 
 ## Section 4: Simple Linear Regression (13 video)
 ### Video 17: How to get the dataset (03:18 02:08:14/40:32:42 5%)
+ras
+
 ### Video 18: Dataset + Business Problem Description (02:56 02:11:10/40:32:42 5%)
+ras
+
 ### Video 19: Simple Linear Regression Intuition - Step 1 (05:45 02:16:55/40:32:42 6%)
+- `y = a + bx`
+
 ### Video 20: Simple Linear Regression Intuition - Step 2 (03:08 02:20:04/40:32:42 6%)
+- Ordinary least squares method
+  - `y_i` value
+  - `hat y_i` model value
+  - `sum_i(y - hat y)^2` mean square error
+
 ### Video 21: Simple Linear Regression in Python - Step 1 (09:55 02:30:00/40:32:42 6%)
+- [mlaz/two.py](mlaz/two.py)
+
 ### Video 22: Simple Linear Regression in Python - Step 2 (08:19 02:38:18/40:32:42 7%)
+- [mlaz/two.py](mlaz/two.py)
+
 ### Video 23: Simple Linear Regression in Python - Step 3 (06:43 02:45:01/40:32:42 7%)
+- [mlaz/two.py](mlaz/two.py)
+
 ### Video 24: Simple Linear Regression in Python - Step 4 (14:50 02:59:51/40:32:42 7%)
+- [mlaz/two.py](mlaz/two.py)
+
 ### Video 25: Simple Linear Regression in R - Step 1 (04:40 03:04:31/40:32:42 8%)
 ### Video 26: Simple Linear Regression in R - Step 2 (05:58 03:10:29/40:32:42 8%)
 ### Video 27: Simple Linear Regression in R - Step 3 (03:38 03:14:07/40:32:42 8%)
