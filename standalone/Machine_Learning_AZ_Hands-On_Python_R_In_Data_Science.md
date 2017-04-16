@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@airware.com>                                       -->
 <!--                                                                         -->
 <!-- Created: 2017/04/14 13:05:23 by ngoguey                                 -->
-<!-- Updated: 2017/04/14 18:59:51 by ngoguey                                 -->
+<!-- Updated: 2017/04/16 15:38:55 by ngoguey                                 -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -24,6 +24,9 @@
 > - 7 Quiz
 > - 257 Video (~9m28 each)
 > - 18 Documents
+
+********************************************************************************
+********************************************************************************
 
 # Part 0: Intro
 ## Section 1: Welcome to the course! (5 video)
@@ -95,12 +98,26 @@ ras
 - R: `label`
 
 ### Video 13: Splitting the Dataset into the Training set and Test set (17:37 01:40:32/40:32:42 4%)
+ras
+
 ### Video 14: Feature Scaling (15:36 01:56:08/40:32:42 5%)
+- Some machine learning model are based on Euclidean distance
+- Standardisation vs normalisation
+
 ### Video 15: And here is our Data Preprocessing Template! (08:48 02:04:56/40:32:42 5%)
+ras
+
 ### Quiz 1: Data Preprocessing
+skip
+
+********************************************************************************
+********************************************************************************
+
 # Part 2: Regression
 ## Section 3: Part 2: Regression (1 video)
 ### Document 16: Welcome to Part 2 - Regression
+
+
 ## Section 4: Simple Linear Regression (13 video)
 ### Video 17: How to get the dataset (03:18 02:08:14/40:32:42 5%)
 ### Video 18: Dataset + Business Problem Description (02:56 02:11:10/40:32:42 5%)
@@ -168,6 +185,10 @@ ras
 ### Video 72: Evaluating Regression Models Performance - Homework's Final Part (08:54 10:33:26/40:32:42 26%)
 ### Video 73: Interpreting Linear Regression Coefficients (09:16 10:42:42/40:32:42 26%)
 ### Document 74: Conclusion of Part 2 - Regression
+
+********************************************************************************
+********************************************************************************
+
 # Part 3: Classification
 ## Section 11: Part 3: Classification (1 video)
 ### Document 75: Welcome to Part 3 - Classification
@@ -232,6 +253,7 @@ ras
 ### Video 123: CAP Curve (11:16 17:59:51/40:32:42 44%)
 ### Video 124: CAP Curve Analysis (06:19 18:06:10/40:32:42 45%)
 ### Document 125: Conclusion of Part 3 - Classification
+
 # Part 4: Clustering
 ## Section 20: Part 4: Clustering (1 video)
 ### Document 126: Welcome to Part 4 - Clustering

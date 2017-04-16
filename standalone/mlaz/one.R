@@ -6,10 +6,11 @@
 ##   By: ngoguey <ngoguey@airware.com>                                        ##
 ##                                                                            ##
 ##   Created: 2017/04/14 18:08:01 by ngoguey                                  ##
-##   Updated: 2017/04/14 18:57:25 by ngoguey                                  ##
+##   Updated: 2017/04/16 16:16:09 by ngoguey                                  ##
 ##                                                                            ##
 ##****************************************************************************##
 
+## install.packages('caTools', repos = "http://cran.us.r-project.org")
 library(caTools)
 
 ## LOAD DATASET ************************************************************* **
@@ -31,7 +32,7 @@ dataset$Salary = ifelse(
 print('dataset:')
 print(dataset)
 
-# CONVERT CATEGORICAL VARIABLES TO DIGITS *********************************** **
+## CONVERT CATEGORICAL VARIABLES TO DIGITS ********************************** **
 dataset$Country = factor(
     dataset$Country,
     levels=c('France', 'Spain', 'Germany'),
@@ -45,16 +46,21 @@ dataset$Purchased = factor(
 print('dataset:')
 print(dataset)
 
+## TEST / TRAINING PARTITION ************************************************ **
+set.seed(42)
+split_mask = sample.split(dataset, SplitRatio=0.8)
+training_set = subset(dataset, split_mask)
+test_set = subset(dataset, split_mask == FALSE)
+print('training_set:')
+print(training_set)
+print('test_set:')
+print(test_set)
 
+## FEATURE SCALING ********************************************************** **
+training_set[, 2:3] = scale(training_set[, 2:3])
+test_set[, 2:3] = scale(test_set[, 2:3])
 
-
-quit()
-
-set.seed(123)
-split = sample.split(dataset$DependentVariable, SplitRatio = 0.8)
-training_set = subset(dataset, split == TRUE)
-test_set = subset(dataset, split == FALSE)
-
-# Feature Scaling
-# training_set = scale(training_set)
-# test_set = scale(test_set)
+print('training_set:')
+print(training_set)
+print('test_set:')
+print(test_set)

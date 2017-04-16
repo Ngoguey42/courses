@@ -6,7 +6,7 @@
 #    By: ngoguey <ngoguey@airware.com>                                         #
 #                                                                              #
 #    Created: 2017/04/14 18:07:57 by ngoguey                                   #
-#    Updated: 2017/04/14 18:57:49 by ngoguey                                   #
+#    Updated: 2017/04/16 16:20:29 by ngoguey                                   #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.cross_validation import train_test_split
-from sklearn.preprocessing import Imputer, LabelEncoder, OneHotEncoder
+from sklearn.preprocessing import Imputer, LabelEncoder, OneHotEncoder, StandardScaler
 
 np.set_printoptions(linewidth=200, precision=3, suppress=True)
 
@@ -58,22 +58,19 @@ enc_y = LabelEncoder()
 y = enc_y.fit_transform(y)
 dump('y')
 
-
-
-
-exit()
-
+# TEST / TRAINING PARTITION ************************************************* **
 x_train, x_test, y_train, y_test = train_test_split(
-    x, y, test_size=0.2, random_state = 0)
+    x, y, test_size=0.2, random_state=42)
 dump('x_train')
 dump('x_test')
 dump('y_train')
 dump('y_test')
 
-# Feature Scaling
-"""from sklearn.preprocessing import StandardScaler
-sc_X = StandardScaler()
-X_train = sc_X.fit_transform(X_train)
-X_test = sc_X.transform(X_test)
-sc_y = StandardScaler()
-y_train = sc_y.fit_transform(y_train)"""
+# FEATURE SCALING *********************************************************** **
+sc_x = StandardScaler()
+x_train = sc_x.fit_transform(x_train)
+x_test = sc_x.transform(x_test)
+dump('x_train')
+dump('x_test')
+dump('y_train')
+dump('y_test')
