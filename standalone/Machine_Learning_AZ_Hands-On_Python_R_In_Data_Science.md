@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@airware.com>                                       -->
 <!--                                                                         -->
 <!-- Created: 2017/04/14 13:05:23 by ngoguey                                 -->
-<!-- Updated: 2017/05/08 16:05:37 by ngoguey                                 -->
+<!-- Updated: 2017/05/08 17:01:46 by ngoguey                                 -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -166,11 +166,32 @@ ras
 skip
 
 ## Section 5: Multiple Linear Regression (19 video)
+> - https://www.superdatascience.com/wp-content/uploads/2017/02/Step-by-step-Blueprints-For-Building-Models.pdf
+
 ### Video 29: How to get the dataset (03:18 03:33:20/40:32:42 9%)
+ras
+
 ### Video 30: Dataset + Business Problem Description (03:44 03:37:04/40:32:42 9%)
+ras
+
 ### Video 31: Multiple Linear Regression Intuition - Step 1 (01:02 03:38:06/40:32:42 9%)
+- `y = a + bx_0 + cx_1 + dx_2 + ...`
+
 ### Video 32: Multiple Linear Regression Intuition - Step 2 (01:00 03:39:06/40:32:42 9%)
+- Asumptions that must hold for datas in linear regression
+  - Linearity
+  - Homoscedasticity
+  - Multivariate normality
+  - Independence of errors
+  - Lack of multicollinerity
+
 ### Video 33: Multiple Linear Regression Intuition - Step 3 (07:21 03:46:27/40:32:42 9%)
+- Dummy variables, again
+- Skip the last dummy variable, because information included in previous dummy variables
+
+WIP video 33
+
+
 ### Video 34: Multiple Linear Regression Intuition - Step 4 (02:09 03:48:37/40:32:42 9%)
 ### Video 35: Multiple Linear Regression Intuition - Step 5 (15:41 04:04:18/40:32:42 10%)
 ### Video 36: Multiple Linear Regression in Python - Step 1 (15:57 04:20:15/40:32:42 11%)
