@@ -6,7 +6,7 @@
 #    By: ngoguey <ngoguey@airware.com>                                         #
 #                                                                              #
 #    Created: 2017/04/16 16:26:49 by ngoguey                                   #
-#    Updated: 2017/04/16 18:21:54 by ngoguey                                   #
+#    Updated: 2017/05/08 16:06:20 by ngoguey                                   #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,6 +48,7 @@ mae = np.abs(yhat_test - y_test).mean()
 r_squared = regressor.score(x_test, y_test)
 dump('mae, y_test.mean(), mae / y_test.mean() * 100., r_squared')
 
+# PLOT ********************************************************************** **
 xx = np.linspace(x.min(), x.max(), 50)
 yy = np.poly1d([np.asscalar(regressor.coef_), regressor.intercept_])(xx)
 

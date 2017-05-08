@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@airware.com>                                       -->
 <!--                                                                         -->
 <!-- Created: 2017/04/14 13:05:23 by ngoguey                                 -->
-<!-- Updated: 2017/04/16 17:19:53 by ngoguey                                 -->
+<!-- Updated: 2017/05/08 16:05:37 by ngoguey                                 -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -151,10 +151,20 @@ ras
 - [mlaz/two.py](mlaz/two.py)
 
 ### Video 25: Simple Linear Regression in R - Step 1 (04:40 03:04:31/40:32:42 8%)
+- [mlaz/two.R](mlaz/two.R)
+
 ### Video 26: Simple Linear Regression in R - Step 2 (05:58 03:10:29/40:32:42 8%)
+- [mlaz/two.R](mlaz/two.R)
+
 ### Video 27: Simple Linear Regression in R - Step 3 (03:38 03:14:07/40:32:42 8%)
+- [mlaz/two.R](mlaz/two.R)
+
 ### Video 28: Simple Linear Regression in R - Step 4 (15:55 03:30:02/40:32:42 9%)
+- [mlaz/two.R](mlaz/two.R)
+
 ### Quiz 2: Simple Linear Regression
+skip
+
 ## Section 5: Multiple Linear Regression (19 video)
 ### Video 29: How to get the dataset (03:18 03:33:20/40:32:42 9%)
 ### Video 30: Dataset + Business Problem Description (03:44 03:37:04/40:32:42 9%)
