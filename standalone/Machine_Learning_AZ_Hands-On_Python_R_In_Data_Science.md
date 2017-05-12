@@ -6,7 +6,7 @@
 <!-- By: ngoguey <ngoguey@airware.com>                                       -->
 <!--                                                                         -->
 <!-- Created: 2017/04/14 13:05:23 by ngoguey                                 -->
-<!-- Updated: 2017/05/08 17:01:46 by ngoguey                                 -->
+<!-- Updated: 2017/05/12 18:54:32 by ngoguey                                 -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -166,8 +166,6 @@ ras
 skip
 
 ## Section 5: Multiple Linear Regression (19 video)
-> - https://www.superdatascience.com/wp-content/uploads/2017/02/Step-by-step-Blueprints-For-Building-Models.pdf
-
 ### Video 29: How to get the dataset (03:18 03:33:20/40:32:42 9%)
 ras
 
@@ -189,12 +187,32 @@ ras
 - Dummy variables, again
 - Skip the last dummy variable, because information included in previous dummy variables
 
-WIP video 33
-
-
 ### Video 34: Multiple Linear Regression Intuition - Step 4 (02:09 03:48:37/40:32:42 9%)
+- Dummy variable trap
+- Always ommit the last dummy variable
+
 ### Video 35: Multiple Linear Regression Intuition - Step 5 (15:41 04:04:18/40:32:42 10%)
+> - https://www.superdatascience.com/wp-content/uploads/2017/02/Step-by-step-Blueprints-For-Building-Models.pdf
+- IF there is garbage in input, there will be garbage in output
+
+##### Building a model method - All-in
+- Keep every variables
+
+##### Building a model method - Backward Elimination
+- Loop fit model with less and less predictors, until threshold using `P-value` `SL: Significance level`
+
+##### Building a model method - Forward Selection
+whatever
+
+##### Building a model method - Bidirectional Elimination (stepwise regression)
+- Both backward elimination and forward selection
+
+##### Building a model method - Score Comparison
+- Test all combo
+
 ### Video 36: Multiple Linear Regression in Python - Step 1 (15:57 04:20:15/40:32:42 11%)
+- [mlaz/three.py](mlaz/three.py)
+
 ### Video 37: Multiple Linear Regression in Python - Step 2 (02:56 04:23:11/40:32:42 11%)
 ### Video 38: Multiple Linear Regression in Python - Step 3 (05:28 04:28:39/40:32:42 11%)
 ### Video 39: Multiple Linear Regression in Python - Backward Elimination - Preparation (13:14 04:41:53/40:32:42 12%)
