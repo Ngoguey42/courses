@@ -80,8 +80,12 @@
 - Image of boys playing tennis captioned plus an object relationship graph
 
 # Lecture 2 - Data driven approach, kNN, Linear Classification 1 (0:57:28)
+
 # Lecture 3 - Linear Classification 2, Optimization (1:11:24)
+
 # Lecture 4 - Backpropagation, Neural Networks (1:19:39)
+http://cs.stanford.edu/people/karpathy/convnetjs/demo/classify2d.html
+
 # Lecture 5 - Neural Networks Part 2 (1:18:38)
 # Lecture 6 - Neural Networks Part 3 Intro to ConvNets (1:09:36)
 # Lecture 7 - Convolutional Neural Networks (1:19:02)
