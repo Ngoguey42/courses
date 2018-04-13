@@ -778,11 +778,13 @@ val s = bufs.subscribe(println(_))
 - Ref: `backpressure`
 
 ### Lecture 15 - Observable Contract (14:19)
-> skipped
+- Always use the factory `make_observable(onNext, onComplete, onError)` instead of implementing manually because of hidden behaviors.
+- `onNext` are always serialized (no concurency)
 
 # Week5
 ### Lecture 1 - Introduction Why Actors (14:46)
 - `Actors` history
+- Ref: `Ericsson's Erlang`
 - Ex: `Concurrency in a bank account`
 - `.synchronized` method
 - `Ordering` to prevent `dead-locks`
@@ -790,12 +792,20 @@ val s = bufs.subscribe(println(_))
 ### Lecture 2 - The Actor Model (13:43)
 - `Actor trait` from `akka`
 - `ActorRef`
-- `implicit` keyword
+- `implicit` keyword in scala for additional  implicit parameters
 - `ActorContext`
 - Actors are created by actors
 
 ### Lecture 3 - Message Processing Semantics (27:28)
+- An actor is effectively single-threaded
+  - Processing one message is the atomic unit of execution
+  - Behavios change is effective before processing the next message
+- To synchronise a communication between `alice` and `bob`: create `tom` for that purpose
+
 ### Lecture 5 - Designing Actor Systems (38:10)
+- Ex: `recursive URL follower`
+  - An actor should remember visited links
+
 ### Lecture 6 - Testing Actor Systems (17:16)
 
 # Week6
